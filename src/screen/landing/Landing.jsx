@@ -1,6 +1,5 @@
 import React from "react";
-import {Landingc} from '.../component/landing/Landingc.jsx';
-
+import { Landingc } from "../../component/landing/Landingc";
 
 const Landing = () => {
     return(
