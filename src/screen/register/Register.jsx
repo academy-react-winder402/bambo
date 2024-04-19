@@ -1,10 +1,9 @@
 import React from "react";
-import {Register} from '.../component/register/Register.jsx';
-
+import {Registerc} from "../../component/register/Register";
 
 const Register = () => {
     return(
-        <Register />
+        <Registerc />
     );
 };
 
