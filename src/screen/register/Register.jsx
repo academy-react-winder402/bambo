@@ -1,5 +1,5 @@
 import React from "react";
-import {Register} from '.../component/register/Register.jsx';
+import {Register} from '../../component/register/Register';
 
 
 const Register = () => {
