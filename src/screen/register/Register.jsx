@@ -1,10 +1,10 @@
 import React from "react";
-import {Register} from '../../component/register/Register';
+import {Registerc} from "../../component/register/Register";
 
 
 const Register = () => {
     return(
-        <Register />
+        <Registerc />
     );
 };
 
