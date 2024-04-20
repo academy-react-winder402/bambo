@@ -6,8 +6,8 @@ import {Landing} from "../screen/landing/Landing.jsx";
 
 const Router = createBrowserRouter([
   {path:'/' , element:<Landing />},
-  {path:'/Login' , element:<Login />},
-  {path:'/Register' , element:<Register />},
+  {path:'/login' , element:<Login />},
+  {path:'/register' , element:<Register />},
 ])
 
 export {Router};

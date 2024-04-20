@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const Register = () => {
+const Registerc = () => {
     return(
-        <h1> register</h1>
+        <h1> register </h1>
     );
 };
 
-export {Register};
+export {Registerc};
