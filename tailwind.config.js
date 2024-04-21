@@ -2,7 +2,12 @@
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'imgegister': "url('/img/logoregister.jpg')",
+       
+      }
+    },
   },
   plugins: [],
 }
