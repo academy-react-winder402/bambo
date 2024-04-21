@@ -1,9 +1,11 @@
-import React from "react"; 
+import React from "react";
 
 const Landingc = () => {
-    return(
-        <h1> landing </h1>
+    return (
+        <h1 className="bg-red-700">
+            landing
+        </h1>
     );
 };
 
-export {Landingc};
+export { Landingc };
