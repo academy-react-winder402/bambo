@@ -2,7 +2,7 @@ import React from "react";
 
 const Landingc = () => {
     return (
-        <h1 className="bg-red-700">
+        <h1>
             landing
         </h1>
     );
