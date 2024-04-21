@@ -1,10 +1,9 @@
 import React from "react";
+import { Header } from "../common/Header";
 
 const Landingc = () => {
     return (
-        <h1>
-            landing
-        </h1>
+        <Header />
     );
 };
 
