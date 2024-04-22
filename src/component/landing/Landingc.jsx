@@ -1,10 +1,10 @@
 import React from "react";
+import { Content } from "./content/Content";
 
 const Landingc = () => {
     return (
-        <h1 className="bg-red-700">
-            landing
-        </h1>
+       <Content />
+        
     );
 };
 
