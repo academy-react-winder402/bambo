@@ -1,9 +1,10 @@
 import React from "react";
-import { Header } from "../common/Header";
+import { Content } from "./content/Content";
 
 const Landingc = () => {
     return (
-        <Header />
+       <Content />
+        
     );
 };
 
