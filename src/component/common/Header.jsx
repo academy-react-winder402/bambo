@@ -3,7 +3,7 @@ import logo from '../../assets/img/logo.png';
 
 const Header = () => {
     return (
-        <div className="border-b border-solid border-[#D1D1D1] w-11/12 h-16 m-auto flex justify-between">
+        <div className="border-b border-solid border-[#D1D1D1] w-11/12 h-14 m-auto flex justify-between">
             <div className=" w-36 flex justify-between">
                 <div className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> ثبت نام </div>
                 <div className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> ورود </div>
@@ -17,7 +17,7 @@ const Header = () => {
             <div className=" w-20 flex justify-between">
                 <div className=" w-14 text-center leading-[3.2rem] text-2xl text-white"> بامبو </div>
                 <div className=" w-6">
-                    <img src={logo} className="w-6 h-7 mt-3"/>
+                    <img src={logo} className="w-5 h-5 mt-[1.1rem]" />
                 </div>
             </div>
         </div>
