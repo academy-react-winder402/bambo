@@ -14,13 +14,13 @@ const Box1 = () => {
                     پس ما ساختیمش
                 </div>
 
-                <div className=" w-[490px] absolute top-[29rem] left-[55rem] text-dase  text-white text-right ">
+                <div className=" w-[390px] absolute top-[29rem] left-[61rem] text-dase  text-white text-right ">
                     سایت بامبو با هدف تولید و انتشار محتوای با کیفیت اموزشی
                     و همچنین اشنایی جامعه با فضای کسب و کار در فضای
                     مجازی ایجاد شده و امید داریم بتوانیم با راهکار های نوین فرصتی برای افراد خواهان پیشرفت فراهم کنیم
                 </div>
 
-                <div className=" w-32 h-14 absolute top-[30rem] left-[46rem]
+                <div className=" w-32 h-14 absolute top-[30rem] left-[52rem]
                  bg-slate-100 text-center leading-[3.2rem] text-sm rounded-md hover:bg-[#004458] 
                  cursor-pointer hover:text-white ">
                     مشاهده دوره ها
