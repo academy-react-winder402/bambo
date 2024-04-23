@@ -1,6 +1,6 @@
 import React from "react";
 import { FormRight } from "./FormRight";
-import {FormRegister} from "./RegisterLeft"
+import {FormRegister} from "./registerleft/RegisterLeft"
 const Registerc= () => {
     return(
         
