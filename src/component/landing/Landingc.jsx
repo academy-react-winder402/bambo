@@ -1,10 +1,12 @@
 import React from "react";
-import { Content } from "./content/Content";
+import { Box1 } from "./box1/Box1";
 
 const Landingc = () => {
     return (
-       <Content />
-        
+        <div>
+            <Box1 />
+        </div>
+
     );
 };
 
