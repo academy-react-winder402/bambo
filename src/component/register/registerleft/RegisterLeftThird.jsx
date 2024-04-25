@@ -12,13 +12,13 @@ const RegisterLeftThird= () => {
 
                     </div>
                     <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[480px] text-[20px]"> پسورد</label>
-                        <Field type="password" name="phonenamber" placeholder="پسورد"  className="w-[400px] h-[60px] rounded-[10px] ml-[150px]" />
+                        <label className="ml-[480px] text-[20px]">رمز عبور</label>
+                        <Field type="password" name="phonenamber" placeholder="رمز عبور"  className="w-[400px] h-[60px] rounded-[10px] ml-[150px]" />
 
                     </div>
                     <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[440px] text-[20px]">تکرار پسورد</label>
-                        <Field type="password" name="phonenamber" placeholder="تکرار پسورد" className="w-[400px] h-[60px] rounded-[10px] ml-[150px]" />
+                        <label className="ml-[440px] text-[20px]">تکرار رمز عبور </label>
+                        <Field type="password" name="phonenamber" placeholder="تکرار رمز عبور" className="w-[400px] h-[60px] rounded-[10px] ml-[150px]" />
 
                     </div>
                 </Form>

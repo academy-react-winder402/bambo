@@ -5,7 +5,7 @@ import tele from "./../../assets/img/tele.jpg"
 import whats from "./../../assets/img/whats.png"
 import yout from "./../../assets/img/yout.jpg"
 
-const FormRight= () => {
+const RegisterRight= () => {
     return(
         <div className=" w-[550px] h-[650px] relative rounded-r-xl" >
   <img src={Logoregister} className="w-[550px]  h-[650px] rounded-r-xl"></img>
@@ -24,4 +24,4 @@ const FormRight= () => {
     );
 };
 
-export {FormRight};
+export { RegisterRight};
