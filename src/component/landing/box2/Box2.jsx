@@ -20,7 +20,8 @@ const Box2 = () => {
                            <div className=" h-14 w-32 text-white text-4xl text-end"> دوره ها </div>
                            <div className=" h-14 w-24 text-white text-4xl text-center"> 219 </div>
                         </div>
-                        <div className=" h-20 w-[18rem] m-auto mt-3 text-white text-center text-sm "> تا کنون بیش از ۲۰۰ دوره از دسته بندی های متفاوت در سایت ثبت شده و قابل دسترسی است </div>
+                        <div className=" h-20 w-[18rem] m-auto mt-3 text-white text-center text-sm "> تا کنون بیش از ۲۰۰ دوره از دسته بندی
+                         های متفاوت در سایت ثبت شده و قابل دسترسی است </div>
                     </div>
 
 
@@ -36,7 +37,8 @@ const Box2 = () => {
                            <div className=" h-14 w-32 text-white text-4xl text-end"> استاد </div>
                            <div className=" h-14 w-24 text-white text-4xl text-center"> 34 </div>
                         </div>
-                        <div className=" h-20 w-[19rem] m-auto mt-3 text-white text-center text-sm "> بیش از ۳۰ استاد از بهترین اساتید ایران همراه ما هستن و دوره های خودشون و ثبت کردن </div>
+                        <div className=" h-20 w-[19rem] m-auto mt-3 text-white text-center text-sm "> بیش از ۳۰ استاد از بهترین اساتید 
+                        ایران همراه ما هستن و دوره های خودشون و ثبت کردن </div>
                     </div>
 
 
@@ -52,7 +54,9 @@ const Box2 = () => {
                            <div className=" h-14 w-32 text-white text-4xl text-end"> دانشجو </div>
                            <div className=" h-14 w-24 text-white text-4xl text-center"> 576 </div>
                         </div>
-                        <div className=" h-20 w-[19rem] m-auto mt-3 text-white text-center text-sm "> تا کنون بیش از ۵۰۰ نفر از اموزش های بامبو استفاده کرده اند و نظرات خودشونو ثبت کرده اند </div>
+                        <div className=" h-20 w-[19rem] m-auto mt-3 text-white text-center text-sm "> تا کنون بیش از ۵۰۰ نفر
+                         از اموزش های بامبو استفاده کرده اند 
+                        و نظرات خودشونو ثبت کرده اند </div>
                     </div>
                 </div>
             </div>
