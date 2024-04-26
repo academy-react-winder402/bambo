@@ -5,7 +5,7 @@ import box4img1 from '../../../assets/img/box4.1.png';
 
 const Box4 = () => {
     return (
-        <div className=" h-[40rem] w-[70rem] m-auto">
+        <div className=" h-[39rem] w-[70rem] m-auto">
 
 
             <div className=" h-[13rem] bg-[#004458] flex gap-36 relativ">
