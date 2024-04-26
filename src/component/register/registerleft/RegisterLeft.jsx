@@ -6,6 +6,7 @@ import { RegisterLeftThird } from "./RegisterLeftThird";
 const FormRegister =() =>{
 
     const [page,setPage]=useState(0);
+    
     const PageDisplay =()=>{
         if (page == 0){
 return <RegisterLeftFirst/>;

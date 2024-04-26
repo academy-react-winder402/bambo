@@ -10,6 +10,11 @@ const FormLogin = () => {
                 navigator("/register")
             );
     }
+    const gotoforgotpass =() => {
+        return (
+            navigator("/ForgotPass")
+        );
+    }
     return (
 
 
@@ -33,7 +38,7 @@ const FormLogin = () => {
                 </Formik>
             </div>
             <div className="h-[75px]  flex flex-row ">
-                <div className=" w-[300px] indent-[70px] leading-[45px] cursor-pointer">فراموشی رمز</div>
+                <div className=" w-[300px] indent-[70px] leading-[45px] cursor-pointer" onClick={ gotoforgotpass}>فراموشی رمز</div>
                 <div className=" w-[300px] flex flex-row-reverse">
                     <div className=" indent-[10px] leading-[45px] w-[150px] mr-[50px]  cursor-pointer">مرا به خاطر بسپار</div>
                     <div className="w-[20px] h-[20px]  mt-[14px]"
