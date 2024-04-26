@@ -31,7 +31,7 @@ const Box4 = () => {
 
 
             <div className=" h-[13rem] bg-[#004458] flex gap-36">
-                <img src={box4img3} className="h-[13rem] w-[27rem]" />
+                <img src={box4img3} className=" h-[13rem] w-[27rem]" />
                 <div className="  h-[13rem] w-[25rem]">
                     <span className="block text-3xl mt-14 text-right text-white"> همکاری در اموزش </span>
                     <span className="block text-xl mt-3 text-right text-[#D1D1D1]"> به اساتید اموزشی ما در بامبو بپیوندبد  </span>

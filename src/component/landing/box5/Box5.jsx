@@ -8,15 +8,18 @@ const Box5 = () => {
     return (
         <div className=" h-[40rem] w-[70rem] m-auto bg-white flex justify-between">
             <div className=" h-[23rem] w-[26rem] mt-[10rem] ml-16">
-                <div className="border border-solid border-[#09B28B] h-[17rem] w-[26rem]">
+                <div className="border border-solid border-[#09B28B] h-[17rem] w-[26rem] relative">
                     <img src={new1} className="h-[17rem] w-[26rem]" />
-                </div>
-                <div className="border border-solid border-[#09B28B] h-[3.5rem] w-[20rem] m-auto flex justify-between">
-                    <div className="border border-solid border-[#09B28B] h-10 w-10 ml-5 mt-1.5">
-                    <img src={left} className="h-10 w-10" />
+                    <div className="h-16 w-full absolute top-[13rem] bg-[#004358b8] text-white text-center leading-[3.5rem]"> 
+                        مقایسه ریکت با فریمورک های جدید جاوا اسکرییپت
                     </div>
-                    <div className="border border-solid border-[#09B28B] h-10 w-10 mr-5 mt-1.5 ">
-                        <img src={left} className="h-10 w-10" />
+                </div>
+                <div className="border-2 border-solid border-[#09B28B] h-[3rem] w-[20rem] m-auto flex justify-between">
+                    <div className=" h-5 w-5 ml-5 mt-4">
+                    <img src={left} className="h-5 w-5" />
+                    </div>
+                    <div className=" h-4.5 w-2.5 mr-5 mt-4 ">
+                        <img src={right} className="h-4.5 w-2.5" />
                     </div>
 
                 </div>
