@@ -3,8 +3,8 @@ import React from "react";
 
 const Box3 = () => {
     return (
-        <div className=" h-[45rem] flex">
-            <div className="border border-solid border-[#D1D1D1] h-[30rem] w-[35rem] relative">
+        <div className=" h-[40rem] flex bg-white w-[70rem] m-auto">
+            <div className="border border-solid border-[#D1D1D1] h-[30rem] w-[30rem] relative">
                 <div className=" h-[5rem] w-[25rem] m-auto mt-[9rem] text-4xl text-right">
                     دوره های اموزشی
                 </div>
@@ -17,8 +17,8 @@ const Box3 = () => {
                     مشاهده دوره ها
                 </div>
             </div>
-            <div className=" h-[45rem] w-[56rem]">
-                <div className="border border-solid border-[#09B28B] h-[25rem] w-96 m-auto mt-32 relative">
+            <div className="  h-[33rem] w-[35rem] mt-20 ml-20 ">
+                <div className="border border-solid border-[#09B28B] h-[25rem] w-96 m-auto  relative">
                     <div className=" h-[18rem] w-56 absolute top-[-1rem] left-[-7rem] bg-[#F7DF1E]">
                         <div className=" h-32 text-8xl text-center font-bold mt-12"> JS </div>
                         <div className=" h-14 text-xl text-center"> دوره جاوا اسکریپت </div>
