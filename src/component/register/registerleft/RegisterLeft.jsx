@@ -10,7 +10,7 @@ const FormRegister =() =>{
         if (page == 0){
 return <RegisterLeftFirst/>;
         }
-else if(page == 1){
+else if(page !== 0){
 return <RegisterLeftSecend/>;
 }
 else {
@@ -24,13 +24,13 @@ else {
 <div className="h-[450px] border-solid border-[transparent] border-[1px] ">{PageDisplay ()}</div>
 <div className="h-[100px]">
     <button className="h-[60px] w-[90px] bg-[#edeaea]  my-[5px] ml-[60px]  rounded-xl hover:bg-[#004458] hover:text-[#ffff]"
-    disabled={page == 0}
+    // disabled={page == 0}
     onClick={() => {
         setPage((currPage) => {currPage - 1});
     }}
     >Prev</button>
     <button  className="h-[60px] w-[90px] bg-[#edeaea] my-[5px] ml-[5px] rounded-xl hover:bg-[#004458] hover:text-[#ffff]" 
-      disabled={page == 2}
+    //   disabled={page == 2}
     onClick={() => {
         setPage((currPage) => {currPage + 1});
     }}>Next</button>
