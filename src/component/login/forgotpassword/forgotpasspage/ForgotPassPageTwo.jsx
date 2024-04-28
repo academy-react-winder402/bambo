@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-const RegisterLeftSecend= ({formData, setFormData}) => {
+const ForgotPassPageTwo= () => {
     return(
         
              <div >
@@ -8,10 +8,7 @@ const RegisterLeftSecend= ({formData, setFormData}) => {
                 <Form>
                     <div className="h-[300px] mt-[100px] flex flex-col gap-[30px] ">
                         <label className="ml-[400px] text-[20px]">کد موقت</label>
-                        <Field name="code" placeholder="کد موقت" className="w-[400px] h-[60px] rounded-[10px] ml-[150px]"
-                           value={formData.code}
-                           onChange ={(event) => setFormData({...formData,code:event.target.value})}
-                         />
+                        <Field name="code" placeholder="کد موقت" className="w-[400px] h-[60px] rounded-[10px] ml-[150px]" />
 
                     </div>
                 </Form>
@@ -22,4 +19,4 @@ const RegisterLeftSecend= ({formData, setFormData}) => {
     );
 };
 
-export {RegisterLeftSecend};
+export {ForgotPassPageTwo};
