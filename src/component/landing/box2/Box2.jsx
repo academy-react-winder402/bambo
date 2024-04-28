@@ -1,8 +1,8 @@
 import React from "react";
 import '../box1/Box1.modular.css';
-import icon1 from '../../../assets/img/icon1.png';
-import icon2 from '../../../assets/img/icon2.png';
-import icon3 from '../../../assets/img/icon3.png';
+import icon1 from '../../../assets/img/landing/icon1.png';
+import icon2 from '../../../assets/img/landing/icon2.png';
+import icon3 from '../../../assets/img/landing/icon3.png';
 
 const Box2 = () => {
     return (

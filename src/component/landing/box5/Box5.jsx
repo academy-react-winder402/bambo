@@ -1,12 +1,12 @@
 import React from "react";
-import new1 from '../../../assets/img/new1.png';
-import left from '../../../assets/img/left.png';
-import right from '../../../assets/img/right.png';
+import new1 from '../../../assets/img/landing/new1.png';
+import left from '../../../assets/img/landing/left.png';
+import right from '../../../assets/img/landing/right.png';
 
 
 const Box5 = () => {
     return (
-        <div className=" h-[40rem] w-[70rem] m-auto bg-white flex justify-between">
+        <div className=" h-[40rem] w-[70rem] m-auto bg-[#f4f3f3] flex justify-between">
             <div className=" h-[23rem] w-[26rem] mt-[10rem] ml-16">
                 <div className="border border-solid border-[#09B28B] h-[17rem] w-[26rem] relative">
                     <img src={new1} className="h-[17rem] w-[26rem]" />
