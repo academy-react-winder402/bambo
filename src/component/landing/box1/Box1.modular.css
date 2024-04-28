@@ -1,9 +1,9 @@
 .back{
-    background: url(../../../assets/img/back1.png) no-repeat 50% 50%;
+    background: url(../../../assets/img/landing/back1.png) no-repeat 50% 50%;
     background-size: cover;
 }
 
 .back2{
-    background: url(../../../assets/img/Backgroundbox.png) no-repeat 50% 50%;
+    background: url(../../../assets/img/landing/Backgroundbox.png) no-repeat 50% 50%;
     background-size: cover;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import box6back from '../../../assets/img/box6back.png'
+import box6back from '../../../assets/img/landing/box6back.png'
 const Box6 = () => {
     return(
         <div className=" h-[25rem] w-[70rem] m-auto flex">  

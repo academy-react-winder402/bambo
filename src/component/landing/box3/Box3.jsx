@@ -3,7 +3,7 @@ import React from "react";
 
 const Box3 = () => {
     return (
-        <div className=" h-[40rem] flex bg-white w-[70rem] m-auto">
+        <div className=" h-[40rem] flex bg-[#f4f3f3] w-[70rem] m-auto">
             <div className="border border-solid border-[#D1D1D1] h-[30rem] w-[30rem] relative">
                 <div className=" h-[5rem] w-[25rem] m-auto mt-[9rem] text-4xl text-right">
                     دوره های اموزشی

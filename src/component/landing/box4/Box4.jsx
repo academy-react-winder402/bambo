@@ -1,7 +1,7 @@
 import React from "react";
-import box4img3 from '../../../assets/img/box4.3.png';
-import box4img2 from '../../../assets/img/Box4.2.png';
-import box4img1 from '../../../assets/img/box4.1.png';
+import box4img3 from '../../../assets/img/landing/box4.3.png';
+import box4img2 from '../../../assets/img/landing/Box4.2.png';
+import box4img1 from '../../../assets/img/landing/box4.1.png';
 
 const Box4 = () => {
     return (
