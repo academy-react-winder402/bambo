@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 const ForgotPassPageOne =()=>{
     return(
-        <div >
+        <div>
         <Formik>
             <Form>
                 <div className="h-[300px] mt-[100px] flex flex-col gap-[30px] ">

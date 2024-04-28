@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import square from "../.././assets/img/square.png"
-import tick from "../.././assets/img/tick.png"
+import square from "../../../assets/img/square.png"
+import home from "../../../assets/img/home.png"
 import { Link, useNavigate } from 'react-router-dom'
 const FormLogin = () => {
     const navigator = useNavigate();
@@ -20,7 +20,12 @@ const FormLogin = () => {
 
 
         <div className="bg-[#f5f2f2] w-[600px] h-[650px] rounded-l-xl">
-            <div className="h-[100px]  text-[30px] text-black leading-[45px] py-[50px] indent-[420px] mt-[50px]">ورود کاربر</div>
+            <div className="h-[100px]  mt-[50px] flex flex-row">
+            <div className="w-[40px] h-[40px] ml-[60px]">
+                <img src={home} className="w-[40px] h-[40px]"></img>
+            </div>
+            <div className="w-[450px]  text-[30px] text-black leading-[25px] py-[50px] text-right">ورود کاربر</div>
+            </div>
             <div className="h-[260px] border-solid border-[transparent] border-[1px]  ">
                 <Formik>
                     <Form>
