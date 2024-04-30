@@ -1,9 +1,17 @@
 import React from "react";
+import { Headersection } from "./headersection/Headersection";
+import { Menusection } from "./menusection/Menusection";
+import {Centersection} from './centersection/Centersection';
 
 const Coursesc = () => {
-    return(
-        <div> Courses </div>
+    return (
+        <>
+            <Headersection />
+            <Menusection />
+            <Centersection />
+        </>
+
     );
 };
 
-export {Coursesc};
+export { Coursesc };

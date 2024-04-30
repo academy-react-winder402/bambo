@@ -1,7 +1,7 @@
 import React from "react";
 import './Box1.modular.css';
 import { Header } from '../../common/Header';
-import { Boxsearch } from "../boxsearch/Boxsearch";
+import { Boxsearch } from "../../common/boxsearch/Boxsearch";
 
 const Box1 = () => {
     return (
