@@ -1,6 +1,7 @@
 import React from "react";
 import { ArticleContentLeft } from "./articlecontentmain/ArticleContentLeft";
 import { ArticleContentRight } from "./articlecontentmain/ArticleContentRight";
+import {ArticleContentBottom} from "./articlecontentbottom/ArticleContentBottom";
 
 const ArticleContent = () => {
     return (
@@ -10,7 +11,9 @@ const ArticleContent = () => {
                 <ArticleContentLeft />
                 <ArticleContentRight />
             </div>
-            <div className="h-[160px] border-solid border-[1px] border-[orange]"></div>
+            <div className="h-[160px] border-solid border-[1px] border-[orange]">
+                <ArticleContentBottom />
+            </div>
         </div>
 
     );
