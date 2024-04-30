@@ -7,7 +7,7 @@ const Articlesc = () => {
         <div className="w-[1536px] h-[2648px] border-solid border-[1px] border-black">
             <Header/>
             <ArticleContent/>
-            <Footer/>
+       
         </div>
     );
 };
