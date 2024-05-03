@@ -6,6 +6,8 @@ import { Register } from "../screen/register/Register.jsx";
 import { ForgotPass } from "../screen/forgotpass/ForgotPass.jsx";
 import { Articles } from '../screen/articles/Articles.jsx';
 import { Courses } from '../screen/courses/Courses.jsx';
+import { CourseDetail } from "../screen/CourseDetail/CourseDetail.jsx";
+import { ArticleDetail } from "../screen/ArticleDetail/ArticleDetail.jsx";
 
 
 const Router = createBrowserRouter([
@@ -15,6 +17,8 @@ const Router = createBrowserRouter([
   { path: '/ForgotPass', element: <ForgotPass /> },
   { path: '/articles', element: <Articles /> },
   { path: '/courses', element: <Courses /> },
+  { path: '/courseDetail', element: <CourseDetail /> },
+  { path: '/ArticleDetail', element: <ArticleDetail /> },
 
 ])
 
