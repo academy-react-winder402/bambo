@@ -4,7 +4,7 @@ import { Header } from "../../common/Header";
 const DetailHeaderTop = () => {
     return(
 
-    <div className="h-[100px] w-[1350px]  m-auto">
+    <div className="h-[80px] w-[1350px]  m-auto">
 <Header/>
     </div>
 

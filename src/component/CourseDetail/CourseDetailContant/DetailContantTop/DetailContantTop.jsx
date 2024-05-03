@@ -4,7 +4,7 @@ import { ContantTopRight } from "./ContantTopRight";
 
 const DetailContantTop = () => {
     return(
-<div className="h-[730px]  flex flex-row justify-around">
+<div className="h-[600px]  flex flex-row justify-around">
    <ContantTopLeft/>
    <ContantTopRight/> 
   

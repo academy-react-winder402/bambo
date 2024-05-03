@@ -3,21 +3,21 @@ import React from "react";
 
 const ContantTopLeft = () => {
     return(
-<div className="h-[500px] w-[450px] mt-[100px] bg-[#F9F9F9]">
- <div className="h-[110px] w-[400px] border-b-solid border-b-black border-b-[1px] m-auto text-[30px] text-right text-[#004458] leading-[100px]" >
+<div className="h-[450px] w-[400px] mt-[100px] bg-[#F9F9F9]">
+ <div className="h-[60px] w-[400px] border-b-solid border-b-black border-b-[1px] m-auto text-[26px] text-right text-[#004458] leading-[50px]" >
     دوره جاوا اسکریپت
     <img ></img>
     </div>   
-    <div className="h-[47px] text-[28px] text-[#004458] flex flex-row-reverse gap-[100px] mt-[20px]">
+    <div className="h-[40px] text-[20px] text-[#004458] flex flex-row-reverse gap-[100px] mt-[15px]">
         <div className="mr-[30px]"> :قیمت دوره</div>
         <div >200هزارتومان</div>
     </div>
 
-    <div className="h-[47px] text-[28px] text-[#004458] flex flex-row-reverse gap-[260px] mt-[20px]">
+    <div className="h-[40px] text-[20px] text-[#004458] flex flex-row-reverse gap-[220px] mt-[15px]">
     <div className="mr-[30px]">تخفیف</div>
     <div className="text-[red]">10٪</div>
 </div>
-<div className="h-[47px] text-[28px] text-[#004458] flex flex-row-reverse gap-[30px] mt-[20px]">
+<div className="h-[40px] text-[20px] text-[#004458] flex flex-row-reverse gap-[20px] mt-[15px]">
     <div className="mr-[30px]">:مبلغ قابل پرداخت</div>
     <div className="text-[#09B28B]">180000تومان</div>
 </div>
