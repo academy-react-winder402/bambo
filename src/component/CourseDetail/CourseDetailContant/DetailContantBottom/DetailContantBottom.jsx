@@ -1,17 +1,40 @@
 import React from "react";
-
+import box1 from "../../../../assets/img/coursedetail/box1.jpg"
+import box2 from "../../../../assets/img/coursedetail/box2.jpg"
+import box3 from "../../../../assets/img/coursedetail/box3.jpg"
 
 const DetailContantBottom = () => {
-    return(
-<div className="h-[600px] border-solid border-[red] border-[1px] flex flex-row-reverse">
-    <div className="w-[600px]
-     border-solid border-[green] border-[1px]
-      bg-[url('assets/img/coursedetail/bottomdetail.jpg')] bg-cover"></div>
-    <div className="w-[950px] bg-[#F9F9F9] direction">
-        <div className="w-[400px] h-[80px] text-[50px] text-[#004458] text-right">مزایای این دوره</div>
-    </div>
-</div>
+    return (
+        <div className="h-[700px] flex flex-row-reverse">
+            <div className="w-[600px] bg-[url('assets/img/coursedetail/bottomdetail.jpg')] bg-cover"></div>
+            <div className="w-[950px] bg-[#F9F9F9]">
+                <div className="w-[400px] h-[80px] text-[50px] text-[#004458] text-right ml-[500px] mt-[20px]">:مزایای این دوره</div>
+                <div className="flex flex-col  text-[#004458] text-right">
+                    <div className="flex flex-row gap-[15px] text-[30px] ml-[320px] mt-[50px]">
+                        <span>آشنایی با زبان برنامه نویسی جاوا اسکریپت </span>
+                        <img src={box1} className="w-[50px] h-[50px]"></img>
+                    </div>
+                    <span className="pr-[40px] pl-[40px] pt-[20px]">.در پایان این دوره ی آموزشی شما دانشجوی گرامی ُقادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود و به راحتی تسک های مربوط را انجام خواهی داد</span>
+                </div>
+
+                <div className="flex flex-col  text-[#004458] text-right">
+                    <div className="flex flex-row gap-[15px] text-[30px] ml-[320px] mt-[50px]">
+                        <span>آشنایی با زبان برنامه نویسی جاوا اسکریپت </span>
+                        <img src={box2} className="w-[50px] h-[50px]"></img>
+                    </div>
+                    <span className="pr-[40px] pl-[40px] pt-[20px]">.در پایان این دوره ی آموزشی شما دانشجوی گرامی ُقادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود و به راحتی تسک های مربوط را انجام خواهی داد</span>
+                </div>
+                
+                <div className="flex flex-col  text-[#004458] text-right">
+                    <div className="flex flex-row gap-[15px] text-[30px] ml-[320px] mt-[50px]">
+                        <span>آشنایی با زبان برنامه نویسی جاوا اسکریپت </span>
+                        <img src={box3} className="w-[50px] h-[50px]"></img>
+                    </div>
+                    <span className="pr-[40px] pl-[40px] pt-[20px]">.در پایان این دوره ی آموزشی شما دانشجوی گرامی ُقادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود و به راحتی تسک های مربوط را انجام خواهی داد</span>
+                </div>
+            </div>
+        </div>
     );
 };
 
-export {DetailContantBottom  };
+export { DetailContantBottom };
