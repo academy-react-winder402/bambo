@@ -3,7 +3,7 @@ import React from "react";
 
 const Filter = () => {
     return (
-        <ul className="border border-solid border-[#D1D1D1]  w-[22rem] mr-5">
+        <ul className="border border-solid border-[#D1D1D1]  w-[15rem] mr-4">
 
             <li className=" border-b border-solid border-[#D1D1D1] flex justify-between">
                 <input type="checkbox" id="prices" name="prices" className=" peer hidden" />
@@ -50,32 +50,28 @@ const Filter = () => {
             </li>
 
             <ul className=" ">
-                <li className=" h-[3rem] w-[7rem] flex justify-between float-end ">
+                <li className=" border border-solid border-[#D1D1D1] h-[3rem] w-[5rem]  mt-[0.5rem] 
+                mr-[0.5rem]  float-end hover:bg-[#004458] hover:cursor-pointer">
                     <input id="all" type="checkbox" name="all" className=" peer hidden" />
-                    <label for="all" className="block border border-solid border-[#D1D1D1] h-[1.3rem] w-[1.3rem] rounded-lg ml-[2rem] mt-[0.7rem] 
-                    peer-checked:bg-[#004458]">  </label>
-                    <label for="all" className="text-lg text-right block mr-4 mt-[0.3rem]"> همه </label>
+                    <label for="all" className=" text-lg ml-[1.5rem] block mr-4 mt-[0.3rem] rounded-lg hover:cursor-pointer"> همه </label>
                 </li>
 
-                <li  className=" h-[3rem] w-[12rem] flex justify-between float-end">
-                    <input id="jadid" type="checkbox" name="jadid" className="peer hidden" />
-                    <label for="jadid" className="block border border-solid border-[#D1D1D1] h-[1.5rem] w-[1.5rem] rounded-lg ml-[2.5rem] mt-[0.7rem] 
-                    peer-checked:bg-[#004458]">  </label>
-                    <label for="jadid" className="text-lg text-right block mr-4 mt-[0.3rem]"> جدید ترین ها </label>
+                <li className=" border border-solid border-[#D1D1D1] h-[3rem] w-[8rem]  mt-[0.5rem] 
+                mr-[0.5rem]  float-end hover:bg-[#004458] hover:cursor-pointer">
+                    <input id="all" type="checkbox" name="all" className=" peer hidden" />
+                    <label for="all" className=" text-lg ml-[1rem] block mr-4 mt-[0.3rem] rounded-lg hover:cursor-pointer"> جدید ترین ها </label>
                 </li>
                 
-                <li  className=" h-[3rem] w-[12rem] flex justify-between float-end">
-                    <input id="mahbob" type="checkbox" name="mahbob" className="peer hidden" />
-                    <label for="mahbob" className="block border border-solid border-[#D1D1D1] h-[1.5rem] w-[1.5rem] rounded-lg ml-[1.5rem] mt-[0.7rem] 
-                    peer-checked:bg-[#004458]">  </label>
-                    <label for="mahbob" className="text-lg text-right block mr-4 mt-[0.3rem]"> محبوب ترین ها </label>
+                <li className=" border border-solid border-[#D1D1D1] h-[3rem] w-[9rem]  mt-[0.5rem] 
+                mr-[0.5rem]  float-end hover:bg-[#004458] hover:cursor-pointer">
+                    <input id="all" type="checkbox" name="all" className=" peer hidden" />
+                    <label for="all" className=" text-lg ml-[1rem] block mr-2 mt-[0.3rem] rounded-lg hover:cursor-pointer"> محبوب ترین ها </label>
                 </li>
                 
-                <li  className=" h-[3rem] w-[8rem] flex justify-between float-end">
-                    <input id="free" type="checkbox" name="free" className="peer hidden" />
-                    <label for="free" className="block border border-solid border-[#D1D1D1] h-[1.5rem] w-[1.5rem] rounded-lg ml-[2rem] mt-[0.7rem] 
-                    peer-checked:bg-[#004458]">  </label>
-                    <label for="free" className="text-lg text-right block mr-4 mt-[0.3rem]"> رایگان </label>
+                <li className=" border border-solid border-[#D1D1D1] h-[3rem] w-[4rem]  mt-[0.5rem] 
+                mr-[0.5rem]  float-end hover:bg-[#004458] hover:cursor-pointer">
+                    <input id="all" type="checkbox" name="all" className=" peer hidden" />
+                    <label for="all" className=" text-lg ml-[0.5rem] block mr-4 mt-[0.3rem] rounded-lg hover:cursor-pointer"> رایگان </label>
                 </li>
             </ul>
 
