@@ -14,9 +14,17 @@ const Centersection = () => {
         { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
         { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
         { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
     ]);
 
-    const [itemspage, setitemspage] = useState(4);
+    const [itemspage, setitemspage] = useState(8);
     const [currentpage, setcurrentpage] = useState(0);
 
 
@@ -52,7 +60,7 @@ const Centersection = () => {
 
             
 
-            <div className=" w-[70.3rem] ml-[2rem]  flex flex-wrap ">
+            <div className=" w-[70.3rem] ml-[4rem]  flex flex-wrap ">
 
                 {visibleitem.map((item, index) => {
                     return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} />);
@@ -61,12 +69,12 @@ const Centersection = () => {
                 <div className="  h-[2rem] flex gap-2 m-auto mb-[2rem] w-full justify-center">
                     
                     <div onClick={prevpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458] 
-    hover:cursor-pointer hover:text-white "> prev </div>
+                                hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> prev </div>
                     <p> {pages.map(page => <span key={page} onClick={() => setcurrentpage(page)}
                         className="border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458]
-         hover:cursor-pointer hover:text-white "> {`${page}`} </span>)} </p>
+                                hover:cursor-pointer hover:text-white bg-[#fff]"> {`${page}`} </span>)} </p>
                     <div onClick={nextpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458]
-     hover:cursor-pointer hover:text-white"> next </div>
+                                hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> next </div>
                 </div>
 
             </div>
