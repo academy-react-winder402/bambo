@@ -2,7 +2,6 @@ import React from "react";
 
 
 const Top = ({img,bg}) => {
-    console.log({img});
     return (
         <div className={`h-[15rem] rounded-t-lg bg-[${bg}]`} >  
         

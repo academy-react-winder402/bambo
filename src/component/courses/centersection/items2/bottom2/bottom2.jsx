@@ -1,16 +1,14 @@
 import React from "react";
 
-
-const Bottom = ({ title, modares, zarfiat, price }) => {
+const Bottom2 = ({title,modares,zarfiat,price}) => {
     return (
-        <div className=" pb-[1rem] bg-[#fff] rounded-b-lg">
-            <div className=" h-[3rem] text-lg text-right mr-[0.5rem] leading-10 "> {title} </div>
-            <div className=" h-[2rem] text-right mr-[0.5rem] text-sm "> {modares} </div>
+        <div className=" bg-[#fff] h-[14rem] w-[24rem] float-right pl-[2rem] rounded-l-lg">
+            <div className=" h-[3rem] text-lg text-right mr-[0.5rem] leading-10 "> {title}</div>
+            <div className=" h-[2rem] text-right mr-[0.5rem] text-sm "> استاد : {modares} </div>
             <div className=" flex justify-between ml-[0.5rem] mr-[0.5rem]">
                 <div className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer"> جزئیات </div>
                 <h1 className="h-[2rem] text-right text-sm"> ظرفیت : {zarfiat} نفر </h1>
             </div>
-
 
             <div className=" h-[1.5rem]  mt-[0.5rem] flex justify-end ">
                 <div className=" h-[1.5rem] w-[4rem] mt-[0.3rem] flex justify-between">
@@ -26,17 +24,17 @@ const Bottom = ({ title, modares, zarfiat, price }) => {
                 </div>
             </div>
 
-
             <div className="border border-solid border-[#004458] mt-[0.5rem] ml-[0.5rem] mr-[0.5rem]"> </div>
             <div className=" h-[2rem] mt-[0.5rem] flex gap-1 ml-[0.5rem] text-[#09B28B]">
                 <h2 className=""> تومان </h2>
                 <h2 className=""> {price} </h2>
+                <div className=" h-[3rem] w-[7rem]  ml-[7rem] bg-[#DBDBDB]
+     text-center leading-10 rounded-md hover:cursor-pointer text-black"> مشاهده دوره </div>
+        </div>
             </div>
 
-            <div className=" h-[3rem] w-[7rem] mt-[1rem] m-auto  bg-[#DBDBDB]
-             text-center leading-10 rounded-md hover:cursor-pointer"> مشاهده دوره </div>
-        </div>
+
     );
 };
 
-export { Bottom };
+export { Bottom2 };

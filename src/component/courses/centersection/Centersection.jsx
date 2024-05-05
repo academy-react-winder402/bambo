@@ -9,30 +9,31 @@ import { Item2 } from "./items2/items2";
 const Centersection = () => {
 
     const [Itemlist, setItemlist] = useState([
-        { im: paython, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        {},
+        { im: paython, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: " " },
         { im: js, title: "دوره سی شارپ", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "#6BDBB9" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "red-500" },
     ]);
 
-    const [itemspage, setitemspage] = useState(2);
-    const [currentpage, setcurrentpage] = useState(0);
+    const [itemspage, setitemspage] = useState(8);
+    const [currentpage, setcurrentpage] = useState(1);
 
 
     const numoftotalpages = Math.ceil(Itemlist.length / itemspage);
-    const pages = [...Array(numoftotalpages + 1).keys()].slice(0);
+    const pages = [...Array(numoftotalpages + 1).keys()].slice(1);
 
 
 
@@ -56,27 +57,11 @@ const Centersection = () => {
         };
     };
 
+const [page, setpage] = useState(1);
 
-    const [soton, setsoton] = useState(0);
-
-
-    const PageDisplay = () => {
-        if (soton === 0) {
-
-            {                visibleitem.map((item, index) => {
-                return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} bg={item.bg} />);
-            })}
-        }
-
-
-        else if (soton === 1) {
-            {
-                visibleitem.map((item, index) => {
-                    return (<Item2 key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} bg={item.bg} />);
-                })
-            }
-        }
-    };
+const updatetab = (id) => {
+        setpage(id);
+};
 
 
     return (
@@ -88,19 +73,34 @@ const Centersection = () => {
 
                 <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
                     <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)]
-     bg-no-repeat bg-cover hover:cursor-pointer focus:bg-[#fff]"> </div>
+     bg-no-repeat bg-cover hover:cursor-pointer" onClick={() => updatetab(2)}> </div>
                     <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listofoghi.png)] 
-    bg-no-repeat bg-cover hover:cursor-pointer" > </div>
+    bg-no-repeat bg-cover hover:cursor-pointer" onClick={() => updatetab(1)}> </div>
                 </div>
                 <h1 className="text-4xl inline-block mr-[4.5rem] mt-[1.5rem]"> دوره های آموزشی </h1>
 
             </div>
 
-            <div className="mt-[1.2rem] flex justify-between">
+            <div className="  mt-[1.2rem] flex justify-between">
 
-                <div className="  w-[70.3rem] ml-[4rem]  flex flex-wrap ">
+                <div className=" w-[74rem] ml-[2rem] ">
 
 
+                    <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
+                        {
+                            visibleitem.map((item, index) => {
+                                return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} bg={item.bg} />);
+                            })
+                        }
+                    </div>
+
+                    <div className={page === 2 ? "flex flex-wrap" : "hidden"}>
+                        {
+                            visibleitem.map((item, index) => {
+                                return (<Item2 key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} bg={item.bg} />);
+                            })
+                        }
+                    </div>
 
                     <div className="  h-[2rem] flex gap-2 m-auto mb-[2rem] w-full justify-center">
 
