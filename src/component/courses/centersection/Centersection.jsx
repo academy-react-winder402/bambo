@@ -2,34 +2,37 @@ import React, { useState } from "react";
 import { Item } from "./items/Item";
 import js from "../../../assets/img/courses/js.png";
 import { Filter } from "./filter/Filter";
+import paython from '../../../assets/img/courses/paython.png';
+import { Item2 } from "./items2/items2";
+
 
 const Centersection = () => {
 
     const [Itemlist, setItemlist] = useState([
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره سی شارپ", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
+        { im: paython, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره سی شارپ", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "#6BDBB9" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
+        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000", bg: "re-500" },
     ]);
 
-    const [itemspage, setitemspage] = useState(8);
+    const [itemspage, setitemspage] = useState(2);
     const [currentpage, setcurrentpage] = useState(0);
 
 
     const numoftotalpages = Math.ceil(Itemlist.length / itemspage);
-    const pages = [...Array(numoftotalpages + 1).keys()].slice(1);
+    const pages = [...Array(numoftotalpages + 1).keys()].slice(0);
 
 
 
@@ -54,33 +57,70 @@ const Centersection = () => {
     };
 
 
+    const [soton, setsoton] = useState(0);
+
+
+    const PageDisplay = () => {
+        if (soton === 0) {
+
+            {                visibleitem.map((item, index) => {
+                return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} bg={item.bg} />);
+            })}
+        }
+
+
+        else if (soton === 1) {
+            {
+                visibleitem.map((item, index) => {
+                    return (<Item2 key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} bg={item.bg} />);
+                })
+            }
+        }
+    };
+
+
     return (
 
-        <div className="mt-[1.2rem] flex justify-between">
 
-            
 
-            <div className=" w-[70.3rem] ml-[4rem]  flex flex-wrap ">
+        <>
+            <div className="h-[6rem] w-full flex justify-between">
 
-                {visibleitem.map((item, index) => {
-                    return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} />);
-                })}
-
-                <div className="  h-[2rem] flex gap-2 m-auto mb-[2rem] w-full justify-center">
-                    
-                    <div onClick={prevpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458] 
-                                hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> prev </div>
-                    <p> {pages.map(page => <span key={page} onClick={() => setcurrentpage(page)}
-                        className="border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458]
-                                hover:cursor-pointer hover:text-white bg-[#fff]"> {`${page}`} </span>)} </p>
-                    <div onClick={nextpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458]
-                                hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> next </div>
+                <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
+                    <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)]
+     bg-no-repeat bg-cover hover:cursor-pointer focus:bg-[#fff]"> </div>
+                    <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listofoghi.png)] 
+    bg-no-repeat bg-cover hover:cursor-pointer" > </div>
                 </div>
+                <h1 className="text-4xl inline-block mr-[4.5rem] mt-[1.5rem]"> دوره های آموزشی </h1>
 
             </div>
 
-            <Filter />
-        </div>
+            <div className="mt-[1.2rem] flex justify-between">
+
+                <div className="  w-[70.3rem] ml-[4rem]  flex flex-wrap ">
+
+
+
+                    <div className="  h-[2rem] flex gap-2 m-auto mb-[2rem] w-full justify-center">
+
+                        <div onClick={prevpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458] 
+                        hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> prev </div>
+                        <p> {pages.map(page => <span key={page} onClick={() => setcurrentpage(page)}
+                            className="border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458]
+                        hover:cursor-pointer hover:text-white bg-[#fff]"> {`${page}`} </span>)} </p>
+                        <div onClick={nextpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458]
+                        hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> next </div>
+                    </div>
+
+                </div>
+
+                <Filter />
+            </div>
+
+        </>
+
+
 
 
     );
