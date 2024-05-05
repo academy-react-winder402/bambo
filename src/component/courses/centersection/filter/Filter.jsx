@@ -1,37 +1,35 @@
 import React from "react";
 import { Range } from "./range/range";
-import {Asatid} from './asatid/Asatid';
-import {Time} from './time/time';
-import { Name } from "./filtername/Filtername";
-import {Dastebandi} from './dastebandi/Dastebandi';
+import { Asatid } from './asatid/Asatid';
+import { Time } from './time/time';
+import { Dastebandi } from './dastebandi/Dastebandi';
+import {Moratab} from './moratabsazi/moratabsazi';
 const Filter = () => {
 
 
     return (
-        <ul className="border border-solid border-[#004458]  bg-[#f0f0f0] rounded-md  w-[15rem] mr-4">
-
-            <li className=" border-b border-solid border-[#004458] w-[15rem]">
+        <div className=" w-[19rem]">
+            <div className=" m-auto h-[10rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] ">
                 <Range />
-            </li>
+            </div>
 
-            <li className=" border-b border-solid border-[#004458] ">
-                <Dastebandi />
-            </li>
-
-            <li className=" border-b border-solid border-[#004458]">
+            <div className=" m-auto h-[10rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
                 <Asatid />
-            </li>
+            </div>
+            <div className=" m-auto h-[17rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
+                 <Dastebandi />
+            </div>
 
-            <li className=" border-b border-solid border-[#004458]">
+            <div className=" m-auto h-[15rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
+                <Moratab />
+            </div>
+
+            <div className=" m-auto h-[15rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
                 <Time />
-            </li>
+            </div>
+   
+        </div>
 
-            <ul className=" ">
-                <Name />
-            </ul>
-
-
-        </ul>
     );
 };
 

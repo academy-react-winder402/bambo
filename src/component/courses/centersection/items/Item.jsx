@@ -4,7 +4,7 @@ import {Bottom} from "./bottom/Bottom";
 
 const Item = ({im,title,modares,zarfiat,price,bg}) => {
     return (
-        <div className=" w-[15rem]  mb-[3rem] mr-10 ">
+        <div className=" w-[16.5rem]  mb-[3rem] mr-7 hover:shadow-2xl hover:scale-110 transition duration-300 ">
             <Top img={im} bg={bg}/>
             <Bottom title={title} modares={modares} zarfiat={zarfiat} price={price}  />
         </div>
