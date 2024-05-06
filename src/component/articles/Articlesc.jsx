@@ -1,13 +1,11 @@
 import React from "react";
-import {Header} from "../common/Header"
-import {Footer} from "../common/Footer"
-import { ArticleContent } from "./ArticleContent";
+import {Header} from './header/Header';
+import {Content} from './content/Content';
 const Articlesc = () => {
     return(
         <>
-            <Header/>
-            <ArticleContent/>
-       
+            <Header />
+            <Content />
         </>
     );
 };
