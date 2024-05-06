@@ -1,10 +1,10 @@
 import React from "react";
-import {Header} from './header/Header';
+import {Headerarticle} from './header/Header';
 import {Content} from './content/Content';
 const Articlesc = () => {
     return(
         <>
-            <Header />
+            <Headerarticle />
             <Content />
         </>
     );
