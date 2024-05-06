@@ -1,0 +1,120 @@
+import React, { useState } from "react";
+import jss from '../../../assets/img/courses/js.png';
+import { Grid } from './grid/Grid';
+import { Grid2 } from './grid2/Grid2';
+
+
+const Contentarticle = () => {
+
+    const [gridlist, setgridlist] = useState([
+
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه رحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به سازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژهه بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+    ]);
+
+    const [gridpage, setgridpage] = useState(8);
+    const [currentpage, setcurrentpage] = useState(1);
+
+
+    const numoftotalpages = Math.ceil(gridlist.length / gridpage);
+    const pages = [...Array(numoftotalpages + 1).keys()].slice(1);
+
+
+
+    const indexoflastitem = currentpage + gridpage;
+
+    const indexoffirstitem = indexoflastitem - gridpage;
+
+    const visibleitem = gridlist.slice(indexoffirstitem, indexoflastitem);
+
+    const prevpagehandles = () => {
+        if (currentpage !== 1) {
+            setcurrentpage(currentpage - 1);
+
+        };
+    };
+
+    const nextpagehandles = () => {
+        if (currentpage !== numoftotalpages) {
+            setcurrentpage(currentpage + 1);
+
+        };
+    };
+
+    const [page, setpage] = useState(2);
+
+    const updatetab = (id) => {
+        setpage(id);
+    };
+
+
+
+
+    return (
+        <>
+            <div className="h-[6rem] w-full flex justify-between">
+
+                <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
+                    <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)]
+                                    bg-no-repeat bg-cover hover:cursor-pointer" onClick={() => updatetab(2)}> </div>
+                    <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listofoghi.png)] 
+                                    bg-no-repeat bg-cover hover:cursor-pointer" onClick={() => updatetab(1)}> </div>
+                </div>
+                <h1 className="text-4xl inline-block mr-[4.5rem] mt-[1.5rem]"> اخبار و مقالات </h1>
+
+            </div>
+
+            <div className="  mt-[3rem] pb-[1rem]">
+                <div className=" w-[74rem] m-auto">
+                    <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
+                        {
+                            visibleitem.map((item, index) => {
+                                return (<Grid2 key={index} im={item.im} title={item.title} />);
+                            })
+                        }
+                    </div>
+
+                    <div className={page === 2 ? "flex flex-wrap" : "hidden"}>
+                        {visibleitem.map((item, index) => {
+                            return (<Grid key={index} im={item.im} title={item.title} />);
+                        })}
+                    </div>
+
+
+
+                    <div className="  h-[2rem] flex gap-2 m-auto mb-[2rem] w-full justify-center">
+
+                        <div onClick={prevpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458] 
+                                                                    hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> prev </div>
+                        <p> {pages.map(page => <span key={page} onClick={() => setcurrentpage(page)}
+                            className="border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458]
+                                        hover:cursor-pointer hover:text-white bg-[#fff]"> {`${page}`} </span>)} </p>
+                        <div onClick={nextpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458]
+                                                                hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> next </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </>
+
+
+
+    );
+};
+
+export { Contentarticle };

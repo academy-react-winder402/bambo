@@ -1,12 +1,12 @@
 import React from "react";
-import {Header} from './header/Header';
-import {Content} from './content/Content';
+import {Headerarticle} from './headerarticle/Header';
+import { Contentarticle } from "./contentarticle/Contentarticle";
 const Articlesc = () => {
     return(
-        <>
-            <Header />
-            <Content />
-        </>
+        <div className="bg-[#ededed]">
+            <Headerarticle />
+            <Contentarticle />
+        </div>
     );
 };
 
