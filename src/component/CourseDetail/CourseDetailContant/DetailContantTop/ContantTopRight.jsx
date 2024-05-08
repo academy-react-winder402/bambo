@@ -1,14 +1,23 @@
 import React from "react";
 import {CommentCourses  } from "../../comment/CommentCourses"
-
+import { Tozihat } from "./Tozihat"
+import { CommentCourses } from "../../comment/CommentCourses";
+import { NavLink } from "react-router-dom";
 const ContantTopRight = () => {
-    return(
+    const [page, setpage] = useState(1);
+
+
+
+  return(
 <div className=" w-[900px] border-solid  mt-[50px] flex flex-col">
-    <div className="w-[265px] h-[80px] text-[44px] text-[#004458] text-right ml-[630px]">:توضیحات</div>
-    <div className=" h-[350px] text-[20px] text-[#004458] text-right ">
-        <span> امروزه به دلیل این که ارتباطات فضای مجازی رونق زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران متفاوت اهمیت  بالایی یافته است. به همین جهت صاحبان سرمایه و ار برای رونق کار خود به دنبال طراحان حرفه ایی برای طراحی سایتی مناسب وکارآمد هستند لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است.جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله ی سایتی مناسب و کارامد هستند.لذا یادگیری روش های مناسب و به وز طراحی سایت مورد توجه بسیاری از کارجویان قرار گرفته است.</span>
+    <div className="flex flex-row justify-end w-[900px]">
+    <div className="w-[140px] h-[70px] text-[30px] text-[#004458] text-center rounded-t-[0.8em] border-[1px] border-solid border-[#707070] border-b-[transparent] p-[10px] mr-[20px]">نظرات</div>
+    <div className="w-[140px] h-[70px] text-[30px] text-[#004458] text-center  rounded-t-[0.8em] border-[1px] border-solid border-[#707070] border-b-[transparent] p-[10px]">توضیحات</div>
     </div>
- <CommentCourses/>
+  <div>
+
+  </div>
+
 </div>
     );
 };

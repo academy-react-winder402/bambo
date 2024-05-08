@@ -43,7 +43,7 @@ const CommentCourses = () => {
     return (
         <div className="flex flex-col justify-center align-middle w-[500px]  bg-[#f9f9f9]">
             <section className="flex flex-col p-[1rem] w-[27rem]">
-                <h2 className="bg-[#004458] text-[2rem] mb-[1rem] text-[#fff] text-center">نظرات</h2>
+                <h2 className="text-[#004458] text-[2rem] mb-[1rem]  text-center">پیشنهادات و انتقادات</h2>
                 <input
                     type="text"
                     value={formState.username}
@@ -68,7 +68,7 @@ const CommentCourses = () => {
             {comments.length === 0 ? (
                 null
             ) : (
-                <section>
+                <section className="flex flex-row">
                     {comments.map((comment, i) => (
                         <div className="  mt-[ 1.5rem] mb-[1.5rem] ml-[1rem] text-[1rem] p-[1rem] w-[25rem] bg-[#eae8e8] " key={i}>
                             <p >
