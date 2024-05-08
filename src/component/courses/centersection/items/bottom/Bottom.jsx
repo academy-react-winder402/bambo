@@ -3,14 +3,14 @@ import React from "react";
 
 const Bottom = ({ title, modares, zarfiat, price }) => {
     return (
-        <div className=" pb-[1rem] bg-[#fff] rounded-b-lg">
+        <div className=" pb-[1rem] bg-[#fff] rounded-b-lg relative">
             <div className=" h-[3rem] text-lg text-right mr-[0.5rem] leading-10 "> {title} </div>
             <div className=" h-[2rem] text-right mr-[0.5rem] text-sm "> {modares} </div>
-            <div className=" flex justify-between ml-[0.5rem] mr-[0.5rem]">
-                <div className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer"> جزئیات </div>
-                <h1 className="h-[2rem] text-right text-sm"> ظرفیت : {zarfiat} نفر </h1>
-            </div>
+                
+                <h1 className="h-[2rem] text-right mr-[0.5rem] text-sm"> ظرفیت : {zarfiat} نفر </h1>
 
+                <div className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer absolute
+                 top-[7.3rem] left-[1rem]"> جزئیات </div>
 
             <div className=" h-[1.5rem]  mt-[0.5rem] flex justify-end ">
                 <div className=" h-[1.5rem] w-[4rem] mt-[0.3rem] flex justify-between">

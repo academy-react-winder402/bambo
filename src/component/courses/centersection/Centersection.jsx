@@ -69,13 +69,14 @@ const Centersection = () => {
 
 
         <>
+
             <div className="h-[6rem] w-full flex justify-between">
 
                 <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
-                    <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)]
-     bg-no-repeat bg-cover hover:cursor-pointer" onClick={() => updatetab(2)}> </div>
-                    <div className=" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listofoghi.png)] 
-    bg-no-repeat bg-cover hover:cursor-pointer" onClick={() => updatetab(1)}> </div>
+                    <div className={ page === 2 ? "h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)] bg-no-repeat bg-cover hover:cursor-pointer bg-[#fff]"
+                     : "h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)] bg-no-repeat bg-cover hover:cursor-pointer "} onClick={() => updatetab(2)}> </div>
+                    <div className={page === 1 ? " h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listofoghi.png)] bg-no-repeat bg-cover hover:cursor-pointer bg-[#fff]" 
+                    :" h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listofoghi.png)] bg-no-repeat bg-cover hover:cursor-pointer"} onClick={() => updatetab(1)}> </div>
                 </div>
                 <h1 className="text-4xl inline-block mr-[4.5rem] mt-[1.5rem]"> دوره های آموزشی </h1>
 
@@ -107,8 +108,8 @@ const Centersection = () => {
                         <div onClick={prevpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458] 
                         hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> prev </div>
                         <p> {pages.map(page => <span key={page} onClick={() => setcurrentpage(page)}
-                            className="border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458]
-                        hover:cursor-pointer hover:text-white bg-[#fff]"> {`${page}`} </span>)} </p>
+                            className={page === currentpage ? "border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458] hover:cursor-pointer hover:text-white bg-[#004458] text-white" 
+                            : "border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458] hover:cursor-pointer hover:text-white bg-[#fff] "}> {`${page}`} </span>)} </p>
                         <div onClick={nextpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458]
                         hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> next </div>
                     </div>
