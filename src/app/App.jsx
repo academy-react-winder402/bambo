@@ -9,6 +9,7 @@ import { Courses } from '../screen/courses/Courses.jsx';
 import { CourseDetail } from "../screen/CourseDetail/CourseDetail.jsx";
 import { ArticleDetail } from "../screen/ArticleDetail/ArticleDetail.jsx";
 import {MainLayout} from './layout/Layout.jsx'
+import { Sabadkharid } from "../screen/sabadkharid/Sabadkharid.jsx";
 
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
@@ -16,6 +17,7 @@ const Router = createBrowserRouter([
     { path: '/article', element: <Articles /> },
     { path: '/course', element: <Courses /> },
   ]},
+  { path: '/sabadkharid', element: <Sabadkharid /> },
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
   { path: '/ForgotPass', element: <ForgotPass /> },
