@@ -5,10 +5,12 @@ import {Box3} from './box3/Box3';
 import { Box4 } from "./box4/Box4";
 import { Box5 } from "./box5/Box5";
 import { Box6 } from "./box6/box6";
+import { SearchLanding } from "../common/searchlanding/SearchLanding";
 
 const Landingc = () => {
     return (
         <div >
+            <SearchLanding />
             <Box1 />
             <Box2 />
             <Box3 />

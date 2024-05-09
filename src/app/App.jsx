@@ -10,7 +10,6 @@ import { CourseDetail } from "../screen/CourseDetail/CourseDetail.jsx";
 import { ArticleDetail } from "../screen/ArticleDetail/ArticleDetail.jsx";
 import {MainLayout} from './layout/Layout.jsx'
 
-
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
     { path: '/', element: <Landing /> },
