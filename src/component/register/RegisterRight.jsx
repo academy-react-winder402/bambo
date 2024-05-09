@@ -5,25 +5,48 @@ import tele from "./../../assets/img/register/tele.jpg"
 import whats from "./../../assets/img/register/whats.png"
 import yout from "./../../assets/img/register/yout.jpg"
 import home from "./../../assets/img/register/home1.png"
+import logo from "../../assets/img/landing/logo.png"
+import { useNavigate } from "react-router-dom";
 
-const RegisterRight= () => {
-    return(
-        <div className=" w-[45%] h-[100%] relative " >
-  <img src={Logoregister} className="w-[100%]  h-[100%] "></img>
-  <div className=" w-[100%] h-[100%]  bg-[#004458] absolute bottom-0 left-0 opacity-90 "></div>
-  <div className=" w-[250px] h-[100px]  absolute  bottom-[350px] left-[220px]" >
-    <div className="h-[50px] border-b-2 border-[#ccc] text-[20px] text-[#ffff] text-center leading-[45px]"> آکادمی آموزشی بامبو</div>
-    <div className="h-[50px] flex justify-between my-[5px]">
-        <img src={insta} className="w-[40px] h-[40px]"></img>
-        <img src={tele} className="w-[40px] h-[40px]"></img>
-        <img src={whats} className="w-[35px] h-[35px]"></img>
-        <img src={yout} className="w-[40px] h-[40px]"></img>
-        <img src={home} className="w-[33px] h-[33px]"></img>
-    </div>
-  </div>
+const RegisterRight = () => {
+    const navigator = useNavigate();
+    const gotolayout = () => {
+        return (
+            navigator("/")
+        );
+    };
+    return (
+        <div className="lg:w-[45%] lg:h-[730px] lg:relative  
+        sm:w-[375px] sm:h-[309px] sm:relative
+        " >
+            <img src={Logoregister} className="lg:w-[100%]  lg:h-[100%]
+            sm:w-[100%] sm:h-[100%]
+             "></img>
+            <div className=" lg:w-[100%]  lg:h-[100%]   lg:bg-[#004458]  lg:absolute  lg:bottom-0  lg:left-0  lg:opacity-90  lg:flex  lg:justify-center 
+            sm:w-[100%] sm:h-[100%]  sm:bg-[#004458]  sm:absolute  sm:bottom-0  sm:left-0  sm:opacity-90  sm:flex  sm:justify-center 
+            ">
+                <div className="  lg:w-[250px]  lg:h-[100px]  lg:m-auto
+                 sm:w-[250px]  sm:h-[80px]  sm:m-auto
+                " >
+                    <div className=" lg:h-[50px]  lg:border-b-2  lg:border-[#ccc]  lg:text-[20px]  lg:text-[#ffff]  lg:text-center  lg:leading-[45px]
+                     sm:h-[37px]   sm:border-b-2   sm:border-[#ccc]  sm:text-[20px]   sm:text-[#ffff]  sm:text-center  sm:leading-[45px]
+                    "> آکادمی آموزشی بامبو</div>
+                    <img className="sm:w-[30px] sm:h-[30px] lg:hidden sm:block" src={logo}></img>
+                    <div className=" lg:h-[50px]  lg:flex  lg:justify-between  lg:my-[5px]
+                    sm:hidden
+                    ">
+                        <img src={insta} className=" lg:w-[40px]  lg:h-[40px]"></img>
+                        <img src={tele} className=" lg:w-[40px]  lg:h-[40px]"></img>
+                        <img src={whats} className=" lg:w-[35px]  lg:h-[35px]"></img>
+                        <img src={yout} className=" lg:w-[40px]  lg:h-[40px]"></img>
+                        <div onClick={gotolayout}> <img src={home} className=" lg:w-[33px]  lg:h-[33px] cursor-pointer" ></img></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      
+
     );
 };
 
-export { RegisterRight};
+export { RegisterRight };

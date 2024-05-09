@@ -7,14 +7,14 @@ const ForgotPassPageThree= () => {
            <Formik>
                 <Form>
                     
-                    <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[550px] text-[20px]">رمز عبور</label>
-                        <Field type="password" name="phonenamber" placeholder="رمز عبور"  className="w-[400px] h-[60px] rounded-[10px] ml-[200px]" />
+                    <div className="h-[4000px] mt-[80px] flex flex-col gap-[10px] pr-[150px]">
+                        <label className=" text-[20px] ">رمز عبور</label>
+                        <Field type="password" name="phonenamber" placeholder="رمز عبور"  className="w-[400px] h-[60px] rounded-[10px] " />
 
-                    </div>
-                    <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[500px] text-[20px]">تکرار رمز عبور </label>
-                        <Field type="password" name="phonenamber" placeholder="تکرار رمز عبور" className="w-[400px] h-[60px] rounded-[10px] ml-[200px]" />
+                  
+                   
+                        <label className=" text-[20px] ">تکرار رمز عبور </label>
+                        <Field type="password" name="phonenamber" placeholder="تکرار رمز عبور" className="w-[400px] h-[60px] rounded-[10px]" />
 
                     </div>
                 </Form>

@@ -5,7 +5,10 @@ import {FormRegister} from "./registerleft/RegisterLeft"
 const Registerc= () => {
     return(
         
-             <div className="flex flex-row w-[100%] h-[730px]">
+          
+        <div className="lg:w-[100%] lg:h-[730px] lg:flex lg:flex-wrap
+        sm:flex sm:flex-col sm:w-[375px] sm:h-[812px]
+         ">
                 <FormRegister/>
                 < RegisterRight/>
              </div>
