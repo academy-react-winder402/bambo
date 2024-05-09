@@ -8,15 +8,18 @@ import { Articles } from '../screen/articles/Articles.jsx';
 import { Courses } from '../screen/courses/Courses.jsx';
 import { CourseDetail } from "../screen/CourseDetail/CourseDetail.jsx";
 import { ArticleDetail } from "../screen/ArticleDetail/ArticleDetail.jsx";
+import {MainLayout} from './layout/Layout.jsx'
 
 
 const Router = createBrowserRouter([
-  { path: '/', element: <Landing /> },
+  {path:"/" , element:<MainLayout /> , children: [
+    { path: '/', element: <Landing /> },
+    { path: '/article', element: <Articles /> },
+    { path: '/course', element: <Courses /> },
+  ]},
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
   { path: '/ForgotPass', element: <ForgotPass /> },
-  { path: '/articles', element: <Articles /> },
-  { path: '/courses', element: <Courses /> },
   { path: '/courseDetail', element: <CourseDetail /> },
   { path: '/ArticleDetail', element: <ArticleDetail /> },
 
