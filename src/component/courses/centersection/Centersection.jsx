@@ -69,6 +69,7 @@ const Centersection = () => {
 
 
         <>
+        
 
             <div className="h-[6rem] w-full flex justify-between">
 
