@@ -4,7 +4,7 @@ import { ForgotPassLeft } from "./ForgotPassLeft";
 import { RegisterRight } from "../../../register/RegisterRight"
 const ForgotPassc = () => {
     return (
-        <div className="w-[1153px] h-[650px]   mx-[200px] my-[20px] flex flex-wrap rounded-xl">
+        <div className="flex flex-row w-[100%] h-[730px]">
             <ForgotPassLeft />
             < RegisterRight />
         </div>

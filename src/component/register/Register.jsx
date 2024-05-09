@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { RegisterRight } from "./RegisterRight";
 import {FormRegister} from "./registerleft/RegisterLeft"
 
 const Registerc= () => {
     return(
         
-             <div className="w-[1153px] h-[650px]   mx-[200px] my-[20px] flex flex-wrap rounded-xl">
+             <div className="flex flex-row w-[100%] h-[730px]">
                 <FormRegister/>
                 < RegisterRight/>
              </div>
