@@ -17,7 +17,6 @@ const Landingc = () => {
             <Box4 />
             <Box5 />
             <Box6 />
-            <Footer />
         </div>
 
     );
