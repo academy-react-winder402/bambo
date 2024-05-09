@@ -1,14 +1,21 @@
 import React from "react";
 import logo from '../../assets/img/landing/logo.png';
 import { NavLink } from "react-router-dom";
+import shopp from '../../assets/img/landing/shopp.png';
 
 const Header = () => {
     return (
-        <div className="border-b border-solid border-[#D1D1D1] w-11/12 h-14 m-auto flex justify-between">
+        <div className="border-b border-solid border-[#D1D1D1] w-11/12 h-14 m-auto flex justify-between relative">
             <div className=" w-36 flex justify-between">
                 <NavLink to='/register' className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> ثبت نام </NavLink>
                 <NavLink to="/login" className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> ورود </NavLink>
             </div>
+
+            <NavLink to="/sabadkharid" className=" h-[3.4rem] w-[5rem] absolute top-[0rem] left-[10rem] 
+                 hover:cursor-pointer hover:bg-[#004458]">  
+                    <img src={shopp} className="h-[2rem] w-[2rem] m-auto mt-[0.8rem]" />
+                 </NavLink>
+
             <div className=" w-1/3 flex justify-between">
                 <div className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> دوره ها </div>
                 <div className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> مقالات </div>
