@@ -5,8 +5,8 @@ import { Boxsearch } from "../../common/boxsearch/Boxsearch";
 
 const Box1 = () => {
     return (
-        <div className="h-[40rem] w-[70rem] back m-auto">
-            <div className="h-[40rem] bg-[#08856887] relative">
+        <div className="h-[46rem] w-[96rem] back ">
+            <div className="h-[46rem] bg-[#08856887] relative">
                 <Header />
                 <div className=" w-[30rem] absolute top-[15rem] left-[36rem] text-3xl font-bold text-white text-right  leading-[4rem]">
                     باید راه بهتری برای اموزش ساخته میشد
