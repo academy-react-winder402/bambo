@@ -12,9 +12,15 @@ const RegisterLeftFirst = ({formData, setFormData}) => {
             <Formik
             validationSchema={validation}>
                 <Form>
-                    <div className="h-[300px] mt-[100px]  flex flex-col gap-[30px]">
-                        <label className=" w-[130px] h-[40px] text-[20px] text-right">شماره موبایل</label>
-                        <Field name="phonenamber"  placeholder="شماره موبایل" className="w-[500px] h-[60px] rounded-[10px]  " 
+                    <div className="lg:h-[300px] lg:mt-[100px]  lg:flex flex-col lg:gap-[30px]
+                    sm:h-[300px] sm:mt-[20px]  sm:flex sm:flex-col sm:gap-[20px]
+                    ">
+                        <label className=" lg:w-[130px] lg:h-[40px] lg:text-[20px] lg:text-right
+                        sm:w-[130px] sm:h-[30px] sm:text-[20px] sm:text-right
+                        ">شماره موبایل</label>
+                        <Field name="phonenamber"  placeholder="شماره موبایل" className="lg:w-[500px] lg:h-[60px] lg:rounded-[10px] 
+                        sm:w-[500px] sm:h-[60px] sm:rounded-[10px] 
+                        " 
                         value={formData.phonenumber}
                         onChange ={(event) => setFormData({...formData,phonenumber:event.target.value})}
                         />

@@ -8,7 +8,7 @@ const Loginc = () => {
 
 
         <div className="lg:w-[100%] lg:h-[730px] lg:flex lg:flex-wrap
-        sm:flex sm:flex-col sm:w-[375px] sm:h-[812px]
+        sm:flex sm:flex-col-reverse sm:w-[100%]  sm:h-[873px]
          ">
           
             <FormLogin />

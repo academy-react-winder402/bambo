@@ -17,7 +17,7 @@ const RegisterRight = () => {
     };
     return (
         <div className="lg:w-[45%] lg:h-[730px] lg:relative  
-        sm:w-[375px] sm:h-[309px] sm:relative
+        sm:w-[100%] sm:h-[40%] sm:relative
         " >
             <img src={Logoregister} className="lg:w-[100%]  lg:h-[100%]
             sm:w-[100%] sm:h-[100%]
@@ -28,18 +28,19 @@ const RegisterRight = () => {
                 <div className="  lg:w-[250px]  lg:h-[100px]  lg:m-auto
                  sm:w-[250px]  sm:h-[80px]  sm:m-auto
                 " >
+                      <img className="sm:w-[30px] sm:h-[30px] lg:hidden sm:block sm:m-auto" src={logo}></img>
                     <div className=" lg:h-[50px]  lg:border-b-2  lg:border-[#ccc]  lg:text-[20px]  lg:text-[#ffff]  lg:text-center  lg:leading-[45px]
                      sm:h-[37px]   sm:border-b-2   sm:border-[#ccc]  sm:text-[20px]   sm:text-[#ffff]  sm:text-center  sm:leading-[45px]
                     "> آکادمی آموزشی بامبو</div>
-                    <img className="sm:w-[30px] sm:h-[30px] lg:hidden sm:block" src={logo}></img>
+                  
                     <div className=" lg:h-[50px]  lg:flex  lg:justify-between  lg:my-[5px]
                     sm:hidden
                     ">
-                        <img src={insta} className=" lg:w-[40px]  lg:h-[40px]"></img>
-                        <img src={tele} className=" lg:w-[40px]  lg:h-[40px]"></img>
-                        <img src={whats} className=" lg:w-[35px]  lg:h-[35px]"></img>
-                        <img src={yout} className=" lg:w-[40px]  lg:h-[40px]"></img>
-                        <div onClick={gotolayout}> <img src={home} className=" lg:w-[33px]  lg:h-[33px] cursor-pointer" ></img></div>
+                        <img src={insta} className=" lg:w-[40px]  lg:h-[40px] sm:hidden  lg:block"></img>
+                        <img src={tele} className=" lg:w-[40px]  lg:h-[40px] sm:hidden lg:block"></img>
+                        <img src={whats} className=" lg:w-[35px]  lg:h-[35px] sm:hidden lg:block"></img>
+                        <img src={yout} className=" lg:w-[40px]  lg:h-[40px] sm:hidden lg:block"></img>
+                        <div onClick={gotolayout}> <img src={home} className=" lg:w-[33px]  lg:h-[33px] cursor-pointer sm:hidden lg:block" ></img></div>
                     </div>
                 </div>
             </div>

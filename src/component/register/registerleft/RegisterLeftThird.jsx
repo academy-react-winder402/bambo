@@ -6,25 +6,37 @@ const RegisterLeftThird= ({formData, setFormData}) => {
              <div >
            <Formik>
                 <Form>
-                    <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[560px] text-[20px]">ایمیل</label>
-                        <Field name="phonenamber" placeholder="ایمیل" className="w-[400px] h-[60px] rounded-[10px] ml-[230px]" 
+                    < div dir="rtl" className=" lg:h-[100px]  lg:mt-[20px]  lg:flex lg:flex-col lg:gap-[10px]
+                      sm:h-[100px] sm:mt-[2px]  sm:flex sm:flex-col sm:gap-[10px]
+                     ">
+                        <label className="   lg:text-[20px]">ایمیل</label>
+                        <Field name="phonenamber" placeholder="ایمیل" className=" lg:w-[500px]  lg:h-[60px]  lg:rounded-[10px] 
+                         sm:w-[500px] sm:h-[40px] sm:rounded-[10px]
+                        " 
                                       value={formData.email}
                                       onChange ={(event) => setFormData({...formData,email:event.target.value})}
                         />
 
                     </div>
-                    <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[530px] text-[20px]">رمز عبور</label>
-                        <Field type="password" name="phonenamber" placeholder="رمز عبور"  className="w-[400px] h-[60px] rounded-[10px] ml-[230px]" 
+                    <div className=" lg:h-[100px]  lg:mt-[20px]  lg:flex  lg:flex-col  lg:gap-[10px] 
+                      sm:h-[100px] sm:mt-[10px]  sm:flex sm:flex-col sm:gap-[10px]
+                    ">
+                        <label className="   lg:text-[20px]">رمز عبور</label>
+                        <Field type="password" name="phonenamber" placeholder="رمز عبور"  className=" lg:w-[500px]  lg:h-[60px]  lg:rounded-[10px] 
+                         sm:w-[500px] sm:h-[40px] sm:rounded-[10px]
+                        " 
                                       value={formData.password}
                                       onChange ={(event) => setFormData({...formData,password:event.target.value})}
                         />
 
                     </div>
-                    <div className="h-[100px] mt-[20px] flex flex-col gap-[10px] ">
-                        <label className="ml-[490px] text-[20px]">تکرار رمز عبور </label>
-                        <Field type="password" name="phonenamber" placeholder="تکرار رمز عبور" className="w-[400px] h-[60px] rounded-[10px] ml-[230px]"
+                    <div className=" lg:h-[100px]  lg:mt-[20px]  lg:flex  lg:flex-col  lg:gap-[10px] 
+                      sm:h-[100px] sm:mt-[10px]  sm:flex sm:flex-col sm:gap-[10px]
+                    ">
+                        <label className="  lg:text-[20px]">تکرار رمز عبور </label>
+                        <Field type="password" name="phonenamber" placeholder="تکرار رمز عبور" className=" lg:w-[500px]  lg:h-[60px]  lg:rounded-[10px] 
+                         sm:w-[500px] sm:h-[40px] sm:rounded-[10px]
+                        "
                            value={formData.confirmPassword}
                            onChange ={(event) => setFormData({...formData,confirmPassword:event.target.value})}
                          />
