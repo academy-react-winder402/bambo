@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 
 
 
-const Bottom = ({ title, modares, zarfiat, price }) => {
+
+const Bottom = ({ title, modares, zarfiat, price,set }) => {
+
+    
+
     return (
+       
         <div className=" pb-[1rem] bg-[#fff] rounded-b-lg relative">
             
             <div className=" h-[3rem] text-lg text-right mr-[0.5rem] leading-10 "> {title} </div>
@@ -11,8 +16,8 @@ const Bottom = ({ title, modares, zarfiat, price }) => {
                 
                 <h1 className="h-[2rem] text-right mr-[0.5rem] text-sm"> ظرفیت : {zarfiat} نفر </h1>
 
-                <div className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer absolute
-                 top-[7.3rem] left-[1rem]"> جزئیات </div>
+                <button className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer absolute
+                 top-[7.3rem] left-[1rem]" onClick={() => {set(true)}}> جزئیات </button>
 
 
             <div className=" h-[1.5rem]  mt-[0.5rem] flex justify-end ">
@@ -39,6 +44,7 @@ const Bottom = ({ title, modares, zarfiat, price }) => {
             <div className=" h-[3rem] w-[7rem] mt-[1rem] m-auto  bg-[#DBDBDB]
              text-center leading-10 rounded-md hover:cursor-pointer"> مشاهده دوره </div>
         </div>
+  
     );
 };
 

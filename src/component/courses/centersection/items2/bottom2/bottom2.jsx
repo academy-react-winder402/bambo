@@ -1,12 +1,13 @@
 import React from "react";
 
-const Bottom2 = ({title,modares,zarfiat,price}) => {
+const Bottom2 = ({title,modares,zarfiat,price,set}) => {
     return (
         <div className=" bg-[#fff] h-[14rem] w-[24rem] float-right pl-[2rem] rounded-l-lg">
             <div className=" h-[3rem] text-lg text-right mr-[0.5rem] leading-10 "> {title}</div>
             <div className=" h-[2rem] text-right mr-[0.5rem] text-sm "> استاد : {modares} </div>
             <div className=" flex justify-between ml-[0.5rem] mr-[0.5rem]">
-                <div className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer"> جزئیات </div>
+                <div className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer"
+                onClick={() => {set(true)}}> جزئیات </div>
                 <h1 className="h-[2rem] text-right text-sm"> ظرفیت : {zarfiat} نفر </h1>
             </div>
 
