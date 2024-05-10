@@ -5,9 +5,11 @@ import { DetailHeaderContant } from "./DetailHeaderContent";
 import { DetailHeaderBottom} from "./DetailHeaderBottom"
 const DetailHeader = () => {
     return(
- <div className="w-[100%] h-[730px] text-white bg-[url('assets/img/coursedetail/headerdetail.jpg')] bg-cover">
+ <div className="lg:w-[100%] lg:h-[730px] lg:text-white lg:bg-[url('assets/img/coursedetail/headerdetail.jpg')] lg:bg-cover
+
+ ">
  
-   <div className="w-[100%] h-[730px] bg-[#000000] opacity-[65%] absolute top-[0px] left-[0px]">
+   <div className="lg:w-[100%] lg:h-[730px] lg:bg-[#000000] lg:opacity-[65%] lg:absolute lg:top-[0px] lg:left-[0px]">
    <DetailHeaderTop />
    <DetailHeaderContant/>
    <DetailHeaderBottom/>
