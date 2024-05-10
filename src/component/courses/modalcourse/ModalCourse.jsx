@@ -1,10 +1,11 @@
 import React from "react";
 import js from '../../../assets/img/courses/js.png';
 
-const ModalCourse = ({ style }) => {
+const ModalCourse = ({isVisible,onclose}) => {
+    if(!isVisible) return null;
     return (
-        <div className={`h-[46rem] w-[96rem] bg-[#333333a1] z-10 ${style} `}>
-            <div className="h-[35rem] w-[40rem] bg-[#fff] m-auto mt-[5rem] relative">
+        <div className="h-[46rem] w-[96rem]  z-10   fixed inset-0 backdrop-blur-sm bg-opacity-25" >
+            <div className="h-[35rem] w-[40rem] bg-[#fff] m-auto mt-[5rem] relative   ">
                 <h1 className="text-3xl text-right mr-[2rem] pt-[2rem] text-[#004458]"> دوره جاوا اسکریپت </h1>
                 <span className="block text-right mr-[2rem] pt-[2rem] text-xl text-[#3E7788]"> مدرس : بیل گیتس </span>
                 <span className="block text-right mr-[2rem] pt-[2rem] text-xl text-[#3E7788]"> ظرفیت : ۵۹ نفر </span>
@@ -16,6 +17,8 @@ const ModalCourse = ({ style }) => {
                     <span className="block  mr-[2rem] pt-[2rem] text-xl text-[#3E7788] "> : وضعیت دوره </span>
 
                 </div>
+                <div className="h-[1rem] w-[1rem] bg-[url('./././assets/img/landing/close.png')] bg-no-repeat bg-cover absolute 
+                top-[0.5rem] left-[0.5rem] hover:cursor-pointer" onClick={() =>{onclose()}}> </div>
                 <div className="border-b-2 border-solid border-[#004458] mt-[1rem] w-[35rem] m-auto"> </div>
                 <div className=" h-[4rem] w-[8rem] mt-[1rem] ml-[3rem]  bg-[#DBDBDB]
                                 text-center leading-[3.7rem] rounded-md hover:cursor-pointer"> مشاهده دوره </div>

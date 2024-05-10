@@ -9,7 +9,7 @@ import { Courses } from '../screen/courses/Courses.jsx';
 import { CourseDetail } from "../screen/CourseDetail/CourseDetail.jsx";
 import { ArticleDetail } from "../screen/ArticleDetail/ArticleDetail.jsx";
 import {MainLayout} from './layout/Layout.jsx'
-import { Sabadkharid } from "../screen/sabadkharid/Sabadkharid.jsx";
+import {Sabadkharid} from '../screen/sabadkharid/Sabadkharid.jsx';
 
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [

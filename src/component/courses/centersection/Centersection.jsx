@@ -6,7 +6,7 @@ import paython from '../../../assets/img/courses/paython.png';
 import { Item2 } from "./items2/items2";
 
 
-const Centersection = () => {
+const Centersection = ({set}) => {
 
     const [Itemlist, setItemlist] = useState([
         {},
@@ -91,7 +91,7 @@ const Centersection = () => {
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
                         {
                             visibleitem.map((item, index) => {
-                                return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} />);
+                                return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} set={set}/>);
                             })
                         }
                     </div>
@@ -99,7 +99,7 @@ const Centersection = () => {
                     <div className={page === 2 ? "flex flex-wrap" : "hidden"}>
                         {
                             visibleitem.map((item, index) => {
-                                return (<Item2 key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} />);
+                                return (<Item2 key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} set={set}/>);
                             })
                         }
                     </div>
