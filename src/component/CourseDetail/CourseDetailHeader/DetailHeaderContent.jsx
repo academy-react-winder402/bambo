@@ -4,7 +4,10 @@ import zarfiat from "../../../assets/img/coursedetail/zarfiat.png"
 import daneshjo from "../../../assets/img/coursedetail/daneshjo.png"
 const DetailHeaderContant = () => {
     return(
- <div className="w-[700px] h-[400px] m-auto flex flex-col">
+ <div className="lg:w-[700px] lg:h-[400px] lg:m-auto lg:flex lg:flex-col
+ md:w-[400px] md:h-[400px] md:m-auto md:flex md:flex-col
+ xs:w-[200px] xs:h-[400px] xs:m-auto xs:flex xs:flex-col
+ ">
 <div className="w-[220px] h-[180px] ml-[250px]"><img className="w-[100%] h-[100%]" src={logodetail}></img></div>
 <div className="h-[80px] w-[480px] text-[50px] ml-[100px] text-center border-b-solid border-b-[1px] border-b-[black]">دوره جاوا اسکریپت</div>
 <div className="h-[50px] w-[480px] ml-[130px]  flex flex-row-reverse gap-[30px]">
