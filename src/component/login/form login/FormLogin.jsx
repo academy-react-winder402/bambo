@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import square from "../../../assets/img/register/square.png"
 import home from "../../../assets/img/register/home.png"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 const FormLogin = () => {
     const navigator = useNavigate();
     const gotoregister =() => {
@@ -54,20 +54,21 @@ const FormLogin = () => {
                     </Form>
                 </Formik>
             </div>
-            <div className="lg:h-[100px] lg:w-[700px] lg:flex lg:flex-row-reverse lg:justify-start lg:gap-[10px]
+            <div className="lg:h-[100px] lg:w-[700px] lg:flex lg:flex-row-reverse 
             sm:h-[100px] sm:w-[600px] sm:flex sm:flex-row-reverse sm:justify-start 
             xs:h-[100px] xs:w-[370px] xs:flex xs:flex-row-reverse  xs:m-auto xs:justify-between  
             ">
-                <div className="lg: w-[300px] lg:indent-[120px] lg:leading-[45px] lg:cursor-pointer
-                sm:w-[300px] sm:indent-[180px] sm:leading-[45px] sm:cursor-pointer
-                xs:w-[160px]  xs:leading-[45px] xs:cursor-pointer  xs:text-left
+                <div className="lg:w-[400px] lg:cursor-pointer lg:text-right lg:hover:text-[#004458] 
+                
+                sm:w-[300px] sm:indent-[180px] sm:leading-[45px] sm:cursor-pointer sm:hover:text-[#004458] 
+                xs:w-[160px]  xs:leading-[45px] xs:cursor-pointer  xs:text-left xs:hover:text-[#004458] 
 
                 " onClick={ gotoforgotpass}>فراموشی رمز</div>
-                <div className=" lg:w-[300px] lg:flex lg:flex-row
-                 sm:w-[300px] sm:flex sm:flex-row sm:justify-center
-                 xs:w-[150px] xs:flex xs:flex-row xs:justify-center 
+                <div className=" lg:w-[300px] lg:flex lg:flex-row lg:justify-center lg:hover:text-[#004458] 
+                 sm:w-[300px] sm:flex sm:flex-row sm:justify-center sm:hover:text-[#004458] 
+                 xs:w-[150px] xs:flex xs:flex-row xs:justify-center xs:hover:text-[#004458] 
                 ">
-                    <div className=" lg:indent-[10px] lg:leading-[45px] lg:w-[150px] lg:mr-[50px]  lg:cursor-pointer
+                    <div className=" lg:indent-[10px] lg:leading-[45px] lg:w-[150px]  lg:cursor-pointer
                     sm:indent-[10px] sm:leading-[45px] sm:w-[150px]  sm:cursor-pointer
                     xs:indent-[10px] xs:leading-[45px] xs:w-[150px]  xs:cursor-pointer
 
@@ -83,6 +84,7 @@ const FormLogin = () => {
             sm:h-[100px] sm:w-[600px] sm:flex sm:flex-row-reverse sm:justify-start sm:gap-[10px
                 xs:h-[100px] xs:w-[350px] xs:flex xs:flex-row-reverse xs:justify-start xs:gap-[10px]
             ]">
+               
                 <button className="lg:h-[60px] lg:w-[90px] lg:bg-[#edeaea]  lg:my-[5px]  lg:rounded-xl lg:hover:bg-[#004458] lg:hover:text-[#ffff]
             sm:h-[50px] sm:w-[70px] sm:bg-[#edeaea]  sm:my-[5px]  sm:rounded-xl sm:hover:bg-[#004458] sm:hover:text-[#ffff]
             xs:h-[50px] xs:w-[70px] xs:bg-[#edeaea]  xs:my-[5px]  xs:rounded-xl xs:hover:bg-[#004458] xs:hover:text-[#ffff]

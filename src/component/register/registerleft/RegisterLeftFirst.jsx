@@ -20,9 +20,9 @@ const RegisterLeftFirst = ({ formData, setFormData }) => {
                         sm:w-[130px] sm:h-[30px] sm:text-[20px] sm:text-right
                         xs:w-[130px] xs:h-[30px] xs:text-[20px] xs:text-right
                         ">شماره موبایل</label>
-                        <Field name="phonenamber" placeholder="شماره موبایل" className="lg:w-[500px] lg:h-[60px] lg:rounded-[10px] 
-                        sm:w-[500px] sm:h-[60px] sm:rounded-[10px] 
-                        xs:w-[350px] xs:h-[60px] xs:rounded-[10px] 
+                        <Field name="phonenamber" placeholder="شماره موبایل" className="lg:w-[500px] lg:h-[60px] lg:rounded-[10px] lg:pr-[1rem]
+                        sm:w-[500px] sm:h-[60px] sm:rounded-[10px] sm:pr-[1rem]
+                        xs:w-[350px] xs:h-[60px] xs:rounded-[10px] xs:pr-[1rem]
                         "
                             value={formData.phonenumber}
                             onChange={(event) => setFormData({ ...formData, phonenumber: event.target.value })}
