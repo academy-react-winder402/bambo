@@ -10,12 +10,14 @@ import { CourseDetail } from "../screen/CourseDetail/CourseDetail.jsx";
 import { ArticleDetail } from "../screen/ArticleDetail/ArticleDetail.jsx";
 import {MainLayout} from './layout/Layout.jsx'
 import {Sabadkharid} from '../screen/sabadkharid/Sabadkharid.jsx';
+import { Notfound } from "../screen/notfound/Notfound.jsx";
 
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
     { path: '/', element: <Landing /> },
     { path: '/article', element: <Articles /> },
     { path: '/course', element: <Courses /> },
+    { path: '*', element: <Notfound /> },
   ]},
   { path: '/sabadkharid', element: <Sabadkharid /> },
   { path: '/login', element: <Login /> },
@@ -23,6 +25,7 @@ const Router = createBrowserRouter([
   { path: '/ForgotPass', element: <ForgotPass /> },
   { path: '/courseDetail', element: <CourseDetail /> },
   { path: '/ArticleDetail', element: <ArticleDetail /> },
+  
 
 ])
 
