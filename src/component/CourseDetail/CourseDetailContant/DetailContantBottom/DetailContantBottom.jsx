@@ -5,7 +5,7 @@ import box3 from "../../../../assets/img/coursedetail/box3.jpg"
 
 const DetailContantBottom = () => {
     return (
-        <div className="h-[550px] flex flex-row-reverse mt-[30px] lg:m-auto">
+        <div className="h-[550px] flex flex-row-reverse mt-[30px] m-auto mb-[5rem]">
             <div className="w-[600px] bg-[url('assets/img/coursedetail/bottomdetail.jpg')] bg-cover"></div>
             <div className="w-[950px] bg-[#F9F9F9]">
                 <div className=" h-[80px] text-[45px] text-[#004458]   mt-[15px] indent-[38rem]">:مزایای این دوره</div>

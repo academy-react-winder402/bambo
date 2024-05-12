@@ -10,7 +10,7 @@ const Headersection = () => {
 
             <div className="bg-[#00435889] h-[7rem] w-full">
                 <Header />
-                <Boxsearch style={"bg-[red]"}/>
+                <Boxsearch />
             </div>
         </div>
     );

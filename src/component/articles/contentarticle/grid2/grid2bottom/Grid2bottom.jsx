@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 
 const Grid2bottom = ({ title }) => {
@@ -26,8 +27,8 @@ const Grid2bottom = ({ title }) => {
             text-[#088568] text-center leading-9 rounded-md hover:cursor-pointer "> اخبار # </div>
 
             
-            <div className=" h-[2.5rem] w-[5rem] mt-[1rem] m-auto  bg-[#DBDBDB]
-             text-center leading-9 rounded-md hover:cursor-pointer absolute top-[6.7rem] left-[1rem]"> مشاهده </div>
+            <NavLink to="/articleDetail" className=" h-[2.5rem] w-[5rem] mt-[1rem] m-auto  bg-[#DBDBDB]
+             text-center leading-9 rounded-md hover:cursor-pointer absolute top-[6.7rem] left-[1rem]"> مشاهده </NavLink>
         </div>
     );
 };

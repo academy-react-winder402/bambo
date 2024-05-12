@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Gridbottom = ({ title }) => {
     return (
@@ -22,8 +23,8 @@ const Gridbottom = ({ title }) => {
             <div className=" h-[2.5rem] w-[6rem] mt-[0.7rem] float-right mr-[0.5rem] bg-[#DCF8F1] 
             text-[#088568] text-center leading-9 rounded-md hover:cursor-pointer"> مقالات # </div>
 
-            <div className=" h-[2.5rem] w-[5rem] mt-[1rem] m-auto  bg-[#DBDBDB]
-             text-center leading-9 rounded-md hover:cursor-pointer absolute top-[7.2rem] left-[1rem]"> مشاهده </div>
+            <NavLink to="/articleDetail" className=" h-[2.5rem] w-[5rem] mt-[1rem] m-auto  bg-[#DBDBDB]
+             text-center leading-9 rounded-md hover:cursor-pointer absolute top-[7.2rem] left-[1rem]"> مشاهده </NavLink>
         </div>
     );
 };

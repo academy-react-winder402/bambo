@@ -17,15 +17,16 @@ const Router = createBrowserRouter([
     { path: '/', element: <Landing /> },
     { path: '/article', element: <Articles /> },
     { path: '/course', element: <Courses /> },
-    { path: '*', element: <Notfound /> },
+    { path: '/courseDetail', element: <CourseDetail /> },
+    { path: '/articleDetail', element: <ArticleDetail /> },
+    { path: '/sabadkharid', element: <Sabadkharid /> },
+    
   ]},
-  { path: '/sabadkharid', element: <Sabadkharid /> },
+  
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
   { path: '/ForgotPass', element: <ForgotPass /> },
-  { path: '/courseDetail', element: <CourseDetail /> },
-  { path: '/articleDetail', element: <ArticleDetail /> },
-  
+  { path: '*', element: <Notfound /> },
 
 ])
 
