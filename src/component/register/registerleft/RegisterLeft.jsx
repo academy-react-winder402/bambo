@@ -88,9 +88,11 @@ const FormRegister = () => {
                     }}>
                     {page == 2 ? "ثبت نام" : "بعدی"}
                 </button>
+
                 <NavLink to="/login" className="lg:h-[60px] lg:ml-[180px] lg:text-center lg:leading-[50px] lg:w-[90px]  lg:mt-[0.5rem] lg:text-[#004458] lg:text-xl
                  sm:ml-[180px] sm:text-center sm:leading-[45px] sm:h-[50px] sm:w-[70px]   
                  xs:ml-[80px] xs:text-center xs:leading-[45px] xs:h-[50px] xs:w-[70px]   ">ورود</NavLink>
+
             </div>
 
         </div>
