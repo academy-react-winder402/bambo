@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Gridbottom = ({ title }) => {
     return (
-        <div className=" bg-[#fff] h-[11rem] w-[22rem] float-right pl-[2rem] rounded-l-lg relative">
+        <div className=" bg-[#fff] h-[11rem] w-[22rem] float-right pl-[2rem] rounded-l-lg relative font-sans">
             <div className=" h-[3rem] text-right mr-[0.5rem] text-2xl mt-[1rem] "> {title}</div>
 
             <div className=" h-[1.5rem]  mt-[2rem] flex justify-end ">

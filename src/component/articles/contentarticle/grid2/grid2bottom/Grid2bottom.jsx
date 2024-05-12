@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Grid2bottom = ({ title }) => {
     return (
-        <div className=" h-[11rem] w-[16.5rem] bg-[#fff] rounded-b-lg pt-[0.5rem] relative">
+        <div className=" h-[11rem] w-[16.5rem] bg-[#fff] rounded-b-lg pt-[0.5rem] relative font-sans">
             
 
             <div className=" h-[4rem] w-[15.5rem] text-xl text-right m-auto"> {title} </div>

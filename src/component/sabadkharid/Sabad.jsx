@@ -6,6 +6,7 @@ import negativ from '../../assets/img/courses/negativ.png';
 import { Header } from '../../component/common/Header';
 
 
+
 const Sabad = () => {
     return (
         <>
@@ -14,11 +15,12 @@ const Sabad = () => {
 
                 <div className="bg-[#00435889] h-[7rem] w-full">
                     <Header />
-                    
+
                 </div>
             </div>
 
             <div>
+
                 <div className="h-[5rem] text-6xl text-right mr-[7rem] mt-[3rem]">
                     سبد خرید
                 </div>

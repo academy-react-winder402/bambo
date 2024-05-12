@@ -3,7 +3,7 @@ import React from "react";
 
 const ContantTopLeft = () => {
     return(
-<div className="h-[450px] w-[400px] mt-[100px] bg-[#F9F9F9]">
+<div className="h-[450px] w-[400px] mt-[100px] bg-[#F9F9F9] font-sans">
  <div className="h-[60px] w-[400px] border-b-solid border-b-black border-b-[1px] m-auto text-[26px] text-right text-[#004458] leading-[50px]" >
     دوره جاوا اسکریپت
     <img ></img>

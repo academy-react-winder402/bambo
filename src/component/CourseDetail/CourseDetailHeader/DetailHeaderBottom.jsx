@@ -1,12 +1,13 @@
 import React from "react";
 import teacher from "../../../assets/img/coursedetail/teacher.png"
 import like from "../../../assets/img/coursedetail/like.png";
-import dislike from '../../../assets/img/courses/dislike.png';
+import dislike from "../../../assets/img/courses/dislike.png";
+import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png"
 
 const DetailHeaderBottom = () => {
     return (
-        <div className="lg:w-[100%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px] lg:flex lg:flex-row-reverse lg:text-center lg:text-[25px] lg:leading-[30px]
+        <div className="lg:w-[100%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px] lg:flex lg:flex-row-reverse lg:text-center lg:text-[25px] lg:leading-[30px] lg:font-sans
  md:w-[100%] md:h-[200px] md:border-solid md:border-[#DBDBDB] md:border-[1px] md:flex md:flex-row-reverse md:text-center md:text-[20px] md:leading-[30px]
  xs:w-[100%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs:flex xs:flex-row-reverse xs:text-center xs:text-[15px] xs:leading-[30px]
  ">
@@ -47,7 +48,7 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs
 
                     <div className=" h-[1.5rem]  mt-[0.5rem] flex justify-end ">
                         <div className=" h-[1.5rem] w-[4rem] mt-[0.3rem] flex justify-between">
-                            <span className=" h-[1.5rem] w-[2.3rem] block text-right leading-4 text-sm" > ۵۶ </span>
+                            <span className=" h-[1.5rem] w-[2.3rem] block text-right leading-4 text-sm" >  </span>
                             <div className=" h-[1.4rem] w-[1.4rem] hover:cursor-pointer">
 
                                 <img src={dislike} />
@@ -56,9 +57,9 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs
 
                         </div>
                         <div className="   h-[1.5rem] w-[3.5rem] flex justify-between mr-[0.5rem]">
-                            <span className=" h-[1.5rem] w-[1.5rem] block text-right leading-6 text-sm " > ۱۲۰ </span>
+                            <span className=" h-[1.5rem] w-[1.5rem] block text-right leading-6 text-sm " > </span>
                             <div className="h-[1.5rem] w-[1.5rem] hover:cursor-pointer">
-                                <img src={like} />
+                                <img src={like2} />
                             </div>
                         </div>
                     </div>

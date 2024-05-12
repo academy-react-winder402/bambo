@@ -10,7 +10,7 @@ import footer3 from '../../assets/img/landing/footer3.png';
 
 const Footer = () => {
     return (
-        <div className=" h-[33rem] w-[96rem] m-auto bg-[#004458] ">
+        <div className=" h-[33rem] w-[96rem] m-auto bg-[#004458] font-sans">
             <div className=" border-b border-solid border-[#D1D1D1]  h-[15rem] w-[85rem] m-auto flex justify-between">
                 <div className=" h-[10rem] w-[35rem] mt-[2rem]">
                     <h1 className=" text-white text-4xl text-right mt-[1rem]"> خبرنامه </h1>

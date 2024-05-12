@@ -1,8 +1,8 @@
 import React from "react";
-import star from "../../../assets/img/articledetail/star.jpg"
+
 const ArticleDetailHeaderBottom = () => {
     return(
-<div className="h-[150px] w-[1000px] m-auto mt-[100px]">
+<div className="h-[150px] w-[1000px] m-auto mt-[100px] font-sans">
 <div className="h-[90px] w-[1000px] border-b border-solid border-[#D1D1D1] text-[45px]">
 چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم
 </div>

@@ -1,11 +1,10 @@
 import React from "react";
-import headerdetail from "../../../assets/img/coursedetail/logodetail.jpg"
 import { DetailHeaderTop } from "./DetailHeaderTop";
 import { DetailHeaderContant } from "./DetailHeaderContent";
 import { DetailHeaderBottom} from "./DetailHeaderBottom"
 const DetailHeader = () => {
     return(
- <div className="lg:w-[100%] lg:h-[765px] lg:text-white lg:bg-[url('assets/img/coursedetail/headerdetail.jpg')] lg:bg-cover
+ <div className="lg:w-[100%] lg:h-[765px] lg:text-white lg:bg-[url('assets/img/coursedetail/headerdetail.jpg')] lg:bg-cover lg:font-sans
  md:w-[100%] md:h-[500px] md:text-white md:bg-[url('assets/img/coursedetail/headerdetail.jpg')] md:bg-cover
  xs:w-[100%] xs:h-[400px] xs:text-white xs:bg-[url('assets/img/coursedetail/headerdetail.jpg')] xs:bg-cover
 

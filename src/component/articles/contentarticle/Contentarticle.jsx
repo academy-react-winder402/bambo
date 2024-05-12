@@ -10,10 +10,10 @@ const Contentarticle = () => {
     const [gridlist, setgridlist] = useState([
 
         { },
-        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
-        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
-        { im: jss, title: "چطور یک پروژه برنامه رحله به مرحله بسازیم؟" },
-        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: python, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: python, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: python, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: python, title: "چطور یک پروژه برنامه رحله به مرحله بسازیم؟" },
         { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
         { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
         { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
@@ -31,10 +31,10 @@ const Contentarticle = () => {
     const [gridlistakhbar, setgridlistakhbar] = useState([
 
         { },
-        { im: python, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
-        { im: python, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
-        { im: python, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
-        { im: python, title: "چطور یک پروژه برنامه رحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه رحله به مرحله بسازیم؟" },
+        { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
         { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
         { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
         { im: jss, title: "چطور یک پروژه برنامه نویسی را مرحله به مرحله بسازیم؟" },
@@ -107,7 +107,7 @@ const Contentarticle = () => {
 
     return (
         <>
-            <div className="h-[6rem] w-full flex justify-between">
+            <div className="h-[6rem] w-full flex justify-between font-sans">
 
                 <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
                     <div className={page === 2 ? "h-[3rem] w-[3rem] bg-[url(./././assets/img/courses/listamodi.png)] bg-no-repeat bg-cover hover:cursor-pointer bg-[#fff]"
@@ -120,7 +120,7 @@ const Contentarticle = () => {
             </div>
 
 
-            <div className=" h-[3rem] w-[60rem] m-auto flex">
+            <div className=" h-[3rem] w-[60rem] m-auto flex font-sans">
 
                 <div className={itemm === 2 ? " border-b-4 border-solid border-[#004458] h-[3rem] w-[30rem] text-center text-[#004458] text-3xl leading-10 hover:cursor-pointer" : " border-b-2 border-solid border-[#004458] h-[3rem] w-[30rem] text-center text-[#004458] text-2xl leading-10 hover:cursor-pointer"}
                     onClick={() => { updateitem(2) }}> اخبار </div>
@@ -131,7 +131,7 @@ const Contentarticle = () => {
 
 
 
-            <div className={itemm === 2 ? "mt-[3rem] pb-[1rem]" : "hidden"}>
+            <div className={itemm === 2 ? "mt-[3rem] pb-[1rem] font-sans" : "hidden"}>
                 <div className=" w-[74rem] m-auto">
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
                         {
@@ -167,7 +167,7 @@ const Contentarticle = () => {
 
 
 
-            <div className={itemm === 1 ? "mt-[3rem] pb-[1rem]" : "hidden"}>
+            <div className={itemm === 1 ? "mt-[3rem] pb-[1rem] font-sans" : "hidden"}>
                 <div className=" w-[74rem] m-auto">
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
                         {

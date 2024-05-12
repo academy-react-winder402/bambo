@@ -4,7 +4,7 @@ import zarfiat from "../../../assets/img/coursedetail/zarfiat.png"
 import daneshjo from "../../../assets/img/coursedetail/daneshjo.png"
 const DetailHeaderContant = () => {
    return (
-      <div className="lg:w-[700px] lg:h-[400px] lg:m-auto lg:flex lg:flex-col lg:mb-[2rem]
+      <div className="lg:w-[700px] lg:h-[400px] lg:m-auto lg:flex lg:flex-col lg:mb-[2rem] lg:font-sans
  md:w-[400px] md:h-[200px] md:m-auto md:flex md:flex-col   
  xs:w-[200px] xs:h-[200px] xs:m-auto xs:flex xs:flex-col
  ">
