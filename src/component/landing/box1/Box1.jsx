@@ -7,7 +7,7 @@ import { Search } from "./search/Search";
 
 const Box1 = ({set}) => {
     return (
-        <div className="h-[46rem] w-[96rem] bg-[url(./././assets/img/landing/back1.png)] bg-cover ">
+        <div className="h-[46rem] w-[96rem] bg-[url(./././assets/img/landing/back1.png)] bg-cover m-auto">
             <div className="h-[46rem] bg-[#08856887] relative">
                 <Header />
 

@@ -5,7 +5,7 @@ import { Gridbottom } from './gridbottom/Gridbottom';
 
 const Grid = ({ im, title }) => {
     return (
-        <div className=" h-[14rem] w-[35rem] hover:scale-110 transition duration-300">
+        <div className=" h-[14rem] w-[35rem] hover:scale-110 transition duration-300 font-sans">
             <Gridtop im={im} />
             <Gridbottom title={title} />
         </div>

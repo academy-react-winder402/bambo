@@ -45,7 +45,9 @@ const CommentCourses = () => {
         }/${current.getFullYear()}`;
  
     return (
-        <div className="flex flex-col justify-center align-middle w-[500px]  bg-[#f9f9f9]">
+
+        <div className="flex flex-col justify-center align-middle w-[500px]  bg-[#f9f9f9] font-sans">
+
             <section className="flex flex-col p-[1rem] w-[56rem] bg-[#F6F6F6]">
                 <input
                     type="text"

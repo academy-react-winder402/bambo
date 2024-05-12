@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Bottom2 = ({title,modares,zarfiat,price,set}) => {
     return (
@@ -29,8 +30,8 @@ const Bottom2 = ({title,modares,zarfiat,price,set}) => {
             <div className=" h-[2rem] mt-[0.5rem] flex gap-1 ml-[0.5rem] text-[#09B28B]">
                 <h2 className=""> تومان </h2>
                 <h2 className=""> {price} </h2>
-                <div className=" h-[3rem] w-[7rem]  ml-[7rem] bg-[#DBDBDB]
-     text-center leading-10 rounded-md hover:cursor-pointer text-black"> مشاهده دوره </div>
+                <NavLink to="/courseDetail" className=" h-[3rem] w-[7rem]  ml-[7rem] bg-[#DBDBDB]
+     text-center leading-10 rounded-md hover:cursor-pointer text-black"> مشاهده دوره </NavLink>
         </div>
             </div>
 

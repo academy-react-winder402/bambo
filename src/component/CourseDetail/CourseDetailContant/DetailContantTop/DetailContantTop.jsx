@@ -4,7 +4,9 @@ import { ContantTopRight } from "./ContantTopRight";
 
 const DetailContantTop = () => {
     return(
-<div className="  lg:flex lg:flex-row   lg:m-auto">
+
+<div className="  lg:flex lg:flex-row   lg:m-auto font-sans">
+in
    <ContantTopLeft/>
    <ContantTopRight/> 
   

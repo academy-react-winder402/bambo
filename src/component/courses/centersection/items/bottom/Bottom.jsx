@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -41,10 +42,10 @@ const Bottom = ({ title, modares, zarfiat, price,set }) => {
                 <h2 className=""> {price} </h2>
             </div>
 
-            <div className=" h-[3rem] w-[7rem] mt-[1rem] m-auto  bg-[#DBDBDB]
-             text-center leading-10 rounded-md hover:cursor-pointer"> مشاهده دوره </div>
+            <NavLink to="/courseDetail" className=" block h-[3rem] w-[7rem] mt-[1rem] m-auto  bg-[#DBDBDB]
+             text-center leading-10 rounded-md hover:cursor-pointer"> مشاهده دوره </NavLink>
         </div>
-  
+   
     );
 };
 

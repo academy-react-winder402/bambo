@@ -4,7 +4,7 @@ import { Grid2bottom } from './grid2bottom/Grid2bottom';
 
 const Grid2 = ({ im, title }) => {
     return (
-        <div className=" w-[16.5rem]  mb-[3rem] mr-7 hover:shadow-2xl hover:scale-110 transition duration-300 ">
+        <div className=" w-[16.5rem]  mb-[3rem] mr-7 hover:shadow-2xl hover:scale-110 transition duration-300 font-sans">
             <Grid2top img={im} />
             <Grid2bottom title={title} />
         </div>
