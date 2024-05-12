@@ -1,86 +1,104 @@
 import React from "react";
-import js from '../../assets/img/courses/js.png';
-import close from '../../assets/img/courses/close.png';
-import plus from '../../assets/img/courses/plus.png';
-import negativ from '../../assets/img/courses/negativ.png';
 import { Header } from '../../component/common/Header';
-
+import deletesabad from '../../assets/img/sabadkharid/deletesabad.png';
+import dkdfkf from '../../assets/img/courses/close.png'
 
 
 const Sabad = () => {
     return (
         <>
 
-            <div className=" h-[7rem] bg-[url('./././assets/img/courses/headerback.png')] bg-no-repeat bg-cover bg-center ">
+            <div className=" h-[5rem] bg-[url('./././assets/img/courses/headerback.png')] bg-no-repeat bg-cover bg-center ">
 
-                <div className="bg-[#00435889] h-[7rem] w-full">
+                <div className="bg-[#00435889] h-[5rem] w-full">
                     <Header />
 
                 </div>
             </div>
 
-            <div>
+            <div className="border border-solid border-transparent h-[40rem] bg-[#ededed]">
 
-                <div className="h-[5rem] text-6xl text-right mr-[7rem] mt-[3rem]">
-                    سبد خرید
-                </div>
+                <div className="border border-solid border-transparent h-[30rem] w-[57rem] bg-[#fff] m-auto mt-[5rem]">
 
-                <div className=" h-[30rem] w-[90%] m-auto mt-[2rem] flex justify-between  mb-[5rem]">
-
-
-                    <div className="border border-solid border-[#004458] h-[25rem] w-[27%] rounded-md ">
-                        <h1 className=" text-center text-2xl mt-[5rem] text-[blue]"> مبلق کل قابل پرداخت </h1>
-                        <span className=" block mt-[1.5rem] text-xl text-center"> 330,300 تومان </span>
-                        <div className="border border-solid border-[#004458] h-[4rem] mt-[5rem] w-[15rem]
-             text-center text-xl leading-[3.5rem] m-auto hover:bg-[#004458] hover:cursor-pointer hover:text-white rounded-md"> پرداخت </div>
+                    <div dir="rtl" className=" h-[2rem]  mt-[2rem] mr-[2.5rem]">
+                        <span className=" pl-[0.3rem] pr-[0.2rem] pb-[0.5rem] text-[#404040] hover:border-b-4 hover:bordersolid 
+                        hover:border-[#004458] hover cursor-pointer hover:text-[#004458]"> سبد خرید </span>
+                        <span className="pl-[0.5rem] pr-[0.5rem] pb-[0.5rem] text-[#404040] hover:border-b-4 hover:bordersolid 
+                        hover:border-[#004458] hover cursor-pointer hover:text-[#004458]"> خرید بعدی </span>
                     </div>
 
+                    <div className="border-2 border-solid border-[#088568a9] w-[90%] m-auto"> </div>
 
-
-                    <div className="border border-solid border-[#004458] h-[30rem] w-[70%] rounded-md">
-                        <div className="border-b border-solid border-[#004458] h-[3rem] w-[95%] m-auto text-xl leading-10 text-right mb-[1rem]" >
-                            <span> سبد خرید </span>
-                            <span> ( 1 کالا ) </span>
+                    <div className="w-[90%] m-auto h-[18rem] mt-[2rem]">
+                        <div dir="rtl" className="h-[3rem] bg-[#09B28B] text-white">
+                            <span className="mr-[3rem] leading-[2.5rem]"> عکس دوره </span>
+                            <span className="mr-[3rem]"> نام دوره </span>
+                            <span className="mr-[4rem]">  مدرس </span>
+                            <span className="mr-[4rem]"> ظرفیت </span>
+                            <span className="mr-[4rem]"> تاریخ شروع </span>
+                            <span className="mr-[4rem]"> قیمت </span>
                         </div>
-
-                        <div className="border-b border-solid border-[#004458] h-[10rem] w-[95%] m-auto flex justify-end ">
-
-                            <div className=" h-[3rem] w-[3rem] rounded-full mr-[3rem] mt-[4rem] bg-[#ffefef]">
-                                <img src={close} className="h-[2rem] w-[2rem] m-auto mt-[0.5rem]" />
+                        <div className="border border-solid border-transparent h-[15rem] bg-[#F1F1F1] ">
+                            <div dir="rtl" className="border-b-2 border-solid border-[#0885688a] h-[5rem] w-[95%] m-auto flex gap-[3rem] text-[#004458]">
+                                <div className=" h-[4rem] w-[4rem] mt-[0.4rem] mr-[1.5rem]
+                                 bg-[url('././assets/img/courses/js.png')] bg-no-repeat bg-cover"> </div>
+                                <span className="block mr-[1.5rem] mt-[1.5rem]"> جاوا </span>
+                                <span className="block mt-[1.5rem] mr-[1.6rem]"> استاد بحر </span>
+                                <span className="block mt-[1.5rem] mr-[1rem]"> ۶۰ نفر </span>
+                                <span className="block mt-[1.5rem] mr-[1.8rem]"> 1401/1/1 </span>
+                                <span className="block mt-[1.6rem] mr-[1rem]"> 200000 </span>
+                                <div className=" h-[2rem] w-[1.7rem] mt-[1.3rem] mr-[1rem]">
+                                    <img src={deletesabad} className="h-[2rem] w-[1.7rem]" />
+                                </div>
                             </div>
 
-                            <div className=" h-[6rem] w-[9rem] text-right mr-[4rem] mt-[3rem]">
-                                <div className=" h-[3rem] w-[9rem] text-center leading-10 text-xl text-[blue]"> قیمت نهایی </div>
-                                <div className=" h-[3rem] w-[9rem] text-center"> ۳۳۹,۰۰۰ تومان </div>
-                            </div>
+                            <div className=" h-[5rem] ">
 
-                            <div className=" h-[9rem] w-[9rem] text-right mr-[4rem] mt-[0.5rem]">
-                                <div className=" h-[2rem] w-[5rem] m-auto mt-[2rem] text-center text-xl"> تعداد </div>
-                                <div className=" h-[3rem] w-[9rem] m-auto flex">
-                                    <div className=" h-[3rem] w-[3rem] bg-[#828282]">
-                                        <img src={negativ} className="h-[2rem] w-[2rem] m-auto mt-[0.5rem] hover:cursor-pointer" />
-                                    </div>
-                                    <div className=" h-[3rem] w-[3rem] bg-[#f5f5f5] text-center leading-[3rem]"> 1 </div>
-                                    <div className=" h-[3rem] w-[3rem] bg-[#828282]">
-                                        <img src={plus} className=" h-[2rem] w-[2rem] m-auto mt-[0.5rem] hover:cursor-pointer" />
+                                <div dir="rtl" className="border-b-2 border-solid border-[#0885688a] h-[5rem] w-[95%] m-auto flex gap-[3rem] text-[#004458]">
+                                    <div className=" h-[4rem] w-[4rem] mt-[0.4rem] mr-[1.5rem]
+                                 bg-[url('././assets/img/courses/js.png')] bg-no-repeat bg-cover"> </div>
+                                    <span className="block mr-[1.5rem] mt-[1.5rem]"> جاوا </span>
+                                    <span className="block mt-[1.5rem] mr-[1.6rem]"> استاد بحر </span>
+                                    <span className="block mt-[1.5rem] mr-[1rem]"> ۶۰ نفر </span>
+                                    <span className="block mt-[1.5rem] mr-[1.8rem]"> 1401/1/1 </span>
+                                    <span className="block mt-[1.6rem] mr-[1rem]"> 200000 </span>
+                                    <div className=" h-[2rem] w-[1.7rem] mt-[1.3rem] mr-[1rem]">
+                                        <img src={deletesabad} className="h-[2rem] w-[1.7rem]" />
                                     </div>
                                 </div>
                             </div>
-                            <div className=" h-[8rem] w-[15rem] text-right mt-[0.8rem] mr-[1rem]">
-                                <span className="text-xl block text-[blue]"> دوره های جاوا اسکریپت </span>
-                                <span className="text-lg block mt-[0.5rem]"> استاد بهر </span>
-                                <span className="text-lg block mt-[0.5rem]"> ظرفیت ۵۹ </span>
+
+                            <div className=" h-[5rem]">
+                                <div dir="rtl" className=" h-[5rem] w-[95%] m-auto flex gap-[3rem] text-[#004458]">
+                                    <div className=" h-[4rem] w-[4rem] mt-[0.4rem] mr-[1.5rem]
+                                 bg-[url('././assets/img/courses/js.png')] bg-no-repeat bg-cover"> </div>
+                                    <span className="block mr-[1.5rem] mt-[1.5rem]"> جاوا </span>
+                                    <span className="block mt-[1.5rem] mr-[1.6rem]"> استاد بحر </span>
+                                    <span className="block mt-[1.5rem] mr-[1rem]"> ۶۰ نفر </span>
+                                    <span className="block mt-[1.5rem] mr-[1.8rem]"> 1401/1/1 </span>
+                                    <span className="block mt-[1.6rem] mr-[1rem]"> 200000 </span>
+                                    <div className=" h-[2rem] w-[1.7rem] mt-[1.3rem] mr-[1rem]">
+                                        <img src={deletesabad} className="h-[2rem] w-[1.7rem]" />
+                                    </div>
+                                </div>
 
                             </div>
 
-                            <div className=" h-[9rem] w-[8rem]">
-                                <img src={js} className="h-[9rem] w-[8rem]" />
-                            </div>
+                        </div>
+                    </div>
+                    <div className=" mt-[1rem] flex justify-between w-[90%] m-auto">
+                        <span className="h-[2.5rem]  w-[7rem] bg-[#004458] text-white text-center leading-[2rem]"> خرید </span>
+                        <div className="flex gap-[0.5rem] text-[#404040]">
+                            <span> تومان </span>
+                            <span> 400000 </span>
+                            <span className=""> : مجموع قیمت </span>
+
                         </div>
 
                     </div>
 
                 </div>
+
             </div>
 
 
