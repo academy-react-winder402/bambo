@@ -1,35 +1,92 @@
 import React, { useState } from "react";
-import { CommentBottom } from "./CommentBottom";
-const CommentCourses =()=>{
-    const comments ={
-        id:1,
-        item:[
-            {id:1677252427307,
-                name:"hello",
-                item:[
-                    {
-                        id:177252434572,
-                        name:"hello world",
-                        item:[]
-                    }
-                ]
-            }
-        ]
+import { Mention, MentionsInput } from 'react-mentions';
+const CommentCourses = () => {
+    const [formState, setFormState] = useState({
+        username: '',
+        comment: '',
+     
+    });
+    const [comments, setComments] = useState([]);
+    const users = [
+        {
+            id: 'isaac',
+            display: 'Isaac Newton',
+        },
+        {
+            id: 'sam',
+            display: 'Sam Victor',
+        },
+        {
+            id: 'emma',
+            display: 'emmanuel@nobody.com',
+        },
+    ];
+    const submit = () => {
+        if (formState.username === '' || formState.comment === '' ) {
+            alert('Please fill in all fields');
+            return;
+        }
+        setComments((comments) => [
+            ...comments,
+            {
+                username: formState.username,
+                comment: formState.comment,
+           
+            },
+        ]);
+        setFormState({
+            username: '',
+            comment: '',
+          
+        });
     };
-    const [commentsData,setCommentsData]=useState(comments);
-    return(
-        <div className=" mt-[50px] h-[700px] bg-[#F9F9F9]" >
-            <div className="h-[100px]  flex  gap-[800px]  ">
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth() + 1
+        }/${current.getFullYear()}`;
+ 
+    return (
+        <div className="flex flex-col justify-center align-middle w-[500px]  bg-[#f9f9f9]">
+            <section className="flex flex-col p-[1rem] w-[56rem] bg-[#F6F6F6]">
+                <input
+                    type="text"
+                    value={formState.username}
+                    onChange={(e) =>
+                        setFormState({ ...formState, username: e.target.value })
+                    }
+                    placeholder=" Your Name"
+                    className="h-[3rem] w-[54rem] mb-[1rem] p-[1rem] text-[18px] bg-[#fff] rounded-[25px]"
+                />
+                <MentionsInput
+                    placeholder="Add Comment"
+                    className="h-[7rem] w-[54rem] mb-[1rem] p-[1rem] text-[18px] bg-[#fff] rounded-[25px]"
+                    value={formState.comment}
+                    onChange={(e) =>
+                        setFormState({ ...formState, comment: e.target.value })
+                    }
+                    >
+                    <Mention data={users} />
+                </MentionsInput>
+                <button className="text-white bg-[#004458]  text-[1.2rem] p-[10px] mt-[1rem]  rounded-[20px]" onClick={submit}>ثبت نظرات</button>
+            </section>
+            {comments.length === 0 ? (
+                null
+            ) : (
+                <section className="flex flex-row">
+                    {comments.map((comment, i) => (
+                        <div className="  mt-[ 1.5rem] mb-[1.5rem] ml-[1rem] text-[1rem] p-[1rem] w-[25rem] bg-[#fff]  rounded-[20px]" key={i}>
+                            <p >
+                                {comment.username} on {date}
+                            </p>
+                            <h2>{comment.comment}</h2>
+                           
+                           <div className="bg-[#004458] w-[70px] h-[40px] text-[#fff] text-center rounded-[20px] leading-8">پاسخ</div>
+                        </div>
+                    ))}
                 
-                              <div className="h-[50px] w-[150px] ml-[220px] bg-[#004458] mt-[50px] text-[white] text-[20px] text-center leading-[45px] rounded-[1em]">مشاهده نظرات</div>
-                <div className="w-[150px] h-[50px] text-[30px] text-center leading-[45px] mt-[50px] ">نظرات</div>
-  
-            </div>
-            <div>
-            <CommentBottom comment={commentsData}/>
-            </div>
-
+                </section>
+            )}
+            
         </div>
     );
 };
-export {CommentCourses};
+export { CommentCourses};
