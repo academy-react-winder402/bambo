@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { Tozihat } from "./Tozihat"
+import { CommentCourses } from "../../comment/CommentCourses";
+
+
 
 
 const ContantTopRight = () => {
-    return(
-<div className="h-[450px] w-[900px] border-solid  mt-[50px]">
-    <div className="w-[265px] h-[80px] text-[44px] text-[#004458] text-right ml-[630px]">:توضیحات</div>
-    <div className=" h-[350px] text-[20px] text-[#004458] text-right ">
-        <span> امروزه به دلیل این که ارتباطات فضای مجازی رونق زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران متفاوت اهمیت  بالایی یافته است. به همین جهت صاحبان سرمایه و ار برای رونق کار خود به دنبال طراحان حرفه ایی برای طراحی سایتی مناسب وکارآمد هستند لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است.جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله ی سایتی مناسب و کارامد هستند.لذا یادگیری روش های مناسب و به وز طراحی سایت مورد توجه بسیاری از کارجویان قرار گرفته است.</span>
+
+const [bottom, setbottom] = useState(1);
+
+const updatebottom = (id) => {
+    setbottom(id);
+};
+
+return (
+<div className="lg:w-[900px] lg:ml-[50px] mt-[50px] lg:flex lg:flex-col">
+    <div className="lg:flex lg:flex-row lg:justify-end lg:w-[900px]">
+    <div className={bottom == 2 ? "lg:bg-[#f9f9f9] lg:w-[140px] lg:h-[70px] lg:text-[30px] lg:text-[#004458] lg:text-center lg:rounded-t-[0.8em] lg:border-[1px] lg:border-solid  lg:border-[#707070] lg:border-b-[transparent] lg:p-[10px] lg:mr-[20px] lg:hover:cursor-pointer" 
+    : "lg:w-[140px] lg:h-[70px] lg:text-[30px] lg:text-[#004458] lg:text-center lg:rounded-t-[0.8em] lg:border-[1px] lg:border-solid  lg:border-[#004458] lg:border-b-[transparent] lg:p-[10px] lg:mr-[20px] lg:hover:cursor-pointer" } onClick={()=> {updatebottom(2)}}>نظرات</div>
+  <div className={bottom == 1 ? "lg:bg-[#f9f9f9] lg:w-[140px] lg:h-[70px] lg:text-[30px] lg:text-[#004458] lg:text-center lg:rounded-t-[0.8em] lg:border-[1px] lg:border-solid  lg:border-[#707070] lg:border-b-[transparent] lg:p-[10px] lg:mr-[20px] lg:hover:cursor-pointer" 
+    : "lg:w-[140px] lg:h-[70px] lg:text-[30px] lg:text-[#004458] lg:text-center lg:rounded-t-[0.8em] lg:border-[1px] lg:border-solid  lg:border-[#004458] lg:border-b-[transparent] lg:p-[10px] lg:mr-[20px] lg:hover:cursor-pointer" } onClick={()=> {updatebottom(1)}}>توضیحات</div>
     </div>
+
+  <div className={bottom === 1 ? "bg-[#f9f9f9]" : "hidden"}>
+    <Tozihat />
+  </div>
+
+  <div className={bottom === 2 ? "bg-[#f9f9f9]" : "hidden"}>
+    <CommentCourses />
+  </div>
+
 </div>
-    );
+);
 };
 
 export {ContantTopRight };

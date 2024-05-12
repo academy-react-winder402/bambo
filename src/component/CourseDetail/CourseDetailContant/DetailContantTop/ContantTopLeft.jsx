@@ -31,7 +31,7 @@ const ContantTopLeft = () => {
     <div className="h-[60px] w-[45px] bg-[#DBDBDB] ml-[5px]" ></div>
     <div className="h-[60px] w-[45px] bg-[#DBDBDB] ml-[5px]" ></div>
 </div>
-<div className="w-[300px] h-[72px] bg-[#09B28B] text-[30px] text-[#fff] text-center leading-[55px] mt-[28px] m-auto ">ثبت نام دوره</div>
+<div className="w-[300px] h-[72px] bg-[#09B28B] text-[30px] text-[#fff] text-center leading-[55px] mt-[28px] m-auto cursor-pointer">ثبت نام دوره</div>
 </div>
     );
 };
