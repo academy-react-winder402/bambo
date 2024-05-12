@@ -25,7 +25,7 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs
             <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px]
 md:w-[33.5%] md:h-[200px] md:border-solid md:border-[#DBDBDB] md:border-[1px] 
 xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] ">
-                <div className="lg:w-[30px] lg:h-[40px] lg:ml-[250px] lg:mt-[35px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px]
+                <div className="lg:w-[30px] lg:h-[40px] lg:ml-[250px] lg:mt-[35px]
 md:w-[20px] md:h-[20px] md:m-auto 
 xs:w-[15px] xs:h-[15px] xs:m-auto 
 " ><img src={danesh}></img></div>

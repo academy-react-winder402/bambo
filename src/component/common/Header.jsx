@@ -17,8 +17,8 @@ const Header = () => {
                  </NavLink>
 
             <div className=" w-1/3 flex justify-between">
-                <div className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> دوره ها </div>
-                <div className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> مقالات </div>
+                <NavLink to="/course" className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> دوره ها </NavLink>
+                <NavLink to="/article" className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> مقالات </NavLink>
                 <div className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> خدمات </div>
                 <div className=" w-3/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white"> درباره ما </div>
             </div>
