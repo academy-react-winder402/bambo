@@ -69,18 +69,18 @@ const FormRegister = () => {
             ">{PageDisplay()}</div>
             <div className="lg:h-[100px] lg:w-[550px] lg:flex lg:flex-row-reverse lg:justify-start lg:gap-[10px]
             sm:h-[100px] sm:w-[500px] sm:flex sm:flex-row-reverse sm:justify-start sm:gap-[10px]
-           xs:h-[100px] xs:w-[350px] xs:flex xs:flex-row-reverse xs:justify-start xs:gap-[10px]
+           xs:h-[110px] xs:w-[300px] xs:flex xs:flex-col-reverse xs:m-auto xs:gap-[10px] 
             ">
                 
                 <button className="lg:h-[60px] lg:w-[90px] lg:bg-[#edeaea]  lg:my-[5px]  lg:rounded-xl lg:hover:bg-[#004458] lg:hover:text-[#ffff]
             sm:h-[50px] sm:w-[70px] sm:bg-[#edeaea]  sm:my-[5px]  sm:rounded-xl sm:hover:bg-[#004458] sm:hover:text-[#ffff]
-            xs:h-[50px] xs:w-[70px] xs:bg-[#edeaea]  xs:my-[5px]  xs:rounded-xl xs:hover:bg-[#004458] xs:hover:text-[#ffff]
+            xs:h-[50px] xs:w-[250px] xs:bg-[#edeaea]  xs:my-[5px]  xs:rounded-xl xs:hover:bg-[#004458] xs:hover:text-[#ffff]
             "
                     onClick={buttonleft}
                 >{page == 0 ? " بازگشت" : "قبلی"}</button>
                 <button className="lg:h-[60px] lg:w-[90px] lg:bg-[#edeaea] lg:my-[5px]  lg:rounded-xl lg:hover:bg-[#004458] lg:hover:text-[#ffff]
                   sm:h-[50px] sm:w-[70px] sm:bg-[#edeaea]  sm:my-[5px]  sm:rounded-xl sm:hover:bg-[#004458] sm:hover:text-[#ffff]
-                 xs:h-[50px] xs:w-[70px] xs:bg-[#edeaea]  xs:my-[5px]  xs:rounded-xl xs:hover:bg-[#004458] xs:hover:text-[#ffff]
+                 xs:h-[50px] xs:w-[250px] xs:bg-[#edeaea]  xs:my-[5px]  xs:rounded-xl xs:hover:bg-[#004458] xs:hover:text-[#ffff]
                 "
                     disabled={page == 2}
                     onClick={() => {
@@ -91,7 +91,8 @@ const FormRegister = () => {
 
                 <NavLink to="/login" className="lg:h-[60px] lg:ml-[180px] lg:text-center lg:leading-[50px] lg:w-[90px]  lg:mt-[0.5rem] lg:text-[#004458] lg:text-xl
                  sm:ml-[180px] sm:text-center sm:leading-[45px] sm:h-[50px] sm:w-[70px]   
-                 xs:ml-[80px] xs:text-center xs:leading-[45px] xs:h-[50px] xs:w-[70px]   ">ورود</NavLink>
+                 xs:ml-[80px] xs:text-center xs:leading-[45px] xs:h-[50px] xs:w-[70px]   xs:absolute xs:bottom-[200px] xs:right-[20px]
+                 ">ورود</NavLink>
 
             </div>
 
