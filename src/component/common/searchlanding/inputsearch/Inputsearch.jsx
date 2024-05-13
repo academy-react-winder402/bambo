@@ -5,22 +5,13 @@ const Inputsearch = () => {
     return (
         <div className="flex justify-between">
 
-            <div className=" w-[25rem] ml-[1rem] h-[3rem] rounded-md flex justify-between">
-                <input type="text" className="border-2 border-solid border-[#00775B]  w-[22rem]  h-[3rem] rounded-l-md outline-none text-right
-             pr-[0.5rem] placeholder:text-[#004458]" placeholder="سرچ دوره ها" />
-                <div className="border-2 border-solid border-[#00775B] w-[3rem]  h-[3rem] rounded-r-md">
-                    <img src={searchicon} className="h-[2rem] w-[2rem] m-auto mt-[0.5rem] " />
+            <div className=" border-2 border-solid border-[#00775B] w-[85%] m-auto h-[3rem] flex justify-end">
+                <input dir="rtl" type="text" className=" w-[45rem]  h-[2.8rem]  outline-none text-right
+             pr-[0.5rem] placeholder:text-[#004458]" placeholder=" جستجو ..." />
+                <div className=" w-[3rem]  h-[3rem]">
+                    <img src={searchicon} className="h-[2rem] w-[2rem] m-auto mt-[0.4rem] " />
                 </div>
             </div>
-
-            <div className="  w-[25rem] mr-[1rem] h-[3rem] rounded-md flex justify-between">
-                <input type="text" className=" border-2 border-solid border-[#00775B] w-[22rem]  h-[3rem] rounded-l-md outline-none text-right
-             pr-[0.5rem] placeholder:text-[#004458]" placeholder="سرچ اخبار و مقالات" />
-                <div className="border-2 border-solid border-[#00775B] w-[3rem]  h-[3rem] rounded-r-md ">
-                    <img src={searchicon} className="h-[2rem] w-[2rem] m-auto mt-[0.5rem] " />
-                </div>
-            </div>
-
         </div>
     );
 };
