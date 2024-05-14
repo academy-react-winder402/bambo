@@ -8,9 +8,9 @@ export default {
     screens:{
       'xs': '350px',
       // => @media (min-width: 370px) { ... },
-      'sm': '640px',
+      'sm': '790px',
       // => @media (min-width: 640px) { ... }, 
-      'lg': '1024px',
+      'lg': '1500px',
       // => @media (min-width: 1024px) { ... }, 
       'md': '768px',
       // => @media (min-width: 768px) { ... }, 

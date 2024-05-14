@@ -13,7 +13,7 @@ const ForgotPassPageTwo= () => {
                         <label className=" text-[20px]  ">کد موقت</label>
                         <Field name="code" placeholder="کد موقت" className="lg:w-[500px] lg:h-[60px] lg:rounded-[10px] 
                         sm:w-[500px] sm:h-[60px] sm:rounded-[10px]
-                        xs:w-[350px] xs:h-[60px] xs:rounded-[10px]
+                        xs:w-[300px] xs:h-[60px] xs:rounded-[10px]
                         " />
 
                     </div>

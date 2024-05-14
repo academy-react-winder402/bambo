@@ -15,7 +15,7 @@ const ForgotPassPageThree= () => {
                         <label className=" text-[20px] ">رمز عبور</label>
                         <Field type="password" name="phonenamber" placeholder="رمز عبور"  className="lg:w-[500px]  lg:h-[70px]  lg:rounded-[10px] 
                          sm:w-[500px] sm:h-[60px] sm:rounded-[10px]
-                         xs:w-[350px] xs:h-[40px] xs:rounded-[10px]
+                         xs:w-[300px] xs:h-[40px] xs:rounded-[10px]
                           " />
 
                   
@@ -23,7 +23,7 @@ const ForgotPassPageThree= () => {
                         <label className=" text-[20px] ">تکرار رمز عبور </label>
                         <Field type="password" name="phonenamber" placeholder="تکرار رمز عبور" className="lg:w-[500px]  lg:h-[70px]  lg:rounded-[10px] 
                          sm:w-[500px] sm:h-[60px] sm:rounded-[10px]
-                         xs:w-[350px] xs:h-[40px] xs:rounded-[10px]
+                         xs:w-[300px] xs:h-[40px] xs:rounded-[10px]
                          " />
 
                     </div>
