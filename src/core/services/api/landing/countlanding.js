@@ -12,3 +12,5 @@ const getcountlanding = async() => {
         return[];
     }
 };
+
+export {getcountlanding};
