@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 const RegisterLeftSecend= ({formData, setFormData}) => {
+  
     return(
         
              <div >
@@ -55,12 +56,14 @@ const RegisterLeftSecend= ({formData, setFormData}) => {
                            onChange ={(event) => setFormData({...formData,code:event.target.value})}
                          />
                         </div>
-                   
+                   <div className="lg:h-[30px] xs:h-[30px] sm:h-[30px] md:h-[30px]">
+    </div>
 
                     </div>
                 </Form>
             </Formik>
              </div>
+             
         
       
     );
