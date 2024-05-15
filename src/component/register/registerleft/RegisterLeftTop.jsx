@@ -2,7 +2,7 @@ import React from "react";
 import home from "../../../assets/img/register/home1.png"
 import left from "../../../assets/img/register/left.png"
 import { useNavigate } from "react-router-dom";
-const RegisterLeftTop =(gotoleft) =>{
+const RegisterLeftTop =({gotoleft}) =>{
     const navigator = useNavigate();
     const gotohome =()=>{
         return (
