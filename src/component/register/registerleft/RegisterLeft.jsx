@@ -42,6 +42,7 @@ const FormRegister = () => {
         }
 
     };
+    const navigator = useNavigate();
     const gotoleft = () => {
         if (page == 0) {
             return (
