@@ -31,8 +31,8 @@ const RegisterLeftFirst = ({ formData, setFormData}) => {
                         xs:w-[130px] xs:h-[30px] xs:text-[17px] xs:text-right 
                         ">شماره موبایل</label>
                         <Field name="phonenumber" placeholder="شماره موبایل" className="lg:w-[500px] lg:h-[60px] lg:rounded-[10px] lg:pr-[1rem] lg:bg-[#ffff]
-                        sm:w-[350px] sm:h-[60px] sm:rounded-[10px] sm:pr-[1rem] sm:bg-[#fff]
-                        md:w-[330px] md:h-[60px] md:rounded-[10px] md:pr-[1rem] md:bg-[#ffff]
+                        sm:w-[250px] sm:h-[60px] sm:rounded-[10px] sm:pr-[1rem] sm:bg-[#fff]
+                        md:w-[250px] md:h-[60px] md:rounded-[10px] md:pr-[1rem] md:bg-[#ffff]
                         xs:w-[330px] xs:h-[60px] xs:rounded-[10px] xs:pr-[1rem] xs:bg-[#f5f2f2]
                         "
                             // value={formData.phonenumber}

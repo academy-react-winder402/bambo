@@ -63,8 +63,8 @@ const FormRegister = () => {
          xs:w-[100%] xs:h-[60%] xs:flex xs:flex-col
          ">
             <div className="lg:m-auto lg:w-[70%] lg:h-[70%]  lg:shadow-sm lg:bg-[#f5f2f2] lg:rounded-lg  
-            sm:m-auto sm:w-[70%] sm:h-[70%]  sm:shadow-sm sm:bg-[#f5f2f2] sm:rounded-lg 
-            md:m-auto md:w-[70%] md:h-[70%] md:shadow-sm md:bg-[#f5f2f2] md:rounded-lg
+            sm:m-auto sm:w-[70%] sm:h-[100%]  sm:shadow-sm sm:bg-[#f5f2f2] sm:rounded-lg 
+            md:m-auto md:w-[70%] md:h-[100%] md:shadow-sm md:bg-[#f5f2f2] md:rounded-lg md:mt-[20px]
             xs:m-auto xs:w-[100%] xs:h-[100%] xs:bg-[#fff] 
             " >
             <RegisterLeftTop gotoleft={gotoleft}/>
@@ -81,11 +81,11 @@ const FormRegister = () => {
        <div className="lg:h-[100px] lg:w-[550px] lg:flex lg:flex-row-reverse lg:justify-start lg:gap-[10px]
        sm:h-[100px] sm:w-[500px] sm:flex sm:flex-row-reverse sm:justify-start sm:gap-[10px]
       xs:h-[110px] xs:w-[300px] xs:flex xs:flex-col-reverse xs:m-auto xs:gap-[10px] 
-      md:h-[100px] md:w-[90%] md:flex md:flex-row-reverse md:justify-start md:m-auto md:gap-[10px]
+      md:h-[100px] md:w-[500px] md:flex md:flex-row-reverse md:justify-start md:m-auto md:gap-[10px]
        ">
       <button className="lg:h-[60px] lg:w-[80%] lg:m-auto lg:hover:bg-gradient-to-b lg:from-[#004458] lg:to-[#1194bc]  lg:rounded-xl lg:bg-[#004458] lg:text-[#ffff]
-                sm:h-[60px] sm:w-[70%] sm:m-auto sm:hover:bg-gradient-to-b sm:from-[#004458] sm:to-[#1194bc]  sm:rounded-xl sm:bg-[#004458] sm:text-[#ffff]
-                md:h-[60px] md:w-[80%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
+                sm:h-[60px] sm:w-[80%] sm:m-auto sm:hover:bg-gradient-to-b sm:from-[#004458] sm:to-[#1194bc]  sm:rounded-xl sm:bg-[#004458] sm:text-[#ffff]
+                md:h-[60px] md:w-[40%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[60px] xs:w-[80%] xs:m-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff]
                 "
                     disabled={page == 2}
