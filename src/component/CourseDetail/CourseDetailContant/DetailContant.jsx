@@ -5,7 +5,7 @@ import { DetailContantTop} from "./DetailContantTop/DetailContantTop";
 const DetailContant = () => {
     return(
 
-<div className="lg:h-[1150px] lg:flex lg:flex-col font-sans">
+<div className=" lg:flex lg:flex-col font-sans">
 
    <DetailContantTop/>
    <DetailContantBottom/> 
