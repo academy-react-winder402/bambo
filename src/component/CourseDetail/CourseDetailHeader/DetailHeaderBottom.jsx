@@ -7,7 +7,7 @@ import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png"
 
 const DetailHeaderBottom = () => {
-    const [ coursedetsil,  setcoursedetail] = useState([]);
+    const [ coursedetail,  setcoursedetail] = useState([]);
     const getcoursedetail = async() =>{
         const courses = await  getcoursedetail();
         setcoursedetail (courses);
@@ -31,7 +31,7 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs
     xs:w-[140px] xs:h-[80px]  xs:ml-[190px]
      ">
         <div>:مدرس</div>
-        <div>{ coursedetsil.teacherName}</div>
+        <div>{ coursedetail.teacherName}</div>
      </div>
             </div>
             <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px]
