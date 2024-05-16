@@ -11,15 +11,17 @@ const RegisterLeftTop =({gotoleft}) =>{
         );  
     };
     return(
-        <div className="lg:h-[60px] w-[100%] lg:text-[25px] lg:text-black  lg:pt-[15px] lg:text-right lg:pr-[40px]
-        md:h-[60px] md:w-[100%] md:text-[17px] md:text-black   md:text-right md:pr-[40px]
-            sm:h-[60px]    sm:text-[25px] sm:text-black  sm:py-[15px] sm:text-right sm:pr-[40px]
-            xs:h-[50px]   xs:text-[25px] xs:text-black xs:py-[15px] xs:text-right xs:pr-[40px]
-            xs:flex
-            ">ثبت نام 
+        <div className="lg:h-[60px] lg:w-[100%]  lg:flex lg:justify-between
+      
+            ">
+                <div className="lg:h-[45px] lg:w-[30%] lg:mt-[15px] lg:pt-[5px] lg:border-r-[1px] lg:border-r-solid lg:border-r-[black] lg:text-[20px] lg:text-[#fff]  lg:text-center
+                lg:border-l-[1px] lg:border-l-solid lg:border-l-[black]
+                lg:border-b-[1px] lg:border-b-solid lg:border-b-[black]
+               lg:rounded-l-[0.8em] lg:bg-[#004458]
+                ">ثبت نام </div>
            
-            <img src={left} onClick={gotoleft} className=" lg:w-[30px] lg:h-[30px] lg:mr-[400px] lg:cursor-pointer md:w-[30px] md:h-[30px] md:mr-[250px] md:cursor-pointer 
-            sm:w-[30px] sm:h-[30px] sm:mr-[300px] sm:cursor-pointer xs:w-[30px] h-[30px] xs:mr-[210px] cursor-pointer"></img>
+            <img src={left} onClick={gotoleft} className=" lg:w-[30px] lg:h-[30px]  lg:cursor-pointer lg:mt-[20px] lg:ml-[15px]
+"></img>
             </div>
     );
 };
