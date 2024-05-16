@@ -6,12 +6,12 @@ const RegisterLeftThird= ({formData, setFormData}) => {
              <div >
            <Formik>
                 <Form>
-                    < div dir="rtl" className=" lg:h-[100px]  lg:flex lg:flex-col lg:gap-[10px]  
+                    < div dir="rtl" className=" lg:h-[100px]  lg:flex lg:flex-col lg:gap-[10px] lg:mt-[30px] 
                       sm:h-[100px] sm:mt-[2px]  sm:flex sm:flex-col sm:gap-[10px]
                       xs:h-[100px] xs:mt-[2px]  xs:flex xs:flex-col xs:gap-[7px]
                      ">
                         <label className="   lg:text-[17px]">ایمیل</label>
-                        <Field name="phonenamber"  className=" lg:w-[90%]  lg:h-[60px]  lg:rounded-[10px] lg:pr-[1rem] 
+                        <Field name="phonenamber"  className=" lg:w-[90%]  lg:h-[50px]  lg:rounded-[10px] lg:pr-[1rem] 
 
                          sm:w-[500px] sm:h-[40px] sm:rounded-[10px] sm:pr-[1rem] 
                          xs:w-[330px] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
@@ -29,7 +29,7 @@ const RegisterLeftThird= ({formData, setFormData}) => {
                       xs:h-[100px] xs:mt-[2px]  xs:flex xs:flex-col xs:gap-[7px]
                     ">
                         <label className="   lg:text-[17px]">رمز عبور</label>
-                        <Field type="password" name="phonenamber"   className=" lg:w-[90%]  lg:h-[60px]  lg:rounded-[10px] lg:pr-[1rem] 
+                        <Field type="password" name="phonenamber"   className=" lg:w-[90%]  lg:h-[50px]  lg:rounded-[10px] lg:pr-[1rem] 
                          sm:w-[500px] sm:h-[40px] sm:rounded-[10px] sm:pr-[1rem] 
                          xs:w-[330px] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
                          lg:border-solid lg:border-[1px] lg:border-[black]
@@ -47,7 +47,7 @@ const RegisterLeftThird= ({formData, setFormData}) => {
                       xs:h-[100px] xs:mt-[2px]  xs:flex xs:flex-col xs:gap-[7px]
                     ">
                         <label className="  lg:text-[17px]">تکرار رمز عبور </label>
-                        <Field type="password" name="phonenamber"  className=" lg:w-[90%]  lg:h-[60px]  lg:rounded-[10px] lg:pr-[1rem] 
+                        <Field type="password" name="phonenamber"  className=" lg:w-[90%]  lg:h-[50px]  lg:rounded-[10px] lg:pr-[1rem] 
                                                 lg:border-solid lg:border-[1px] lg:border-[black]
                                                 sm:border-[1px] sm:border-[black] sm:border-solid
                                                 md:border-[1px] md:border-[black] md:border-solid
