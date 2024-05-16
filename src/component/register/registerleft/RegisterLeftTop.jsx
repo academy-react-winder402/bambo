@@ -18,7 +18,7 @@ const RegisterLeftTop =({gotoleft}) =>{
             xs:flex
             ">ثبت نام 
            
-            <img src={left} onClick={gotoleft} className=" lg:w-[30px] lg:h-[30px] lg:mr-[400px] lg:cursor-pointer md:w-[30px] md:h-[30px] md:mr-[250px] md:cursor-pointer 
+            <img src={left} onClick={gotoleft} className=" lg:w-[30px] lg:h-[30px] lg:mr-[370px] lg:cursor-pointer md:w-[30px] md:h-[30px] md:mr-[250px] md:cursor-pointer 
             sm:w-[30px] sm:h-[30px] sm:mr-[300px] sm:cursor-pointer xs:w-[30px] h-[30px] xs:mr-[210px] cursor-pointer"></img>
             </div>
     );
