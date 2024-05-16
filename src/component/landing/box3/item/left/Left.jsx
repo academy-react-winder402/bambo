@@ -6,8 +6,14 @@ const Left = ({course}) => {
     console.log(course);
 
     return (
-        <div className="  h-[33rem] w-[35rem] mt-[7rem] ml-[15rem] ">
-            <Leftimg im={course[0].tumbImageAddress} img={course[1].tumbImageAddress} imag={course[2].tumbImageAddress}/>
+        <div className="  h-[33rem] w-[35rem] mt-[10rem] ml-[5rem] ">
+            <div className=" h-[20rem] w-[50rem] m-auto  flex justify-between ">
+
+            {course.map((item,index) =>{
+               return(<Leftimg key={index} im={item.tumbImageAddress} title={item.title}/>)
+            })}
+
+            </div> 
         </div>
     );
 };

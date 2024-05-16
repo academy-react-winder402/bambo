@@ -1,14 +1,16 @@
 import React from "react";
 
-const Leftimg = ({ im ,img , imag}) => {
+const Leftimg = ({im,title}) => {
     
     return (
-        <div className="border border-solid border-[#09B28B] h-[25rem] w-96 m-auto  relative">
-            <img src={im} className="h-[18rem] w-56 absolute top-[-1rem] left-[-7rem] " />
-            <img src={img} className="h-40 w-[16.5rem] absolute top-[2rem] left-[8.5rem] " />
-            <img src={imag} className="h-[14rem] w-[12rem] absolute top-[18rem] left-[-5rem] " />
-            <img src={im} className="h-[14rem] w-[14rem] absolute top-[14rem] left-[8.5rem] " />
+        <div className=" h-[20rem] w-56 m-auto  relative group">
+        
+        <img src={im} className="h-[20rem] w-56 rounded-md " />
+        <div className="h-[20rem] w-56 bg-[#00000088] absolute top-10 left-0 text-white group-hover:top-0 opacity-0 group-hover:opacity-[1]"> 
+            {title}
         </div>
+        </div> 
+
 
     );
 };
