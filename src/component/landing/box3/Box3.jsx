@@ -15,9 +15,6 @@ const Box3 = () => {
         getCourseList();
     }, []);
 
-    console.log(courselanding);
-
-
 
     return (
         <div className=" h-[46.5rem] w-[96rem] flex bg-[#f4f3f3] m-auto">
@@ -25,7 +22,7 @@ const Box3 = () => {
             <Right />
 
             
-            <Left courselanding={courselanding} />
+            <Left course={courselanding} />
             
 
         </div>
