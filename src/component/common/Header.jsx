@@ -29,8 +29,8 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className=" h-[3.4rem] w-[5rem] absolute top-[0rem] left-[14rem] hover:cursor-pointer hover:bg-[#004458]">  
-            <img src={sun} className="h-[2rem] w-[2rem] m-auto mt-[0.8rem]" />
+            <div className=" h-[3.4rem] w-[5rem] absolute top-[0rem] left-[15rem] hover:cursor-pointer hover:bg-[#004458]">  
+            <img src={sun} className="h-[1.5rem] w-[1.5rem] m-auto mt-[1.1rem]" />
             </div>
         </div>
     );
