@@ -5,7 +5,7 @@ const getnewslanding = async() => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/News?PageNumber=1&RowsOfPage=10&SortingCol=InsertDate&SortType=DESC");
+        const result = await instance.get("/Home/GetCoursesTop");
 
         return result;
     }catch(error){
