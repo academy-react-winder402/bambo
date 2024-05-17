@@ -10,7 +10,7 @@ const Left = ({course}) => {
             <div className=" h-[20rem] w-[50rem] m-auto  flex justify-between ">
 
             {course.map((item,index) =>{
-               return(<Leftimg key={index} im={item.tumbImageAddress} title={item.title}/>)
+               return(<Leftimg key={index} im={item.tumbImageAddress} title={item.title} teacher={item.teacherName} typename={item.typeName}/>)
             })}
 
             </div> 
