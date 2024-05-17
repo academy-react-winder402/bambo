@@ -8,36 +8,31 @@ import right from '../../../../assets/img/landing/right.png';
 const Rightt = ({newslanding}) => {
 
 
+console.log(newslanding);
 
 
-const slider = [
-    {im:js, title:"مقایسه ریکت با فریمورک های جدید جاوا اسکرییپت"},
-    {im:new1 , title:"rezaaaaa"},
-];
-
-
-const [currentindex,setcurrentindex] = useState(0);
+const [currentslide,setcurrentslide] = useState(0);
 
 const pervSlide = () => {
-    const infirstSlide = currentindex === 0;
-    const newIndex = infirstSlide ? {newslanding} - 1 : currentindex - 1;
-    setcurrentindex(newIndex);
+    const infirstSlide = currentslide === 0;
+    const newIndex = infirstSlide ? {newslanding} - 1 : currentslide - 1;
+    setcurrentslide(newIndex);
 };
 
+
 const nextSlide = () => {
-    const inlastSlide = currentindex ===  - 1;
-    const newIndex = inlastSlide ? 0 : currentindex + 1;
-    setcurrentindex(newIndex);
-};
-    
+    const inlastSlide = currentslide ===  - 1;
+    const newIndex = inlastSlide ? 0  : currentslide + 1;
+    setcurrentslide(newIndex);
+}; 
 
 
     return (
         <div className=" h-[30rem] w-[35rem] mt-[8rem] ml-20">
             <div className="border border-solid border-[#09B28B] h-[24rem] w-[35rem] relative">
-                <img src={newslanding[currentindex].tumbImageAddress} className="h-[24rem] w-[35rem]" />
+                <img src={newslanding[currentslide].tumbImageAddress} className="h-[24rem] w-[35rem]" />
                 <div className="h-16 w-full txt-2xl absolute top-[20rem] bg-[#004358b8] text-white text-center leading-[3.5rem]">
-                    {newslanding[currentindex].title}
+                    
                 </div>
             </div>
             <div className="border-2 border-solid border-[#09B28B] h-[3rem] w-[27rem] m-auto flex justify-between">

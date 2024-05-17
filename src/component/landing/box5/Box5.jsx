@@ -19,7 +19,7 @@ const Box5 = () => {
     }, []);
 
 
-
+console.log(newslanding);
 
     return (
         <div className=" h-[46rem] w-[96rem]  flex justify-between m-auto">
