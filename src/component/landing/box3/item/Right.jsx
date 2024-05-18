@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+
 const Right = () => {
     return (
         <div className="border border-solid border-[#D1D1D1] h-[37rem] w-[37rem] relative">
