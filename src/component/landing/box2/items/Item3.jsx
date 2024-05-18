@@ -21,10 +21,10 @@ const Item3 = () => {
                 <img src={icon3} className="h-14 w-14" />
             </div>
             <div className=" h-16 w-52 m-auto mt-3 flex">
-                <div className=" h-14 w-32 text-white text-4xl text-end"> دانشجو </div>
-                <div className=" h-14 w-24 text-white text-4xl text-center"> {courselanding.studentCount} </div>
+                <div className=" h-14 w-32 text-white text-4xl text-end dark:text-[#969faf]"> دانشجو </div>
+                <div className=" h-14 w-24 text-white text-4xl text-center dark:text-[#969faf]"> {courselanding.studentCount} </div>
             </div>
-            <div className=" h-20 w-[23rem] m-auto  text-white text-center text-lg "> تا کنون بیش از ۵۰۰ نفر
+            <div className=" h-20 w-[23rem] m-auto  text-white text-center text-lg dark:text-[#969faf]"> تا کنون بیش از ۵۰۰ نفر
                 از اموزش های بامبو استفاده کرده اند
                 و نظرات خودشونو ثبت کرده اند </div>
         </div>

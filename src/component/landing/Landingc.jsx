@@ -12,7 +12,7 @@ const Landingc = () => {
     return (
         <div >
             <SearchLanding isVisible={showModal}  onclose={() => {setshowModal(false);}} />
-            <Box1 set={setshowModal}/>
+            <Box1 set={setshowModal} />
             <Box2 />
             <Box3 />
             <Box4 />
