@@ -3,6 +3,7 @@ import logo from '../../assets/img/landing/logo.png';
 import { NavLink } from "react-router-dom";
 import shopp from '../../assets/img/landing/shopp.png';
 import sun from '../../assets/img/courses/sun.png';
+import { DarkModeSwitch } from "./darkmod/Darkmode";
 
 const Header = () => {
     return (
@@ -32,6 +33,9 @@ const Header = () => {
             <div className=" h-[3.4rem] w-[5rem] absolute top-[0rem] left-[15rem] hover:cursor-pointer hover:bg-[#004458]">  
             <img src={sun} className="h-[1.5rem] w-[1.5rem] m-auto mt-[1.1rem]" />
             </div>
+
+<DarkModeSwitch />
+
         </div>
     );
 };
