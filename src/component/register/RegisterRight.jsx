@@ -39,20 +39,22 @@ const RegisterRight = () => {
                     "> آکادمی آموزشی بامبو</div>
                   
                     <div className=" lg:h-[50px]  lg:flex  lg:justify-between  lg:my-[5px]
-                    sm:hidden xs:hidden
+                    
                     ">
                         <img src={insta} className=" lg:w-[40px]  lg:h-[40px] sm:hidden  lg:block xs:hidden"></img>
                         <img src={tele} className=" lg:w-[40px]  lg:h-[40px] sm:hidden lg:block xs:hidden"></img>
                         <img src={whats} className=" lg:w-[35px]  lg:h-[35px] sm:hidden lg:block xs:hidden"></img>
                         <img src={yout} className=" lg:w-[40px]  lg:h-[40px] sm:hidden lg:block xs:hidden"></img>
-                        <div onClick={gotolayout}> <img src={home} className=" lg:w-[33px]  lg:h-[33px] cursor-pointer sm:hidden lg:block xs:hidden" ></img></div>
+                        <div onClick={gotolayout}> <img src={home} className=" lg:w-[33px]  lg:h-[33px] cursor-pointer sm:w-[33px]  sm:h-[33px] xs:w-[33px]  xs:h-[33px]
+                        sm:m-auto xs:m-auto sm:mt-[5px] xs:mt-[5px]
+                        " ></img></div>
                     </div>
                 </div>
             </div>
 
         </div>
 
-    );
+    ); 
 };
 
 export { RegisterRight };

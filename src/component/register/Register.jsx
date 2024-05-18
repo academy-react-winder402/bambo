@@ -9,6 +9,7 @@ const Registerc= () => {
         <div className="lg:w-[100%] lg:h-[730px] lg:flex lg:flex-wrap
        sm:flex sm:flex-col-reverse sm:w-[100%]  sm:h-[915px]
        xs:flex xs:flex-col-reverse xs:w-[100%]  xs:h-[915px]
+       md:flex  md:w-[100%]  md:h-[730px]
          ">
                 <FormRegister/>
                 < RegisterRight/>

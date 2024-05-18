@@ -2,7 +2,7 @@ import React from "react";
 import logodetail from "../../../assets/img/coursedetail/logodetail.jpg"
 import zarfiat from "../../../assets/img/coursedetail/zarfiat.png"
 import daneshjo from "../../../assets/img/coursedetail/daneshjo.png"
-const DetailHeaderContant = () => {
+const DetailHeaderContant = ({coursedetail}) => {
 
    return (
       <div className="lg:w-[700px] lg:h-[400px] lg:m-auto lg:flex lg:flex-col lg:mb-[2rem] lg:font-sans
@@ -20,7 +20,7 @@ md:w-[100%] md:h-[100%] xs:w-[100%] xs:h-[100%]
          <div className="lg:h-[80px] lg:w-[480px] lg:text-[50px] lg:ml-[100px] lg:text-center lg:border-b-solid lg:border-b-[1px] lg:border-b-[black]
 md:h-[70px] md:w-[300px] md:text-[30px] md:ml-[50px] md:text-center md:border-b-solid md:border-b-[1px] md:border-b-[black]
 xs:h-[70px] xs:w-[200px] xs:text-[20px] xs:ml-[5px] xs:text-center xs:border-b-solid xs:border-b-[1px] xs:border-b-[black]
-">دوره جاوا اسکریپت</div>
+">{coursedetail.title}</div>
          <div className="lg:h-[50px] lg:w-[480px] lg:ml-[130px]  lg:flex lg:flex-row-reverse lg:gap-[30px]
 md:h-[50px] md:w-[300px] md:ml-[30px]  md:flex md:flex-row-reverse md:gap-[30px]
 xs:h-[50px] xs:w-[200px] xs:ml-[5px]  xs:flex xs:flex-row-reverse xs:gap-[30px]
