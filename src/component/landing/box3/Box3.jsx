@@ -13,6 +13,7 @@ const Box3 = () => {
 
     useEffect(() => {
         getCourseList();
+      
     }, []);
 
 
