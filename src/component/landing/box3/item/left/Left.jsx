@@ -6,7 +6,7 @@ const Left = ({course}) => {
     console.log(course);
 
     return (
-        <div className="  h-[36rem] w-[55rem] mt-[12rem] ml-[2rem] ">
+        <div className="  h-[36rem] w-[55rem] mt-[5rem] ml-[2rem] ">
             <div className=" h-[18rem] w-[55rem] flex">
 
 
