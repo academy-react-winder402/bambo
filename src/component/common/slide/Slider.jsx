@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Leftimg } from '../../landing/box3/item/left/Leftimg';
 
+
 const Slider = ({course}) => {
   return (
     <Swiper
@@ -17,6 +18,7 @@ const Slider = ({course}) => {
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
+  
       
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
