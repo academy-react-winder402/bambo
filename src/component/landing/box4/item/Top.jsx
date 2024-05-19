@@ -10,8 +10,8 @@ const Top = () => {
              m-auto mt-28 bg-[#DBDBDB] text-center text-xl text-[#333333c3] leading-[3rem]"> مشاوره </div>
             </div>
             <div className=" h-[15.3rem] w-[25rem]">
-                <span className="block text-5xl mt-14 text-right text-white dark:text-[#969faf]"> مشاوره انلاین </span>
-                <span className="block text-2xl  text-right text-[#D1D1D1] mt-[2rem] dark:text-[#969faf]"> مشاوران ما برای حل مشکل شما اماده اند </span>
+                <span className="block text-5xl mt-14 text-right text-white "> مشاوره انلاین </span>
+                <span className="block text-2xl  text-right text-[#D1D1D1] mt-[2rem] "> مشاوران ما برای حل مشکل شما اماده اند </span>
             </div>
         </div>
     );

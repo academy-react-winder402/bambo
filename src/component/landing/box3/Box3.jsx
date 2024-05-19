@@ -18,7 +18,7 @@ const Box3 = () => {
 
 
     return (
-        <div className=" h-[46.5rem] w-[96rem] flex bg-[#f4f3f3] m-auto dark:bg-[#262931]">
+        <div className=" h-[46.5rem] w-[96rem] flex bg-[#f4f3f3] m-auto dark:bg-[#242424]">
 
             <Right />
 

@@ -22,10 +22,10 @@ const Item1 = () => {
                 <img src={icon1} className="h-14 w-14" />
             </div>
             <div className=" h-16 w-52 m-auto mt-6 flex">
-                <div className=" h-14 w-32 text-white text-4xl text-end dark:text-[#969faf]"> دوره ها </div>
-                <div className=" h-14 w-24 text-white text-4xl text-center dark:text-[#969faf]"> {courselanding.courseCount} </div>
+                <div className=" h-14 w-32 text-white text-4xl text-end "> دوره ها </div>
+                <div className=" h-14 w-24 text-white text-4xl text-center "> {courselanding.courseCount} </div>
             </div>
-            <div className=" h-20 w-[23rem] m-auto  text-white text-center text-lg dark:text-[#969faf]"> تا کنون بیش از ۲۰۰ دوره از دسته بندی
+            <div className=" h-20 w-[23rem] m-auto  text-white text-center text-lg "> تا کنون بیش از ۲۰۰ دوره از دسته بندی
                 های متفاوت در سایت ثبت شده و قابل دسترسی است </div>
         </div>
     );
