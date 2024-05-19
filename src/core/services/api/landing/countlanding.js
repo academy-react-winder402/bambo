@@ -1,5 +1,6 @@
 import { instance } from "../../interseptor";
 
+
 const getcountlanding = async() => {
     try{
         console.log("fetching started ...");
