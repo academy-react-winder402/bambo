@@ -14,7 +14,7 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
                 initialValues={{ phonenumber: "" }}
                 onSubmit={(values) => onSubmit(values)}
                 validationSchema={validation}>
-                {(form) => <Form>
+                <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px] lg:mt-[50px]
                     sm:h-[200px] sm:mt-[50px]  sm:flex sm:flex-col sm:gap-[20px] sm:m-auto
                     md:h-[200px]  md:mt-[40px]  md:flex md:flex-col md:gap-[20px] 
@@ -41,7 +41,7 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
                         <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
                 </Form>
-                }
+                
             </Formik>
         </div>
 

@@ -71,7 +71,7 @@ const RegisterLeftSecend = ({ formData, setFormData }) => {
                         onChange={(event) => setFormData({ ...formData, code: event.target.value })}
                      />
                      <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+                  
                      <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
                            md:w-[50px] md:h-[60px] md:rounded-[10px] 
                         sm:w-[50px] sm:h-[60px] sm:rounded-[10px]

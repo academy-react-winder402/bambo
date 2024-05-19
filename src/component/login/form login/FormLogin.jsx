@@ -44,7 +44,7 @@ const FormLogin = () => {
         md:w-[55%]  
         xs:w-[100%]  xs:h-[60%]
         ">
-          <div className="lg:m-auto lg:w-[30rem] h-auto   lg:shadow-sm lg:border-solid lg:border-[1px] lg:border-[black] lg:rounded-lg lg:pb-[2rem] 
+          <div className="lg:m-auto lg:w-[30rem] h-auto   lg:shadow-sm lg:border-solid lg:border-[1px] lg:border-[black] lg:rounded-lg 
         sm:m-auto sm:w-[65%] sm:h-auto  sm:shadow-sm sm:border-[1px] sm:border-[black] sm:border-solid sm:rounded-lg sm:mt-[80px]
         md:m-auto md:w-[80%] md:h-auto md:shadow-sm md:border-[1px] md:border-[black] md:border-solid md:rounded-lg md:mt-[20px]
          xs:w-[100%] xs:h-auto xs:bg-[#fff] 
