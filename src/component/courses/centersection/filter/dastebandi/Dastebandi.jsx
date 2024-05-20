@@ -1,6 +1,24 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { getFiltercourse } from "../../../../../core/services/api/landing/Filtercourse";
 
 const Dastebandi = () => {
+
+    const [coursetype, setcoursetype] = useState([]);
+
+    const getCourseList = async () => {
+        const courses = await getFiltercourse();
+        setcoursetype(courses);
+    };
+
+    useEffect(() => {
+        getCourseList();
+      
+    }, []);
+
+    
+
+    const {typeName} = coursetype;
+    console.log(coursetype.typeName);
 
     return (
         <div>
@@ -12,7 +30,9 @@ const Dastebandi = () => {
 
                 <div className=" text-right flex justify-end ">
                     <input type="checkbox" id="online" name="online" className="peer hidden" />
-                    <label for="online" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" > دوره انلاین</label>
+                    <label for="online" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" onClick={() => {
+                        
+                    }} > دوره انلاین</label>
                     <label for="online" v className="border border-solid border-[black] rounded-full h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
 peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover hover:cursor-pointer">  </label>
                 </div>

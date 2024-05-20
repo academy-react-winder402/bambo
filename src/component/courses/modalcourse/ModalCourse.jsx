@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from "react";
 import js from '../../../assets/img/courses/js.png';
 
-import { getcourseid } from "../../../core/services/api/landing/courseid";
 
 const ModalCourse = ({isVisible,onclose,courseId}) => {
     if(!isVisible) return null;
