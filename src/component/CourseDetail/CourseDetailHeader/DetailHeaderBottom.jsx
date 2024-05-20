@@ -5,21 +5,23 @@ import dislike from "../../../assets/img/courses/dislike.png";
 import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png";
 import { getcoursedetail} from "../../../core/services/api/coursedetail/coursedetail"
+import { useParams } from "react-router-dom";
 
 const DetailHeaderBottom = () => {
         const [coursedetail, setcoursedetail] = useState([]);
-    
+    const courseid=useParams().id;
         const getCoursedetailList = async () => {
-            const courses = await getcoursedetail();
+            const courses = await getcoursedetail(courseid);
             setcoursedetail(courses);
+            console.log(courses);
         };
     
         useEffect(() => {
             getCoursedetailList();
           
-        }, []);
+        }, [courseid]);
 
-        console.log(coursedetail);
+       
 
     return (
         <div className="lg:w-[100%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px] lg:flex lg:flex-row-reverse lg:text-center lg:text-[25px] lg:leading-[30px] lg:font-sans
@@ -40,7 +42,7 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs
     xs:w-[140px] xs:h-[80px]  xs:ml-[190px]
      ">
         <div>:مدرس</div>
-        <div>  </div>
+        <div> {coursedetail?.teacherName} </div>
      </div>
             </div>
             <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px]
