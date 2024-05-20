@@ -8,6 +8,9 @@ const Contentsearch = () => {
                 <span className="block text-[#0CDBAB]"> مشاهده همه </span>
                 <h1 className="mr-[0.5rem]"> دوره ها </h1>
             </div>
+            <div className="border border-solid border-[#088568] mt-[1rem] h-[3rem] w-[95%] m-auto">  </div>
+
+            </div>
             <div className="border border-solid border-[#088568] mt-[1rem] h-[5rem] w-[95%] m-auto">
                 <div className="border border-solid border-[#088568] h-[3rem] mt-[1rem] flex justify-end">
                     <span className="block"> 2000 </span>
@@ -19,6 +22,7 @@ const Contentsearch = () => {
                 </div>
 
             </div>
+
         </div>
     );
 };

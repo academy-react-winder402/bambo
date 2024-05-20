@@ -6,7 +6,16 @@ import dislike from "../../../assets/img/courses/dislike.png";
 import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png"
 
-const DetailHeaderBottom = ({coursedetail}) => {
+
+const DetailHeaderBottom = () => {
+    const [ coursedetail,  setcoursedetail] = useState([]);
+    const getcoursedetail = async() =>{
+        const courses = await  getcoursedetail();
+        setcoursedetail (courses);
+    };
+
+const DetailHeaderBottomm = ({coursedetail}) => {
+
 
     return (
         <div className="lg:w-[100%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px] lg:flex lg:flex-row-reverse lg:text-center lg:text-[25px] lg:leading-[30px] lg:font-sans

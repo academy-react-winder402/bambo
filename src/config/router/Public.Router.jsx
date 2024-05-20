@@ -13,6 +13,7 @@ import {Sabadkharid} from '../../screen/sabadkharid/Sabadkharid.jsx';
 import { Notfound } from "../../screen/notfound/Notfound.jsx";
 import {About} from '../../screen/about/About.jsx';
 
+
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
     { path: '/', element: <Landing /> },
@@ -22,6 +23,7 @@ const Router = createBrowserRouter([
     { path: '/articleDetail', element: <ArticleDetail /> },
     { path: '/sabadkharid', element: <Sabadkharid /> },
     { path: '/about', element: <About /> },
+
     
   ]},
   
