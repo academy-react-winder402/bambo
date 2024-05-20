@@ -1,16 +1,20 @@
 import React from "react";
-import {Slider} from '../../../../common/slide/Slider';
+import {Leftimg} from './Leftimg';
 
 const Left = ({course}) => {
 
     console.log(course);
 
     return (
-        <div className="  h-[36rem] w-[55rem] mt-[5rem] ml-[2rem] ">
-            <div className=" h-[18rem] w-[55rem] flex">
+        <div className="  h-[36rem] w-[55rem] mt-[8rem] ml-[2rem] ">
+            <div className=" h-[22rem] w-[55rem] flex gap-[1rem]">
 
 
-                <Slider  course={course}/>
+                
+        {course.map((item, index) => {
+          return (
+            <Leftimg key={index} im={item.tumbImageAddress} title={item.title} teacher={item.teacherName} typename={item.typeName} />)
+        })}
 
 
             </div> 
