@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState,useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { FormLoginBottom } from "./FormLoginBottom";
 import { FormLoginTop } from "./FormLoginTop.jsx";
 import {FormLoginCenter} from "./FormLoginCenter.jsx"
+
+
 const FormLogin = () => {
     const navigator = useNavigate();
     const gotoregister =() => {
@@ -38,7 +40,7 @@ const FormLogin = () => {
     };
     
     return (
-
+    
         <div dir="rtl" className="lg:w-[55%]  lg:my-auto
         sm:w-[100%]  
         md:w-[55%]  
@@ -50,7 +52,7 @@ const FormLogin = () => {
          xs:w-[100%] xs:h-auto xs:bg-[#fff] 
         " >
             <FormLoginTop gotoleft={gotoleft}/>
-      <FormLoginCenter gotoforgotpass={gotoforgotpass}/>
+      <FormLoginCenter gotoforgotpass={gotoforgotpass} />
 <FormLoginBottom gotoregister={gotoregister}/>
             </div>
       

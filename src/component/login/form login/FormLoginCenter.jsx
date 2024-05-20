@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState,useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import {Postlogin} from "../../../core/services/api/auth/Lgin"
 const FormLoginCenter =({gotoforgotpass})=>{
+    const [formdata,setFormData]=useState(
+        {
+            phoneOrGmail:"",
+            password:""
+        }
+    );
+    const onSubmit =async(values) => {
+        const obj = {phoneOrGmail:values.phoneOrGmail,password: values.password}
+         
+             const loginapi = await Postlogin(obj);
+             setFormData(loginapi);
+             console.log(loginapi);
+       };
+     
     return(
+   
+ 
         <>
           <div className="
         sm:border-solid sm:border-[transparent] sm:border-[1px] 
@@ -9,7 +26,10 @@ const FormLoginCenter =({gotoforgotpass})=>{
         md:border-solid md:border-[transparent] md:border-[1px] 
  
    ">
-       <Formik>
+       <Formik
+           initialValues={{phoneOrGmail: "",password: "" }}
+           onSubmit={(values) => onSubmit(values)}
+       >
            <Form>
                <div className="lg:h-[150px] lg:w-[80%]   lg:flex lg:flex-col lg:gap-[20px]  lg:mt-[50px] 
                lg:m-auto
@@ -19,7 +39,7 @@ const FormLoginCenter =({gotoforgotpass})=>{
               xs:h-[150px] xs:w-[80%]   xs:flex xs:flex-col xs:gap-[20px] xs:mt-[50px] xs:mr-[13%]
                ">
 
-                   <Field name="phonenamber" placeholder=" شماره موبایل" className=" lg:w-[100%]  lg:h-[50px]  lg:rounded-[10px]
+                   <Field name="phoneOrGmail" placeholder=" شماره موبایل" className=" lg:w-[100%]  lg:h-[50px]  lg:rounded-[10px]
                     
                        md:w-[100%]  md:h-[50px]  md:rounded-[10px] md:pr-[1rem] lg:pr-[1rem]
                         sm:w-[100%] sm:h-[40px] sm:rounded-[10px] sm:pr-[1rem] 
@@ -30,9 +50,7 @@ const FormLoginCenter =({gotoforgotpass})=>{
                         md:border-[1px] md:border-[black] md:border-solid
                    " />
 
-              
-
-                   <Field name="phonenamber" placeholder="رمز عبور" className=" lg:w-[100%]  lg:h-[50px]  lg:rounded-[10px]  
+                   <Field name="password" placeholder="رمز عبور" className=" lg:w-[100%]  lg:h-[50px]  lg:rounded-[10px]  
                        md:w-[100%]  md:h-[50px]  md:rounded-[10px] md:pr-[1rem] lg:pr-[1rem]
                         sm:w-[100%] sm:h-[40px] sm:rounded-[10px] sm:pr-[1rem] 
                         xs:w-[90%] xs:h-[40px] xs:rounded-[10px]  xs:pr-[1rem] 
