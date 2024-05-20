@@ -2,18 +2,10 @@ import React, { useState,useEffect } from "react";
 import { DetailHeaderTop } from "./DetailHeaderTop";
 import { DetailHeaderContant } from "./DetailHeaderContent";
 import { DetailHeaderBottom} from "./DetailHeaderBottom"
-import { getcoursedetail } from "../../../core/services/api/coursedetail/coursedetail";
-const DetailHeader = () => {
- const [coursedetail, setcoursedetail]=useState([]);
-  const getCoursedetailList = async () => {
-    const courses = await getcoursedetail();
-    setcoursedetail(courses);
-};
 
-useEffect(() => {
-    getCoursedetailList();
-  
-}, []);
+
+const DetailHeader = ({coursedetail}) => {
+ 
     return(
 
  <div className="lg:w-[100%] lg:h-[765px] lg:text-white lg:bg-[url('assets/img/coursedetail/headerdetail.jpg')] lg:bg-cover lg:font-sans

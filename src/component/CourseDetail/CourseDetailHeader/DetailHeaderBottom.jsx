@@ -4,22 +4,9 @@ import like from "../../../assets/img/coursedetail/like.png";
 import dislike from "../../../assets/img/courses/dislike.png";
 import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png";
-import { getcoursedetail} from "../../../core/services/api/coursedetail/coursedetail"
-import { useParams } from "react-router-dom";
 
-const DetailHeaderBottom = () => {
-        const [coursedetail, setcoursedetail] = useState([]);
-    const courseid=useParams().id;
-        const getCoursedetailList = async () => {
-            const courses = await getcoursedetail(courseid);
-            setcoursedetail(courses);
-            console.log(courses);
-        };
-    
-        useEffect(() => {
-            getCoursedetailList();
-          
-        }, [courseid]);
+const DetailHeaderBottom = ({coursedetail}) => {
+      const {title, teacherName,endTime,startTime,cost,describe,miniDescribe} = coursedetail;
 
        
 
@@ -42,7 +29,7 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] xs
     xs:w-[140px] xs:h-[80px]  xs:ml-[190px]
      ">
         <div>:مدرس</div>
-        <div> {coursedetail?.teacherName} </div>
+        <div> {teacherName} </div>
      </div>
             </div>
             <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px]
@@ -52,8 +39,8 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] ">
 md:w-[20px] md:h-[20px] md:m-auto 
 xs:w-[15px] xs:h-[15px] xs:m-auto 
 " ><img src={danesh}></img></div>
-                <div className=" mt-[3rem]"> تاریخ شروع : 1400/1/1</div>
-                <div className=" mt-[1rem]"> تاریخ پایان : 1401/1/1</div>
+                <div className=" mt-[3rem]"> تاریخ شروع :{startTime}</div>
+                <div className=" mt-[1rem]"> تاریخ پایان:{endTime}</div>
             </div>
             <div className="wlg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px] lg:flex lg:flex-col lg:justify-center lg:gap-[10px]
 md:w-[33.5%] md:h-[220px] md:border-solid md:border-[#DBDBDB] md:border-[1px] md:flex md:flex-col md:justify-center md:gap-[10px]
