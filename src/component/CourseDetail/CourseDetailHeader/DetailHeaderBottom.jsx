@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import teacher from "../../../assets/img/coursedetail/teacher.png"
-import { getcoursedetail} from "../../../core/services/api/coursedetail/coursedetail"
 import like from "../../../assets/img/coursedetail/like.png";
 import dislike from "../../../assets/img/courses/dislike.png";
 import like2 from "../../../assets/img/courses/likee.png";
@@ -8,13 +7,6 @@ import danesh from "../../../assets/img/coursedetail/danesh.png"
 
 
 const DetailHeaderBottom = () => {
-    const [ coursedetail,  setcoursedetail] = useState([]);
-    const getcoursedetail = async() =>{
-        const courses = await  getcoursedetail();
-        setcoursedetail (courses);
-    };
-
-const DetailHeaderBottomm = ({coursedetail}) => {
 
 
     return (
