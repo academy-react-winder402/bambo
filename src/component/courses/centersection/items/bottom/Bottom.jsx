@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom";
 const Bottom = ({ title, modares, zarfiat, price, set,level,type,like,dis ,id,get}) => {
 
 
-
     return (
 
         <div className=" pb-[1rem] bg-[#fff] rounded-b-lg relative">
@@ -22,7 +21,7 @@ const Bottom = ({ title, modares, zarfiat, price, set,level,type,like,dis ,id,ge
             <button className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer absolute
                  top-[7.3rem] left-[1rem]" onClick={() => { 
                     set(true);
-                    get(id);
+                    get({id,title});
                   }}> جزئیات </button>
 
 

@@ -21,12 +21,12 @@ const [getid, setgetid] = useState();
       
     }, []);
 
-    console.log(course);
+   
 
 
     return (
         <div className="bg-[#ededed]">
-            <ModalCourse isVisible={showModal} idmodal={getid}  onclose={() => {setshowModal(false);}}/>
+            <ModalCourse isVisible={showModal} courseId={getid}  onclose={() => {setshowModal(false);}}/>
             <Headersection />
             <Centersection set={setshowModal} get={setgetid} course={course}/>
             
