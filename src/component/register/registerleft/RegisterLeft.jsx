@@ -14,7 +14,7 @@ const FormRegister = () => {
         {
             email: "",
             password: "",
-            phonenumber: "",
+            phoneNumber: "",
             code: "",
             confirmPassword: "",
         }
@@ -22,32 +22,22 @@ const FormRegister = () => {
     const validation = () => {
         yup.object().shape({
             password: yup.string().max(8, 'Must be 8 characters or less').required("fill"),
-            phonenumber: yup.string().required("fill").matches(/[0-11]/, 'Password requires a number'),
+            phoneNumber: yup.string().required("fill").matches(/[0-11]/, 'phonenumber requires a number'),
             email: yup.string().required("fill").email(),
             confirmPassword:  yup.string().required("fill"),
             code:  yup.string().required("fill").max(5, 'Must be 5 characters or less')
         });
-    };     
-       const onSubmit =async  (values) => {
-       
-        
-            const registerapi = await Postregister();
-            setFormData(registerapi);
+    };    
+  
 
-      };
-      useEffect(() => {
-       onSubmit();
-      
-    }, []);
-
-    console.log(formData);
+    
     const PageDisplay = () => {
         if (page == 0) {
             return <RegisterLeftFirst
                
-                setFormData={(value) => setFormData([...formData,value])}
+               
               validation ={validation}
-              onSubmit={onSubmit}
+           
             />;
         }
         else if (page == 1) {
@@ -55,7 +45,7 @@ const FormRegister = () => {
                 formData={formData}
                 setFormData={setFormData}
                 validation ={validation}
-                onSubmit={onSubmit}
+              
             />;
         }
         else {
@@ -63,7 +53,7 @@ const FormRegister = () => {
                 formData={formData}
                 setFormData={setFormData}
                 validation ={validation}
-                onSubmit={onSubmit}
+              
             />;
         }
 

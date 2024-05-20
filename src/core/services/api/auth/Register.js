@@ -1,10 +1,11 @@
 import { instance } from "../../interseptor/index.js";
 
-const Postregister = async() => {
+export const Postregister = async(obj) => {
+
     try{
         console.log("fetching started ...");
 
-        const result = await instance.post("/");
+        const result = await instance.post("/Sign/SendVerifyMessage " , obj);
 
         return result;
     }catch(error){
@@ -12,4 +13,4 @@ const Postregister = async() => {
         return[];
     }
 };
-export {Postregister};
+
