@@ -1,61 +1,10 @@
 import React, { useState } from "react";
 import { Item } from "./items/Item";
-import js from "../../../assets/img/courses/js.png";
 import { Filter } from "./filter/Filter";
-import paython from '../../../assets/img/courses/paython.png';
 import { Item2 } from "./items2/items2";
 
 
-const Centersection = ({set}) => {
-
-    const [Itemlist, setItemlist] = useState([
-        {},
-        { im: paython, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره سی شارپ", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-        { im: js, title: "دوره جاوا اسکریپت", modares: "بیل گیتس", zarfiat: "۵۹", price: "200,000" },
-    ]);
-
-    const [itemspage, setitemspage] = useState(8);
-    const [currentpage, setcurrentpage] = useState(1);
-
-
-    const numoftotalpages = Math.ceil(Itemlist.length / itemspage);
-    const pages = [...Array(numoftotalpages + 1).keys()].slice(1);
-
-
-
-    const indexoflastitem = currentpage + itemspage;
-
-    const indexoffirstitem = indexoflastitem - itemspage;
-
-    const visibleitem = Itemlist.slice(indexoffirstitem, indexoflastitem);
-
-    const prevpagehandles = () => {
-        if (currentpage !== 1) {
-            setcurrentpage(currentpage - 1);
-
-        };
-    };
-
-    const nextpagehandles = () => {
-        if (currentpage !== numoftotalpages) {
-            setcurrentpage(currentpage + 1);
-
-        };
-    };
+const Centersection = ({set , course ,get}) => {
 
     const [page, setpage] = useState(1);
 
@@ -65,9 +14,6 @@ const Centersection = ({set}) => {
 
 
     return (
-
-
-
         <>
         
 
@@ -90,29 +36,19 @@ const Centersection = ({set}) => {
 
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
                         {
-                            visibleitem.map((item, index) => {
-                                return (<Item key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} set={set}/>);
+                            course.map((item, index) => {
+                                return (<Item key={index} im={item.tumbImageAddress} title={item.title} modares={item.teacherName} level={item.levelName} type={item.typeName} 
+                                    price={item.cost} like={item.likeCount} dis={item.dissLikeCount} set={set} id={item.courseId} get={get}/>);
                             })
                         }
                     </div>
 
                     <div className={page === 2 ? "flex flex-wrap" : "hidden"}>
                         {
-                            visibleitem.map((item, index) => {
-                                return (<Item2 key={index} im={item.im} title={item.title} modares={item.modares} zarfiat={item.zarfiat} price={item.price} set={set}/>);
+                            course.map((item, index) => {
+                                return (<Item2 key={index} im={item.tumbImageAddress} title={item.title} />);
                             })
                         }
-                    </div>
-
-                    <div className="  h-[2rem] flex gap-2 m-auto mb-[2rem] w-full justify-center">
-
-                        <div onClick={prevpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458] 
-                        hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> prev </div>
-                        <p> {pages.map(page => <span key={page} onClick={() => setcurrentpage(page)}
-                            className={page === currentpage ? "border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458] hover:cursor-pointer hover:text-white bg-[#004458] text-white" 
-                            : "border border-solid border-[#D1D1D1] w-[2rem] h-[2rem] text-center leading-7 inline-block hover:bg-[#004458] hover:cursor-pointer hover:text-white bg-[#fff] "}> {`${page}`} </span>)} </p>
-                        <div onClick={nextpagehandles} className="border border-solid border-[#D1D1D1] text-lg p-[0.6rem] leading-[0.5rem] hover:bg-[#004458]
-                        hover:cursor-pointer hover:text-white bg-[#fff] rounded-md"> next </div>
                     </div>
 
                 </div>
