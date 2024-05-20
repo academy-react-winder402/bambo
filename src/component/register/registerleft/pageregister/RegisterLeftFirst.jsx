@@ -1,11 +1,9 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage  } from "formik";
 import React from "react";
-import * as yup from 'yup';
-const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
 
-    const onSubmit = (values) => {
-        const obj = { phonenumber: values.phonenumber }
-    };
+const RegisterLeftFirst = ({ formData, setFormData, validation,onSubmit }) => {
+
+  
 
     return (
 
@@ -13,7 +11,8 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
             <Formik
                 initialValues={{ phonenumber: "" }}
                 onSubmit={(values) => onSubmit(values)}
-                validationSchema={validation}>
+                validationSchema={validation}
+                >
                 <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px] lg:mt-[50px]
                     sm:h-[200px] sm:mt-[50px]  sm:flex sm:flex-col sm:gap-[20px] sm:m-auto
@@ -26,7 +25,7 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
                          md:h-[30px] md:text-[15px] md:text-right md:mt-[30px]
                          xs:h-[30px] xs:text-[15px] xs:text-right  xs:mt-[30px]
                         " > شماره موبایل خود را وارد کنید</label>
-                        <Field name="phonenumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
+                        <Field  name="phonenumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
                         sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] 
                         md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] 
                         lg:border-solid lg:border-[1px] lg:border-[black] 
@@ -35,9 +34,8 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
                         xs:border-[1px] xs:border-[black] xs:border-solid 
                         xs:w-[90%] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
                         "
-                            value={formData.phonenumber}
-                        onChange={(event) => setFormData({ ...formData, phonenumber: event.target.value })}
-                        />
+                      
+                         />
                         <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
                 </Form>

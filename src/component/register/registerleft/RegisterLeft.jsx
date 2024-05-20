@@ -6,10 +6,11 @@ import { RegisterLeftThird } from "./pageregister/RegisterLeftThird";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { RegisterLeftTop } from "./RegisterLeftTop";
-
 import * as yup from 'yup';
 const FormRegister = () => {
     const [page, setPage] = useState(0);
+    
+          
     const [formData, setFormData] = useState(
         {
             email: "",
@@ -22,18 +23,23 @@ const FormRegister = () => {
     const validation = () => {
         yup.object().shape({
             password: yup.string().max(8, 'Must be 8 characters or less').required("fill"),
-            phonenumber: yup.string().required("fill"),
-            email: yup.string().required("fill"),
+            phonenumber: yup.string().required("fill").matches(/[0-11]/, 'Password requires a number'),
+            email: yup.string().required("fill").email(),
             confirmPassword:  yup.string().required("fill"),
-            code:  yup.string().required("fill"),
+            code:  yup.string().required("fill").max(5, 'Must be 5 characters or less')
         });
     };
+    const onSubmit = (value) => {
+        setFormData( value)  ; 
+           
+       };
     const PageDisplay = () => {
         if (page == 0) {
             return <RegisterLeftFirst
-                formData={formData}
-                setFormData={setFormData}
+               
+                setFormData={(value) => setFormData([...formData,value])}
               validation ={validation}
+              onSubmit={onSubmit}
             />;
         }
         else if (page == 1) {
@@ -41,6 +47,7 @@ const FormRegister = () => {
                 formData={formData}
                 setFormData={setFormData}
                 validation ={validation}
+                onSubmit={onSubmit}
             />;
         }
         else {
@@ -48,6 +55,7 @@ const FormRegister = () => {
                 formData={formData}
                 setFormData={setFormData}
                 validation ={validation}
+                onSubmit={onSubmit}
             />;
         }
 
@@ -78,6 +86,7 @@ const FormRegister = () => {
             md:m-auto md:w-[70%] md:h-[100%] md:shadow-sm md:border-[1px] md:border-[black] md:border-solid md:rounded-lg md:mt-[20px]
             xs:m-auto xs:w-[100%] xs:h-auto xs:bg-[#fff] 
             " >
+       
             <RegisterLeftTop gotoleft={gotoleft}/>
             <div className="lg:pr-[40px] 
          sm:border-solid sm:border-[transparent] sm:border-[1px] sm:pr-[40px]
@@ -102,9 +111,10 @@ const FormRegister = () => {
                     disabled={page == 2}
                     onClick={() => {
                         setPage((currPage) => (currPage + 1));
-                    }}>
+                       
+                    }}   >
                     {page == 2 ? "ثبت نام" : "بعدی"}
-                </button>
+                    </button>
        </div>
             
          
