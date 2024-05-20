@@ -1,8 +1,21 @@
 import React from "react";
 import js from '../../../assets/img/courses/js.png';
+import { getcourse } from "../../../core/services/api/landing/Course";
 
-const ModalCourse = ({isVisible,onclose}) => {
+const ModalCourse = ({isVisible,onclose,idmodal}) => {
     if(!isVisible) return null;
+
+    const [data, setdata] = useState();
+    const getCourseList = async () => {
+        const courses = await getcourse();
+        setdata(courses);
+    };
+
+    useEffect(() => {
+        getCourseList();
+      
+    }, []);
+
     return (
         <div className="h-[46rem] w-[96rem]  z-10   fixed inset-0 backdrop-blur-sm bg-opacity-25" >
             <div className="h-[35rem] w-[40rem] bg-[#fff] m-auto mt-[5rem] relative   ">
