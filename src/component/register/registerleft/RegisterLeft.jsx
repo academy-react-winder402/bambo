@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { RegisterLeftFirst } from "./pageregister/RegisterLeftFirst";
 import { RegisterLeftSecend } from "./pageregister/RegisterLeftSecend";
@@ -6,16 +6,15 @@ import { RegisterLeftThird } from "./pageregister/RegisterLeftThird";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { RegisterLeftTop } from "./RegisterLeftTop";
+import {Postregister} from "../../../core/services/api/auth/Register"
 import * as yup from 'yup';
 const FormRegister = () => {
-    const [page, setPage] = useState(0);
-    
-          
+    const [page, setPage] = useState(0);     
     const [formData, setFormData] = useState(
         {
             email: "",
             password: "",
-            phonenumber: "",
+            phoneNumber: "",
             code: "",
             confirmPassword: "",
         }
@@ -23,23 +22,22 @@ const FormRegister = () => {
     const validation = () => {
         yup.object().shape({
             password: yup.string().max(8, 'Must be 8 characters or less').required("fill"),
-            phonenumber: yup.string().required("fill").matches(/[0-11]/, 'Password requires a number'),
+            phoneNumber: yup.string().required("fill").matches(/[0-11]/, 'phonenumber requires a number'),
             email: yup.string().required("fill").email(),
             confirmPassword:  yup.string().required("fill"),
             code:  yup.string().required("fill").max(5, 'Must be 5 characters or less')
         });
-    };
-    const onSubmit = (value) => {
-        setFormData( value)  ; 
-           
-       };
+    };    
+  
+
+    
     const PageDisplay = () => {
         if (page == 0) {
             return <RegisterLeftFirst
                
-                setFormData={(value) => setFormData([...formData,value])}
+               
               validation ={validation}
-              onSubmit={onSubmit}
+           
             />;
         }
         else if (page == 1) {
@@ -47,7 +45,7 @@ const FormRegister = () => {
                 formData={formData}
                 setFormData={setFormData}
                 validation ={validation}
-                onSubmit={onSubmit}
+              
             />;
         }
         else {
@@ -55,7 +53,7 @@ const FormRegister = () => {
                 formData={formData}
                 setFormData={setFormData}
                 validation ={validation}
-                onSubmit={onSubmit}
+              
             />;
         }
 
