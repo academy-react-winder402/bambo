@@ -26,9 +26,9 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
                          md:h-[30px] md:text-[15px] md:text-right md:mt-[30px]
                          xs:h-[30px] xs:text-[15px] xs:text-right  xs:mt-[30px]
                         " > شماره موبایل خود را وارد کنید</label>
-                        <Field name="phonenumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px] lg:pr-[1rem] lg:bg-[#ffff]
-                        sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] sm:mr-[1.2rem]
-                        md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] md:mr-[1.8rem]
+                        <Field name="phonenumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
+                        sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] 
+                        md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] 
                         lg:border-solid lg:border-[1px] lg:border-[black] 
                         sm:border-[1px] sm:border-[black] sm:border-solid
                         md:border-[1px] md:border-[black] md:border-solid
@@ -36,7 +36,7 @@ const RegisterLeftFirst = ({ formData, setFormData, validation }) => {
                         xs:w-[90%] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
                         "
                             value={formData.phonenumber}
-                        // onChange={(event) => setFormData({ ...formData, phonenumber: event.target.value })}
+                        onChange={(event) => setFormData({ ...formData, phonenumber: event.target.value })}
                         />
                         <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
