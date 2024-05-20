@@ -1,10 +1,10 @@
 import { instance } from "../../interseptor";
 
-const getcourseid = async(courseid) => {
+const getFiltercourse = async() => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/Home/GetCoursesTop/" + courseid);
+        const result = await instance.get("/CourseType/GetCourseTypes" );
 
         return result;
     }catch(error){
@@ -13,4 +13,4 @@ const getcourseid = async(courseid) => {
     }
 };
 
-export {getcourseid};
+export {getFiltercourse};
