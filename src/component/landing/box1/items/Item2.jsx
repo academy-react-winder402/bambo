@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item2 = () => {
+const Item2 = ({dark}) => {
     return (
         <div className=" w-[600px] absolute top-[26rem] left-[53rem] text-2xl  text-white text-right font-sans ">
             سایت بامبو با هدف تولید و انتشار محتوای با کیفیت اموزشی

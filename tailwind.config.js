@@ -3,6 +3,12 @@ export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors:{
+        textgray:{
+          light:'#fafafa',
+          dark:'#282828',
+        },
+      },
   
     },
     screens:{
@@ -19,6 +25,7 @@ export default {
       
     }
   },
+  darkMode:'class',
   plugins: [],
 }
 

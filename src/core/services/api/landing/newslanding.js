@@ -1,21 +1,17 @@
 
-import axios from "axios";
 import { instance } from "../../interseptor";
 
-const getcountlanding = async() => {
+const getnewslanding = async() => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/Home/LandingReport");
+        const result = await instance.get("/Home/GetCoursesTop");
 
         return result;
-
     }catch(error){
         console.log(error);
         return[];
     }
-
 };
 
-export {getcountlanding};
-
+export {getnewslanding};

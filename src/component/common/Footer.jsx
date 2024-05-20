@@ -10,14 +10,14 @@ import footer3 from '../../assets/img/landing/footer3.png';
 
 const Footer = () => {
     return (
-        <div className=" h-[33rem] w-[96rem] m-auto bg-[#004458] font-sans">
+        <div className=" h-[33rem] w-[96rem] m-auto bg-[#004458] font-sans dark:bg-[#404040]">
             <div className=" border-b border-solid border-[#D1D1D1]  h-[15rem] w-[85rem] m-auto flex justify-between">
                 <div className=" h-[10rem] w-[35rem] mt-[2rem]">
                     <h1 className=" text-white text-4xl text-right mt-[1rem]"> خبرنامه </h1>
                     <div className=" h-[4rem]  mt-[1.5rem] flex">
                         <button className="h-[4rem] w-[8rem] bg-[#002B37] text-[#09B28B]" > عضویت </button>
                         <input type="text" placeholder=" ... ایمیل خود را وارد کنید " className="bg-[#003544] h-[4rem] w-[28rem]
-                    text-right " />
+                    text-right  dark:bg-[#242424] dark:placeholder:text-white" />
 
                     </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
 
 
-            <div className=" h-[5rem] bg-[#003544] text-white text-center leading-[5rem] text-base">
+            <div className=" h-[5rem] bg-[#003544] text-white text-center leading-[5rem] text-base dark:bg-[#242424]">
                 کليه حقوق محصولات و محتوای اين سایت متعلق به بامبو می باشد و هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست
             </div>
 

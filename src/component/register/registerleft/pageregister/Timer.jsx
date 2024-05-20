@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import OtpTimer from "otp-timer";
+import OtpTimer from 'otp-timer';
 
 const Timer = () => {
     return (
