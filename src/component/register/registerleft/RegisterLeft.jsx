@@ -10,27 +10,6 @@ import {Postregister} from "../../../core/services/api/auth/Register"
 import * as yup from 'yup';
 const FormRegister = () => {
     const [page, setPage] = useState(0);     
-    const [formData, setFormData] = useState(
-        {
-            email: "",
-            password: "",
-            phoneNumber: "",
-            code: "",
-            confirmPassword: "",
-        }
-    );
-    const validation = () => {
-        yup.object().shape({
-            password: yup.string().max(8, 'Must be 8 characters or less').required("fill"),
-            phoneNumber: yup.string().required("fill").matches(/[0-11]/, 'phonenumber requires a number'),
-            email: yup.string().required("fill").email(),
-            confirmPassword:  yup.string().required("fill"),
-            code:  yup.string().required("fill").max(5, 'Must be 5 characters or less')
-        });
-    };    
-  
-
-    
     const PageDisplay = () => {
         if (page == 0) {
             return <RegisterLeftFirst

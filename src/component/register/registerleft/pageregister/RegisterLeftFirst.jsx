@@ -1,11 +1,11 @@
 import { Formik, Form, Field, ErrorMessage  } from "formik";
 import React, { useState,useEffect } from "react";
-
-const RegisterLeftFirst = ({  validation }) => {
+import {Validation} from "../../../../core/validation/index"
+const RegisterLeftFirst = () => {
 
     const [phoneNumber,setPhoneNumber]=useState(""); 
-       const onSubmit =async  (values) => {
-       const obj=(values.phoneNumber);
+       const onSubmit =async(values) => {
+       const obj=values.phoneNumber;
         
             const registerapi = await Postregister(obj);
             setPhoneNumber(registerapi);
@@ -18,7 +18,7 @@ const RegisterLeftFirst = ({  validation }) => {
             <Formik
                 initialValues={{  phoneNumber: "" }}
                 onSubmit={(values) => onSubmit(values)}
-                validationSchema={validation}
+                validationSchema={Validation}
                 >
                 <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px] lg:mt-[50px]
@@ -32,7 +32,7 @@ const RegisterLeftFirst = ({  validation }) => {
                          md:h-[30px] md:text-[15px] md:text-right md:mt-[30px]
                          xs:h-[30px] xs:text-[15px] xs:text-right  xs:mt-[30px]
                         " > شماره موبایل خود را وارد کنید</label>
-                        <Field  name=" phoneNumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
+                        <Field name=" phoneNumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
                         sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] 
                         md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] 
                         lg:border-solid lg:border-[1px] lg:border-[black] 
