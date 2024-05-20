@@ -9,8 +9,8 @@ const RegisterLeftFirst = ({ formData, setFormData, validation,onSubmit }) => {
 
         <div  >
             <Formik
-                initialValues={{ phonenumber: "" }}
-                onSubmit={(values) => onSubmit(values)}
+                initialValues={{  phonenumber: "" }}
+                onsubmit={(values) => onSubmit(values)}
                 validationSchema={validation}
                 >
                 <Form>
@@ -25,7 +25,7 @@ const RegisterLeftFirst = ({ formData, setFormData, validation,onSubmit }) => {
                          md:h-[30px] md:text-[15px] md:text-right md:mt-[30px]
                          xs:h-[30px] xs:text-[15px] xs:text-right  xs:mt-[30px]
                         " > شماره موبایل خود را وارد کنید</label>
-                        <Field  name="phonenumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
+                        <Field  name=" phonenumber" className="lg:w-[90%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
                         sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] 
                         md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] 
                         lg:border-solid lg:border-[1px] lg:border-[black] 
@@ -34,9 +34,10 @@ const RegisterLeftFirst = ({ formData, setFormData, validation,onSubmit }) => {
                         xs:border-[1px] xs:border-[black] xs:border-solid 
                         xs:w-[90%] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
                         "
-                      
+                        values={ phonenumber}
+        onChange={(e) => setFormData(e.target.values)}
                          />
-                        <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+                        <ErrorMessage name=" phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
                 </Form>
                 
