@@ -32,11 +32,11 @@ const FormRegister = () => {
        
         
             const registerapi = await Postregister();
-            setFormData(courses);
+            setFormData(registerapi);
 
       };
       useEffect(() => {
-       registerapi();
+       onSubmit();
       
     }, []);
 
