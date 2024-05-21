@@ -31,7 +31,7 @@ const Router = createBrowserRouter([
   { path: '/register', element: <Register /> },
   { path: '/ForgotPass', element: <ForgotPass /> },
   { path: '*', element: <Notfound /> },
-  { path: '/paneldashbord', element: <PanelDashbord /> },
+  { path: '/PanelDashbord', element: <PanelDashbord/> },
 
 ])
 

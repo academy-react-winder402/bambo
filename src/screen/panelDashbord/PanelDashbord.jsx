@@ -1,9 +1,9 @@
 import React from "react";
-import { PanelDashbordc } from "../../component/paneldaneshjo/PanelDashbord";
+import {PanelDashbordc } from "../../component/paneldaneshjo/PanelDashbord";
 
 const PanelDashbord= () => {
     return(
-        <PanelDashbordc />
+        <PanelDashbordc/>
     );
 };
 
