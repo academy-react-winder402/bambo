@@ -11,29 +11,16 @@ import * as yup from 'yup';
 const FormRegister = () => {
     const [page, setPage] = useState(0);     
     const PageDisplay = () => {
-        if (page == 0) {
-            return <RegisterLeftFirst
-               
-               
-              validation ={validation}
+        switch(page){
+            case 0: return <RegisterLeftFirst />;
+            break
+            
+            case 1: return <RegisterLeftSecend />;
+            break 
+
+            case 2: return <RegisterLeftThird/>;
+            break
            
-            />;
-        }
-        else if (page == 1) {
-            return <RegisterLeftSecend
-                formData={formData}
-                setFormData={setFormData}
-                validation ={validation}
-              
-            />;
-        }
-        else {
-            return <RegisterLeftThird
-                formData={formData}
-                setFormData={setFormData}
-                validation ={validation}
-              
-            />;
         }
 
     };

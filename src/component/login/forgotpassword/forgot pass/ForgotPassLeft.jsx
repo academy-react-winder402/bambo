@@ -17,23 +17,16 @@ const ForgotPassLeft = () => {
         }
     );
     const PageDisplay = () => {
-        if (page == 0) {
-            return <ForgotPassPageOne
-                formData={formData}
-                setFormData={setFormData}
-            />;
-        }
-        else if (page == 1) {
-            return <ForgotPassPageTwo
-                formData={formData}
-                setFormData={setFormData}
-            />;
-        }
-        else {
-            return <ForgotPassPageThree
-                formData={formData}
-                setFormData={setFormData}
-            />;
+        switch(page){
+            case 0: return <ForgotPassPageOne />;
+            break
+            
+            case 1: return <ForgotPassPageTwo/>;
+            break 
+
+            case 2: return <ForgotPassPageThree/>;
+            break
+           
         }
     }
     const navigator = useNavigate();

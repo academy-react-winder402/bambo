@@ -22,8 +22,7 @@ const RegisterLeftThird = ({ formData, setFormData }) => {
                          sm:border-[1px] sm:border-[black] sm:border-solid
                          md:border-[1px] md:border-[black] md:border-solid
                         "
-              value={formData.email}
-              onChange={(event) => setFormData({ ...formData, email: event.target.value })}
+            
             />
             <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
           </div>
@@ -42,8 +41,7 @@ const RegisterLeftThird = ({ formData, setFormData }) => {
                          md:border-[1px] md:border-[black] md:border-solid
                          xs:border-solid xs:border-[1px] xs:border-[black]
                         "
-              value={formData.password}
-              onChange={(event) => setFormData({ ...formData, password: event.target.value })}
+          
             />
             <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
           </div>
@@ -63,8 +61,7 @@ const RegisterLeftThird = ({ formData, setFormData }) => {
                          xs:w-[90%] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
                          xs:border-solid xs:border-[1px] xs:border-[black]
                         "
-              value={formData.confirmPassword}
-              onChange={(event) => setFormData({ ...formData, confirmPassword: event.target.value })}
+        
             />
 
           </div>

@@ -26,8 +26,7 @@ const ForgotPassPageTwo= ({formData, setFormData}) => {
                      md:border-[1px] md:border-[black] md:border-solid
                      xs:border-[1px] xs:border-[black] xs:border-solid
                      "
-                     value={formData.code}
-                     onChange={(event) => setFormData({ ...formData, code: event.target.value })}
+                  
                   />
                   {/* <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" /> */}
                   <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
@@ -39,8 +38,7 @@ const ForgotPassPageTwo= ({formData, setFormData}) => {
                      md:border-[1px] md:border-[black] md:border-solid
                      xs:border-[1px] xs:border-[black] xs:border-solid
                      "
-                     value={formData.code}
-                     onChange={(event) => setFormData({ ...formData, code: event.target.value })}
+                  
                   />
                   {/* <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" /> */}
                   <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
@@ -52,8 +50,7 @@ const ForgotPassPageTwo= ({formData, setFormData}) => {
                      md:border-[1px] md:border-[black] md:border-solid
                      xs:border-[1px] xs:border-[black] xs:border-solid
                      "
-                     value={formData.code}
-                     onChange={(event) => setFormData({ ...formData, code: event.target.value })}
+                   
                   />
                   {/* <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" /> */}
                   <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
@@ -65,8 +62,6 @@ const ForgotPassPageTwo= ({formData, setFormData}) => {
                      md:border-[1px] md:border-[black] md:border-solid
                      xs:border-[1px] xs:border-[black] xs:border-solid
                      "
-                     value={formData.code}
-                     onChange={(event) => setFormData({ ...formData, code: event.target.value })}
                   />
                   {/* <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                   <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" /> */}
@@ -79,8 +74,6 @@ const ForgotPassPageTwo= ({formData, setFormData}) => {
                      md:border-[1px] md:border-[black] md:border-solid
                      xs:border-[1px] xs:border-[black] xs:border-solid
                      "
-                     value={formData.code}
-                     onChange={(event) => setFormData({ ...formData, code: event.target.value })}
                   />
                   {/* <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" /> */}
                </div>
