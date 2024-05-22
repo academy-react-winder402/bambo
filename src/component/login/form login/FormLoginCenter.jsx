@@ -2,6 +2,7 @@ import React, { useState,useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import {Postlogin} from "../../../core/services/api/auth/Lgin"
 import axios from "axios";
+import { setItem } from "../../../core/services/storage/Storage.Services";
 const FormLoginCenter =({gotoforgotpass,gotoregister})=>{
     const [formdata,setFormData]=useState(
         {
@@ -13,8 +14,16 @@ const FormLoginCenter =({gotoforgotpass,gotoregister})=>{
         const obj = {phoneOrGmail:values.phoneOrGmail,password: values.password}
       
         const loginrapi = await Postlogin(obj);
+        if(loginrapi.success){
+        setItem("token",loginrapi.token);
+        alert("yes");
+
+        }
+        else{
+            alert("no")
+        }
         setFormData(loginrapi);
-        console.log(setFormData);
+        console.log(loginrapi);
     
     }
      
