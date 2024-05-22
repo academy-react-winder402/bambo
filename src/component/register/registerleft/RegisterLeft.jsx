@@ -52,8 +52,7 @@ const FormRegister = () => {
             " >
        
             <RegisterLeftTop gotoleft={gotoleft}/>
-           <Formik>
-            <Form>
+         
             <div className="lg:pr-[40px] 
          sm:border-solid sm:border-[transparent] sm:border-[1px] sm:pr-[40px]
          xs:border-solid xs:border-[transparent] xs:border-[1px] xs:pr-[40px]
@@ -82,8 +81,7 @@ const FormRegister = () => {
                     {page == 2 ? "ثبت نام" : "بعدی"}
                     </button>
        </div>
-       </Form>
-       </Formik>  
+      
          
             </div>
             </div>
