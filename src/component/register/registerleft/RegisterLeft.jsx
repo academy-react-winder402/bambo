@@ -6,19 +6,19 @@ import { RegisterLeftThird } from "./pageregister/RegisterLeftThird";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { RegisterLeftTop } from "./RegisterLeftTop";
-import {Postregister} from "../../../core/services/api/auth/Register"
-import * as yup from 'yup';
+
 const FormRegister = () => {
+
     const [page, setPage] = useState(0);     
     const PageDisplay = () => {
         switch(page){
-            case 0: return <RegisterLeftFirst />;
+            case 0: return <RegisterLeftFirst  />;
             break
             
-            case 1: return <RegisterLeftSecend />;
+            case 1: return <RegisterLeftSecend  />;
             break 
 
-            case 2: return <RegisterLeftThird/>;
+            case 2: return <RegisterLeftThird />;
             break
            
         }
@@ -52,6 +52,8 @@ const FormRegister = () => {
             " >
        
             <RegisterLeftTop gotoleft={gotoleft}/>
+           <Formik>
+            <Form>
             <div className="lg:pr-[40px] 
          sm:border-solid sm:border-[transparent] sm:border-[1px] sm:pr-[40px]
          xs:border-solid xs:border-[transparent] xs:border-[1px] xs:pr-[40px]
@@ -76,11 +78,12 @@ const FormRegister = () => {
                     onClick={() => {
                         setPage((currPage) => (currPage + 1));
                        
-                    }}   >
+                    }}   type="submit">
                     {page == 2 ? "ثبت نام" : "بعدی"}
                     </button>
        </div>
-            
+       </Form>
+       </Formik>  
          
             </div>
             </div>
