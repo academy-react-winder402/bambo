@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage  } from "formik";
 import React, { useState,useEffect} from "react";
 import {Validation} from "../../../../core/validation/index"
+import {Postregister} from "../../../../core/services/api/auth/Register"
 const RegisterLeftFirst = () => {
 
     const [phoneNumber,setPhoneNumber]=useState(""); 

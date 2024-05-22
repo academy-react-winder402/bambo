@@ -1,12 +1,18 @@
-import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useState, useEffect } from "react";
+
+import { Validation } from "../../../../core/validation/index"
 import Timer from "./Timer";
 const RegisterLeftSecend = () => {
 
    return (
 
       <div >
-         <Formik>
+         <Formik
+            initialValues={{ code: "" }}
+
+            validationSchema={Validation}
+         >
             <Form>
                <div className="lg:h-[200px]   lg:flex flex-col lg:gap-[30px] lg:mt-[50px]
                     sm:h-[200px] sm:mt-[50px]  sm:flex sm:flex-col sm:gap-[20px] 
@@ -18,7 +24,7 @@ const RegisterLeftSecend = () => {
                   <div className="lg:flex lg:gap-[15px] sm:flex sm:gap-[15px] xs:flex xs:gap-[15px] lg:w-[80%] lg:mt-[20px] lg:mx-[40px]
                         sm:mt-[20px] sm:mx-[22px]  md:mt-[20px] md:mx-[30px] xs:mt-[20px] xs:mx-[5px]
                         ">
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+
                      <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
                          md:w-[50px] md:h-[60px] md:rounded-[10px] 
                         sm:w-[50px] sm:h-[60px] sm:rounded-[10px] 
@@ -28,10 +34,9 @@ const RegisterLeftSecend = () => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-                      
-                     
+
                      />
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+
                      <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
                            md:w-[50px] md:h-[60px] md:rounded-[10px] 
                         sm:w-[50px] sm:h-[60px] sm:rounded-[10px] 
@@ -41,9 +46,9 @@ const RegisterLeftSecend = () => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-                
+
                      />
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+
                      <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
                            md:w-[50px] md:h-[60px] md:rounded-[10px] 
                         sm:w-[50px] sm:h-[60px] sm:rounded-[10px] 
@@ -53,9 +58,9 @@ const RegisterLeftSecend = () => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-                       
+
                      />
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+
                      <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
                            md:w-[50px] md:h-[60px] md:rounded-[10px] 
                         sm:w-[50px] sm:h-[60px] sm:rounded-[10px] sm:pr-[1rem] 
@@ -65,10 +70,10 @@ const RegisterLeftSecend = () => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-                     
+
                      />
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
-                  
+
+
                      <Field name="code" className="lg:w-[50px] lg:h-[60px] lg:rounded-[10px] 
                            md:w-[50px] md:h-[60px] md:rounded-[10px] 
                         sm:w-[50px] sm:h-[60px] sm:rounded-[10px]
@@ -78,11 +83,11 @@ const RegisterLeftSecend = () => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-                     
-                     />
-                     <ErrorMessage name="phonenumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
-                  </div>
 
+                     />
+
+                  </div>
+                  <ErrorMessage name="code" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
 
                </div>
             </Form>
