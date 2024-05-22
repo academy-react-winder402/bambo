@@ -9,7 +9,7 @@ const DashbordRight =()=>{
     return(
         <div dir="rtl" className=" lg:w-[25%] lg:h-[100%]  lg:bg-[#088568]
         md:w-[25%] md:h-[100%]  md:bg-[#088568]
-     sm:hidden   sm:w-[25%] sm:h-[100%]  sm:bg-[#088568] 
+    sm:hidden  sm:w-[25%] sm:h-[100%]  sm:bg-[#088568] 
          ">
 <div className="lg:w-[80%] lg:h-[15%] lg:border-b-solid lg:border-b-[#DBDBDB] lg:border-b-[1px] lg:m-auto lg:text-[#ffff] lg:text-center
 lg:text-[23px] lg:leading-[120px] lg:flex lg:gap-[20px] lg:justify-center
