@@ -4,7 +4,8 @@ import { Asatid } from './asatid/Asatid';
 import { Time } from './time/time';
 import { Dastebandi } from './dastebandi/Dastebandi';
 import {Moratab} from './moratabsazi/moratabsazi';
-const Filter = () => {
+
+const Filter = ({gettype}) => {
 
 
     return (
@@ -17,7 +18,7 @@ const Filter = () => {
                 <Asatid />
             </div>
             <div className=" m-auto h-[17rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
-                 <Dastebandi />
+                 <Dastebandi  gettype={gettype}/>
             </div>
 
             <div className=" m-auto h-[15rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">

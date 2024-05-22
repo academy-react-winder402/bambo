@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from "react";
 import { getFiltercourse } from "../../../../../core/services/api/landing/Filtercourse";
 
-const Dastebandi = () => {
+const Dastebandi = ({gettype}) => {
+
 
     const [coursetype, setcoursetype] = useState([]);
 
@@ -15,11 +16,6 @@ const Dastebandi = () => {
       
     }, []);
 
-    
-
-    const {typeName} = coursetype;
-    console.log(coursetype.typeName);
-
     return (
         <div>
             <div className=" h-[3rem] w-[16rem] m-auto mt-[1rem] rounded-md bg-[#004458]">
@@ -30,8 +26,8 @@ const Dastebandi = () => {
 
                 <div className=" text-right flex justify-end ">
                     <input type="checkbox" id="online" name="online" className="peer hidden" />
-                    <label for="online" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" onClick={() => {
-                        
+                    <label for="online" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer "  onClick={() => {
+                        gettype(coursetype[1].typeName);
                     }} > دوره انلاین</label>
                     <label for="online" v className="border border-solid border-[black] rounded-full h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
 peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover hover:cursor-pointer">  </label>

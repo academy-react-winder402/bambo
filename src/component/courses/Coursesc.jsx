@@ -7,7 +7,13 @@ import { getcourse } from "../../core/services/api/landing/Course";
 
 const Coursesc = () => {
     const [showModal, setshowModal] = useState(false);
+
+
 const [getid, setgetid] = useState();
+
+const [getfilter,setgetfilter] = useState();
+
+
 
     const [course, setcourse] = useState([]);
 
@@ -21,14 +27,20 @@ const [getid, setgetid] = useState();
       
     }, []);
 
-   
+    const [type, settype] = useState([]);
+
+const gettype = course.filter((e) => {return(e.typeName === getfilter)});
+
+settype(gettype);
+
+   console.log(type);
 
 
     return (
         <div className="bg-[#ededed]">
             <ModalCourse isVisible={showModal} courseId={getid}  onclose={() => {setshowModal(false);}}/>
             <Headersection />
-            <Centersection set={setshowModal} get={setgetid} course={course}/>
+            <Centersection set={setshowModal} getid={setgetid} gettype={setgetfilter} course={course}/>
             
         </div>
 
