@@ -1,8 +1,40 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import { getcourse } from "../../../../../core/services/api/landing/Course";
 
-const Range = () => {
+const Range = ({typename}) => {
 
-    const [data, setdata] = useState(0);
+    const [data, setdata] = useState();
+
+
+    const [coursefilter, setcoursefilter] = useState([]);
+
+    const getCoursefilter = async () => {
+        const courses = await getcourse();
+        setcoursefilter(courses);
+    };
+
+    useEffect(() => {
+        getCoursefilter();
+
+    }, []);
+
+    
+
+
+    const filterResult = () => {
+
+        const result = coursefilter.filter((curData) => {
+            return curData.cost <= data;
+        });
+
+        typename(result);
+    };
+
+    useEffect(() => {
+        filterResult();
+
+    }, []);
+
 
     return (
         <div>

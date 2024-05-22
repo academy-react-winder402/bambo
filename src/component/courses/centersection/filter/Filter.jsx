@@ -5,20 +5,20 @@ import { Time } from './time/time';
 import { Dastebandi } from './dastebandi/Dastebandi';
 import {Moratab} from './moratabsazi/moratabsazi';
 
-const Filter = ({gettype}) => {
+const Filter = ({typename,course}) => {
 
 
     return (
         <div className=" w-[19rem]">
             <div className=" m-auto h-[10rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] ">
-                <Range />
+                <Range  typename={typename}/>
             </div>
 
             <div className=" m-auto h-[10rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
                 <Asatid />
             </div>
             <div className=" m-auto h-[17rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">
-                 <Dastebandi  gettype={gettype}/>
+                 <Dastebandi  typename={typename} course={course}/>
             </div>
 
             <div className=" m-auto h-[15rem] w-[17rem] mr-[1rem] bg-[#fff] rounded-md pt-[1rem] mt-[1rem]">

@@ -4,7 +4,7 @@ import { Filter } from "./filter/Filter";
 import { Item2 } from "./items2/items2";
 
 
-const Centersection = ({set , course ,gettype}) => {
+const Centersection = ({set , course,getid,typename }) => {
 
     const [page, setpage] = useState(1);
 
@@ -53,7 +53,7 @@ const Centersection = ({set , course ,gettype}) => {
 
                 </div>
 
-                <Filter gettype={gettype}/>
+                <Filter typename={typename} course={course} />
             </div>
 
         </>
