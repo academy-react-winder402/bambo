@@ -4,7 +4,7 @@ import { Filter } from "./filter/Filter";
 import { Item2 } from "./items2/items2";
 
 
-const Centersection = ({set , course ,get}) => {
+const Centersection = ({set , course ,gettype}) => {
 
     const [page, setpage] = useState(1);
 
@@ -38,7 +38,7 @@ const Centersection = ({set , course ,get}) => {
                         {
                             course.map((item, index) => {
                                 return (<Item key={index} im={item.tumbImageAddress} title={item.title} modares={item.teacherName} level={item.levelName} type={item.typeName} 
-                                    price={item.cost} like={item.likeCount} dis={item.dissLikeCount} set={set} id={item.courseId} get={get}/>);
+                                    price={item.cost} like={item.likeCount} dis={item.dissLikeCount} set={set} id={item.courseId} get={getid}/>);
                             })
                         }
                     </div>
@@ -53,7 +53,7 @@ const Centersection = ({set , course ,get}) => {
 
                 </div>
 
-                <Filter />
+                <Filter gettype={gettype}/>
             </div>
 
         </>
