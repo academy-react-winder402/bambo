@@ -13,7 +13,7 @@ export const Postregister = async(obj) => {
         return[];
     }
 };
-/Sign/VerifyMessage
+
 export const Postregistertwo = async(obj) => {
 
     try{

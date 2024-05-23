@@ -1,5 +1,8 @@
 import React from "react";
-const setItem =(key,value)=>{
+export const setItem =(key,value)=>{
     localStorage.setItem(key.JSON.stringify(value));
 }
-export {setItem};
+export const getItem =(key)=>{
+    if(localStorage.getItem(key)) return JSON.parse(localStorage.getItem(key));
+    return false
+}
