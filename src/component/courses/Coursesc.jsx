@@ -6,7 +6,9 @@ import { ModalCourse } from "./modalcourse/ModalCourse";
 import { getcourse } from "../../core/services/api/landing/Course";
 
 const Coursesc = () => {
+
     const [showModal, setshowModal] = useState(false);
+
     const [getid, setgetid] = useState();
 
 
@@ -14,7 +16,10 @@ const Coursesc = () => {
     const [course, setcourse] = useState([]);
 
     const getCourseList = async () => {
-        const courses = await getcourse();
+        const courses = await getcourse(
+            pageNumber,
+            RowsOfPage,
+        );
         setcourse(courses);
     };
 
@@ -22,6 +27,8 @@ const Coursesc = () => {
         getCourseList();
 
     }, []);
+
+    console.log(course);
 
 
     
