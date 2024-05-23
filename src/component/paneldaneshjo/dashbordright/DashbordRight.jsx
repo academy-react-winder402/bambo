@@ -8,7 +8,7 @@ import edit from "../../../assets/img/dashbord/edit.png"
 import { MdModeEdit } from "react-icons/md";
 const DashbordRight =()=>{
     return(
-        <>
+        <div >
 <div className="lg:w-[80%] lg:h-[15%] lg:border-b-solid lg:border-b-[#DBDBDB] lg:border-b-[1px] lg:m-auto lg:text-[#ffff] lg:text-center
 lg:text-[23px] lg:leading-[120px] lg:flex lg:gap-[20px] lg:justify-center
 md:w-[100%] md:h-[15%] md:border-b-solid md:border-b-[#DBDBDB] md:border-b-[1px] md:m-auto md:text-[#ffff] md:text-center
@@ -21,11 +21,11 @@ sm:text-[16px] sm:leading-[120px] sm:flex sm:gap-[7px] sm:justify-start
 
 </div>
 <div className="lg:w-[80%] lg:h-[10%] lg:border-solid lg:border-[transparent]  lg:border-[1px] lg:m-auto  lg:mt-[20px]  lg:text-[#ffff] lg:text-center
-lg:text-[20px] lg:leading-[60px] lg:hover:w-[100%] lg:hover:bg-[#ffff] lg:hover:text-[#088568] 
+lg:text-[20px] lg:leading-[60px] 
 md:w-[80%] md:h-[10%] md:border-solid md:border-[transparent] md:border-[1px] md:m-auto  md:mt-[20px]  md:text-[#ffff] md:text-center
-md:text-[18px] md:leading-[60px] md:hover:w-[100%] md:hover:bg-[#ffff] md:hover:text-[#088568]
+md:text-[18px] md:leading-[60px] 
 sm:w-[80%] sm:h-[10%] sm:border-solid sm:border-[transparent] sm:border-[1px] sm:m-auto  sm:mt-[20px]  sm:text-[#ffff] sm:text-center
-sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:text-[#088568]
+sm:text-[16px] sm:leading-[60px] 
 ">
 پنل دانشجو
 
@@ -93,7 +93,7 @@ sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:
 خروج
 
 </div>
-       </>
+       </div>
     )
 }
 export {DashbordRight};
