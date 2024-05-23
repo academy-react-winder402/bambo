@@ -1,27 +1,27 @@
 
 import React, { useState,useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Validation } from "../../../../core/validation";
-const RegisterLeftThird = () => {
-//   const [formdata,setFormData]=useState(
-//     {
-//        gmail:"",
-//         password:""
-//     }
-// );
-//   const onSubmit =async(values) => {
-//     const obj = {gmail:values.gmail,password: values.password}
-//        const registerapistep = await Postregister(obj);
-//        setPassword(registerapistep);
-//        console.log(registerapistep);
-//  };
+import { Validationone } from "../../../../core/validation/index";
+import { Postregisterthree } from "../../../../core/services/api/auth/Register";
+const RegisterLeftThird = ({setPassword,setGmail}) => {
+  const onSubmit =async(values) => {
+    const obj={password:values.password, gmail:values.gmail};
+     
+         const registerapithree = await Postregisterthree(obj);
+         setPassword(registerapithree);
+         setGmail(registerapithree);
+         console.log(registerapithree);
+         if(registerapithree.success == true){
+             step();
+         }
+   };
   return (
 
     <div >
       <Formik
-                initialValues={{phoneOrGmail: "",password: "" }}
+                initialValues={{gmail: "",password: "" }}
                 onSubmit={(values) => onSubmit(values)}
-                validationSchema={ Validation }
+                validationSchema={ Validationone }
       >
         <Form>
           < div dir="rtl" className=" lg:h-[100px]  lg:flex lg:flex-col lg:gap-[10px] lg:mt-[30px] 

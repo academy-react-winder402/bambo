@@ -9,6 +9,8 @@ import { RegisterLeftTop } from "./RegisterLeftTop";
 
 const FormRegister = () => {
 const [phoneNumber,setPhoneNumber]=useState();
+const [password,setPassword]=useState();
+const [gmail,setGmail]=useState();
     // const [page, setPage] = useState(0);     
     // const PageDisplay = () => {
     //     switch(page){
@@ -69,12 +71,13 @@ const [phoneNumber,setPhoneNumber]=useState();
        ">              {step == 1 ? (
         <RegisterLeftFirst step={stepCounter} setPhoneNumber={setPhoneNumber} />
       ) : step == 2 ? (
-        <RegisterLeftSecend phoneNumber={phoneNumber}
+        <RegisterLeftSecend 
           Back={Back}
           step={stepCounter}
         />
       ) : step == 3 ? (
-        <RegisterLeftThird phoneNumber={phoneNumber}
+        <RegisterLeftThird setPassword={setPassword}
+        setGmail={setGmail}
           Back={Back}
           step={stepCounter}
         />

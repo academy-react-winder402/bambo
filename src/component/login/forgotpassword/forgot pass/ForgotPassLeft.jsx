@@ -16,19 +16,14 @@ const ForgotPassLeft = () => {
             confirmPassword: "",
         }
     );
-    const PageDisplay = () => {
-        switch(page){
-            case 0: return <ForgotPassPageOne />;
-            break
-            
-            case 1: return <ForgotPassPageTwo/>;
-            break 
-
-            case 2: return <ForgotPassPageThree/>;
-            break
-           
-        }
-    }
+    const [step, setStep] = useState(1);
+    const stepCounter = () => {
+        setStep(step + 1);
+      };
+    
+      const Back = () => {
+        setStep(step - 1);
+      };
     const navigator = useNavigate();
     const buttonleft = () => {
         if (page == 0) {
