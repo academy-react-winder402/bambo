@@ -26,7 +26,7 @@ const Range = ({typename}) => {
     const filterResult = () => {
 
         const result = coursefilter.filter((curData) => {
-            return curData.cost <= maxdata && curData.cost <= mindata;
+            return curData.cost <= maxdata && curData.cost >= mindata;
         });
 
         typename(result);
