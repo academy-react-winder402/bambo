@@ -10,9 +10,11 @@ const RegisterLeftSecend = () => {
        
            const registerapitwo = await Postregister(obj);
            setCode(registerapitwo);
-           console.log(registerapitwo);
            if(registerapitwo.success == true){
                step();
+           }
+           else if (registerapitwo.success == false){
+          
            }
      };
 

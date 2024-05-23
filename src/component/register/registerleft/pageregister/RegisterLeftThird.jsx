@@ -3,7 +3,7 @@ import React, { useState,useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Validationone } from "../../../../core/validation/index";
 import { Postregisterthree } from "../../../../core/services/api/auth/Register";
-const RegisterLeftThird = ({setPassword,setGmail}) => {
+const RegisterLeftThird = ({setPassword,setGmail,step}) => {
   const onSubmit =async(values) => {
     const obj={password:values.password, gmail:values.gmail};
      
