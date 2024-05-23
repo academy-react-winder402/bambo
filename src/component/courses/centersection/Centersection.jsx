@@ -29,9 +29,9 @@ const Centersection = ({set , course,getid,typename }) => {
 
             </div>
 
-            <div className="  mt-[1.2rem] flex justify-between">
+            <div className="  mt-[3rem] flex justify-between">
 
-                <div className=" w-[74rem] ml-[2rem] ">
+                <div className=" w-[70rem] ml-[5rem] ">
 
 
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
