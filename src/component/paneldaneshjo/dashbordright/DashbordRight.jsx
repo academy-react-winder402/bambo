@@ -5,12 +5,10 @@ import dashbord1 from "../../../assets/img/dashbord/dashboard1.png"
 import list from "../../../assets/img/dashbord/list.png"
 import close from "../../../assets/img/dashbord/close.png"
 import edit from "../../../assets/img/dashbord/edit.png"
+import { MdModeEdit } from "react-icons/md";
 const DashbordRight =()=>{
     return(
-        <div dir="rtl" className=" lg:w-[25%] lg:h-[100%]  lg:bg-[#088568]
-        md:w-[25%] md:h-[100%]  md:bg-[#088568]
-    sm:hidden  sm:w-[25%] sm:h-[100%]  sm:bg-[#088568] 
-         ">
+        <>
 <div className="lg:w-[80%] lg:h-[15%] lg:border-b-solid lg:border-b-[#DBDBDB] lg:border-b-[1px] lg:m-auto lg:text-[#ffff] lg:text-center
 lg:text-[23px] lg:leading-[120px] lg:flex lg:gap-[20px] lg:justify-center
 md:w-[100%] md:h-[15%] md:border-b-solid md:border-b-[#DBDBDB] md:border-b-[1px] md:m-auto md:text-[#ffff] md:text-center
@@ -18,7 +16,7 @@ md:text-[18px] md:leading-[120px] md:flex md:gap-[10px] md:justify-center
 sm:w-[100%] sm:h-[15%] sm:border-b-solid sm:border-b-[#DBDBDB] sm:border-b-[1px] sm:m-auto sm:text-[#ffff] sm:text-center
 sm:text-[16px] sm:leading-[120px] sm:flex sm:gap-[7px] sm:justify-start
 ">
-   <img src={logo} className="lg:w-[25px] lg:h-[25px] lg:mt-[45px] md:w-[25px] md:h-[25px] md:mt-[45px] sm:w-[23px] sm:h-[23px] sm:mt-[45px] sm:mr-[5px]"></img>
+   <img src={logo} className="hover:lg:w-[25px] lg:h-[25px] lg:mt-[45px] md:w-[25px] md:h-[25px] md:mt-[45px] sm:w-[23px] sm:h-[23px] sm:mt-[45px] sm:mr-[5px]"></img>
 <div>آکادمی آموزشی بامبو</div>
 
 </div>
@@ -95,7 +93,7 @@ sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:
 خروج
 
 </div>
-        </div>
+       </>
     )
 }
 export {DashbordRight};
