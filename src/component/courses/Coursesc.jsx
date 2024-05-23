@@ -31,7 +31,6 @@ const Coursesc = () => {
             <ModalCourse isVisible={showModal} courseId={getid} onclose={() => { setshowModal(false); }} />
             <Headersection typename={setcourse}/>
             <Centersection set={setshowModal} getid={setgetid}  course={course} typename={setcourse} />
-
         </div>
 
     );
