@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getcourse } from "../../../../../core/services/api/landing/Course";
 import { getFiltercourse } from "../../../../../core/services/api/landing/Filtercourse";
 
-const Dastebandi = ({ typename, course }) => {
+const Dastebandi = () => {
 
 
-    const [coursefilter, setcoursefilter] = useState([]);
-
-    const getCoursefilter = async () => {
-        const courses = await getcourse();
-        setcoursefilter(courses);
-    };
-
-    useEffect(() => {
-        getCoursefilter();
-
-    }, []);
-
-
-const [coursetypename,setcoursetypename] = useState([]);
+    const [coursetypename, setcoursetypename] = useState([]);
 
     const getCoursefiltertype = async () => {
         const courses = await getFiltercourse();
@@ -31,49 +17,37 @@ const [coursetypename,setcoursetypename] = useState([]);
     }, []);
 
 
-    
-
-    const filterResult = (catItem) => {
-
-        const result = coursefilter.filter((curData) => {
-            return curData.typeName === catItem;
-        });
-
-        typename(result);
-    };
-
-
-    const handlechange = (e, index) => {
-        console.log(e.target.value);
-        const activedata = document.getElementById(index).checked
-        
-        if(activedata == true){
-            filterResult(e.target.value);
-        }
-        else{
-            typename(coursefilter);
-        }
-    };
-
     return (
         <div>
-            <div className=" h-[3rem] w-[16rem] m-auto mt-[1rem] rounded-md bg-[#004458]">
-                <span className="block mr-[1.5rem] text-white text-right leading-10 text-xl"> دسته بندی </span>
+
+            <div className="relative w-[19rem] bg-[#fff] shadow-[6px,6px,10px,-1px,rgba(0,0,0.15),-6px,-6px,-10px,-1px,rgba(255,255,255,0.8)]
+             rounded-xl mb-[1rem]">
+
+                <input type="checkbox" id="inputdaste" className="absolute peer opacity-0" />
+
+                <label for="inputdaste" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> product </label>
+                <label for="inputdaste" className="h-[1rem] w-[1rem] bg-[url('./././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] right-[30px]
+                 peer-checked:bg-[url('./././././assets/img/courses/negativ.png')] duration-300">  </label>
+
+                <div className="max-h-0 overflow-hidden peer-checked:max-h-full" >
+                    <div className="mt-[1rem] mb-[1rem]">
+
+                        {
+                            coursetypename.map((item, index) => {
+                                return (
+                                    <div className=" text-right flex justify-end " key={index}>
+                                        <input type="checkbox" id={index} value={item.typeName} onChange={(e) => handlechange(e, index)} /> <span> {item.typeName} </span>
+                                    </div>)
+                            })
+
+                        }
+
+                    </div>
+                </div>
             </div>
 
-            <div className="mt-[1rem]">
 
-                {
-                    coursetypename.map((item, index) => {
-                        return (
-                            <div className=" text-right flex justify-end " key={index}>
-                                <input type="checkbox" id={index}  value={item.typeName}  onChange={(e) => handlechange(e, index)} /> <span> {item.typeName} </span>
-                            </div>)
-                    })
 
-                }
-
-            </div>
         </div>
     );
 };
