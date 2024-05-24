@@ -2,7 +2,7 @@ import { instance } from "../../interseptor";
 
 const getcourse = async() => {
     try{
-        const result = await instance.get('/Home/GetCoursesWithPagination?PageNumber=0&RowsOfPage=10');
+        const result = await instance.get("/Home/GetCoursesTop");
 
         return result;
     }catch(error){
