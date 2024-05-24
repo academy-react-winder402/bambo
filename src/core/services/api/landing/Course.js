@@ -9,8 +9,8 @@ const getcourse = async(
         PageNumber=${PageNumber}
         &RowsOfPage=${RowsOfPage}
         `);
-
         return result;
+        
     }catch(error){
         console.log(error);
         return[];
