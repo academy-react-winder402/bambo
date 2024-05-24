@@ -5,11 +5,7 @@ const Asatid = () => {
     return (
         <div>
 
-            <div className=" h-[3rem] w-[16rem] m-auto mt-[1rem] rounded-md bg-[#004458]">
-                <span className="block mr-[1.5rem] text-white text-right leading-10 text-xl"> اساتید</span>
-            </div>
-
-            <div className="mt-[1rem]">
+            <div className="mt-[0.5rem] mb-[1rem]">
 
                 <div className=" text-right flex justify-end ">
                     <input type="checkbox" id="bahr" name="bahr" className="peer hidden" />

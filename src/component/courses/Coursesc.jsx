@@ -16,10 +16,7 @@ const Coursesc = () => {
     const [course, setcourse] = useState([]);
 
     const getCourseList = async () => {
-        const courses = await getcourse(
-            pageNumber,
-            RowsOfPage,
-        );
+        const courses = await getcourse();
         setcourse(courses);
     };
 
