@@ -16,14 +16,19 @@ const Coursesc = () => {
     const [course, setcourse] = useState([]);
 
     const getCourseList = async () => {
-        const courses = await getcourse();
+        const courses = await getcourse(
+            PageNumber,
+            RowsOfPage,
+        );
         setcourse(courses);
     };
 
     useEffect(() => {
         getCourseList();
 
-    }, []);
+    }, [RowsOfPage,
+        PageNumber,
+    ]);
 
     console.log(course);
 
@@ -34,7 +39,7 @@ const Coursesc = () => {
         <div className="bg-[#ededed]">
             <ModalCourse isVisible={showModal} courseId={getid} onclose={() => { setshowModal(false); }} />
             <Headersection typename={setcourse}/>
-            <Centersection set={setshowModal} getid={setgetid}  course={course} typename={setcourse} />
+            <Centersection set={setshowModal} getid={setgetid}  course={course} />
         </div>
 
     );
