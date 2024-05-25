@@ -12,21 +12,28 @@ const [codes, setCodes] = useState();
 const code =(values)=>{
 setCodes(values)
 };
+console.log(phoneNumber);
+useEffect(() => {
+   code();
+},[]);
+
+console.log(code);
+
+const onSubmit = async() => {
+   const obj ={
+      phoneNumber:phoneNumber,
+      verifycode:codes,
+   };
+              const registerapitwo = await Postregistertwo(obj);
+              console.log(registerapitwo);
+              if(registerapitwo.success == true){
+                  step();
+              }
+             
+        };
 
 
-   const onSubmit = async() => {
-const obj ={
-   phoneNumber:phoneNumber,
-   verifycode:codes,
-};
-           const registerapitwo = await Postregistertwo(obj);
-           setCodes( registerapitwo);
-           console.log(registerapitwo);
-           if(registerapitwo.success == true){
-               step();
-           }
-          
-     };
+
 
 
    return (
@@ -35,7 +42,7 @@ const obj ={
          <Formik
         
      initialValues={{code:""}}
-    onSubmit={onsubmit}
+  onSubmit={onSubmit}
             validationSchema={Validationthree}
          >
             <Form>
@@ -142,7 +149,7 @@ const obj ={
                 md:h-[50px] md:w-[80%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff]
                 "
-   type="submit" onClick={onSubmit()}>
+   type="submit">
                    بعدی
                     </button>
                     </div> 

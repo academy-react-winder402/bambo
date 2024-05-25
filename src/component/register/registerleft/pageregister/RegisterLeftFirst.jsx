@@ -18,7 +18,7 @@ const RegisterLeftFirst = ({step,setPhoneNumber}) => {
             if(registerapi.success == true){
                 
                 step();
-                setItem("token",registerapi .token);
+                setItem("token",registerapi.token);
             }
         
       };
