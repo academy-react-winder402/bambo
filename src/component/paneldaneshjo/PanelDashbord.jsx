@@ -3,11 +3,12 @@ import { Fragment } from "react";
 import {HeaderDashbord} from "../paneldaneshjo/dashbordleft/header"
 import { DashbordRight } from "./dashbordright/DashbordRight";
 import { EditProfile } from "./editprofile/EditProfile";
+import { Dashbored } from "./dashbord/Dashbord";
 const PanelDashbordc =()=>{
 
 
     return(
-        <div dir="rtl" className="lg:flex lg:w-[100%] lg:h-[730px] 
+        <div dir="rtl" className="lg:flex lg:w-[100%]  
         md:flex md:w-[100%] md:h-[730px]
         sm:flex sm:w-[100%] sm:h-[730px]
         ">
@@ -22,7 +23,7 @@ const PanelDashbordc =()=>{
             ">
   <div className="lg:w-[100%] lg:h-[11%] lg:mt-[2%] md:h-[11%] md:w-[100%] md:mt-[2%] sm:w-[100%] sm:h-[11%] sm:mt-[2%]"><HeaderDashbord/></div>
 <div className="lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" >
-  <EditProfile/>
+  <Dashbored/>
 </div>
             </div>
  
