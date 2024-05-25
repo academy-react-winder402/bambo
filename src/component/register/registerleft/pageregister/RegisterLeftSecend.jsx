@@ -9,14 +9,19 @@ const RegisterLeftSecend = ({phoneNumber,step}) => {
   
  const[otp,setOtp]=useState();
 const [codes, setCodes] = useState();
-setCodes(value.code);
-const obj ={codes,phoneNumber};
+const code =(values)=>{
+setCodes(values)
+};
 
 
-   const onSubmit = async(obj) => {
-
+   const onSubmit = async() => {
+const obj ={
+   phoneNumber:phoneNumber,
+   verifycode:codes,
+};
            const registerapitwo = await Postregistertwo(obj);
            setOtp( registerapitwo);
+           console.log(registerapitwo);
            if(registerapitwo.success == true){
                step();
            }
@@ -30,7 +35,7 @@ const obj ={codes,phoneNumber};
          <Formik
         
      initialValues={{code:""}}
-     
+    
             validationSchema={Validationthree}
          >
             <Form>
