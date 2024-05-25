@@ -7,7 +7,7 @@ import Timer from "./Timer";
 
 const RegisterLeftSecend = ({phoneNumber,step}) => {
   
- const[otp,setOtp]=useState();
+ 
 const [codes, setCodes] = useState();
 const code =(values)=>{
 setCodes(values)
@@ -20,7 +20,7 @@ const obj ={
    verifycode:codes,
 };
            const registerapitwo = await Postregistertwo(obj);
-           setOtp( registerapitwo);
+           setCodes( registerapitwo);
            console.log(registerapitwo);
            if(registerapitwo.success == true){
                step();
