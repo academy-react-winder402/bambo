@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Fragment } from "react";
 import {HeaderDashbord} from "../paneldaneshjo/dashbordleft/header"
 import { DashbordRight } from "./dashbordright/DashbordRight";
+import { EditProfile } from "./editprofile/EditProfile";
 const PanelDashbordc =()=>{
-  const click =()=>{
-    
-  }
+
 
     return(
         <div dir="rtl" className="lg:flex lg:w-[100%] lg:h-[730px] 
@@ -22,7 +21,9 @@ const PanelDashbordc =()=>{
             sm:w-[100%] sm:h-[100%] sm:bg-[#DBDBDB] 
             ">
   <div className="lg:w-[100%] lg:h-[11%] lg:mt-[2%] md:h-[11%] md:w-[100%] md:mt-[2%] sm:w-[100%] sm:h-[11%] sm:mt-[2%]"><HeaderDashbord/></div>
-<div className="lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" ></div>
+<div className="lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" >
+  <EditProfile/>
+</div>
             </div>
  
         </div>
