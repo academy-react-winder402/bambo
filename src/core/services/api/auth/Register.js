@@ -14,12 +14,12 @@ export const Postregister = async(obj) => {
     }
 };
 
-export const Postregistertwo = async(obj) => {
+export const Postregistertwo = async() => {
 
     try{
         console.log("fetching started ...");
 
-        const result = await instance.post("/Sign/VerifyMessage" + obj);
+        const result = await instance.post("/Sign/VerifyMessage");
 
         return result;
     }catch(error){

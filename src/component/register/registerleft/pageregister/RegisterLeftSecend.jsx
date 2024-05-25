@@ -6,12 +6,17 @@ import { Postregistertwo } from "../../../../core/services/api/auth/Register";
 import Timer from "./Timer";
 
 const RegisterLeftSecend = ({phoneNumber,step}) => {
-   const [code,setcode]=useState();
-   setcode(code);
+  
  const[otp,setOtp]=useState();
- const obj ={code,phoneNumber}
-   const onSubmit = async(obj) => {
-           const registerapitwo = await Postregistertwo(obj);
+const [codes, setCodes] = useState();
+const obj =(value)=>{
+   const req={code:value.code,phoneNumber}
+   setCodes(req);
+}
+
+   const onSubmit = async() => {
+
+           const registerapitwo = await Postregistertwo();
            setOtp( registerapitwo);
            if(registerapitwo.success == true){
                step();
@@ -26,7 +31,6 @@ const RegisterLeftSecend = ({phoneNumber,step}) => {
          <Formik
         
      initialValues={{code:""}}
-    
             validationSchema={Validationthree}
          >
             <Form>
@@ -133,7 +137,7 @@ const RegisterLeftSecend = ({phoneNumber,step}) => {
                 md:h-[50px] md:w-[80%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff]
                 "
-   type="submit" onClick={onSubmit}>
+   type="submit" onClick={onSubmit()}>
                    بعدی
                     </button>
                     </div> 
