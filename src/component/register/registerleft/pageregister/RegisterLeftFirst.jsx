@@ -3,6 +3,7 @@ import React, { useState,useEffect} from "react";
 import {Validationfoure} from "../../../../core/validation/index"
 import {Postregister} from "../../../../core/services/api/auth/Register"
 import { NavLink } from "react-router-dom";
+import { setItem } from "../../../../core/services/storage/Storage.Services";
 const RegisterLeftFirst = ({step,setPhoneNumber}) => {
 
     // const [phoneNumber,setPhoneNumber]=useState(""); 
@@ -11,10 +12,15 @@ const RegisterLeftFirst = ({step,setPhoneNumber}) => {
         
             const registerapi = await Postregister(obj);
             setPhoneNumber(registerapi);
-            console.log(registerapi);
+           
+          
+            
             if(registerapi.success == true){
+                
                 step();
+                setItem("token",registerapi .token);
             }
+        
       };
 
     return (

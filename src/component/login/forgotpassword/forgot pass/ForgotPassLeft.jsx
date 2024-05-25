@@ -14,6 +14,7 @@ const ForgotPassLeft = () => {
             confirmPassword: "",
         }
     );
+    const [otp,setotp]=useState();
     const [step, setStep] = useState(1);
     const stepCounter = () => {
         setStep(step + 1);
@@ -81,14 +82,12 @@ const ForgotPassLeft = () => {
         <ForgotPassPageOne step={stepCounter} setFormData={setFormData}/>
       ) : step == 2 ? (
         <ForgotPassPageTwo
-        setFormData={setFormData}
+        setotp={setotp}
          
           step={stepCounter}
         />
       ) : step == 3 ? (
         <ForgotPassPageThree setFormData={setFormData}
-        setGmail={setGmail}
-         
           step={stepCounter}
         />
       ) : null}

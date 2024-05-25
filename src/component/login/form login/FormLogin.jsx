@@ -24,20 +24,7 @@ const FormLogin = () => {
 
         );  
     };
-    const gotoleft = () => {
-        if (page == 0) {
-            return (
-                navigator("/")
-
-            );
-        }
-        else {
-
-            setPage((currPage) => (currPage - 1));
-
-        };
-
-    };
+ 
     
     return (
     
@@ -51,7 +38,7 @@ const FormLogin = () => {
         md:m-auto md:w-[80%] md:h-auto md:shadow-sm md:border-[1px] md:border-[black] md:border-solid md:rounded-lg md:mt-[20px]
          xs:w-[100%] xs:h-auto xs:bg-[#fff] 
         " >
-            <FormLoginTop gotoleft={gotoleft}/>
+            <FormLoginTop gotohome={gotohome}/>
       <FormLoginCenter gotoforgotpass={gotoforgotpass}  gotoregister={gotoregister}/>
 
             </div>

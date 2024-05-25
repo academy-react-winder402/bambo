@@ -7,7 +7,7 @@ import * as yup from "yup";
 });
 
    export const Validationthree = yup.object().shape({
-      code:yup.string().max(5,"must be 5 characters or less").required("لطفا پر کنید"),
+      code:yup.string().matches(5,"must be number").required("لطفا پر کنید"),
   })
 export const Validationfoure = yup.object().shape({
    phoneNumber:yup.string().matches(/[0-11]/).required("لطفا پر کنید"),

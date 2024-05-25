@@ -19,7 +19,7 @@ export const Postregistertwo = async(obj) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.post("/Sign/VerifyMessage" , obj);
+        const result = await instance.post("/Sign/VerifyMessage" + obj);
 
         return result;
     }catch(error){

@@ -2,6 +2,7 @@ import React from 'react';
 import OtpTimer from 'otp-timer';
 
 const Timer = () => {
+
     return (
 
           <OtpTimer

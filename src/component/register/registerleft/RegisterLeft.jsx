@@ -31,13 +31,13 @@ const [gmail,setGmail]=useState();
         setStep(step + 1);
       };
     
-      const Back = () => {
-        setStep(step - 1);
-      };
+      // const Back = () => {
+      //   setStep(step - 1);
+      // };
       
     const navigator = useNavigate();
     const gotoleft = () => {
-        if (page == 0) {
+        if (step == 1) {
             return (
                 navigator("/")
 
@@ -45,7 +45,7 @@ const [gmail,setGmail]=useState();
         }
         else {
 
-            setPage((currPage) => (currPage - 1));
+            setStep((step) => (step - 1));
 
         };
 
@@ -72,13 +72,14 @@ const [gmail,setGmail]=useState();
         <RegisterLeftFirst step={stepCounter} setPhoneNumber={setPhoneNumber} />
       ) : step == 2 ? (
         <RegisterLeftSecend 
-          Back={Back}
+        
           step={stepCounter}
+          phoneNumber={phoneNumber}
         />
       ) : step == 3 ? (
         <RegisterLeftThird setPassword={setPassword}
         setGmail={setGmail}
-          Back={Back}
+        
           step={stepCounter}
         />
       ) : null} </div>

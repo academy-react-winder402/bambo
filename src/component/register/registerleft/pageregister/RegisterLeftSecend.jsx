@@ -2,20 +2,21 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Validationthree } from "../../../../core/validation/index"
+import { Postregistertwo } from "../../../../core/services/api/auth/Register";
 import Timer from "./Timer";
-const RegisterLeftSecend = () => {
-   const [code,setCode]=useState();
-   const onSubmit =async(values) => {
-      const obj={code:values.code};
-       
-           const registerapitwo = await Postregister(obj);
-           setCode(registerapitwo);
+
+const RegisterLeftSecend = ({phoneNumber,step}) => {
+   const [code,setcode]=useState();
+   setcode(code);
+ const[otp,setOtp]=useState();
+ const obj ={code,phoneNumber}
+   const onSubmit = async(obj) => {
+           const registerapitwo = await Postregistertwo(obj);
+           setOtp( registerapitwo);
            if(registerapitwo.success == true){
                step();
            }
-           else if (registerapitwo.success == false){
           
-           }
      };
 
 
@@ -23,8 +24,9 @@ const RegisterLeftSecend = () => {
 
       <div >
          <Formik
-            initialValues={{ code: "" }}
-            onSubmit={onSubmit}
+        
+     initialValues={{code:""}}
+    
             validationSchema={Validationthree}
          >
             <Form>
@@ -131,7 +133,7 @@ const RegisterLeftSecend = () => {
                 md:h-[50px] md:w-[80%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff]
                 "
-   type="submit">
+   type="submit" onClick={onSubmit}>
                    بعدی
                     </button>
                     </div> 
