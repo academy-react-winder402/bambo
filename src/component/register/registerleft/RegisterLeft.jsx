@@ -11,6 +11,7 @@ const FormRegister = () => {
 const [phoneNumber,setPhoneNumber]=useState();
 const [password,setPassword]=useState();
 const [gmail,setGmail]=useState();
+
     // const [page, setPage] = useState(0);     
     // const PageDisplay = () => {
     //     switch(page){
@@ -79,7 +80,7 @@ const [gmail,setGmail]=useState();
       ) : step == 3 ? (
         <RegisterLeftThird setPassword={setPassword}
         setGmail={setGmail}
-        
+       phoneNumber={phoneNumber}
           step={stepCounter}
         />
       ) : null} </div>

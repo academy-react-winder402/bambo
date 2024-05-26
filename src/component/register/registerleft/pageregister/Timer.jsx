@@ -10,6 +10,7 @@ const Timer = () => {
             seconds={0}
             text="زمان باقی مانده"
             resend={Timer}
+            ButtonText="ارسال مجدد"
           />
     
       );

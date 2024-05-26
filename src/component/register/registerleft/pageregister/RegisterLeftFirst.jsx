@@ -5,20 +5,12 @@ import {Postregister} from "../../../../core/services/api/auth/Register"
 import { NavLink } from "react-router-dom";
 import { setItem } from "../../../../core/services/storage/Storage.Services";
 const RegisterLeftFirst = ({step,setPhoneNumber}) => {
-
-    // const [phoneNumber,setPhoneNumber]=useState(""); 
        const onSubmit =async(values) => {
-       const obj={phoneNumber:values.phoneNumber};
-        
+        setPhoneNumber(values?.phoneNumber);
+       const obj={phoneNumber:values?.phoneNumber};
             const registerapi = await Postregister(obj);
-            setPhoneNumber(registerapi);
-           
-          
-            
-            if(registerapi.success == true){
-                
-                step();
-                setItem("token",registerapi.token);
+            if(registerapi.success == true){   
+                step();   
             }
         
       };

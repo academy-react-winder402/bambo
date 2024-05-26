@@ -8,22 +8,17 @@ import Timer from "./Timer";
 const RegisterLeftSecend = ({phoneNumber,step}) => {
   
  
-const [codes, setCodes] = useState();
-const code =(values)=>{
-setCodes(values)
-};
-console.log(phoneNumber);
-useEffect(() => {
-   code();
-},[]);
+const [code, setCode] = useState();
+const handlecode = (e) => { 
+   setCode(e.target.value); 
 
-console.log(code);
-
+}; 
 const onSubmit = async() => {
    const obj ={
       phoneNumber:phoneNumber,
-      verifycode:codes,
+      verifycode:code,
    };
+   console.log(obj);
               const registerapitwo = await Postregistertwo(obj);
               console.log(registerapitwo);
               if(registerapitwo.success == true){
@@ -40,9 +35,6 @@ const onSubmit = async() => {
 
       <div >
          <Formik
-        
-     initialValues={{code:""}}
-  onSubmit={onSubmit}
             validationSchema={Validationthree}
          >
             <Form>
@@ -66,7 +58,7 @@ const onSubmit = async() => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-
+value={code} onChange={handlecode}
                         />
 
                     
@@ -149,7 +141,7 @@ const onSubmit = async() => {
                 md:h-[50px] md:w-[80%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff]
                 "
-   type="submit">
+   type="submit" onClick={onSubmit}>
                    بعدی
                     </button>
                     </div> 
