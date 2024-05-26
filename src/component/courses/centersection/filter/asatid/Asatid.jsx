@@ -1,6 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setfilter} from "../../../../../redux/course";
 
-const Asatid = () => {
+
+const Asatid = ({teacher}) => {
+
+    const dispatch = useDispatch();
+    const state = useSelector((state) => state);
+    console.log(state);
+teacher(state.filterCourse.filter);
 
     return (
         <div>
@@ -10,7 +19,7 @@ const Asatid = () => {
 
                 <input type="checkbox" id="inputasatid" className="absolute peer opacity-0" />
 
-                <label for="inputasatid" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> product </label>
+                <label for="inputasatid" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> اساتید </label>
                 <label for="inputasatid" className="h-[1rem] w-[1rem] bg-[url('././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] right-[30px]
                  peer-checked:bg-[url('././././assets/img/courses/negativ.png')] duration-300">  </label>
 
@@ -19,7 +28,14 @@ const Asatid = () => {
 
                         <div className=" text-right flex justify-end ">
                             <input type="checkbox" id="bahr" name="bahr" className="peer hidden" />
-                            <label for="bahr" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer">  استاد بحر العلوم </label>
+                            <label for="bahr" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" onClick={(e) => {
+                                dispatch(
+                                    setfilter({
+                                        filter:("مبتدی"),
+                                    }),
+                                );
+                                
+                                }}>  MMdReza Sadaty </label>
                             <label for="bahr" v className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
 peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover rounded-full hover:cursor-pointer">  </label>
                         </div>

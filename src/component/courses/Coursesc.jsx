@@ -17,7 +17,7 @@ const Coursesc = () => {
 
     const getCourseList = async () => {
         const courses = await getcourse();
-        setcourse(courses.courseFilterDtos);
+        setcourse(courses);
     };
 
     useEffect(() => {
@@ -26,12 +26,12 @@ const Coursesc = () => {
     }, []);
 
     const [itemOffset, setItemOffset] = useState(0);
-    const endOffset = itemOffset + 2;
+    const endOffset = itemOffset + 6;
     const currentItems = course.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(course.length / 2);
+    const pageCount = Math.ceil(course.length / 6);
 
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * 2) % course.length;
+        const newOffset = (event.selected * 1) % course.length;
         setItemOffset(newOffset);
     };
 
@@ -39,7 +39,7 @@ const Coursesc = () => {
         <div className="bg-[#ededed]">
             <ModalCourse isVisible={showModal} courseId={getid} onclose={() => { setshowModal(false); }} />
             <Headersection typename={setcourse} />
-            <Centersection set={setshowModal} getid={setgetid} course={currentItems} />
+            <Centersection set={setshowModal} getid={setgetid} course={currentItems}  />
 
             
             <ReactPaginate
@@ -50,6 +50,7 @@ const Coursesc = () => {
                 pageCount={pageCount}
                 previousLabel="< previous"
                 renderOnZeroPageCount={null}
+                className=" h-[3rem] w-[77%] flex gap-4 justify-center"
             />
 
         </div>

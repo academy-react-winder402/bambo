@@ -25,7 +25,7 @@ const Dastebandi = () => {
 
                 <input type="checkbox" id="inputdaste" className="absolute peer opacity-0" />
 
-                <label for="inputdaste" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> product </label>
+                <label for="inputdaste" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> دسته بندی </label>
                 <label for="inputdaste" className="h-[1rem] w-[1rem] bg-[url('./././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] right-[30px]
                  peer-checked:bg-[url('./././././assets/img/courses/negativ.png')] duration-300">  </label>
 

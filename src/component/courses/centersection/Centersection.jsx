@@ -13,7 +13,8 @@ const Centersection = ({ set, course, getid }) => {
         setpage(id);
     };
     
-
+const [getfilter, setgetfilter] = useState("");
+console.log(getfilter.filter);
 
     return (
         <>
@@ -38,7 +39,12 @@ const Centersection = ({ set, course, getid }) => {
 
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
                         {
-                            course.map((item, index) => {
+                            course.filter((item) => {
+                            if(item.levelName == getfilter.filter){return  item.levelName == getfilter.filter;}
+                            else{
+                                return item;
+                            }
+                            }).map((item, index) => {
                                 return (<Item key={index} im={item.tumbImageAddress} title={item.title} modares={item.teacherName} level={item.levelName}
                                     price={item.cost} set={set} id={item.courseId} get={getid} />);
                             })
@@ -58,7 +64,7 @@ const Centersection = ({ set, course, getid }) => {
 
                 </div>
 
-                <Filter />
+                <Filter teacher={setgetfilter} />
             </div>
 
         </>
