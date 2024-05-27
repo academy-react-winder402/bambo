@@ -6,53 +6,26 @@ import { ForgotPassPageThree } from "../forgotpasspage/ForgotPassPageThree.jsx";
 import { useNavigate } from "react-router-dom";
 import left from "../../../../assets/img/register/left.png"
 const ForgotPassLeft = () => {
-    const [page, setPage] = useState(0);
     const [formData, setFormData] = useState(
         {
             email: "",
             password: "",
             phonenumber: "",
-            code: "",
             confirmPassword: "",
         }
     );
-    const PageDisplay = () => {
-        if (page == 0) {
-            return <ForgotPassPageOne
-                formData={formData}
-                setFormData={setFormData}
-            />;
-        }
-        else if (page == 1) {
-            return <ForgotPassPageTwo
-                formData={formData}
-                setFormData={setFormData}
-            />;
-        }
-        else {
-            return <ForgotPassPageThree
-                formData={formData}
-                setFormData={setFormData}
-            />;
-        }
-    }
+    const [otp,setotp]=useState();
+    const [step, setStep] = useState(1);
+    const stepCounter = () => {
+        setStep(step + 1);
+      };
+    
+    //   const Back = () => {
+    //     setStep(step - 1);
+    //   };
     const navigator = useNavigate();
-    const buttonleft = () => {
-        if (page == 0) {
-            return (
-                navigator("/login")
-
-            );
-        }
-        else {
-
-            setPage((currPage) => (currPage - 1));
-
-        };
-
-    };
     const gotoleft = () => {
-        if (page == 0) {
+        if (step == 1) {
             return (
                 navigator("/")
 
@@ -60,7 +33,7 @@ const ForgotPassLeft = () => {
         }
         else {
 
-            setPage((currPage) => (currPage - 1));
+             setStep(step - 1);
 
         };
 
@@ -105,25 +78,21 @@ const ForgotPassLeft = () => {
          sm:border-solid sm:border-[transparent] sm:border-[1px] sm:pr-[17px]
          xs:border-solid xs:border-[transparent] xs:border-[1px] xs:pr-[50px]
          md:border-solid md:border-[transparent] md:border-[1px] md:pr-[15px] xs:mt-[50px]
-       ">{PageDisplay()}</div>
-       
-       <div className="lg:h-[50px] lg:w-[100%]  lg:mt-[40px]
-        sm:h-[80px] sm:w-[70%] sm:m-auto
-      xs:h-[110px] xs:w-[300px] xs:m-auto
-      md:h-[50px] md:w-[100%] md:m-auto
-       ">
-      <button className="lg:h-[50px] lg:w-[80%] lg:block  lg:m-auto lg:hover:bg-gradient-to-b lg:from-[#004458] lg:to-[#1194bc]  lg:rounded-xl lg:bg-[#004458] lg:text-[#ffff]
-                sm:h-[50px] sm:w-[100%] sm:m-auto sm:hover:bg-gradient-to-b sm:from-[#004458] sm:to-[#1194bc]  sm:rounded-xl sm:bg-[#004458] sm:text-[#ffff]
-                md:h-[50px] md:w-[80%] md:block md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
-                xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff] xs:mt-[30px]
-                "
-                    disabled={page == 2}
-                    onClick={() => {
-                        setPage((currPage) => (currPage + 1));
-                    }}>
-                    {page == 2 ? "تغییر رمز عبور": "بعدی"}
-                </button>
-       </div>
+       "> {step == 1 ? (
+        <ForgotPassPageOne step={stepCounter} setFormData={setFormData}/>
+      ) : step == 2 ? (
+        <ForgotPassPageTwo
+        setotp={setotp}
+         
+          step={stepCounter}
+        />
+      ) : step == 3 ? (
+        <ForgotPassPageThree setFormData={setFormData}
+          step={stepCounter}
+        />
+      ) : null}
+      </div>
+ 
             
          
             </div>

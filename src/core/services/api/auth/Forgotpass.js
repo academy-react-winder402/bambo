@@ -1,10 +1,11 @@
 import { instance } from "../../interseptor/index.js";
 
-const getcoursedetail = async(id) => {
+export const Postforgotpass = async(object) => {
+
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get( `/Home/GetCourseDetails?CourseId=${id}`);
+        const result = await instance.post("Sign/ForgetPassword " , object);
 
         return result;
     }catch(error){
@@ -12,4 +13,3 @@ const getcoursedetail = async(id) => {
         return[];
     }
 };
-export {getcoursedetail};
