@@ -5,6 +5,7 @@ import { DashbordRight } from "./dashbordright/DashbordRight";
 import { EditProfile } from "./editprofile/EditProfile";
 import { Dashbored } from "./dashbord/Dashbord";
 import { PannelCourse } from "./pannelcourse/PannelCourse";
+import { MyCourse } from "./mycourses/MyCourses";
 const PanelDashbordc =()=>{
 
 
@@ -24,7 +25,7 @@ const PanelDashbordc =()=>{
             ">
   <div className="lg:w-[100%] lg:h-[11%] lg:mt-[2%] md:h-[11%] md:w-[100%] md:mt-[2%] sm:w-[100%] sm:h-[11%] sm:mt-[2%]"><HeaderDashbord/></div>
 <div className="lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" >
-<PannelCourse/>
+<MyCourse/>
 </div>
             </div>
  
