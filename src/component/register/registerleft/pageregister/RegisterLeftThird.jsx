@@ -10,17 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
 const RegisterLeftThird = ({setPassword,setGmail,phoneNumber}) => {
-  const onSubmit =async(values) => {
-    setPassword(values?.password);
-    setGmail(values?.gmail);
-   
+  const onSubmit =async(values) => { 
     const obj={password:values?.password, gmail:values?.gmail,phoneNumber:phoneNumber};
    
       const registerapithree = await Postregisterthree(obj);
       console.log(registerapithree);
       const obj2={password:values?.password,phoneNumber:phoneNumber}
       if(registerapithree.success == true){
-          Userlogin = await Userlogin(obj2);
+        const  Userlogin = await Userlogin(obj2);
           if(login.success == true){
             Navigate("")
           }
