@@ -2,7 +2,7 @@ import { instance } from "../../interseptor";
 
 const getcourse = async(
     PageNumber=1,
-    RowsOfPage=8,
+    RowsOfPage=6,
 ) => {
     try{
         const result = await instance.get(`/Home/GetCoursesWithPagination?

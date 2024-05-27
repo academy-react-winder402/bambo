@@ -4,7 +4,7 @@ import { Centersection } from './centersection/Centersection';
 import { ModalCourse } from "./modalcourse/ModalCourse";
 import { getcourse } from "../../core/services/api/landing/Course";
 import ReactPaginate from 'react-paginate';
-
+import { useSelector } from "react-redux";
 
 const Coursesc = () => {
 
@@ -13,18 +13,22 @@ const Coursesc = () => {
     const [getid, setgetid] = useState();
 
 
+    const { RowsOfPage } = useSelector((state) => state.filterCourse);
+    console.log(RowsOfPage);
 
     const [course, setcourse] = useState([]);
 
     const getCourseList = async () => {
-        const courses = await getcourse();
+        const courses = await getcourse(RowsOfPage);
         setcourse(courses);
     };
 
     useEffect(() => {
         getCourseList();
 
-    }, []);
+    }, [
+        
+    ]);
 
 
 

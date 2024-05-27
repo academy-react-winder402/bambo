@@ -1,43 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setfilter } from "../../../../../redux/course";
-import { useSelector } from "react-redux";
-import { getcourse } from "../../../../../core/services/api/landing/Course";
+
 
 const Asatid = ({ level }) => {
 
     const dispatch = useDispatch();
-    const { filter } = useSelector((state) => state.filterCourse);
-    console.log(filter);
-
-    const [coursefilter, setcoursefilter] = useState([]);
-
-    const getCourseList = async () => {
-        const courses = await getcourse();
-        setcoursefilter(courses);
-    };
-
-    useEffect(() => {
-        getCourseList();
-
-    }, []);
-    console.log(coursefilter);
-
-
-    const handlefilter = () => {
-        const filtercourse = coursefilter.filter((item) => {
-            if(filter === "مبتدی"){
-                return item.levelName == filter;
-            }
-            else if(filter === "پیشرقته"){
-                return item.levelName == filter;
-            }
-            else{
-                return item;
-            }
-        });
-        level(filtercourse);
-    };
 
 
     return (
@@ -59,8 +27,8 @@ const Asatid = ({ level }) => {
                             <input type="checkbox" id="bahr" name="bahr" className="peer hidden" />
                             <label for="bahr" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer"  onClick={() => {
                                 dispatch(
-                                    setfilter("مبتدی")
-                                )
+                                    setfilter(3)
+                                );
                                 
                             }}>  MMdReza Sadaty </label>
                             <label for="bahr" v className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
