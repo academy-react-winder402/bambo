@@ -4,28 +4,27 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Validationone} from "../../../../core/validation/index";
 
 import { Postregisterthree } from "../../../../core/services/api/auth/Register";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
 const RegisterLeftThird = ({setPassword,setGmail,phoneNumber}) => {
-  const [pass,setPass]=useState();
-
-    const handlepass = (e) => { 
-      setPass(e.target.value); 
-   
-   }; 
   const onSubmit =async(values) => {
     setPassword(values?.password);
     setGmail(values?.gmail);
    
-    const obj={password:values?.password, gmail:values?.gmail,confirmPassword:pass,phoneNumber:phoneNumber};
-    
+    const obj={password:values?.password, gmail:values?.gmail,phoneNumber:phoneNumber};
+   
       const registerapithree = await Postregisterthree(obj);
       console.log(registerapithree);
+      const obj2={password:values?.password,phoneNumber:phoneNumber}
       if(registerapithree.success == true){
-          gotohome();
+          Userlogin = await Userlogin(obj2);
+          if(login.success == true){
+            Navigate("")
+          }
+
       }
     
      
@@ -51,8 +50,8 @@ const RegisterLeftThird = ({setPassword,setGmail,phoneNumber}) => {
     <div >
       <Formik
                 initialValues={{gmail: "",password: "" }}
-onSubmit={onSubmit}
                 validationSchema={ Validationone }
+                onSubmit={onSubmit} 
       >
         <Form>
           < div dir="rtl" className=" lg:h-[100px]  lg:flex lg:flex-col lg:gap-[10px] lg:mt-[30px] 
@@ -116,10 +115,7 @@ onSubmit={onSubmit}
                          sm:w-[80%] sm:h-[40px] sm:rounded-[10px] sm:pr-[1rem] 
                          xs:w-[90%] xs:h-[40px] xs:rounded-[10px] xs:pr-[1rem] 
                          xs:border-solid xs:border-[1px] xs:border-[black]
-                        "
-                  value={pass} onChang={handlepass}      
-                
-                  
+                        "   
             />
  
 
@@ -141,7 +137,7 @@ onSubmit={onSubmit}
                 md:h-[50px] md:w-[80%] md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff]
                 "
-   type="submit" onClick={onSubmit}>
+   type="submit" >
                    ثبت 
                     </button>
                     </div> 
