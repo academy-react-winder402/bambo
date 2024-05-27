@@ -5,13 +5,13 @@ import { Time } from './time/time';
 import { Dastebandi } from './dastebandi/Dastebandi';
 import {Moratab} from './moratabsazi/moratabsazi';
 
-const Filter = () => {
+const Filter = ({level}) => {
 
 
     return (
         <div className=" w-[19rem] mr-[1rem]">
             <Range />
-            <Asatid />
+            <Asatid level={level} />
             <Dastebandi />
             <Moratab />
             <Time />

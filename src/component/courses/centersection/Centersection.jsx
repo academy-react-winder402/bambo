@@ -5,7 +5,7 @@ import { Item2 } from "./items2/items2";
 
 
 
-const Centersection = ({ set, course, getid }) => {
+const Centersection = ({ set, course, getid,level }) => {
 
     const [page, setpage] = useState(1);
 
@@ -13,8 +13,6 @@ const Centersection = ({ set, course, getid }) => {
         setpage(id);
     };
     
-
-
     return (
         <>
 
@@ -58,7 +56,7 @@ const Centersection = ({ set, course, getid }) => {
 
                 </div>
 
-                <Filter />
+                <Filter level={level} />
             </div>
 
         </>
