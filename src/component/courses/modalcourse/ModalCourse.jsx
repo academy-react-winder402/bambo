@@ -1,12 +1,19 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import js from '../../../assets/img/courses/js.png';
 
-const ModalCourse = ({isVisible,onclose}) => {
+
+const ModalCourse = ({isVisible,onclose,courseId}) => {
     if(!isVisible) return null;
+
+    
+
+    const [data, setdata] = useState(courseId);
+
+
     return (
         <div className="h-[46rem] w-[96rem]  z-10   fixed inset-0 backdrop-blur-sm bg-opacity-25" >
             <div className="h-[35rem] w-[40rem] bg-[#fff] m-auto mt-[5rem] relative   ">
-                <h1 className="text-3xl text-right mr-[2rem] pt-[2rem] text-[#004458]"> دوره جاوا اسکریپت </h1>
+                <h1 className="text-2xl text-right mr-[2rem] pt-[2rem] text-[#004458]" > {data.title} </h1>
                 <span className="block text-right mr-[2rem] pt-[2rem] text-xl text-[#3E7788]"> مدرس : بیل گیتس </span>
                 <span className="block text-right mr-[2rem] pt-[2rem] text-xl text-[#3E7788]"> ظرفیت : ۵۹ نفر </span>
                 <span className="block text-right mr-[2rem] pt-[2rem] text-xl text-[#3E7788]"> 1400/1/1 : تاریخ شروع   </span>
