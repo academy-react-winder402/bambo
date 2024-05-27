@@ -8,7 +8,7 @@ import edit from "../../../assets/img/dashbord/edit.png"
 import { MdModeEdit } from "react-icons/md";
 const DashbordRight =({page})=>{
     return(
-        <div >
+        <div>
 <div className="lg:w-[80%] lg:h-[15%] lg:border-b-solid lg:border-b-[#DBDBDB] lg:border-b-[1px] lg:m-auto lg:text-[#ffff] lg:text-center
 lg:text-[23px] lg:leading-[120px] lg:flex lg:gap-[20px] lg:justify-center
 md:w-[100%] md:h-[15%] md:border-b-solid md:border-b-[#DBDBDB] md:border-b-[1px] md:m-auto md:text-[#ffff] md:text-center
