@@ -5,6 +5,7 @@ import { ModalCourse } from "./modalcourse/ModalCourse";
 import { getcourse } from "../../core/services/api/landing/Course";
 import ReactPaginate from 'react-paginate';
 
+
 const Coursesc = () => {
 
     const [showModal, setshowModal] = useState(false);
@@ -25,6 +26,12 @@ const Coursesc = () => {
 
     }, []);
 
+
+
+
+
+
+
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + 6;
     const currentItems = course.slice(itemOffset, endOffset);
@@ -39,7 +46,7 @@ const Coursesc = () => {
         <div className="bg-[#ededed]">
             <ModalCourse isVisible={showModal} courseId={getid} onclose={() => { setshowModal(false); }} />
             <Headersection typename={setcourse} />
-            <Centersection set={setshowModal} getid={setgetid} course={currentItems}  />
+            <Centersection set={setshowModal} getid={setgetid} course={currentItems} level={setcourse} />
 
             
             <ReactPaginate

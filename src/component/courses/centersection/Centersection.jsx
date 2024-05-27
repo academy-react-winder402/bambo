@@ -5,7 +5,7 @@ import { Item2 } from "./items2/items2";
 
 
 
-const Centersection = ({ set, course, getid }) => {
+const Centersection = ({ set, course, getid,level }) => {
 
     const [page, setpage] = useState(1);
 
@@ -13,9 +13,6 @@ const Centersection = ({ set, course, getid }) => {
         setpage(id);
     };
     
-const [getfilter, setgetfilter] = useState("");
-console.log(getfilter.filter);
-
     return (
         <>
 
@@ -39,12 +36,7 @@ console.log(getfilter.filter);
 
                     <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
                         {
-                            course.filter((item) => {
-                            if(item.levelName == getfilter.filter){return  item.levelName == getfilter.filter;}
-                            else{
-                                return item;
-                            }
-                            }).map((item, index) => {
+                            course.map((item, index) => {
                                 return (<Item key={index} im={item.tumbImageAddress} title={item.title} modares={item.teacherName} level={item.levelName}
                                     price={item.cost} set={set} id={item.courseId} get={getid} />);
                             })
@@ -64,7 +56,7 @@ console.log(getfilter.filter);
 
                 </div>
 
-                <Filter teacher={setgetfilter} />
+                <Filter level={level} />
             </div>
 
         </>
