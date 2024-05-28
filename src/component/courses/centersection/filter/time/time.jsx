@@ -12,8 +12,8 @@ const Time = () => {
 
                 <input type="checkbox" id="inputtime" className="absolute peer opacity-0" />
 
-                <label for="inputtime" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> مدت زمان </label>
-                <label for="inputtime" className="h-[1rem] w-[1rem] bg-[url('./././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] right-[30px]
+                <label for="inputtime" className="font-bold tracking-[1px] w-[7rem] mx-[210px] h-[50px] flex items-center"> مدت زمان </label>
+                <label for="inputtime" className="h-[1rem] w-[1rem] bg-[url('./././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] left-[20px]
                  peer-checked:bg-[url('./././././assets/img/courses/negativ.png')] duration-300">  </label>
 
                 <div className="max-h-0 overflow-hidden peer-checked:max-h-full" >

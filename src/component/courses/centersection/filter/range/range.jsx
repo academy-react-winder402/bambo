@@ -17,8 +17,8 @@ const Range = () => {
 
                 <input type="checkbox" id="inputrange" className="absolute peer opacity-0" />
 
-                <label for="inputrange" className="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center"> قیمت </label>
-                <label for="inputrange" className="h-[1rem] w-[1rem] bg-[url('././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] right-[30px]
+                <label for="inputrange" className="font-bold tracking-[1px] mx-[235px] h-[50px] flex items-center"> قیمت </label>
+                <label for="inputrange" className="h-[1rem] w-[1rem] bg-[url('././././assets/img/courses/plus.png')] bg-no-repeat bg-cover absolute top-[17px] left-[20px]
                  peer-checked:bg-[url('././././assets/img/courses/negativ.png')] duration-300">  </label>
 
                 <div className="max-h-0 overflow-hidden peer-checked:max-h-full" >

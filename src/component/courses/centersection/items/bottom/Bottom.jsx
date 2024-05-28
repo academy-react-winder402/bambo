@@ -1,21 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Bottom = ({ title, modares,level, price, set,id,get}) => {
+const Bottom = ({ title, modares,price, showmodal}) => {
     return (
 
         <div className=" pb-[1rem] bg-[#fff]  relative">
 
             <div className=" h-[2.5rem] text-lg text-right mr-[0.5rem] leading-10 "> {title} </div>
             <div className=" h-[1.8rem] text-right mr-[1rem] text-sm ">    {modares} : <span> نام استاد‌ </span> </div>
-            <div className=" h-[1.8rem] text-right mr-[1rem] text-sm ">   {level}  </div>
+            <div className=" h-[1.8rem] text-right mr-[1rem] text-sm ">     </div>
 
             <h1 className="h-[2rem] text-right mr-[1rem] text-sm"> ظرفیت :  نفر </h1>
 
             <button className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer absolute
                  top-[5.8rem] left-[1rem]" onClick={() => { 
-                    set(true);
-                    get({id,title});
+                    showmodal();
+                    
                   }}> جزئیات </button>
 
             <div className="border border-solid border-[#004458]  ml-[0.5rem] mr-[0.5rem]"> </div>
