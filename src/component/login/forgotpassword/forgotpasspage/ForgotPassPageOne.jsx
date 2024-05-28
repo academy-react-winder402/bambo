@@ -3,25 +3,29 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Postregister } from "../../../../core/services/api/auth/Register";
 import { Postforgotpass } from "../../../../core/services/api/auth/Forgotpass";
 import { Validationfoure } from "../../../../core/validation";
-const ForgotPassPageOne = ({setFormData,step}) => {
-    const onSubmit =async(values) => {
-        const obj={phoneNumber:values.phoneNumber};
-         
-             const forgotapi = await Postregister(obj);
-             setFormData=(forgotapi);
-             console.log(forgotapi);
-             if(forgotapi.success == true){
-                 step();
-             }
-             else if (forgotapi.success == false){
-errorr();
-             }
-       };
+const ForgotPassPageOne = ({setPhonenumber,step}) => {
+    
+        const onSubmit =async(values) => {
+            const obj = {phoneNumber:values.phoneNumber}
+          
+            const forgotapi = await Postforgotpass(obj);
+            if(forgotapi.success){
+            setItem("token",forgotapi.token);
+            alert("yes");
+    
+            }
+            else{
+                alert("no")
+            }
+            setPhonenumber(forgotapi);
+            console.log(forgotapi);
+        
+        }
        const [error, setError]=useState([]);
 
         const errorr= async () => {
             const object ={error}
-          const result = await Postforgotpass(object);
+          const result = await Postforgotpass(obj);
           setError(result);
       };
     return (
