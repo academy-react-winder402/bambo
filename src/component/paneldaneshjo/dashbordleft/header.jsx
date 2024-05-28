@@ -4,18 +4,13 @@ import adam from "../../../assets/img/dashbord/adam.png";
 import menu from "../../../assets/img/dashbord/menu.png";
 import { DashbordRight } from "../dashbordright/DashbordRight";
 const HeaderDashbord =() =>{
-    const [menu,setmenu]=useState(false);
-    const gotomenu =()=>{
+    const [menuu,setmenu]=useState();
 
-
-      
-    
-    }
 
 return(
   <div  dir="rtl" className="lg:m-auto lg:w-[90%] lg:h-[100%]  lg:bg-[#fff] lg:flex
   md:m-auto md:w-[90%]  md:h-[100%] md:bg-[#fff] md:flex
-  sm:m-auto sm:w-[90%]  sm:h-[100%] sm:bg-[#fff] sm:flex
+  sm:m-auto sm:w-[90%]  sm:h-[100%] sm:bg-[#fff] sm:flex sm:relative
   ">
 <div className="lg:w-[80%]  lg:h-[100%] lg:flex lg:text-[#088568] lg:leading-[80px]
 md:w-[80%]  md:h-[100%] md:flex md:text-[#088568] md:leading-[80px]
@@ -23,8 +18,8 @@ sm:w-[80%]  sm:h-[100%] sm:flex sm:text-[#088568] sm:leading-[75px]
 ">
      <div className="lg:hidden md:hidden
     sm:w-[25px] sm:h-[25px] sm:mt-[23px] sm:mr-[20px]
-    " onclick={gotomenu()}><img src={menu} ></img>
-        <div  className="lg:hidden md:hidden sm:fixd sm:top-0 sm:right-0 sm:w-[300px] sm:h-[950px] sm:z-50 sm:bg-[red]" >
+    " ><img src={menu} onClick={()=> setmenu (0)}></img>
+        <div  className={menuu === 0 ?"sm:bg-[#088568] sm:w-[20rem] sm:absolute sm:right-[-30px] sm:top-[80px]" : "sm:right-[-400px] sm:hidden"  }>
           
 <DashbordRight/>
         </div>
