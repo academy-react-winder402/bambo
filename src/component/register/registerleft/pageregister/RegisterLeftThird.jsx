@@ -17,7 +17,7 @@ const RegisterLeftThird = ({setPassword,setGmail,phoneNumber}) => {
       console.log(registerapithree);
       const obj2={password:values?.password,phoneNumber:phoneNumber}
       if(registerapithree.success == true){
-        const  Userlogin = await Userlogin(obj2);
+        const  login = await Userlogin(obj2);
           if(login.success == true){
             Navigate("")
           }
