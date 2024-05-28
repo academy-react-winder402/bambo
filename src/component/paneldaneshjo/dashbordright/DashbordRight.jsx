@@ -6,7 +6,7 @@ import list from "../../../assets/img/dashbord/list.png"
 import close from "../../../assets/img/dashbord/close.png"
 import edit from "../../../assets/img/dashbord/edit.png"
 import { MdModeEdit } from "react-icons/md";
-const DashbordRight =({page})=>{
+const DashbordRight =({on})=>{
     return(
         <div>
 <div className="lg:w-[80%] lg:h-[15%] lg:border-b-solid lg:border-b-[#DBDBDB] lg:border-b-[1px] lg:m-auto lg:text-[#ffff] lg:text-center
@@ -36,7 +36,7 @@ md:w-[80%] md:h-[10%] md:border-solid md:border-[transparent]  md:border-[1px] m
 md:text-[18px] md:leading-[60px] md:hover:w-[100%] md:hover:bg-[#ffff] md:hover:text-[#088568] md:flex md:gap-[20px] md:justify-start
 sm:w-[80%] sm:h-[10%] sm:border-solid sm:border-[transparent]  sm:border-[1px] sm:m-auto  sm:mt-[20px]  sm:text-[#ffff] sm:text-center
 sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:text-[#088568] sm:flex sm:gap-[20px] sm:justify-start
-" onClick={page == 1}>
+"  onClick={()=>{on(0)}}>
 <img src={dashbord1} className="lg:w-[25px] lg:h-[25px] lg:mt-[20px] lg:mr-[35px] md:w-[20px] md:h-[20px] md:mt-[25px]
 sm:w-[20px] sm:h-[20px] sm:mt-[25px]
 "></img>
@@ -49,7 +49,7 @@ md:w-[80%] md:h-[10%] md:border-solid md:border-[transparent]  md:border-[1px] m
 md:text-[18px] md:leading-[60px] md:hover:w-[100%] md:hover:bg-[#ffff] md:hover:text-[#088568] md:flex md:gap-[20px] md:justify-start
 sm:w-[80%] sm:h-[10%] sm:border-solid sm:border-[transparent]  sm:border-[1px] sm:m-auto  sm:mt-[20px]  sm:text-[#ffff] sm:text-center
 sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:text-[#088568] sm:flex sm:gap-[20px] sm:justify-start
-">
+"  onClick={()=>{on(1)}}>
     <img src={edit} className="lg:w-[30px] lg:h-[30px] lg:mt-[20px] lg:mr-[35px] md:w-[20px] md:h-[20px] md:mt-[25px]
     sm:w-[20px] sm:h-[20px] sm:mt-[25px]
     "></img>
@@ -62,7 +62,7 @@ md:w-[80%] md:h-[10%] md:border-solid md:border-[transparent]  md:border-[1px] m
 md:text-[18px] md:leading-[60px] md:hover:w-[100%] md:hover:bg-[#ffff] md:hover:text-[#088568] md:flex md:gap-[20px] md:justify-start
 sm:w-[80%] sm:h-[10%] sm:border-solid sm:border-[transparent]  sm:border-[1px] sm:m-auto  sm:mt-[20px]  sm:text-[#ffff] sm:text-center
 sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:text-[#088568] sm:flex sm:gap-[20px] sm:justify-start
-">
+"  onClick={()=>{on(2)}}>
     <img src={bok} className="lg:w-[30px] lg:h-[30px] lg:mt-[20px] lg:mr-[35px] md:w-[20px] md:h-[20px] md:mt-[25px]
     sm:w-[20px] sm:h-[20px] sm:mt-[25px]
     "></img>
@@ -75,7 +75,7 @@ md:w-[80%] md:h-[10%] md:border-solid md:border-[transparent]  md:border-[1px] m
 md:text-[18px] md:leading-[60px] md:hover:w-[100%] md:hover:bg-[#ffff] md:hover:text-[#088568] md:flex md:gap-[20px] md:justify-start
 sm:w-[80%] sm:h-[10%] sm:border-solid sm:border-[transparent]  sm:border-[1px] sm:m-auto  sm:mt-[20px]  sm:text-[#ffff] sm:text-center
 sm:text-[16px] sm:leading-[60px] sm:hover:w-[100%] sm:hover:bg-[#ffff] sm:hover:text-[#088568] sm:flex sm:gap-[20px] sm:justify-start
-">
+"  onClick={()=>{on(3)}}>
     <img src={list} className="lg:w-[30px] lg:h-[30px] lg:mt-[20px] lg:mr-[35px] md:w-[20px] md:h-[20px] md:mt-[25px]
     sm:w-[20px] sm:h-[20px] sm:mt-[25px]
     "></img>

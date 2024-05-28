@@ -8,6 +8,7 @@ import { PannelCourse } from "./pannelcourse/PannelCourse";
 import { MyCourse } from "./mycourses/MyCourses";
 const PanelDashbordc =()=>{
 
+  const [pagedashbord, setpagedashbord]= useState(0);
 
     return(
         <div dir="rtl" className="lg:flex lg:w-[100%]  
@@ -18,15 +19,34 @@ const PanelDashbordc =()=>{
         md:w-[25%] md:h-[100%]  md:bg-[#088568] lg:block md:block
      sm:w-[25%] sm:h-[100%]  sm:bg-[#088568] sm:hidden
          ">
-           <DashbordRight/>
+           <DashbordRight on={setpagedashbord} />
             </div>
             <div className="lg:w-[75%] lg:h-[100%] lg:bg-[#DBDBDB] md:w-[75%] md:h-[100%] md:bg-[#DBDBDB]
             sm:w-[100%] sm:h-[100%] sm:bg-[#DBDBDB] 
             ">
   <div className="lg:w-[100%] lg:h-[11%] lg:mt-[2%] md:h-[11%] md:w-[100%] md:mt-[2%] sm:w-[100%] sm:h-[11%] sm:mt-[2%]"><HeaderDashbord/></div>
-<div className="lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" >
-<Dashbored/>
+<div className={pagedashbord === 0 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" : "hidden"} >
+  
+  <Dashbored/> 
+
 </div>
+
+<div className={pagedashbord === 1 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" : "hidden"} >
+  
+  <EditProfile /> 
+
+</div>
+<div className={pagedashbord === 2 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" : "hidden"} >
+  
+  <PannelCourse /> 
+
+</div>
+<div className={pagedashbord === 3 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%]" : "hidden"} >
+  
+  <MyCourse /> 
+
+</div>
+
             </div>
  
         </div>
