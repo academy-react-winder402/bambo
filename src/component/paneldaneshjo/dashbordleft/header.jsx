@@ -18,8 +18,8 @@ sm:w-[80%]  sm:h-[100%] sm:flex sm:text-[#088568] sm:leading-[75px]
 ">
      <div className="lg:hidden md:hidden
     sm:w-[25px] sm:h-[25px] sm:mt-[23px] sm:mr-[20px]
-    " ><img src={menu} onClick={()=> setmenu (0)}></img>
-        <div  className={menuu === 0 ?"sm:bg-[#088568] sm:w-[20rem] sm:absolute sm:right-[-30px] sm:top-[80px]" : "sm:right-[-400px] sm:hidden"  }>
+    " ><img src={menu} onClick={()=> setmenu ()}></img>
+        <div  className={menuu === 0 ?"sm:bg-[#088568] sm:w-[20rem] sm:absolute sm:right-[-30px] sm:top-[80px]" : "sm:right-[-400px] sm:hidden"}>
           
 <DashbordRight/>
         </div>
