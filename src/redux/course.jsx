@@ -5,8 +5,6 @@ const filterCourse = createSlice({
     initialState:{
         RowsOfPage:3,
         PageNumber:1,
-        
-        
     },
     reducers:{
         
