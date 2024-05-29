@@ -8,8 +8,10 @@ const Top =()=>{
    md:pt-[30px] 
    sm:w-[90%] sm:h-[13%] sm:m-auto sm:border-b-solid sm:border-b-[1px] sm:border-b-[#088568] sm:text-[#088568] sm:text-[20px]
    sm:pt-[30px]
-    ">: آخرین دوره ثبت شده</div>
-    <div className="lg:w-[90%] md:w-[90%] sm:w-[90%]">
+   xs:w-[90%] xs:h-[13%] xs:m-auto xs:border-b-solid xs:border-b-[1px] xs:border-b-[#088568] xs:text-[#088568] xs:text-[20px]
+   xs:pt-[30px]
+    ">آخرین دوره ثبت شده:</div>
+    <div className="lg:w-[90%] md:w-[90%] sm:w-[90%] xs:w-[90%]">
         
     </div>
         </>
