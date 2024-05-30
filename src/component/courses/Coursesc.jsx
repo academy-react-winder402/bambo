@@ -128,8 +128,10 @@ const [pageNumber, setPageNumber] = useState();
           previousLabel="< previous"
           renderOnZeroPageCount={null}
           className=" h-[3rem] w-[77%] flex gap-4 justify-center"
-          pageClassName="border border-solid border-[#004458] "
+          pageClassName="border border-solid border-[#004458] h-[2rem] w-[2rem] text-center hover:bg-[#004458] hover:text-white"
           activeClassName="text-[red]"
+          previousClassName="border border-solid border-[#004458] h-[2rem] w-[6rem] text-center hover:bg-[#004458] hover:text-white"
+          nextClassName="border border-solid border-[#004458] h-[2rem] w-[4rem] text-center hover:bg-[#004458] hover:text-white"
         />
       )}
     </div>
