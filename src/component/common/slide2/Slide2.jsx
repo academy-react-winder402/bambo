@@ -29,7 +29,7 @@ const Slide2 = ({news}) => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="w-[40rem] h-[25rem] rounded-md"
+                className="w-[40rem] h-[25rem]"
             >
         {news.map((item, index) => {
           return (<SwiperSlide key={index} im={item.tumbImageAddress}>
