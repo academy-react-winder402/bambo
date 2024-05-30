@@ -14,21 +14,22 @@ const Coursesc = () => {
 
   const [getid, setgetid] = useState();
 
-  const { RowsOfPage } = useSelector((state) => state.filterCourse);
+  const { RowsOfPage , CourseTypeId } = useSelector((state) => state.filterCourse);
+  console.log(CourseTypeId);
 
   const [data, setData] = useState([]);
 const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
-    const courses = await getcourse(pageNumber, RowsOfPage);
+    const courses = await getcourse(pageNumber, RowsOfPage, CourseTypeId);
     setTotalPages(Math.ceil(courses?.totalCount / RowsOfPage));
     setData(courses);
   };
 
   useEffect(() => {
     getCourseList();
-  }, [RowsOfPage, pageNumber]);
+  }, [RowsOfPage, pageNumber,CourseTypeId]);
 
   const [page, setpage] = useState(1);
 
