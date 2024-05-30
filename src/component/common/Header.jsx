@@ -4,13 +4,22 @@ import { NavLink } from "react-router-dom";
 import shopp from '../../assets/img/landing/shopp.png';
 import sun from '../../assets/img/courses/sun.png';
 import { DarkModeSwitch } from "./darkmod/Darkmode";
-
+import {getItem} from "./storage/Storage.Services"
 const Header = () => {
+    const [islogin,setIslogin] = useState(null);
+    const Loged = getItem("token");
     return (
         <div className="border-b border-solid border-[#D1D1D1]  w-11/12 h-14 m-auto flex justify-between relative font-sans dark:bg-[#4040406c] ">
             <div className=" w-36 flex justify-between ">
-                <NavLink to='/register' className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white "> ثبت نام </NavLink>
-                <NavLink to="/login" className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white "> ورود </NavLink>
+                {islogin?(<>
+                
+                </>):(
+                    <>
+                    <NavLink to='/register' className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white "> ثبت نام </NavLink>
+                    <NavLink to="/login" className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white "> ورود </NavLink>
+                    </>
+                )}
+                
             </div>
 
             <NavLink to="/sabadkharid" className=" h-[3.4rem] w-[5rem] absolute top-[0rem] left-[10rem] hover:cursor-pointer hover:bg-[#004458]">  
