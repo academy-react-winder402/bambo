@@ -23,8 +23,5 @@ export const Validationsix = yup.object().shape({
    phoneOrGmail:yup.string().required("لطفا پر کنید"),
    password: yup
    .string()
-   .matches(
-      "/[0-11]/",
-      "Must be number"
-   ).required("لطفا پر کنید"),
+ .required("لطفا پر کنید"),
 });

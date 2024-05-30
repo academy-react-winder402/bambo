@@ -1,38 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Postregister } from "../../../../core/services/api/auth/Register";
 import { Postforgotpass } from "../../../../core/services/api/auth/Forgotpass";
 import { Validationfoure } from "../../../../core/validation";
-const ForgotPassPageOne = ({setPhonenumber,step}) => {
-    
-        const onSubmit =async(values) => {
-            const obj = {phoneNumber:values.phoneNumber}
-          
-            const forgotapi = await Postforgotpass(obj);
-            if(forgotapi.success){
-            setItem("token",forgotapi.token);
-            alert("yes");
-    
-            }
-            else{
-                alert("no")
-            }
-            setPhonenumber(forgotapi);
-            console.log(forgotapi);
-        
-        }
-       const [error, setError]=useState([]);
-
-        const errorr= async () => {
-            const object ={error}
-          const result = await Postforgotpass(obj);
-          setError(result);
-      };
+import {setItem} from "../../../../core/services/api/storage/Storage.Services"
+const ForgotPassPageOne = ({setPhoneNumber,step,phoneNumber}) => {
+    const handlephone = (e) => { 
+        setPhoneNumber(e.target.value); 
+     
+     };
+                const onSubmit = async () => {
+                  
+                    const obj = {phoneNumber:phoneNumber};
+                    const forgotapi = await Postforgotpass(obj);
+                    console.log(forgotapi);
+                    if (forgotapi.success == true) {
+                      step();
+                    }
+                  };
+    //    const [error, setError]=useState([]);
+    //     const errorr= async () => {
+    //         const object ={error}
+    //       const result = await Postforgotpass(obj);
+    //       setError(result);
+    //   };
     return (
         <div>
-               <Formik
-                         initialValues={{phoneNumber: ""}}
-                         onSubmit={onSubmit}
+               <Formik   
                      validationSchema={Validationfoure}
                >
                 <Form>
@@ -57,8 +50,7 @@ const ForgotPassPageOne = ({setPhonenumber,step}) => {
                         xs:border-[1px] xs:border-[black] xs:border-solid 
                         xs:w-[85%] xs:h-[40px] xs:rounded-[10px]  
                         "
-                            // value={formData.phonenumber}
-                        // onChange={(event) => setFormData({ ...formData, phonenumber: event.target.value })}
+                        value={phoneNumber} onChange={handlephone}
                         />
                        <ErrorMessage name="phoneNumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
@@ -73,7 +65,7 @@ const ForgotPassPageOne = ({setPhonenumber,step}) => {
                 md:h-[50px] md:w-[80%] md:block md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff] xs:mt-[30px]
                 "
-              >
+           type="submit"  onClick={onSubmit} >
                    بعدی
                 </button>
        </div>

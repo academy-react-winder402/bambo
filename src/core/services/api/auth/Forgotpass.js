@@ -5,7 +5,7 @@ export const Postforgotpass = async(obj) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.post("Sign/ForgetPassword " , obj);
+        const result = await instance.post("/Sign/ForgetPassword" , obj);
 
         return result;
     }catch(error){

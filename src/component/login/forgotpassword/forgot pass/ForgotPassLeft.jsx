@@ -6,7 +6,7 @@ import { ForgotPassPageThree } from "../forgotpasspage/ForgotPassPageThree.jsx";
 import { useNavigate } from "react-router-dom";
 import left from "../../../../assets/img/register/left.png";
 const ForgotPassLeft = () => {
-  const [phonenumber, setPhonenumber] = useState()
+  const [ phoneNumber, setPhoneNumber] = useState()
   const [password, setPassword] = useState()
   const [resetpassword, setResetpassword] = useState()
   const [otp, setotp] = useState();
@@ -85,11 +85,11 @@ const ForgotPassLeft = () => {
         >
           {" "}
           {step == 1 ? (
-            <ForgotPassPageOne step={stepCounter} setPhonenumber={setPhonenumber} />
+            <ForgotPassPageOne step={stepCounter} setPhoneNumber={setPhoneNumber} phoneNumber={ phoneNumber}/>
           ) : step == 2 ? (
-            <ForgotPassPageTwo setotp={setotp} step={stepCounter} phonenumber={phonenumber}  />
+            <ForgotPassPageTwo setotp={setotp} step={stepCounter}  phoneNumber={ phoneNumber}  />
           ) : step == 3 ? (
-            <ForgotPassPageThree phonenumber={phonenumber} step={stepCounter} setPassword={setPassword} setResetpassword={setResetpassword}/>
+            <ForgotPassPageThree  phoneNumber={ phoneNumber} step={stepCounter} setPassword={setPassword} setResetpassword={setResetpassword}/>
           ) : null}
         </div>
       </div>

@@ -1,10 +1,11 @@
 import React, { useState,useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import {Postlogin} from "../../../core/services/api/auth/Lgin"
-import { setItem } from "../../common/storage/Storage.Services";
+import { setItem } from "../../../core/services/api/storage/Storage.Services";
 import { Validationsix } from "../../../core/validation/index";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 const FormLoginCenter =({gotoforgotpass,gotoregister})=>{
+    const navigator =useNavigate();
     const [formdata,setFormData]=useState(
         {
             phoneOrGmail:"",
@@ -17,7 +18,7 @@ const FormLoginCenter =({gotoforgotpass,gotoregister})=>{
         const loginrapi = await Postlogin(obj);
         if(loginrapi.success){
         setItem("token",loginrapi.token);
-        alert("yes");
+       navigator ("/")
 
         }
         else{

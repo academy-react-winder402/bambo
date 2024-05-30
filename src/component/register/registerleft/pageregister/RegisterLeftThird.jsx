@@ -3,13 +3,14 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Validationone } from "../../../../core/validation/index";
 import { Postlogin2 } from "../../../../core/services/api/auth/Register";
 import { Postregisterthree } from "../../../../core/services/api/auth/Register";
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
-const navigator = useNavigate();
+
 const RegisterLeftThird = ({ setPassword, setGmail, phoneNumber }) => {
+ const navigator = useNavigate();
   const onSubmit = async (values) => {
     const obj = {
       phoneNumber: phoneNumber,
