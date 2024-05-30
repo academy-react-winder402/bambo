@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Validationfoure } from "../../../../core/validation/index";
 import { Postregister } from "../../../../core/services/api/auth/Register";
 import { NavLink } from "react-router-dom";
-import { setItem } from "../../../../core/services/storage/Storage.Services";
+
 const RegisterLeftFirst = ({ step, setPhoneNumber }) => {
   const onSubmit = async (values) => {
     setPhoneNumber(values?.phoneNumber);
