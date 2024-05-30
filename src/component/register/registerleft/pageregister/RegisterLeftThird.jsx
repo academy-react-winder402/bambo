@@ -8,25 +8,30 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
+const navigator = useNavigate();
 const RegisterLeftThird = ({ setPassword, setGmail, phoneNumber }) => {
   const onSubmit = async (values) => {
     const obj = {
+      phoneNumber: phoneNumber,
       password: values?.password,
       gmail: values?.gmail,
-      phoneNumber: phoneNumber,
+     
     };
 
     const registerapithree = await Postregisterthree(obj);
     console.log(registerapithree);
-    const obj2 = { password: values?.password, phoneNumber: phoneNumber };
+    const obj2 = { phoneNumber: phoneNumber ,password: values?.password,};
     if (registerapithree.success == true) {
       const login = await Postlogin2(obj2);
       if (login.success == true) {
-        Navigate("/");
+        navigator("/");
       }
+      else 
+        navigator("/login");
+      
     }
   };
-  const navigator = useNavigate();
+
   const gotohome = () => {
     return navigator("/");
   };
