@@ -3,24 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const filterCourse = createSlice({
     name:"filterCourse",
     initialState:{
-        RowsOfPage:3,
-        PageNumber:1,
+        RowsOfPage:4,
     },
     reducers:{
         
         setfilter:(state,action) =>{
-           state.RowsOfPage=action.payload;
+           state.RowsOfPage=action.payload.RowsOfPage;
         },
-        setpage:(state,action) => {
-            state.PageNumber=action.payload;
-        },
-
     },
 
     
 
 });
 
-export const{setfilter,setpage}=filterCourse.actions;
+export const{setfilter}=filterCourse.actions;
 
 export default filterCourse.reducer;

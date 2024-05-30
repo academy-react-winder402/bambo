@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import {  setfilter,setpage } from "../../../../../redux/course";
+import {  setfilter } from "../../../../../redux/course";
 
 
 const Asatid = ({ level }) => {
@@ -28,7 +28,6 @@ const Asatid = ({ level }) => {
                             <label for="bahr" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer"  onClick={() => {
                                 dispatch(
                                     setfilter(3),
-                                    setpage(1)
                                 );
                                 
                             }}>  MMdReza Sadaty </label>

@@ -14,21 +14,21 @@ const Coursesc = () => {
 
   const [getid, setgetid] = useState();
 
-  const { PageNumber, RowsOfPage } = useSelector((state) => state.filterCourse);
+  const { RowsOfPage } = useSelector((state) => state.filterCourse);
 
-
-  const [course, setcourse] = useState([]);
-  const [totalpage, settotalpage] = useState();
+  const [data, setData] = useState([]);
+const [pageNumber, setPageNumber] = useState();
+  const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
-    const courses = await getcourse(PageNumber, RowsOfPage);
-    settotalpage(Math.ceil(courses?.totalCount / RowsOfPage));
-    setcourse(courses);
+    const courses = await getcourse(pageNumber, RowsOfPage);
+    setTotalPages(Math.ceil(courses?.totalCount / RowsOfPage));
+    setData(courses);
   };
 
   useEffect(() => {
     getCourseList();
-  }, [PageNumber, RowsOfPage]);
+  }, [RowsOfPage, pageNumber]);
 
   const [page, setpage] = useState(1);
 
@@ -36,16 +36,9 @@ const Coursesc = () => {
     setpage(id);
   };
 
-  const [currentpage, setcurrentpage] = useState(1);
-
-  const lastindex = currentpage * RowsOfPage;
-  const firstindex = lastindex - RowsOfPage;
-
-
-  const handlePageClick = (event) => {
-    setcurrentpage(event)
+  const handlePageClick = (e) => {
+    setPageNumber(e.selected + 1);
   };
-
 
 
   return (
@@ -57,7 +50,7 @@ const Coursesc = () => {
           setshowModal(false);
         }}
       />
-      <Headersection typename={setcourse} />
+      <Headersection typename={setData} />
 
       <div className="h-[6rem] w-full flex justify-between ">
         <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
@@ -91,7 +84,7 @@ const Coursesc = () => {
       <div className="  mt-[3rem] flex justify-between">
         <div className=" w-[70rem] ml-[5rem] ">
           <div className={page === 1 ? "flex flex-wrap" : "hidden"}>
-            {course.courseFilterDtos?.map((item, index) => {
+            {data.courseFilterDtos?.map((item, index) => {
               return (
                 <Item
                   key={index}
@@ -108,7 +101,7 @@ const Coursesc = () => {
           </div>
 
           <div className={page === 2 ? "flex flex-wrap" : "hidden"}>
-            {course.courseFilterDtos?.map((item, index) => {
+            {data.courseFilterDtos?.map((item, index) => {
               return (
                 <Item2
                   key={index}
@@ -125,16 +118,17 @@ const Coursesc = () => {
         <Filter />
       </div>
 
-      {totalpage > 1 && (
+      {totalPages > 1 && (
         <ReactPaginate
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={totalpage}
+          pageRangeDisplayed={3}
+          pageCount={totalPages}
           previousLabel="< previous"
           renderOnZeroPageCount={null}
           className=" h-[3rem] w-[77%] flex gap-4 justify-center"
+          pageClassName="border border-solid border-[#004458] "
           activeClassName="text-[red]"
         />
       )}
