@@ -11,7 +11,7 @@ const filterCourse = createSlice({
         setfilter:(state,action) =>{
            state.RowsOfPage=action.payload.RowsOfPage;
         },
-        settypeid:(state,action) =>{
+        setTypeId:(state,action) =>{
             state.CourseTypeId=action.payload;
         },
     },
@@ -20,6 +20,6 @@ const filterCourse = createSlice({
 
 });
 
-export const{setfilter,settypeid}=filterCourse.actions;
+export const{setfilter,setTypeId}=filterCourse.actions;
 
 export default filterCourse.reducer;

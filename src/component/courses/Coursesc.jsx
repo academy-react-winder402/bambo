@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Headersection } from "./headersection/Headersection";
-import { Centersection } from "./centersection/Centersection";
 import { ModalCourse } from "./modalcourse/ModalCourse";
 import { getcourse } from "../../core/services/api/landing/Course";
 import ReactPaginate from "react-paginate";
@@ -22,7 +21,7 @@ const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
-    const courses = await getcourse(pageNumber, RowsOfPage, CourseTypeId);
+    const courses = await getcourse(pageNumber, RowsOfPage,CourseTypeId);
     setTotalPages(Math.ceil(courses?.totalCount / RowsOfPage));
     setData(courses);
   };
