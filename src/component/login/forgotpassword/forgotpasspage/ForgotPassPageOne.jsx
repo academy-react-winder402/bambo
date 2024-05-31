@@ -26,7 +26,7 @@ const ForgotPassPageOne = ({setPhoneNumber,step,phoneNumber}) => {
     return (
         <div>
                <Formik   
-                     validationSchema={Validationfoure}
+                      validationSchema={Validationfoure}
                >
                 <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px]  lg:mr-[30px]
