@@ -17,7 +17,12 @@ import * as yup from "yup";
 export const Validationfoure = yup.object().shape({
    phoneNumber:yup.string().matches(/[0-11]/).required("لطفا پر کنید"),
 });
-
+export const Validationgmail = yup.object().shape({
+   gmail: yup
+   .string()
+   .email()
+  .required("لطفا پر کنید"),
+});
 
 export const Validationsix = yup.object().shape({
    phoneOrGmail:yup.string().required("لطفا پر کنید"),

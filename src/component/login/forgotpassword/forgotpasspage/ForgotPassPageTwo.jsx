@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Timer from "../../../register/registerleft/pageregister/Timer";
 import { getforgottwo } from "../../../../core/services/api/auth/Forgotpass";
-const ForgotPassPageTwo = ({ step,  phoneNumber }) => {
+const ForgotPassPageTwo = ({ step,  gmail }) => {
   const [code, setCode] = useState();
   const handlecode = (e) => {
     setCode(e.target.value);
   };
   const onSubmit = async () => {
     const obj = {
-      phoneNumber: phoneNumber,
+      gmail:gmail,
       verifycode: code,
     };
     const forgotapitwo = await getforgottwo(obj);
