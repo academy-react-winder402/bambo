@@ -19,12 +19,12 @@ xs:py-[10px]
     ">
     <Formik>
             <Form>  
-            <div className="w-full min-h-screen py-1 md:w-2/3 lg:w-3/4">
-        <div className="p-2 md:p-4">
+            <div className=" w-full min-h-screen py-1 md:w-2/3 lg:w-3/4">
+        <div className=" p-2 md:p-4">
             <div className="w-full px-6 pb-8 mt-8 sm:max-w-xl sm:rounded-lg">
                 <h2 className="pl-6 text-2xl font-bold sm:text-xl">Public Profile</h2>
 
-                <div className="grid max-w-2xl mx-auto mt-8">
+                <div className="flex flex-row-reverse max-w-2xl mx-auto mt-8">
                     <div className="flex flex-col items-center space-y-5 sm:flex-row sm:space-y-0">
 
                         <img className="object-cover w-40 h-40 p-1 rounded-full ring-2 ring-indigo-300 dark:ring-indigo-500"
