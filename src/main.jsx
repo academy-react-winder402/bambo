@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {Router} from './config/router/Public.Router';
 import { RouterProvider } from 'react-router-dom';
+import {Provider} from 'react-redux';
 import './index.css';
 
 
