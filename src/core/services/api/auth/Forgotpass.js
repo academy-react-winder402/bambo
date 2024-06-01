@@ -26,3 +26,17 @@ export const getforgottwo = async(obj) => {
         return[];
     }
 };
+
+export const Postnewpass = async(obj) => {
+
+    try{
+        console.log("fetching started ...");
+
+        const result = await instance.post("/Sign/Reset" , obj);
+
+        return result;
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};

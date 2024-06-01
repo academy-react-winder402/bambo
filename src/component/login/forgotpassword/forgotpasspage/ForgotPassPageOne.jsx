@@ -3,30 +3,29 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Postforgotpass } from "../../../../core/services/api/auth/Forgotpass";
 import { Validationgmail } from "../../../../core/validation";
 import {setItem} from "../../../../core/services/api/storage/Storage.Services"
-const ForgotPassPageOne = ({setGmail,step,gmail}) => {
+const ForgotPassPageOne = ({setEmail,step,email}) => {
  
-        // const onSubmit = async (values) => {
-        //   setGmail(values?.gmail);
-        //   const obj = { gmail: values?.gmail };
-        //   const forgotapi = await Postforgotpass(obj);
-        //                   console.log(forgotapi);
-        //                   if (forgotapi.success == true) {
-        //                     step();
-        //                   }
-        //                 };
-    const handlephone = (e) => { 
-        setGmail(e.target.value); 
+        const onSubmit = async (values) => {
+         
+          const obj = { email:values.email };
+          const forgotapi = await Postforgotpass(obj);
+          setEmail( forgotapi);
+                          console.log(forgotapi);
+                            step();
+                        };
+    // const handlephone = (e) => { 
+    //     setGmail(e.target.value); 
      
-     };
-                const onSubmit = async () => {
+    //  };
+    //             const onSubmit = async () => {
                   
-                    const obj = {gmail:gmail};
-                    const forgotapi = await Postforgotpass(obj);
-                    console.log(forgotapi);
-                    if (forgotapi.success == true) {
-                      step();
-                    }
-                  };
+    //                 const obj = {gmail:gmail};
+    //                 const forgotapi = await Postforgotpass(obj);
+    //                 console.log(forgotapi);
+    //                 if (forgotapi.success == true) {
+    //                   step();
+    //                 }
+    //               };
     //    const [error, setError]=useState([]);
     //     const errorr= async () => {
     //         const object ={error}
@@ -36,9 +35,9 @@ const ForgotPassPageOne = ({setGmail,step,gmail}) => {
     return (
         <div>
                <Formik   
-            //    initialValues={{gmail:""}}
+               initialValues={{email:""}}
                       validationSchema={Validationgmail}
-                     
+                     onSubmit={onSubmit}
                >
                 <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px]  lg:mr-[30px]
@@ -53,7 +52,7 @@ const ForgotPassPageOne = ({setGmail,step,gmail}) => {
                          xs:h-[30px] xs:text-[15px] xs:text-right  xs:mt-[30px]
                         
                         " >ایمیل خود را وارد کنید</label>
-                        <Field name="gmail" className="lg:w-[88%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
+                        <Field name="email" className="lg:w-[88%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
                         sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] 
                         md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] 
                         lg:border-solid lg:border-[1px] lg:border-[black] 
@@ -62,9 +61,9 @@ const ForgotPassPageOne = ({setGmail,step,gmail}) => {
                         xs:border-[1px] xs:border-[black] xs:border-solid 
                         xs:w-[85%] xs:h-[40px] xs:rounded-[10px]  
                         "
-                        value={gmail} onChange={handlephone}
+                       
                         />
-                       <ErrorMessage name="gmail" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+                       <ErrorMessage name="email" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
                           
        <div className="lg:h-[50px] lg:w-[100%]  lg:mt-[40px]
@@ -77,7 +76,7 @@ const ForgotPassPageOne = ({setGmail,step,gmail}) => {
                 md:h-[50px] md:w-[80%] md:block md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff] xs:mt-[30px]
                 "
-           type="submit" onClick={onSubmit} >
+           type="submit" >
                    بعدی
                 </button>
        </div>
