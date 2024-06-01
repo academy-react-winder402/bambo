@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Headersection } from "./headersection/Headersection";
-import { Centersection } from "./centersection/Centersection";
 import { ModalCourse } from "./modalcourse/ModalCourse";
 import { getcourse } from "../../core/services/api/landing/Course";
 import ReactPaginate from "react-paginate";
@@ -14,21 +13,22 @@ const Coursesc = () => {
 
   const [getid, setgetid] = useState();
 
-  const { RowsOfPage } = useSelector((state) => state.filterCourse);
+  const { RowsOfPage,Query,courseLevelId } = useSelector((state) => state.filterCourse);
+console.log(courseLevelId);
 
   const [data, setData] = useState([]);
 const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
-    const courses = await getcourse(pageNumber, RowsOfPage);
+    const courses = await getcourse(pageNumber, RowsOfPage,Query,courseLevelId);
     setTotalPages(Math.ceil(courses?.totalCount / RowsOfPage));
     setData(courses);
   };
 
   useEffect(() => {
     getCourseList();
-  }, [RowsOfPage, pageNumber]);
+  }, [RowsOfPage, pageNumber,Query,courseLevelId]);
 
   const [page, setpage] = useState(1);
 
@@ -50,7 +50,7 @@ const [pageNumber, setPageNumber] = useState();
           setshowModal(false);
         }}
       />
-      <Headersection typename={setData} />
+      <Headersection  />
 
       <div className="h-[6rem] w-full flex justify-between ">
         <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
@@ -128,8 +128,10 @@ const [pageNumber, setPageNumber] = useState();
           previousLabel="< previous"
           renderOnZeroPageCount={null}
           className=" h-[3rem] w-[77%] flex gap-4 justify-center"
-          pageClassName="border border-solid border-[#004458] "
+          pageClassName="border border-solid border-[#004458] h-[2rem] w-[2rem] text-center hover:bg-[#004458] hover:text-white"
           activeClassName="text-[red]"
+          previousClassName="border border-solid border-[#004458] h-[2rem] w-[6rem] text-center hover:bg-[#004458] hover:text-white"
+          nextClassName="border border-solid border-[#004458] h-[2rem] w-[4rem] text-center hover:bg-[#004458] hover:text-white"
         />
       )}
     </div>

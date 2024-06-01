@@ -6,10 +6,6 @@ const ModalCourse = ({isVisible,onclose}) => {
     if(!isVisible) return null;
 
     
-
-    
-
-
     return (
         <div className="h-[46rem] w-[96rem]  z-10   fixed inset-0 backdrop-blur-sm bg-opacity-25" >
             <div className="h-[35rem] w-[40rem] bg-[#fff] m-auto mt-[5rem] relative   ">
