@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import { getFilterlevel } from "../../../../../core/services/api/landing/FilterLevel";
-import { setTypeid } from "../../../../../redux/course";
+import { setlevelid } from "../../../../../redux/course";
 import { useDispatch } from "react-redux";
 
 const Moratab = () => {
@@ -39,7 +39,7 @@ const Moratab = () => {
                                     <div className=" text-right flex justify-end " key={index}>
                                         <input type="checkbox" id={item.id} value={item.levelName} onClick={(e) => {
                                             dispatch(
-                                                setTypeid(e.target.value),
+                                                setlevelid(item.id),
                                             )
                                         }}/> <span> {item.levelName} </span>
                                     </div>)

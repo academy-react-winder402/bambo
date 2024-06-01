@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getFiltercourse } from "../../../../../core/services/api/landing/Filtercourse";
-
+import { setTypeid } from "../../../../../redux/course";
+import { useDispatch } from "react-redux";
 
 
 const Dastebandi = () => {
@@ -19,7 +20,7 @@ const Dastebandi = () => {
     }, []);
 
 
-
+const dispatch = useDispatch();
 
 
 
@@ -42,7 +43,11 @@ const Dastebandi = () => {
                             coursetypename.map((item, index) => {
                                 return (
                                     <div className=" text-right flex justify-end " key={index}>
-                                        <input type="checkbox" id={item.id} value={item.typeName} /> <span> {item.typeName} </span>
+                                        <input type="checkbox" id={item.id} value={item.typeName} onClick={(e) => {
+                                            dispatch(
+                                                setTypeid(item.id)
+                                            )
+                                        }}/> <span> {item.typeName} </span>
                                     </div>)
                             })
 
