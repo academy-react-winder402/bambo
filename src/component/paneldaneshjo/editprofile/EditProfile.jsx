@@ -2,6 +2,8 @@ import { Formik, Form, Field } from "formik";
 import React from "react";
 import { Fragment } from "react";
 const EditProfile = () => {
+  const formprofile = newFormProfile ();
+formprofile.append()
   return (
     <Fragment>
       <div
@@ -22,7 +24,10 @@ xs:py-[10px]
         className="lg:w-[90%] lg:m-auto lg:h-[85%]  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto 
     "
       >
-        <Formik>
+        <Formik
+        initialValues={{LName:"",FName:"",Gmail:"",BirthDay:"",phoneNumber:"",Gender:"",HomeAdderess:""}}
+        onSubmit={(values) => {onSubmit(values)}}
+        >
           <Form>
             <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
               <div className="lg:w-[30%] flex flex-col gap-[10px] items-center ">
@@ -48,13 +53,14 @@ xs:py-[10px]
                 <div className="lg:flex lg:gap-[20px] items-center w-[100%] space-x-0 space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0 ">
                   <div className="w-[33%]">
                     <label
-                      for="first_name"
+                      for="LName"
                       className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                    نام
                     </label>
                     <Field
                       type="text"
+                      name="LName"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                       
                     />
@@ -62,15 +68,16 @@ xs:py-[10px]
 
                   <div className="w-[33%]">
                     <label
-                      for="last_name"
+                      for="FName"
                       className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                       نام خانوادگی
                     </label>
                     <Field
                       type="text"
+                      name="FName"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                      
+                    
                     />
                   </div>
                 </div>
@@ -78,13 +85,13 @@ xs:py-[10px]
                 <div className="w-[100%] flex gap-[20px] items-center ">
                   <div className="w-[33%]">
                     <label
-                      for="email"
+                      for="Gmail"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                       جیمیل
                     </label>
                     <Field
-                      type="email"
+                      type="Gmail"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                      
                     />
@@ -92,7 +99,7 @@ xs:py-[10px]
 
                   <div className="w-[33%]">
                     <label
-                      for="birthday"
+                      for="BirthDay"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                      تاریخ تولد
@@ -100,7 +107,7 @@ xs:py-[10px]
                     <Field
                       type="text"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                     
+                     name="BirthDay"
                     />
                   </div>
                 </div>
@@ -114,6 +121,7 @@ xs:py-[10px]
                     </label>
                     <Field
                       type="phoneNumber"
+                      name="PhoneNumber"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                     
                     />
@@ -121,12 +129,13 @@ xs:py-[10px]
 
                   <div className="w-[33%]">
                     <label
-                      for="jensiat"
+                      for="Gender"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                      جنسیت
                     </label>
                     <Field
+                    name="Gender"
                       type="text"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                      
@@ -136,12 +145,13 @@ xs:py-[10px]
                 </div>
                 <div className="w-[100%]  ">
                     <label
-                      for="address"
+                      for="HomeAdderess"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                       آدرس
                     </label>
                     <Field
+                    name="HomeAdderess"
                       type="text"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                       
