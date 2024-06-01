@@ -7,13 +7,16 @@ import { useSelector } from "react-redux";
 import { Item } from "./centersection/items/Item";
 import { Item2 } from "./centersection/items2/items2";
 import { Filter } from "./centersection/filter/Filter";
+import { getfilterlevelid } from "../../core/services/api/landing/filterlevelid";
+import { getfiltersearch } from "../../core/services/api/landing/filtersearch";
+import { getfiltertype } from "../../core/services/api/landing/coursefiltertype";
 
 const Coursesc = () => {
   const [showModal, setshowModal] = useState(false);
 
   const [getid, setgetid] = useState();
 
-  const { RowsOfPage,Query,courseLevelId } = useSelector((state) => state.filterCourse);
+  const { RowsOfPage,CourseTypeId,Query,courseLevelId} = useSelector((state) => state.filterCourse);
 console.log(courseLevelId);
 
   const [data, setData] = useState([]);
@@ -21,14 +24,46 @@ const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
-    const courses = await getcourse(pageNumber, RowsOfPage,Query,courseLevelId);
+    const courses = await getcourse(pageNumber, RowsOfPage);
     setTotalPages(Math.ceil(courses?.totalCount / RowsOfPage));
     setData(courses);
   };
 
   useEffect(() => {
     getCourseList();
-  }, [RowsOfPage, pageNumber,Query,courseLevelId]);
+  }, [RowsOfPage, pageNumber]);
+
+
+
+
+  const getfiltersearchlist = async () => {
+    const courses = await getfiltersearch(Query);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfiltersearchlist();
+  }, [Query]);
+
+
+  const getfilterList = async () => {
+    const courses = await getfiltertype(CourseTypeId);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterList();
+  }, [CourseTypeId]);
+
+  const getfilterlevelList = async () => {
+    const courses = await getfiltertype(courseLevelId);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterlevelList();
+  }, [courseLevelId]);
+
 
   const [page, setpage] = useState(1);
 
