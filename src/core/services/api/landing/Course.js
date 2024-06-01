@@ -3,11 +3,12 @@ import { instance } from "../../interseptor";
 const getcourse = async(
     PageNumber=1,
     RowsOfPage=4,
-    CourseTypeId=undefined,
+    Query=undefined,
+    courseLevelId=undefined,
 ) => {
     try{
         
-        const result = await instance.get(`/Home/GetCoursesWithPagination?PageNumber=${PageNumber}&RowsOfPage=${RowsOfPage}&CourseTypeId=${CourseTypeId}`);
+        const result = await instance.get(`/Home/GetCoursesWithPagination?PageNumber=${PageNumber}&RowsOfPage=${RowsOfPage}&Query=${Query}&CourseTypeId=${courseLevelId}`);
         return result;
         
     }catch(error){

@@ -1,6 +1,22 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { getFilterlevel } from "../../../../../core/services/api/landing/FilterLevel";
+import { setTypeid } from "../../../../../redux/course";
+import { useDispatch } from "react-redux";
 
 const Moratab = () => {
+
+    const [courselevel, setcourselevel] = useState([]);
+
+    const getCoursefilterlevel = async () => {
+        const courses = await getFilterlevel();
+        setcourselevel(courses);
+    };
+
+    useEffect(() => {
+        getCoursefilterlevel();
+    }, []);
+
+    const dispatch = useDispatch();
 
     return (
         <div>
@@ -17,33 +33,19 @@ const Moratab = () => {
                 <div className="max-h-0 overflow-hidden peer-checked:max-h-full" >
                     <div className="mt-[1rem] mb-[1rem]">
 
-                        <div className=" text-right flex justify-end mt-[0.5rem]">
-                            <input type="checkbox" id="hame" name="hame" className="peer hidden" />
-                            <label for="hame" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" > همه  </label>
-                            <label for="hame" className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
- peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover rounded-full hover:cursor-pointer">  </label>
-                        </div>
+                    {
+                            courselevel.map((item, index) => {
+                                return (
+                                    <div className=" text-right flex justify-end " key={index}>
+                                        <input type="checkbox" id={item.id} value={item.levelName} onClick={(e) => {
+                                            dispatch(
+                                                setTypeid(e.target.value),
+                                            )
+                                        }}/> <span> {item.levelName} </span>
+                                    </div>)
+                            })
 
-                        <div className=" text-right flex justify-end ">
-                            <input type="checkbox" id="jadid" name="jadid" className="peer hidden" />
-                            <label for="jadid" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" > جدید ترین  </label>
-                            <label for="jadid" v className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
-peer-checked:bg-[#09B28B] peer-checked:border-none  bg-no-repeat bg-cover rounded-full hover:cursor-pointer">  </label>
-                        </div>
-
-                        <div className=" text-right flex justify-end mt-[0.5rem]">
-                            <input type="checkbox" id="mahbob" name="mahbob" className="peer hidden" />
-                            <label for="mahbob" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" > محبوب ترین ها  </label>
-                            <label for="mahbob" className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
- peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover rounded-full hover:cursor-pointer">  </label>
-                        </div>
-
-                        <div className=" text-right flex justify-end mt-[0.5rem]">
-                            <input type="checkbox" id="free" name="free" className="peer hidden" />
-                            <label for="free" className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer" > رایگان  </label>
-                            <label for="free" className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
- peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover rounded-full hover:cursor-pointer">  </label>
-                        </div>
+                        }
 
                     </div>
                 </div>

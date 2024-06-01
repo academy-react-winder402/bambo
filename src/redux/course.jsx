@@ -4,15 +4,19 @@ const filterCourse = createSlice({
     name:"filterCourse",
     initialState:{
         RowsOfPage:4,
-        CourseTypeId:undefined,
+        Query:undefined,
+        courseLevelId:undefined,
     },
     reducers:{
         
         setfilter:(state,action) =>{
            state.RowsOfPage=action.payload.RowsOfPage;
         },
-        setTypeId:(state,action) =>{
-            state.CourseTypeId=action.payload;
+        setSearch:(state,action) =>{
+            state.Query=action.payload;
+        },
+        setTypeid:(state,action) =>{
+            state.courseLevelId=action.payload;
         },
     },
 
@@ -20,6 +24,6 @@ const filterCourse = createSlice({
 
 });
 
-export const{setfilter,setTypeId}=filterCourse.actions;
+export const{setfilter,setSearch,setTypeid}=filterCourse.actions;
 
 export default filterCourse.reducer;

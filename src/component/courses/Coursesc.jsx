@@ -13,22 +13,22 @@ const Coursesc = () => {
 
   const [getid, setgetid] = useState();
 
-  const { RowsOfPage , CourseTypeId } = useSelector((state) => state.filterCourse);
-  console.log(CourseTypeId);
+  const { RowsOfPage,Query,courseLevelId } = useSelector((state) => state.filterCourse);
+console.log(courseLevelId);
 
   const [data, setData] = useState([]);
 const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
-    const courses = await getcourse(pageNumber, RowsOfPage,CourseTypeId);
+    const courses = await getcourse(pageNumber, RowsOfPage,Query,courseLevelId);
     setTotalPages(Math.ceil(courses?.totalCount / RowsOfPage));
     setData(courses);
   };
 
   useEffect(() => {
     getCourseList();
-  }, [RowsOfPage, pageNumber,CourseTypeId]);
+  }, [RowsOfPage, pageNumber,Query,courseLevelId]);
 
   const [page, setpage] = useState(1);
 
@@ -50,7 +50,7 @@ const [pageNumber, setPageNumber] = useState();
           setshowModal(false);
         }}
       />
-      <Headersection typename={setData} />
+      <Headersection  />
 
       <div className="h-[6rem] w-full flex justify-between ">
         <div className="  h-[3rem] w-[10rem] flex gap-[0.5rem] mt-[2rem] ml-[4rem]">
