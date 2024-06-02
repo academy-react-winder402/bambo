@@ -6,11 +6,11 @@ import {setItem} from "../../../../core/services/api/storage/Storage.Services"
 import { useParams } from "react-router-dom";
 import { getforgottwo } from "../../../../core/services/api/auth/Forgotpass";
 const ForgotPassPageOne = ({setEmail,step,email}) => {
-    const {email}=useParams();
+  
         const onSubmit = async (values) => {
-          
-        
-          const forgotapi = await Postforgotpass();
+          const params =useParams(values);
+        const obj = {email:params}
+          const forgotapi = await Postforgotpass(obj);
           setEmail( forgotapi);
                           console.log(forgotapi);
                             step();
@@ -39,7 +39,7 @@ const ForgotPassPageOne = ({setEmail,step,email}) => {
                <Formik   
                initialValues={{email:""}}
                       validationSchema={Validationgmail}
-                     onSubmit={onSubmit}
+                      onSubmit={(values) => onSubmit(values)}
                >
                 <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px]  lg:mr-[30px]
