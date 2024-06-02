@@ -1,9 +1,10 @@
 import { Formik, Form, Field } from "formik";
 import React from "react";
 import { Fragment } from "react";
+import { useDispatch } from "react-redux";
+import { setlname } from "../../../redux/profile";
 const EditProfile = () => {
-  const formprofile = newFormProfile ();
-formprofile.append()
+const dispatch = useDispatch();
   return (
     <Fragment>
       <div
@@ -25,8 +26,8 @@ xs:py-[10px]
     "
       >
         <Formik
-        initialValues={{LName:"",FName:"",Gmail:"",BirthDay:"",phoneNumber:"",Gender:"",HomeAdderess:""}}
-        onSubmit={(values) => {onSubmit(values)}}
+        // initialValues={{LName:"",FName:"",Gmail:"",BirthDay:"",phoneNumber:"",Gender:"",HomeAdderess:""}}
+        // onSubmit={(values) => {onSubmit(values)}}
         >
           <Form>
             <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
@@ -62,7 +63,7 @@ xs:py-[10px]
                       type="text"
                       name="LName"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                      
+                    onchange={(e) => { dispatch(setlname(e.target.value),)}}  
                     />
                   </div>
 

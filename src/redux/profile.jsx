@@ -12,7 +12,13 @@ Gmail:"www.leilakarimi2015@gmail.com",
 Gender:"animal"
     },
     reducers:{
-
+setlname:(state,action) =>{
+    state.LName=action.payload;
+},
+setfname:(state,action) =>{
+    state.FName=action.payload;
+},
     }
-})
+});
+export const{setfname,setlname}=profile.actions;
 export default profile.reducer
