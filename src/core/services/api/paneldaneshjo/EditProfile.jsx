@@ -1,10 +1,10 @@
 import { instance } from "../../interseptor/index.js";
 
-const getname = async() => {
+const getname = async(formdata) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.put("/SharePanel/UpdateProfileInfo");
+        const result = await instance.put("/SharePanel/UpdateProfileInfo" , formdata);
 
         return result;
     }catch(error){

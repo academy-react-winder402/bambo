@@ -4,16 +4,20 @@ import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { setlname } from "../../../redux/profile";
 import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
+
 const EditProfile = () => {
-const dispatch = useDispatch();
-const [Lname,setLname] = useState ([]);
-const getprofile = async () =>{
-  const profile = await getname();
-  setLname(profile)
-}
-useEffect (() =>{
-  getprofile();
-},[]);
+  const [profile,setProfile] = useState([])
+  
+  const onSubmit = async()=>{
+    const formdata =new FormData();
+formdata.append ("LName",values.LName)
+const editapi = await getname(formdata);
+
+  }
+
+
+
+
   return (
     <Fragment>
       <div
@@ -35,7 +39,7 @@ xs:py-[10px]
     "
       >
         <Formik
-        // initialValues={{LName:"",FName:"",Gmail:"",BirthDay:"",phoneNumber:"",Gender:"",HomeAdderess:""}}
+        initialValues={{LName:profile.LName,FName:"",Gmail:"",BirthDay:"",phoneNumber:"",Gender:"",HomeAdderess:""}}
         // onSubmit={(values) => {onSubmit(values)}}
         >
           <Form>
@@ -72,7 +76,7 @@ xs:py-[10px]
                       type="text"
                       name="LName"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                    onchange={(e) => { dispatch(setLname(e.target.value),)}}  
+                   
                     />
                   </div>
 
