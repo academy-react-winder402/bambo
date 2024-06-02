@@ -3,12 +3,14 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Postforgotpass } from "../../../../core/services/api/auth/Forgotpass";
 import { Validationgmail } from "../../../../core/validation";
 import {setItem} from "../../../../core/services/api/storage/Storage.Services"
+import { useParams } from "react-router-dom";
+import { getforgottwo } from "../../../../core/services/api/auth/Forgotpass";
 const ForgotPassPageOne = ({setEmail,step,email}) => {
- 
+    const {email}=useParams();
         const onSubmit = async (values) => {
-         
-          const obj = { email:values.email };
-          const forgotapi = await Postforgotpass(obj);
+          
+        
+          const forgotapi = await Postforgotpass();
           setEmail( forgotapi);
                           console.log(forgotapi);
                             step();

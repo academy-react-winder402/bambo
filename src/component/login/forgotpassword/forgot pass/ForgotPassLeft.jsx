@@ -1,7 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useState } from "react";
 import { ForgotPassPageOne } from "../forgotpasspage/ForgotPassPageOne.jsx";
-import { ForgotPassPageTwo } from "../forgotpasspage/ForgotPassPageTwo.jsx";
 import { ForgotPassPageThree } from "../forgotpasspage/ForgotPassPageThree.jsx";
 import { useNavigate } from "react-router-dom";
 import left from "../../../../assets/img/register/left.png";
