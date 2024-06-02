@@ -18,7 +18,7 @@ const filterCourse = createSlice({
             state.CourseTypeId=action.payload;
         },
         setSearch:(state,action) =>{
-            state.Query=action.payload;
+            state.Query=action.payload.Query;
         },
         setlevelid:(state,action) =>{
             state.courseLevelId=action.payload;

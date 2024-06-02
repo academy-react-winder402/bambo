@@ -37,13 +37,13 @@ const [pageNumber, setPageNumber] = useState();
 
 
   const getfiltersearchlist = async () => {
-    const courses = await getfiltersearch(Query);
+    const courses = await getfiltersearch(Query,RowsOfPage);
     setData(courses);
   };
 
   useEffect(() => {
     getfiltersearchlist();
-  }, [Query]);
+  }, [Query,RowsOfPage]);
 
 
   const getfilterList = async () => {
@@ -127,6 +127,7 @@ const [pageNumber, setPageNumber] = useState();
                   title={item.title}
                   modares={item.teacherName}
                   price={item.cost}
+                  courseid={item.courseId}
                   showmodal={() => {
                     setshowModal(true);
                   }}
