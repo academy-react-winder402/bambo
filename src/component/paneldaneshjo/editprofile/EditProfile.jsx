@@ -1,10 +1,19 @@
 import { Formik, Form, Field } from "formik";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { setlname } from "../../../redux/profile";
+import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
 const EditProfile = () => {
 const dispatch = useDispatch();
+const [Lname,setLname] = useState ([]);
+const getprofile = async () =>{
+  const profile = await getname();
+  setLname(profile)
+}
+useEffect (() =>{
+  getprofile();
+},[]);
   return (
     <Fragment>
       <div
@@ -63,7 +72,7 @@ xs:py-[10px]
                       type="text"
                       name="LName"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                    onchange={(e) => { dispatch(setlname(e.target.value),)}}  
+                    onchange={(e) => { dispatch(setLname(e.target.value),)}}  
                     />
                   </div>
 
@@ -184,6 +193,7 @@ md:bg-[#09B28B] md:w-[17%] md:h-[50px]
 sm:bg-[#09B28B] sm:w-[17%] sm:h-[50px]
 xs:bg-[#09B28B] xs:w-[30%] xs:h-[50px]
 "
+onClick={getprofile}
                   >
                     ثبت تغییرات
                   </button>
