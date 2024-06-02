@@ -13,12 +13,12 @@ export const Postforgotpass = async(obj) => {
         return[];
     }
 };
-export const getforgottwo = async() => {
+export const getforgottwo = async(ConfigValue) => {
 
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/Sign/Reset/:ConfigValue" +id);
+        const result = await instance.get(`/Sign/Reset/${ConfigValue}`);
 
         return result;
     }catch(error){

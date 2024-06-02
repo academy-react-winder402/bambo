@@ -27,8 +27,6 @@ export const  Validatinew = yup.object().shape({
    password: yup
    .string()
  .required("لطفا پر کنید"),
- resetpass:   yup.string()
- .required("لطفا پر کنید"),
 });
 export const Validationsix = yup.object().shape({
    phoneOrGmail:yup.string().required("لطفا پر کنید"),
