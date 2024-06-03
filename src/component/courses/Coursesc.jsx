@@ -10,14 +10,18 @@ import { Filter } from "./centersection/filter/Filter";
 import { getfilterlevelid } from "../../core/services/api/landing/filterlevelid";
 import { getfiltersearch } from "../../core/services/api/landing/filtersearch";
 import { getfiltertype } from "../../core/services/api/landing/coursefiltertype";
+import { getfiltertechnologyid } from "../../core/services/api/landing/filtertechnologyid";
+import { getfilterteacherid } from "../../core/services/api/landing/filtertecherid";
+import { getfilterpricedown } from "../../core/services/api/landing/filterprice";
+import { getfilterpriceup } from "../../core/services/api/landing/filterpriceup";
 
 const Coursesc = () => {
   const [showModal, setshowModal] = useState(false);
 
   const [getid, setgetid] = useState();
 
-  const { RowsOfPage,CourseTypeId,Query,courseLevelId} = useSelector((state) => state.filterCourse);
-console.log(courseLevelId);
+  const { RowsOfPage,CourseTypeId,Query,courseLevelId,ListTech,TeacherId,CostDown,CostUp} = useSelector((state) => state.filterCourse);
+
 
   const [data, setData] = useState([]);
 const [pageNumber, setPageNumber] = useState();
@@ -56,13 +60,49 @@ const [pageNumber, setPageNumber] = useState();
   }, [CourseTypeId]);
 
   const getfilterlevelList = async () => {
-    const courses = await getfiltertype(courseLevelId);
+    const courses = await getfilterlevelid(courseLevelId);
     setData(courses);
   };
 
   useEffect(() => {
     getfilterlevelList();
   }, [courseLevelId]);
+
+  const getfiltertechnologyList = async () => {
+    const courses = await getfiltertechnologyid(ListTech);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfiltertechnologyList();
+  }, [ListTech]);
+
+  const getfilterteacherList = async () => {
+    const courses = await getfilterteacherid(TeacherId);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterteacherList();
+  }, [TeacherId]);
+
+  const getfilterpricedownList = async () => {
+    const courses = await getfilterpricedown(CostDown);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterpricedownList();
+  }, [CostDown]);
+
+  const getfilterpriceupList = async () => {
+    const courses = await getfilterpriceup(CostUp);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterpriceupList();
+  }, [CostUp]);
 
 
   const [page, setpage] = useState(1);

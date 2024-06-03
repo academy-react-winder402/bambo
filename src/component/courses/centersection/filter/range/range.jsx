@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useEffect} from "react";
+import { setpricedown } from "../../../../../redux/course";
+import { setpriceup } from "../../../../../redux/course";
+import { useDispatch } from "react-redux";
 
 
 const Range = () => {
@@ -6,6 +9,19 @@ const Range = () => {
     const [maxdata, setmaxdata] = useState(10000000);
 
     const [mindata, setmindata] = useState(0);
+
+const dispatch = useDispatch();
+
+const filterprice = () => {
+    dispatch(
+        setpriceup(maxdata),
+        setpricedown(mindata),
+    )
+};
+
+useEffect(() => {
+    filterprice();
+  }, []);
 
 
 

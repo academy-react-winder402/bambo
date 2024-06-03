@@ -56,7 +56,7 @@ const Centersection = ({ set, course, getid,level }) => {
 
                 </div>
 
-                <Filter level={level} />
+                <Filter />
             </div>
 
         </>

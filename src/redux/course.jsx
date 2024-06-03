@@ -7,7 +7,10 @@ const filterCourse = createSlice({
         CourseTypeId:undefined,
         Query:undefined,
         courseLevelId:undefined,
-   
+        ListTech:undefined,
+        TeacherId:undefined,
+        CostDown:undefined,
+        CostUp:undefined,
     },
     reducers:{
         
@@ -23,6 +26,18 @@ const filterCourse = createSlice({
         setlevelid:(state,action) =>{
             state.courseLevelId=action.payload;
         },
+        settechnology:(state,action) =>{
+            state.ListTech=action.payload.ListTech;
+        },
+        setteacher:(state,action) =>{
+            state.TeacherId=action.payload;
+        },
+        setpricedown:(state,action) =>{
+            state.CostDown=action.payload;
+        },
+        setpriceup:(state,action) =>{
+            state.CostUp=action.payload;
+        },
 
     },
 
@@ -30,6 +45,6 @@ const filterCourse = createSlice({
 
 });
 
-export const{setfilter,setSearch,setTypeid,setlevelid}=filterCourse.actions;
+export const{setfilter,setSearch,setTypeid,setlevelid,settechnology,setteacher,setpricedown,setpriceup}=filterCourse.actions;
 
 export default filterCourse.reducer;
