@@ -8,10 +8,18 @@ import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
 const EditProfile = () => {
   const [profile,setProfile] = useState([])
   
-  const onSubmit = async()=>{
+  const onSubmit = async(values)=>{
     const formdata =new FormData();
 formdata.append ("LName",values.LName)
+formdata.append ("FName",values.FName)
+formdata.append ("BirthDay",values.BirthDay)
+formdata.append ("phoneNumber",values.phoneNumber)
+formdata.append ("Gender",values.Gender)
+formdata.append ("HomeAdderess",values.HomeAdderess)
+formdata.append ("Email",values.Email)
+
 const editapi = await getname(formdata);
+console.log(editapi);
 
   }
 
@@ -39,8 +47,8 @@ xs:py-[10px]
     "
       >
         <Formik
-        initialValues={{LName:profile.LName,FName:"",Gmail:"",BirthDay:"",phoneNumber:"",Gender:"",HomeAdderess:""}}
-        // onSubmit={(values) => {onSubmit(values)}}
+        initialValues={{LName:profile.LName,FName:profile.FName,Email:profile.Email,BirthDay:profile.BirthDay,phoneNumber:profile.phoneNumber,Gender:profile.Gender,HomeAdderess:profile.HomeAdderess}}
+        onSubmit={(values) => onSubmit(values)}
         >
           <Form>
             <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
@@ -99,15 +107,15 @@ xs:py-[10px]
                 <div className="w-[100%] flex gap-[20px] items-center ">
                   <div className="w-[33%]">
                     <label
-                      for="Gmail"
+                      for="Email"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
                       جیمیل
                     </label>
                     <Field
-                      type="Gmail"
+                      type="Email"
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                     
+                     name="Email"
                     />
                   </div>
 
@@ -197,7 +205,8 @@ md:bg-[#09B28B] md:w-[17%] md:h-[50px]
 sm:bg-[#09B28B] sm:w-[17%] sm:h-[50px]
 xs:bg-[#09B28B] xs:w-[30%] xs:h-[50px]
 "
-onClick={getprofile}
+type="onsubmit"
+
                   >
                     ثبت تغییرات
                   </button>
