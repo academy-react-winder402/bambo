@@ -4,10 +4,9 @@ import { Postnewpass } from "../../../../core/services/api/auth/Forgotpass";
 import { Validatinew } from "../../../../core/validation";
 import { useNavigate, useParams } from "react-router-dom";
 import { getforgottwo } from "../../../../core/services/api/auth/Forgotpass";
-const ForgotPassPageThree = () => {
+const ForgotPassPageThree = ({setEmail,email}) => {
   const [reset, setReset] = useState([]);
   const ConfigValue = useParams().ConfigValue;
-  console.log(ConfigValue);
   console.log(ConfigValue);
   const getsteptwo = async() => {
     const getapi = await getforgottwo(ConfigValue);

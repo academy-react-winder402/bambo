@@ -84,7 +84,7 @@ const ForgotPassLeft = () => {
           {step == 1 ? (
             <ForgotPassPageOne step={stepCounter} setEmail={setEmail} email={ email}/>
           ) : step == 2? (
-            <ForgotPassPageThree   step={stepCounter} />
+            <ForgotPassPageThree   step={stepCounter} setEmail={setEmail} email={ email}/>
           ) : null}
         </div>
       </div>

@@ -12,7 +12,8 @@ import {MainLayout} from '../layout/Layout.jsx'
 import {Sabadkharid} from '../../screen/sabadkharid/Sabadkharid.jsx';
 import { Notfound } from "../../screen/notfound/Notfound.jsx";
 import {About} from '../../screen/about/About.jsx';
-
+import { ForgotPassPageOne } from "../../component/login/forgotpassword/forgotpasspage/ForgotPassPageOne.jsx";
+import { ForgotPassPageThree } from "../../component/login/forgotpassword/forgotpasspage/ForgotPassPageThree.jsx";
 
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
@@ -29,7 +30,9 @@ const Router = createBrowserRouter([
   
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
-  { path: '/ForgotPass', element: <ForgotPass /> },
+  {path:'forgotpass', element:<ForgotPass/>},
+  // {path:'forgotpass',element:<ForgotPassPageOne/>},
+  { path: "/forgotpass/newpass/:configValue?", element: <ForgotPassPageThree /> },
   { path: '*', element: <Notfound /> },
 
 ])
