@@ -19,6 +19,7 @@ formdata.append ("HomeAdderess",values.HomeAdderess)
 formdata.append ("Email",values.Email)
 
 const editapi = await getname(formdata);
+
 console.log(editapi);
 
   }
