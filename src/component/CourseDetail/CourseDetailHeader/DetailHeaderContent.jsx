@@ -5,11 +5,11 @@ import daneshjo from "../../../assets/img/coursedetail/daneshjo.png"
 const DetailHeaderContant = ({title}) => {
 
    return (
-      <div className="lg:w-[700px] lg:h-[400px] lg:m-auto lg:flex lg:flex-col lg:mb-[2rem] lg:font-sans
- md:w-[400px] md:h-[200px] md:m-auto md:flex md:flex-col   
- xs:w-[200px] xs:h-[200px] xs:m-auto xs:flex xs:flex-col
+      <div className="lg:border lg:border-solid lg:border-transparent lg:w-[700px] lg:h-[400px] lg:m-auto  lg:mb-[2rem] lg:font-sans
+ md:w-[400px] md:h-[200px] md:m-auto  
+ xs:w-[200px] xs:h-[200px] xs:m-auto 
  ">
-         <div className="lg:w-[220px] lg:h-[180px] lg:ml-[250px] 
+         <div className="lg:w-[190px] lg:h-[180px] lg:ml-[250px] lg:mt-[2rem]
 
 md:w-[100px] md:h-[120px] md:m-auto
 xs:w-[80px] xs:h-[70px] xs:m-auto
@@ -17,11 +17,11 @@ xs:w-[80px] xs:h-[70px] xs:m-auto
 md:w-[100%] md:h-[100%] xs:w-[100%] xs:h-[100%]
 " src={logodetail}></img></div>
 
-         <div className="lg:h-[80px] lg:w-[480px] lg:text-[50px] lg:ml-[100px] lg:text-center lg:border-b-solid lg:border-b-[1px] lg:border-b-[black]
-md:h-[70px] md:w-[300px] md:text-[30px] md:ml-[50px] md:text-center md:border-b-solid md:border-b-[1px] md:border-b-[black]
-xs:h-[70px] xs:w-[200px] xs:text-[20px] xs:ml-[5px] xs:text-center xs:border-b-solid xs:border-b-[1px] xs:border-b-[black]
+         <div className=" lg:h-[80px] lg:w-[700px] lg:text-[50px]  lg:text-center lg:mt-[2rem]
+md:h-[70px] md:w-[300px] md:text-[30px]  md:text-center 
+xs:h-[70px] xs:w-[200px] xs:text-[20px]  xs:text-center 
 ">{title}</div>
-         <div className="lg:h-[50px] lg:w-[480px] lg:ml-[130px]  lg:flex lg:flex-row-reverse lg:gap-[30px]
+         <div className="lg:h-[50px] lg:w-[490px] lg:ml-[130px]  lg:flex lg:flex-row-reverse lg:gap-[30px] lg:mt-[1rem]
 md:h-[50px] md:w-[300px] md:ml-[30px]  md:flex md:flex-row-reverse md:gap-[30px]
 xs:h-[50px] xs:w-[200px] xs:ml-[5px]  xs:flex xs:flex-row-reverse xs:gap-[30px]
 ">

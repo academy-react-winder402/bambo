@@ -14,8 +14,9 @@ const dispatch = useDispatch();
 
 const filterprice = () => {
     dispatch(
-        setpriceup(maxdata),
         setpricedown(mindata),
+        setpriceup(maxdata),
+        
     )
 };
 

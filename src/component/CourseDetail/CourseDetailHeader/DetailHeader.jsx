@@ -50,7 +50,7 @@ console.log(data);
     {cardid?(<div> 
       <DetailHeaderTop />
    <DetailHeaderContant title={data.title}/>
-   <DetailHeaderBottom />
+   <DetailHeaderBottom teachername={data.teacherName}/>
   </div>):null}
 
 

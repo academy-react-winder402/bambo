@@ -22,7 +22,7 @@ const Coursesc = () => {
 
   const { RowsOfPage,CourseTypeId,Query,courseLevelId,ListTech,TeacherId,CostDown,CostUp} = useSelector((state) => state.filterCourse);
 
-
+console.log(CostDown);
   const [data, setData] = useState([]);
 const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
@@ -184,6 +184,7 @@ const [pageNumber, setPageNumber] = useState();
                   im={item.tumbImageAddress}
                   title={item.title}
                   modares={item.teacherName}
+                  courseid={item.courseId}
                   price={item.cost}
                 />
               );

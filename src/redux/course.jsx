@@ -33,10 +33,10 @@ const filterCourse = createSlice({
             state.TeacherId=action.payload;
         },
         setpricedown:(state,action) =>{
-            state.CostDown=action.payload;
+            state.CostDown=action.payload.CostDown;
         },
         setpriceup:(state,action) =>{
-            state.CostUp=action.payload;
+            state.CostUp=action.payload.CostUp;
         },
 
     },
