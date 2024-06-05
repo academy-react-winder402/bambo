@@ -4,10 +4,13 @@ import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { setlname } from "../../../redux/profile";
 import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
+import { useParams } from "react-router-dom";
 
 const EditProfile = () => {
   const [profile,setProfile] = useState([])
+  const id= useParams().id;
   
+  console.log(id);
   const onSubmit = async(values)=>{
     const formdata =new FormData();
 formdata.append ("LName",values.LName)
