@@ -1,6 +1,6 @@
 import { instance } from "../../interseptor/index.js";
 
-const getname = async() => {
+export const getname = async() => {
     try{
         console.log("fetching started ...");
 
@@ -12,4 +12,41 @@ const getname = async() => {
         return[];
     }
 };
-export {getname};
+
+
+export const SelectImg = async() => {
+    try{
+        console.log("fetching started ...");
+
+        const result = await instance.put("/SharePanel/SelectProfileImage");
+
+        return result;
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};
+export const DeleteImg = async() => {
+    try{
+        console.log("fetching started ...");
+
+        const result = await instance.put("/SharePanel/DeleteProfileImage");
+
+        return result;
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};
+export const AddImg = async() => {
+    try{
+        console.log("fetching started ...");
+
+        const result = await instance.put("/SharePanel/AddProfileImage");
+
+        return result;
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};
