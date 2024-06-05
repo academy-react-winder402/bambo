@@ -12,6 +12,7 @@ const ForgotPassPageThree = ({setEmail,email}) => {
     const getapi = await getforgottwo(ConfigValue);
     setReset(getapi);
   };
+ 
   const navigate =useNavigate();
   const onSubmit = async(values) => {
     const obj = {
@@ -19,8 +20,9 @@ const ForgotPassPageThree = ({setEmail,email}) => {
       resetValue: reset?.resetpass,
       userId: reset?.id,
     };
+   
     const newpassapi = await Postnewpass(obj);
-    console.log(forgotapi);
+    console.log(newpassapi);
     if (newpassapi.success == true) {
       navigate("/Login");
     }
