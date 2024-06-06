@@ -38,11 +38,11 @@ export const DeleteImg = async() => {
         return[];
     }
 };
-export const AddImg = async() => {
+export const AddImg = async(imgdata) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.put("/SharePanel/AddProfileImage");
+        const result = await instance.post("/SharePanel/AddProfileImage",imgdata);
 
         return result;
     }catch(error){

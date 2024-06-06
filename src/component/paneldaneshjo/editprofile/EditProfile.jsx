@@ -10,7 +10,7 @@ const EditProfile = () => {
   const [user, setUser] = useState();
   const id = useParams().id;
 
-  console.log(id);
+ 
   const onSubmit = async (values) => {
     const formdata = new FormData();
     formdata.append("LName", values.LName);
@@ -20,7 +20,7 @@ const EditProfile = () => {
     formdata.append("Gender", values.Gender);
     formdata.append("HomeAdderess", values.HomeAdderess);
     formdata.append("Email", values.Email);
-
+    console.log(formdata);
     const editapi = await getname(formdata);
 
     console.log(editapi);
@@ -29,9 +29,15 @@ const EditProfile = () => {
 const getimg =async()=>{
   const imgdata = new FormData();
 
-  imgdata.append('image', values.img);
+  imgdata.append('formFile', values.formFile);
+  console.log(imgdata);
   const editimg = await AddImg(imgdata);
+  const imageObjectURL = URL.createObjectURL(editimg);
+  setPic(imageObjectURL);
 }
+useEffect(() => {
+  getimg();
+}, []);
   return (
     <Fragment>
       <div
@@ -51,14 +57,14 @@ xs:py-[10px]
       <div
         className="lg:w-[90%] lg:m-auto lg:h-[85%]  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto " >
         <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
-        <Formik initialValues={{img:pic.img}}>
-        {(form) => <div className="lg:w-[30%] flex flex-col gap-[10px] items-center ">
+        <Formik initialValues={{formFile:pic.formFile}}>
+         <div className="lg:w-[30%] flex flex-col gap-[10px] items-center ">
            
               <Form>
               <div className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]">
-                            {form.values.img && <img src={URL.createObjectURL(form.values.img)} className="object-cover w-40 h-40 p-1 rounded-full ring-2 ring-indigo-300 dark:ring-indigo-500"/>}
-
-                            <Field type="file" name="img" onChange={(e) => form.setFieldValue('img', e.target.files[0])} />
+              <img src={pic}></img>
+                            <Field type="file" name="formFile"/>
+                           
                         </div>
 
                 <div className="flex flex-col gap-[20px]">
@@ -77,7 +83,7 @@ xs:py-[10px]
                 </div>
               </Form>
            
-          </div>}
+          </div>
           </Formik>
           <div className="lg:w-[70%] flex flex-col gap-[30px] items-start text-[#202142] h-[100%] ">
             <Formik
@@ -94,7 +100,7 @@ xs:py-[10px]
             >
               <Form>
                 <div className="lg:flex lg:gap-[20px] items-center w-[100%] space-x-0 space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0 ">
-                  <div className="w-[33%]">
+                  <div className="w-[50%]">
                     <label
                       for="LName"
                       className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
@@ -107,7 +113,7 @@ xs:py-[10px]
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "  />
                   </div>
 
-                  <div className="w-[33%]">
+                  <div className="w-[50%]">
                     <label
                       for="FName"
                       className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
@@ -121,8 +127,8 @@ xs:py-[10px]
                   </div>
                 </div>
 
-                <div className="w-[100%] flex gap-[20px] items-center ">
-                  <div className="w-[33%]">
+                <div className="w-[100%] flex gap-[20px] items-center mt-[30px] ">
+                  <div className="w-[50%]">
                     <label
                       for="Email"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
@@ -136,7 +142,7 @@ xs:py-[10px]
                     />
                   </div>
 
-                  <div className="w-[33%]">
+                  <div className="w-[50%]">
                     <label
                       for="BirthDay"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
@@ -150,7 +156,7 @@ xs:py-[10px]
                     />
                   </div>
                 </div>
-                <div className="w-[100%] flex gap-[20px] items-center ">
+                <div className="w-[100%] flex gap-[20px] items-center  mt-[30px] ">
                   <div className="w-[33%]">
                     <label
                       for="phoneNumber"
@@ -177,7 +183,7 @@ xs:py-[10px]
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 " />
                   </div>
                 </div>
-                <div className="w-[100%]  ">
+                <div className="w-[100%]  mt-[30px]  ">
                   <label
                     for="HomeAdderess"
                     className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
@@ -198,18 +204,18 @@ xs:py-[10px]
     "
                 >
                   <button
-                    className="lg:bg-[#F83333] lg:w-[17%] lg:h-[50px] rounded-[0.5em]
-md:bg-[#F83333] md:w-[17%] md:h-[50px]
-sm:bg-[#F83333] sm:w-[17%] sm:h-[50px]
+                    className="lg:bg-[#F83333] lg:w-[50%] lg:h-[50px] rounded-[0.5em]
+md:bg-[#F83333] md:w-[50%] md:h-[50px]
+sm:bg-[#F83333] sm:w-[50%] sm:h-[50px]
 xs:bg-[#F83333] xs:w-[30%] xs:h-[50px]
 "
                   >
                     لغوتغییرات
                   </button>
                   <button
-                    className="lg:bg-[#09B28B] lg:w-[17%] lg:h-[50px]  rounded-[0.5em]
-md:bg-[#09B28B] md:w-[17%] md:h-[50px]
-sm:bg-[#09B28B] sm:w-[17%] sm:h-[50px]
+                    className="lg:bg-[#09B28B] lg:w-[50%] lg:h-[50px]  rounded-[0.5em]
+md:bg-[#09B28B] md:w-[50%] md:h-[50px]
+sm:bg-[#09B28B] sm:w-[50%] sm:h-[50px]
 xs:bg-[#09B28B] xs:w-[30%] xs:h-[50px]
 "
                     type="onsubmit"
