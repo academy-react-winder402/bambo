@@ -18,7 +18,7 @@ export const getforgottwo = async(ConfigValue) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get(`/Sign/Reset/${ConfigValue}`);
+        const result = await instance.get(`/Sign/Reset/:ConfigValue${ConfigValue}`);
 
         return result;
     }catch(error){

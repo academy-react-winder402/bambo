@@ -31,8 +31,8 @@ const Router = createBrowserRouter([
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
   {path:'forgotpass', element:<ForgotPass/>},
-  // {path:'forgotpass',element:<ForgotPassPageOne/>},
-  { path: "/forgotpass/newpass/:configValue?", element: <ForgotPassPageThree /> },
+  {path:'forgotpass/one',element:<ForgotPassPageOne/>},
+  { path: "/forgotpass/one/newpass/:configValue?", element: <ForgotPassPageThree /> },
   { path: '*', element: <Notfound /> },
 
 ])
