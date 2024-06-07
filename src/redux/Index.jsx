@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import profile from "./profile";
+import filterCourse from "./course";
 
-const store = configureStore ({
+const store = configureStore({
     reducer:{
-profile:profile,
+        filterCourse:filterCourse,
     },
 });
+
 export {store};
