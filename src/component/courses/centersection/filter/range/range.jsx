@@ -14,8 +14,8 @@ const dispatch = useDispatch();
 
 const filterprice = () => {
     dispatch(
-        setpricedown(mindata),
-        setpriceup(maxdata),
+        setpricedown({mindata}),
+        setpriceup({maxdata}),
         
     )
 };
@@ -45,7 +45,7 @@ useEffect(() => {
                             <span className="inline-block ml-[0.3rem] mt-[0.3rem]"> 0 </span>
                             <input type="range" min="0" max="10000000" step="10" value={maxdata} onChange={e => setmaxdata(e.target.value)}
                                 className="w-[10rem] ml-[0.5rem] mr-[0.5rem] block appearance-none h-[0.2rem] rounded-md mt-[1rem] bg-[#004458]" />
-                            <span className="mt-[0.1rem]"> 10000 </span>
+                            <span className="mt-[0.1rem]"> 10000000 </span>
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@ useEffect(() => {
                             <span className="inline-block ml-[0.3rem] mt-[0.3rem]"> 0 </span>
                             <input type="range" min="0" max="10000000" step="10" value={mindata} onChange={e => setmindata(e.target.value)}
                                 className="w-[10rem] ml-[0.5rem] mr-[0.5rem] block appearance-none h-[0.2rem] rounded-md mt-[1rem] bg-[#004458]" />
-                            <span className="mt-[0.1rem]"> 10000 </span>
+                            <span className="mt-[0.1rem]"> 10000000 </span>
                         </div>
                     </div>
                 </div>

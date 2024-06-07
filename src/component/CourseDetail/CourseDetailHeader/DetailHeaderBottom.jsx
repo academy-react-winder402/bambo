@@ -6,7 +6,7 @@ import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png";
 
 
-const DetailHeaderBottom = ({teachername}) => {
+const DetailHeaderBottom = ({teachername,likecount,dislikecount}) => {
 
 
     return (
@@ -31,9 +31,9 @@ xs:w-[33.5%] xs:h-[200px]
         <div className="ml-[0.5rem]">:مدرس</div>
      </div>
             </div>
-            <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-[1px]
-md:w-[33.5%] md:h-[200px] md:border-solid md:border-[#DBDBDB] md:border-[1px] 
-xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-[1px] ">
+            <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-r-[1px] lg:border-l-[1px]
+md:w-[33.5%] md:h-[200px] md:border-solid md:border-[#DBDBDB] md:border-r-[1px] md:border-l-[1px]
+xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-r-[1px] xs:border-l-[1px]">
                 <div className="lg:w-[50px] lg:h-[60px] lg:ml-[250px] lg:mt-[35px]
 md:w-[20px] md:h-[20px] md:m-auto 
 xs:w-[15px] xs:h-[15px] xs:m-auto 
@@ -59,14 +59,14 @@ xs:w-[33.5%] xs:h-[200px]  ">
 
                     <div className=" h-[1.5rem]   flex justify-end ">
                         <div className="h-[1.5rem] w-[4rem]  flex justify-between ">
-                            <span className=" h-[1.5rem] w-[1.9rem] text-white block text-right leading-6 text-sm" > 140 </span>
+                            <span className=" h-[1.5rem] w-[1.9rem] text-white block text-right leading-6 text-sm" > {likecount} </span>
                             <div className="  h-[1.4rem] w-[1.4rem] hover:cursor-pointer">
                                 <img src={like} />
                             </div>
 
                         </div>
                         <div className="   h-[1.5rem] w-[3.5rem] flex justify-between ml-[0.8rem]">
-                            <span className=" h-[1.5rem] w-[1.5rem] text-white block text-right leading-6 text-sm " > 140 </span>
+                            <span className=" h-[1.5rem] w-[1.5rem] text-white block text-right leading-6 text-sm " > {dislikecount} </span>
                             <div className="h-[1.5rem] w-[1.5rem] hover:cursor-pointer">
                                 <img src={like} />
                             </div>

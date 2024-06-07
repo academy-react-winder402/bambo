@@ -27,16 +27,16 @@ const filterCourse = createSlice({
             state.courseLevelId=action.payload;
         },
         settechnology:(state,action) =>{
-            state.ListTech=action.payload.ListTech;
+            state.ListTech=action.payload;
         },
         setteacher:(state,action) =>{
             state.TeacherId=action.payload;
         },
         setpricedown:(state,action) =>{
-            state.CostDown=action.payload.CostDown;
+            state.CostDown=action.payload;
         },
         setpriceup:(state,action) =>{
-            state.CostUp=action.payload.CostUp;
+            state.CostUp=action.payload;
         },
 
     },

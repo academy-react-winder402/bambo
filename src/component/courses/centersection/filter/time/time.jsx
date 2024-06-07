@@ -63,7 +63,7 @@ const Time = () => {
                     for={item.techName}
                     className="block mr-[0.5rem] hover:text-[#09B28B] hover:cursor-pointer"
                     onClick={() => {
-                      dispatch(settechnology({ListTech:item.techName}));
+                      dispatch(settechnology(item.id));
                     }}
                   >
                     {item.techName}
@@ -73,7 +73,7 @@ const Time = () => {
                     className="border border-solid border-[black] h-[1rem] w-[1rem] mt-[0.4rem] mr-[1rem] block 
           peer-checked:bg-[#09B28B] peer-checked:border-none bg-no-repeat bg-cover rounded-full hover:cursor-pointer hover:bg-[#09B28B]"
                     onClick={() => {
-                      dispatch(settechnology({ListTech:item.techName}));
+                      dispatch(settechnology(item.id));
                     }}
                   ></label>
                 </div>

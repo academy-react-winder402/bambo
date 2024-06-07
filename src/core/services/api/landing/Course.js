@@ -2,9 +2,7 @@ import { instance } from "../../interseptor";
 
 const getcourse = async(
     PageNumber=1,
-    RowsOfPage=4,
-
-    
+    RowsOfPage=4,  
 ) => {
     try{
         

@@ -7,7 +7,7 @@ const getfiltersearch = async(
 ) => {
     try{
         
-        const result = await instance.get(`/Home/GetCoursesWithPagination?RowsOfPage=${RowsOfPage}&${Query ? `&Query=${Query} ` : ""}`);
+        const result = await instance.get(`/Home/GetCoursesWithPagination?RowsOfPage=${RowsOfPage}&${Query ? `Query=${Query} ` : ""}`);
         return result;
         
     }catch(error){

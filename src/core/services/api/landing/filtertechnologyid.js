@@ -1,11 +1,12 @@
 import { instance } from "../../interseptor";
 
 const getfiltertechnologyid = async(
-    ListTech=undefined,  
+    ListTech=undefined,
+    TechCount=1,  
 ) => {
     try{
         
-        const result = await instance.get(`/Home/GetCoursesWithPagination?${ListTech ? `&ListTech=${ListTech} ` : ""}`);
+        const result = await instance.get(`/Home/GetCoursesWithPagination?TechCount=${TechCount}&ListTech=${ListTech}`);
         return result;
         
     }catch(error){

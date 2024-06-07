@@ -2,34 +2,8 @@ import React, { useState,useEffect } from "react";
 import { DetailHeaderTop } from "./DetailHeaderTop";
 import { DetailHeaderContant } from "./DetailHeaderContent";
 import { DetailHeaderBottom} from "./DetailHeaderBottom"
-import { getcoursedetail } from "../../../core/services/api/landing/CourseDetail";
-import { useParams } from "react-router-dom";
-const DetailHeader = () => {
-//  const [coursedetail, setcoursedetail]=useState([]);
-//   const getCoursedetailList = async () => {
-//     const courses = await getcoursedetail();
-//     setcoursedetail(courses);
-// };
 
-// useEffect(() => {
-//     getCoursedetailList();
-  
-// }, []);
-
-  const [data, setData]=useState([]);
-  const cardid = useParams().id;
-
-  const getcardid = async() => {
-    const courses = await getcoursedetail(cardid);
-    setData(courses);
-  };
-
-useEffect(()=> {
-  getcardid();
-},[cardid]);
-
-
-console.log(data);
+const DetailHeader = ({title,teachername,likecount,dislikecount}) => {
 
     return(
 
@@ -47,11 +21,10 @@ console.log(data);
    xs:w-[100%] xs:h-[400px] xs:bg-[#000000] xs:opacity-[65%] xs:absolute xs:top-[0px] xs:left-[0px]
    ">
 
-    {cardid?(<div> 
-      <DetailHeaderTop />
-   <DetailHeaderContant title={data.title}/>
-   <DetailHeaderBottom teachername={data.teacherName}/>
-  </div>):null}
+    <DetailHeaderTop />
+   <DetailHeaderContant title={title}/>
+   <DetailHeaderBottom teachername={teachername} likecount={likecount} dislikecount={dislikecount}/>
+
 
 
    </div>
