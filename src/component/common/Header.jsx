@@ -8,7 +8,6 @@ const Header = () => {
 
     const [islogin,setIslogin] =useState(null);
     const Loged = getItem("token");
-n
     return (
         <div className="border-b border-solid border-[#D1D1D1]  w-11/12 h-14 m-auto flex justify-between relative font-sans dark:bg-[#4040406c] ">
             <div className=" w-36 flex justify-between ">
