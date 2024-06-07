@@ -1,12 +1,12 @@
 import { instance } from "../../interseptor";
 
-const getcourse = async(
+const GetNews = async(
     PageNumber=1,
-    RowsOfPage=4,  
+    RowsOfPage=4,
 ) => {
     try{
         
-        const result = await instance.get(`/Home/GetCoursesWithPagination?PageNumber=${PageNumber}&RowsOfPage=${RowsOfPage}`);
+        const result = await instance.get(`/News?PageNumber=${PageNumber}&RowsOfPage=${RowsOfPage}`);
         return result;
         
     }catch(error){
@@ -15,4 +15,6 @@ const getcourse = async(
     }
 };
 
-export {getcourse};
+
+
+export {GetNews};

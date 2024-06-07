@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import logo from '../../assets/img/landing/logo.png';
 import { NavLink } from "react-router-dom";
 import shopp from '../../assets/img/landing/shopp.png';
-import sun from '../../assets/img/courses/sun.png';
 import { DarkModeSwitch } from "./darkmod/Darkmode";
 import { getItem } from "../../core/services/api/storage/Storage.Services";
 const Header = () => {
-<<<<<<< HEAD
-    
-=======
+
     const [islogin,setIslogin] =useState(null);
     const Loged = getItem("token");
->>>>>>> origin/ApiRegister
+n
     return (
         <div className="border-b border-solid border-[#D1D1D1]  w-11/12 h-14 m-auto flex justify-between relative font-sans dark:bg-[#4040406c] ">
             <div className=" w-36 flex justify-between ">

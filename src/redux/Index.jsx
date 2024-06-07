@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import filterCourse from "./course";
 
 const store = configureStore({
@@ -7,4 +8,3 @@ const store = configureStore({
     },
 });
 
-export {store};

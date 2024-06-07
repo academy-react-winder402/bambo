@@ -4,8 +4,8 @@ import { ArticleDetailContant } from "./ArticleDetailContent/ArticleDetailConten
 const ArticleDetailc = () => {
     return(
     <>
-<ArticleDetailHeader/>
-<ArticleDetailContant/>
+    <ArticleDetailHeader/>
+    <ArticleDetailContant/>
     </>
     );
 };

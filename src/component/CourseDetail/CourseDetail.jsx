@@ -1,26 +1,36 @@
 
+import React, { useEffect, useState } from "react";
 import { DetailHeader } from "./CourseDetailHeader/DetailHeader";
 import {DetailContant } from "./CourseDetailContant/DetailContant"
+import { getcoursedetail } from "../../core/services/api/landing/CourseDetail";
 import { useParams } from "react-router-dom";
-import { getcoursedetail } from "../../core/services/api/coursedetail/coursedetail";
-import React, { useEffect, useState } from "react";
+
 const CourseDetailc = () => {
-  const [coursedetail, setcoursedetail]=useState([]);
- const courseId = useParams().id
-  const getCoursedetailList = async () => {
-    const result = await getcoursedetail(courseId);
-    setcoursedetail(result);
+    
+const [data, setData]=useState([]);
+const cardid = useParams().id;
+
+const getcardid = async() => {
+  const courses = await getcoursedetail(cardid);
+  setData(courses);
 };
 
-useEffect(() => {
-    getCoursedetailList();
+useEffect(()=> {
+getcardid();
+},[cardid]);
+
+
+console.log(data);
   
-}, []);
-    return(
+  return(
   <>
-  <DetailHeader coursedetail={coursedetail}/>
-  <DetailContant coursedetail={coursedetail}/> 
- 
+
+{cardid?(<div> 
+  <DetailHeader title={data.title} teachername={data.teacherName} likecount={data.likeCount} dislikecount={data.dissLikeCount}/>
+  <DetailContant  des={data.describe}/>
+  </div>):null}
+
+
   </>
     );
 };

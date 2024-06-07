@@ -1,11 +1,10 @@
-
 import { instance } from "../../interseptor";
 
-const getcourselanding = async() => {
+const getFiltertecnology = async() => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/Home/GetCoursesTop?count=2");
+        const result = await instance.get("/Home/GetTechnologies" );
 
         return result;
     }catch(error){
@@ -14,4 +13,4 @@ const getcourselanding = async() => {
     }
 };
 
-export {getcourselanding};
+export {getFiltertecnology};
