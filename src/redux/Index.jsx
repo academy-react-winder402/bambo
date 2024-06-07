@@ -7,4 +7,5 @@ const store = configureStore({
         filterCourse:filterCourse,
     },
 });
+export {store};
 
