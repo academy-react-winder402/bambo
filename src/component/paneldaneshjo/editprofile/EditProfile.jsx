@@ -7,10 +7,8 @@ import { AddImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
 
 const EditProfile = () => {
   const [profile, setProfile] = useState([]);
-  const [user, setUser] = useState();
-  const id = useParams().id;
-
- 
+  // const [user, setUser] = useState();
+  // const id = useParams().id;
   const onSubmit = async (values) => {
     const formdata = new FormData();
     formdata.append("LName", values.LName);
@@ -25,19 +23,17 @@ const EditProfile = () => {
 
     console.log(editapi);
   };
-  const [pic,setPic] = useState([]);
-const getimg =async()=>{
-  const imgdata = new FormData();
-
-  imgdata.append('formFile', values.formFile);
-  console.log(imgdata);
-  const editimg = await AddImg(imgdata);
-  const imageObjectURL = URL.createObjectURL(editimg);
-  setPic(imageObjectURL);
-}
-useEffect(() => {
-  getimg();
-}, []);
+//   const [pic,setPic] = useState([]);
+// const getimg =async()=>{
+//   const imgdata = new FormData();
+//   imgdata.append('formFile', values.formFile);
+//   const editimg = await AddImg(imgdata);
+//   const imageObjectURL = URL.createObjectURL(editimg);
+//   setPic(imageObjectURL);
+// }
+// useEffect(() => {
+//   getimg();
+// }, []);
   return (
     <Fragment>
       <div
@@ -57,13 +53,15 @@ xs:py-[10px]
       <div
         className="lg:w-[90%] lg:m-auto lg:h-[85%]  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto " >
         <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
-        <Formik initialValues={{formFile:pic.formFile}}>
+        <Formik 
+        // initialValues={{formFile:pic.formFile}}
+        >
          <div className="lg:w-[30%] flex flex-col gap-[10px] items-center ">
            
               <Form>
               <div className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]">
-              <img src={pic}></img>
-                            <Field type="file" name="formFile"/>
+              {/* <img src={pic}></img> */}
+                            {/* <Field type="file" name="formFile"/> */}
                            
                         </div>
 
@@ -71,7 +69,8 @@ xs:py-[10px]
                   <button
                     type="button"
                     className="py-3.5 px-7 text-base font-medium text-[#fff] focus:outline-none bg-[#09B28B]  rounded-xl "
-                 onClick={getimg} >
+                //  onClick={getimg} 
+                 >
                     Change picture
                   </button>
                   <button
