@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState,useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { FormLoginBottom } from "./FormLoginBottom";
+
 import { FormLoginTop } from "./FormLoginTop.jsx";
 import {FormLoginCenter} from "./FormLoginCenter.jsx"
+
+
 const FormLogin = () => {
     const navigator = useNavigate();
     const gotoregister =() => {
@@ -22,23 +24,10 @@ const FormLogin = () => {
 
         );  
     };
-    const gotoleft = () => {
-        if (page == 0) {
-            return (
-                navigator("/")
-
-            );
-        }
-        else {
-
-            setPage((currPage) => (currPage - 1));
-
-        };
-
-    };
+ 
     
     return (
-
+    
         <div dir="rtl" className="lg:w-[55%]  lg:my-auto
         sm:w-[100%]  
         md:w-[55%]  
@@ -49,9 +38,9 @@ const FormLogin = () => {
         md:m-auto md:w-[80%] md:h-auto md:shadow-sm md:border-[1px] md:border-[black] md:border-solid md:rounded-lg md:mt-[20px]
          xs:w-[100%] xs:h-auto xs:bg-[#fff] 
         " >
-            <FormLoginTop gotoleft={gotoleft}/>
-      <FormLoginCenter gotoforgotpass={gotoforgotpass}/>
-<FormLoginBottom gotoregister={gotoregister}/>
+            <FormLoginTop gotohome={gotohome}/>
+      <FormLoginCenter gotoforgotpass={gotoforgotpass}  gotoregister={gotoregister}/>
+
             </div>
       
 

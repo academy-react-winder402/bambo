@@ -2,6 +2,7 @@ import React from "react";
 import { ContantTopLeft } from "./ContantTopLeft";
 import { ContantTopRight } from "./ContantTopRight";
 
+
 const DetailContantTop = ({des}) => {
     return(
 
@@ -9,6 +10,7 @@ const DetailContantTop = ({des}) => {
 
    <ContantTopLeft/>
    <ContantTopRight des={des}/> 
+
   
 </div>
     );
