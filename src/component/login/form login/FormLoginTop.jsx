@@ -1,6 +1,6 @@
 import React from "react";
 import left from "../../../assets/img/register/left.png"
-const FormLoginTop =({gotoleft}) =>{
+const FormLoginTop =({gotohome}) =>{
     return(
      
      <div className="lg:h-[60px] lg:w-[100%]  lg:flex lg:justify-between
@@ -23,7 +23,7 @@ const FormLoginTop =({gotoleft}) =>{
             ">ورود</div>
 
        
-        <img src={left} onClick={gotoleft} className=" lg:w-[30px] lg:h-[30px]  lg:cursor-pointer lg:mt-[20px] lg:ml-[15px]
+        <img src={left} onClick={gotohome} className=" lg:w-[30px] lg:h-[30px]  lg:cursor-pointer lg:mt-[20px] lg:ml-[15px]
          sm:w-[30px] sm:h-[30px]  sm:cursor-pointer sm:mt-[20px] sm:ml-[15px]
        xs:w-[30px] xs:h-[30px]  xs:cursor-pointer xs:mt-[20px] xs:ml-[15px]
 "></img>
