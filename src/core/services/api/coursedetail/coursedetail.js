@@ -1,10 +1,10 @@
 import { instance } from "../../interseptor/index.js";
 
-const getcoursedetail = async() => {
+const getcoursedetail = async(id) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/Home/GetCoursesTop?Count=5");
+        const result = await instance.get( `/Home/GetCourseDetails?CourseId=${id}`);
 
         return result;
     }catch(error){

@@ -5,7 +5,7 @@ const getcourselanding = async() => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.get("/Home/GetCoursesTop?count=3");
+        const result = await instance.get("/Home/GetCoursesTop?count=2");
 
         return result;
     }catch(error){

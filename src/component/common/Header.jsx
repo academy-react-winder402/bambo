@@ -2,7 +2,6 @@ import React from "react";
 import logo from '../../assets/img/landing/logo.png';
 import { NavLink } from "react-router-dom";
 import shopp from '../../assets/img/landing/shopp.png';
-import sun from '../../assets/img/courses/sun.png';
 import { DarkModeSwitch } from "./darkmod/Darkmode";
 
 const Header = () => {

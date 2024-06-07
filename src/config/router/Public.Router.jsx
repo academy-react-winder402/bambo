@@ -19,7 +19,7 @@ const Router = createBrowserRouter([
     { path: '/', element: <Landing /> },
     { path: '/article', element: <Articles /> },
     { path: '/course', element: <Courses /> },
-    { path: '/courseDetail', element: <CourseDetail /> },
+    { path: '/courseDetail/:id', element: <CourseDetail /> },
     { path: '/articleDetail', element: <ArticleDetail /> },
     { path: '/sabadkharid', element: <Sabadkharid /> },
     { path: '/about', element: <About /> },

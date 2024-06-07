@@ -2,13 +2,15 @@ import React from "react";
 import { ContantTopLeft } from "./ContantTopLeft";
 import { ContantTopRight } from "./ContantTopRight";
 
-const DetailContantTop = () => {
+
+const DetailContantTop = ({des}) => {
     return(
 
 <div className="  lg:flex lg:flex-row   lg:m-auto font-sans">
-in
+
    <ContantTopLeft/>
-   <ContantTopRight/> 
+   <ContantTopRight des={des}/> 
+
   
 </div>
     );

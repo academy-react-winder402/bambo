@@ -2,6 +2,7 @@ import React from 'react';
 import OtpTimer from 'otp-timer';
 
 const Timer = () => {
+
     return (
 
           <OtpTimer
@@ -9,6 +10,7 @@ const Timer = () => {
             seconds={0}
             text="زمان باقی مانده"
             resend={Timer}
+            ButtonText="ارسال مجدد"
           />
     
       );

@@ -1,11 +1,11 @@
 import React from "react";
-import Logoregister from "../../assets/img/register/logoregister.jpg"
-import insta from "../../assets/img/register/img.icons8.png"
-import tele from "../../assets/img/register/tele.jpg"
-import whats from "../../assets/img/register/whats.png"
-import yout from "../../assets/img/register/yout.jpg"
-import home from "../../assets/img/register/home1.png"
-import logo from "../../assets/img/landing/logo.png"
+import Logoregister from "../../assets/img/register/logoregister.jpg";
+import insta from "../../assets/img/register/img.icons8.png";
+import tele from "../../assets/img/register/tele.jpg";
+import whats from "../../assets/img/register/whats.png";
+import yout from "../../assets/img/register/yout.jpg";
+import home from "../../assets/img/register/home1.png";
+import logo from "../../assets/img/landing/logo.png";
 import { useNavigate } from "react-router-dom";
 
 const RegisterRight = () => {
