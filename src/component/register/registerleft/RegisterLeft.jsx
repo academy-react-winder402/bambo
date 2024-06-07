@@ -78,8 +78,7 @@ const [gmail,setGmail]=useState();
           phoneNumber={phoneNumber}
         />
       ) : step == 3 ? (
-        <RegisterLeftThird setPassword={setPassword}
-        setGmail={setGmail}
+        <RegisterLeftThird 
        phoneNumber={phoneNumber}
           step={stepCounter}
         />

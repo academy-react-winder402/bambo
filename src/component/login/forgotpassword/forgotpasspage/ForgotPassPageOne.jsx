@@ -1,35 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Postregister } from "../../../../core/services/api/auth/Register";
 import { Postforgotpass } from "../../../../core/services/api/auth/Forgotpass";
-import { Validationfoure } from "../../../../core/validation";
-const ForgotPassPageOne = ({setFormData,step}) => {
-    const onSubmit =async(values) => {
-        const obj={phoneNumber:values.phoneNumber};
+import { Validationgmail } from "../../../../core/validation";
+import {setItem} from "../../../../core/services/api/storage/Storage.Services"
+import { useParams } from "react-router-dom";
+import { getforgottwo } from "../../../../core/services/api/auth/Forgotpass";
+const ForgotPassPageOne = ({step}) => {
+  
+        const onSubmit = async (values) => {
          
-             const forgotapi = await Postregister(obj);
-             setFormData=(forgotapi);
-             console.log(forgotapi);
-             if(forgotapi.success == true){
-                 step();
-             }
-             else if (forgotapi.success == false){
-errorr();
-             }
-       };
-       const [error, setError]=useState([]);
-
-        const errorr= async () => {
-            const object ={error}
-          const result = await Postforgotpass(object);
-          setError(result);
-      };
+        const obj = {email:values.email,baseUrl: "https://localhost:5173/resetpassword"}
+          const forgotapi = await Postforgotpass(obj);
+                          console.log(forgotapi);
+                            step();
+                        };
+    // const handlephone = (e) => { 
+    //     setGmail(e.target.value); 
+     
+    //  };
+    //             const onSubmit = async () => {
+                  
+    //                 const obj = {gmail:gmail};
+    //                 const forgotapi = await Postforgotpass(obj);
+    //                 console.log(forgotapi);
+    //                 if (forgotapi.success == true) {
+    //                   step();
+    //                 }
+    //               };
+    //    const [error, setError]=useState([]);
+    //     const errorr= async () => {
+    //         const object ={error}
+    //       const result = await Postforgotpass(obj);
+    //       setError(result);
+    //   };
     return (
         <div>
-               <Formik
-                         initialValues={{phoneNumber: ""}}
-                         onSubmit={onSubmit}
-                     validationSchema={Validationfoure}
+               <Formik   
+               initialValues={{email:""}}
+                      validationSchema={Validationgmail}
+                      onSubmit={(value) => onSubmit(value)}
                >
                 <Form>
                     <div className="lg:h-[140px]   lg:flex flex-col lg:gap-[10px]  lg:mr-[30px]
@@ -43,8 +52,8 @@ errorr();
                          md:h-[30px] md:text-[15px] md:text-right md:mt-[30px]
                          xs:h-[30px] xs:text-[15px] xs:text-right  xs:mt-[30px]
                         
-                        " > شماره موبایل خود را وارد کنید</label>
-                        <Field name="phoneNumber" className="lg:w-[88%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
+                        " >ایمیل خود را وارد کنید</label>
+                        <Field name="email" className="lg:w-[88%] lg:h-[50px] lg:rounded-[10px]  lg:bg-[#ffff]
                         sm:w-[79%] sm:h-[50px] sm:rounded-[10px] sm:bg-[#fff] 
                         md:w-[83%] md:h-[50px] md:rounded-[10px] md:bg-[#fff] 
                         lg:border-solid lg:border-[1px] lg:border-[black] 
@@ -53,10 +62,9 @@ errorr();
                         xs:border-[1px] xs:border-[black] xs:border-solid 
                         xs:w-[85%] xs:h-[40px] xs:rounded-[10px]  
                         "
-                            // value={formData.phonenumber}
-                        // onChange={(event) => setFormData({ ...formData, phonenumber: event.target.value })}
+                       
                         />
-                       <ErrorMessage name="phoneNumber" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
+                       <ErrorMessage name="email" component={"p"} className="lg:text-[red]  sm:text-[red] xs:text-[red]" />
                     </div>
                           
        <div className="lg:h-[50px] lg:w-[100%]  lg:mt-[40px]
@@ -69,7 +77,7 @@ errorr();
                 md:h-[50px] md:w-[80%] md:block md:m-auto md:hover:bg-gradient-to-b md:from-[#004458] md:to-[#1194bc]  md:rounded-xl md:bg-[#004458] md:text-[#ffff]
                 xs:h-[50px] xs:w-[100%] xs:mx-auto xs:hover:bg-gradient-to-b xs:from-[#004458] xs:to-[#1194bc]  xs:rounded-xl xs:bg-[#004458] xs:text-[#ffff] xs:mt-[30px]
                 "
-              >
+           type="submit" >
                    بعدی
                 </button>
        </div>

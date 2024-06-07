@@ -41,4 +41,18 @@ export const Postregisterthree = async(obj) => {
         return[];
     }
 };
+export const Postlogin2 = async(obj2) => {
+    try{
+        console.log("fetching started ...");
+
+        const result = await instance.post("/Sign/Login",obj2);
+      
+        return result;
+       
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};
+
 

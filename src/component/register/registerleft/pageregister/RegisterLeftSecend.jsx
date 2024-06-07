@@ -8,15 +8,15 @@ import Timer from "./Timer";
 const RegisterLeftSecend = ({phoneNumber,step}) => {
   
  
-const [code, setCode] = useState();
-const handlecode = (e) => { 
+const [Code, setCode] = useState();
+const handleCode = (e) => { 
    setCode(e.target.value); 
 
 }; 
 const onSubmit = async() => {
    const obj ={
       phoneNumber:phoneNumber,
-      verifycode:code,
+      verifyCode:Code,
    };
    console.log(obj);
               const registerapitwo = await Postregistertwo(obj);
@@ -26,10 +26,6 @@ const onSubmit = async() => {
               }
              
         };
-
-
-
-
 
    return (
 
@@ -49,7 +45,7 @@ const onSubmit = async() => {
                         sm:mt-[20px] sm:mx-[22px]  md:mt-[20px] md:mx-[30px] xs:mt-[20px] xs:mx-[5px]
                         ">
                   
-                        <Field name="code" className="lg:w-[100%] lg:h-[50px] lg:rounded-[10px] 
+                        <Field name="Code" className="lg:w-[100%] lg:h-[50px] lg:rounded-[10px] 
                          md:w-[100%] md:h-[50px] md:rounded-[10px] 
                         sm:w-[100%] sm:h-[50px] sm:rounded-[10px] 
                         xs:w-[100%] xs:h-[50px] xs:rounded-[10px] xs:pr-[1rem] 
@@ -58,7 +54,7 @@ const onSubmit = async() => {
                         md:border-[1px] md:border-[black] md:border-solid
                         xs:border-[1px] xs:border-[black] xs:border-solid
                         "
-value={code} onChange={handlecode}
+value={Code} onChange={handleCode}
                         />
 
                     
