@@ -10,15 +10,18 @@ import { Filter } from "./centersection/filter/Filter";
 import { getfilterlevelid } from "../../core/services/api/landing/filterlevelid";
 import { getfiltersearch } from "../../core/services/api/landing/filtersearch";
 import { getfiltertype } from "../../core/services/api/landing/coursefiltertype";
+import { getfiltertechnologyid } from "../../core/services/api/landing/filtertechnologyid";
+import { getfilterteacherid } from "../../core/services/api/landing/filtertecherid";
+import { getfilterpriceup } from "../../core/services/api/landing/filterpriceup";
 
 const Coursesc = () => {
   const [showModal, setshowModal] = useState(false);
 
   const [getid, setgetid] = useState();
 
-  const { RowsOfPage,CourseTypeId,Query,courseLevelId} = useSelector((state) => state.filterCourse);
-console.log(courseLevelId);
+  const { RowsOfPage,CourseTypeId,Query,courseLevelId,ListTech,TeacherId,CostDown,CostUp} = useSelector((state) => state.filterCourse);
 
+console.log(ListTech);
   const [data, setData] = useState([]);
 const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
@@ -37,13 +40,13 @@ const [pageNumber, setPageNumber] = useState();
 
 
   const getfiltersearchlist = async () => {
-    const courses = await getfiltersearch(Query);
+    const courses = await getfiltersearch(Query,RowsOfPage);
     setData(courses);
   };
 
   useEffect(() => {
     getfiltersearchlist();
-  }, [Query]);
+  }, [Query,RowsOfPage]);
 
 
   const getfilterList = async () => {
@@ -56,13 +59,41 @@ const [pageNumber, setPageNumber] = useState();
   }, [CourseTypeId]);
 
   const getfilterlevelList = async () => {
-    const courses = await getfiltertype(courseLevelId);
+    const courses = await getfilterlevelid(courseLevelId);
     setData(courses);
   };
 
   useEffect(() => {
     getfilterlevelList();
   }, [courseLevelId]);
+
+  const getfiltertechnologyList = async () => {
+    const courses = await getfiltertechnologyid(ListTech);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfiltertechnologyList();
+  }, [ListTech]);
+
+  const getfilterteacherList = async () => {
+    const courses = await getfilterteacherid(TeacherId);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterteacherList();
+  }, [TeacherId]);
+
+
+  const getfilterpriceupList = async () => {
+    const courses = await getfilterpriceup(CostUp,CostDown);
+    setData(courses);
+  };
+
+  useEffect(() => {
+    getfilterpriceupList();
+  }, [CostUp,CostDown]);
 
 
   const [page, setpage] = useState(1);
@@ -127,6 +158,7 @@ const [pageNumber, setPageNumber] = useState();
                   title={item.title}
                   modares={item.teacherName}
                   price={item.cost}
+                  courseid={item.courseId}
                   showmodal={() => {
                     setshowModal(true);
                   }}
@@ -143,6 +175,7 @@ const [pageNumber, setPageNumber] = useState();
                   im={item.tumbImageAddress}
                   title={item.title}
                   modares={item.teacherName}
+                  courseid={item.courseId}
                   price={item.cost}
                 />
               );

@@ -5,7 +5,9 @@ import { CommentCourses } from "../../comment/CommentCourses";
 
 
 
-const ContantTopRight = ({coursedetail}) => {
+
+const ContantTopRight = ({des}) => {
+
 
 const [bottom, setbottom] = useState(1);
 
@@ -25,7 +27,9 @@ return (
     </div>
 
   <div className={bottom === 1 ? "bg-[#f9f9f9]" : "hidden"}>
-    <Tozihat coursedetail={coursedetail}/>
+
+    <Tozihat des={des} />
+
   </div>
 
   <div className={bottom === 2 ? "bg-[#f9f9f9]" : "hidden"}>

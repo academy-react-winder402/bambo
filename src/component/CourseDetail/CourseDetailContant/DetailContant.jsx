@@ -2,13 +2,17 @@ import React from "react";
 import { DetailContantBottom } from "./DetailContantBottom/DetailContantBottom";
 import { DetailContantTop} from "./DetailContantTop/DetailContantTop";
 
-const DetailContant = ({coursedetail}) => {
+
+const DetailContant = ({des}) => {
+
     return(
 
 <div className=" lg:flex lg:flex-col font-sans">
 
-   <DetailContantTop coursedetail={coursedetail}/>
-   <DetailContantBottom coursedetail={coursedetail}/> 
+
+   <DetailContantTop des={des}/>
+   <DetailContantBottom/> 
+
 </div>
     );
 };

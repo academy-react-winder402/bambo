@@ -11,7 +11,7 @@ const Filter = ({level}) => {
     return (
         <div className=" w-[19rem] mr-[1rem]">
             <Range />
-            <Asatid level={level} />
+            <Asatid />
             <Dastebandi />
             <Moratab />
             <Time />

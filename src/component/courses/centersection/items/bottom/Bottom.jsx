@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Bottom = ({ title, modares,price, showmodal}) => {
+const Bottom = ({ title, modares,price, showmodal,courseid}) => {
     return (
 
         <div className=" pb-[1rem] bg-[#fff]  relative">
@@ -25,7 +25,7 @@ const Bottom = ({ title, modares,price, showmodal}) => {
                 <h2 className=""> {price} </h2>
             </div>
 
-            <NavLink to="/courseDetail" className=" block h-[3rem] w-[7rem] mt-[0.2rem] m-auto  bg-[#DBDBDB]
+            <NavLink to={`/courseDetail/${courseid}`} className=" block h-[3rem] w-[7rem] mt-[0.2rem] m-auto  bg-[#DBDBDB]
              text-center leading-10 rounded-md hover:cursor-pointer"> مشاهده دوره </NavLink>
         </div>
 
