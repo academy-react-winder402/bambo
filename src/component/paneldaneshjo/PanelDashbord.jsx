@@ -6,6 +6,7 @@ import { EditProfile } from "./editprofile/EditProfile";
 import { Dashbored } from "./dashbord/Dashbord";
 import { PannelCourse } from "./pannelcourse/PannelCourse";
 import { MyCourse } from "./mycourses/MyCourses";
+import { NavLink } from "react-router-dom";
 const PanelDashbordc =()=>{
 
   const [pagedashbord, setpagedashbord]= useState(0);
@@ -30,7 +31,7 @@ const PanelDashbordc =()=>{
   "><HeaderDashbord/></div>
 <div className={pagedashbord === 0 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%] md:w-[90%] md:h-[80%] md:bg-[#ffff] md:m-auto md:mt-[3%] sm:w-[90%] sm:h-[80%] sm:bg-[#ffff] sm:m-auto sm:mt-[3%] xs:w-[90%]  xs:bg-[#ffff] xs:m-auto xs:mt-[3%]" : "hidden"} >
   
-  <Dashbored/> 
+<NavLink to='/dashbord'></NavLink>
 
 </div>
 

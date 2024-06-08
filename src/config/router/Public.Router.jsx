@@ -15,8 +15,10 @@ import {About} from '../../screen/about/About.jsx';
 import {PanelDashbord} from "../../screen/panelDashbord/PanelDashbord.jsx";
 import { ForgotPassPageOne } from "../../component/login/forgotpassword/forgotpasspage/ForgotPassPageOne.jsx";
 import { ForgotPassPageThree } from "../../component/login/forgotpassword/forgotpasspage/ForgotPassPageThree.jsx";
-
-
+import { Dashbored } from "../../component/paneldaneshjo/dashbord/Dashbord.jsx";
+import { EditProfile } from "../../component/paneldaneshjo/editprofile/EditProfile.jsx";
+import { MyCourse } from "../../component/paneldaneshjo/mycourses/MyCourses.jsx";
+import { PannelCourse } from "../../component/paneldaneshjo/pannelcourse/PannelCourse.jsx";
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
     { path: '/', element: <Landing /> },
@@ -33,10 +35,16 @@ const Router = createBrowserRouter([
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
   {path:'forgotpass', element:<ForgotPass/>},
-  {path:'forgotpass/one',element:<ForgotPassPageOne/>},
-  { path: "/forgotpass/one/newpass/:configValue?", element: <ForgotPassPageThree /> },
+  {path:'forgotpassone',element:<ForgotPassPageOne/>},
+  { path: "/forgotpassone/newpass/:configValue?", element: <ForgotPassPageThree /> },
   { path: '*', element: <Notfound /> },
-  { path: '/PanelDashbord', element: <PanelDashbord/> },
+  { path: '/PanelDashbord', element: <PanelDashbord/>,children: [
+    { path: '/dashbord', element: <Dashbored /> },
+    { path: '/editprofile', element: <EditProfile /> },
+    { path: '/mycourse', element: <MyCourse /> },
+    { path: '/pannelcourse', element: <PannelCourse/> },
+  ] },
+  
 
 ])
 
