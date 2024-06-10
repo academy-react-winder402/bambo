@@ -4,11 +4,11 @@ import { Fragment } from "react";
 import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
 import { useParams } from "react-router-dom";
 import { AddImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
-
+import { SelectImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
 const EditProfile = () => {
   const [profile, setProfile] = useState([]);
   const [user, setUser] = useState();
-  const id = useParams().id;
+ 
   const onSubmit = async (values) => {
     const formdata = new FormData();
     formdata.append("LName", values.LName);
@@ -18,13 +18,21 @@ const EditProfile = () => {
     formdata.append("Gender", values.Gender);
     formdata.append("HomeAdderess", values.HomeAdderess);
     formdata.append("Email", values.Email);
-    formdata.append("id", values.id);
+ 
     console.log(formdata);
     const editapi = await getname(formdata);
-
     console.log(editapi);
+    const imgdata = new FormData();
+    imgdata.append('formFile', values.formFile);
+    const editimg = await AddImg(imgdata ? imgdata : null);
+    
   };
-//   const [pic,setPic] = useState([]);
+  const selectimg = async() =>{
+const formdata = new FormData();
+formdata.append('ImageId',id);
+const selectapi =await SelectImg(formdata);
+  }
+
 // const getimg =async()=>{
 //   const imgdata = new FormData();
 //   imgdata.append('formFile', values.formFile);
@@ -55,14 +63,14 @@ xs:py-[10px]
         className="lg:w-[90%] lg:m-auto lg:h-[85%]  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto " >
         <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
         <Formik 
-        // initialValues={{formFile:pic.formFile}}
+        initialValues={{formFile:null}}
         >
          <div className="lg:w-[30%] flex flex-col gap-[10px] items-center ">
            
               <Form>
               <div className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]">
               {/* <img src={pic}></img> */}
-                            {/* <Field type="file" name="formFile"/> */}
+                            <Field onchange={(e) => setfieldvalue("formFile",e.target.file[0])} />
                            
                         </div>
 

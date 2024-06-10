@@ -36,11 +36,11 @@ const Router = createBrowserRouter([
   { path: '/register', element: <Register /> },
   {path:'forgotpass', element:<ForgotPass/>},
   {path:'forgotpassone',element:<ForgotPassPageOne/>},
-  { path: "/forgotpassone/newpass/:configValue?", element: <ForgotPassPageThree /> },
+  { path: "/forgotpassthree:configValue?", element: <ForgotPassPageThree /> },
   { path: '*', element: <Notfound /> },
   { path: '/PanelDashbord', element: <PanelDashbord/>,children: [
     { path: '/PanelDashbord/dashbord', element: <Dashbored /> },
-    { path: '/PanelDashbord/editprofile/:id', element: <EditProfile /> },
+    { path: '/PanelDashbord/editprofile', element: <EditProfile /> },
     { path: '/PanelDashbord/mycourse', element: <MyCourse /> },
     { path: '/PanelDashbord/pannelcourse', element: <PannelCourse/> },
   ]},
