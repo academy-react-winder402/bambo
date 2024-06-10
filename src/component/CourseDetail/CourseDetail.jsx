@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { DetailHeader } from "./CourseDetailHeader/DetailHeader";
 import {DetailContant } from "./CourseDetailContant/DetailContant"
@@ -28,6 +29,7 @@ console.log(data);
   <DetailHeader title={data.title} teachername={data.teacherName} likecount={data.likeCount} dislikecount={data.dissLikeCount}/>
   <DetailContant  des={data.describe}/>
   </div>):null}
+
 
   </>
     );

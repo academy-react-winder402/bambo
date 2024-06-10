@@ -12,7 +12,7 @@ import {MainLayout} from '../layout/Layout.jsx'
 import {Sabadkharid} from '../../screen/sabadkharid/Sabadkharid.jsx';
 import { Notfound } from "../../screen/notfound/Notfound.jsx";
 import {About} from '../../screen/about/About.jsx';
-
+import {PanelDashbord} from "../../screen/panelDashbord/PanelDashbord.jsx"
 
 const Router = createBrowserRouter([
   {path:"/" , element:<MainLayout /> , children: [
@@ -31,6 +31,7 @@ const Router = createBrowserRouter([
   { path: '/register', element: <Register /> },
   { path: '/ForgotPass', element: <ForgotPass /> },
   { path: '*', element: <Notfound /> },
+  { path: '/PanelDashbord', element: <PanelDashbord/> },
 
 ])
 

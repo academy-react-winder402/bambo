@@ -3,7 +3,9 @@ import { DetailHeaderTop } from "./DetailHeaderTop";
 import { DetailHeaderContant } from "./DetailHeaderContent";
 import { DetailHeaderBottom} from "./DetailHeaderBottom"
 
+
 const DetailHeader = ({title,teachername,likecount,dislikecount}) => {
+
 
     return(
 

@@ -6,7 +6,9 @@ import like2 from "../../../assets/img/courses/likee.png";
 import danesh from "../../../assets/img/coursedetail/danesh.png";
 
 
+
 const DetailHeaderBottom = ({teachername,likecount,dislikecount}) => {
+
 
 
     return (
@@ -26,9 +28,11 @@ xs:w-[33.5%] xs:h-[200px]
     md:w-[140px] md:h-[100px]  md:ml-[190px]
     xs:w-[140px] xs:h-[80px]  xs:ml-[190px]
      ">
+
         
         <div> {teachername} </div>
         <div className="ml-[0.5rem]">:مدرس</div>
+
      </div>
             </div>
             <div className="lg:w-[33.5%] lg:h-[250px] lg:border-solid lg:border-[#DBDBDB] lg:border-r-[1px] lg:border-l-[1px]
@@ -38,8 +42,10 @@ xs:w-[33.5%] xs:h-[200px] xs:border-solid xs:border-[#DBDBDB] xs:border-r-[1px] 
 md:w-[20px] md:h-[20px] md:m-auto 
 xs:w-[15px] xs:h-[15px] xs:m-auto 
 " ><img src={danesh}></img></div>
+
                 <div className=" mt-[3rem]"> تاریخ شروع : </div>
                 <div className=" mt-[1rem]"> تاریخ پایان : </div>
+
             </div>
 
 
