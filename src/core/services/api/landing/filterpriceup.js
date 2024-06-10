@@ -3,10 +3,11 @@ import { instance } from "../../interseptor";
 const getfilterpriceup = async(
     CostUp=undefined,  
     CostDown=undefined,
+    
 ) => {
     try{
         
-        const result = await instance.get(`/Home/GetCoursesWithPagination?CostUp=${CostUp}&CostDown=${CostDown}`);
+        const result = await instance.get(`/Home/GetCoursesWithPagination?${CostUp ? `CostUp=${CostUp} ` : ""}&${CostDown ? `CostDown=${CostDown} ` : ""}`);
         return result;
         
     }catch(error){

@@ -17,13 +17,14 @@ import { getfilterpriceup } from "../../core/services/api/landing/filterpriceup"
 const Coursesc = () => {
   const [showModal, setshowModal] = useState(false);
 
-  const [getid, setgetid] = useState();
+  const [modal, setmodal] = useState([]);
+
+
 
   const { RowsOfPage,CourseTypeId,Query,courseLevelId,ListTech,TeacherId,CostDown,CostUp} = useSelector((state) => state.filterCourse);
 
-console.log(ListTech);
   const [data, setData] = useState([]);
-const [pageNumber, setPageNumber] = useState();
+  const [pageNumber, setPageNumber] = useState();
   const [totalPages, setTotalPages] = useState();
 
   const getCourseList = async () => {
@@ -110,8 +111,8 @@ const [pageNumber, setPageNumber] = useState();
   return (
     <div className="bg-[#ededed] dark:bg-[#242424ed]">
       <ModalCourse
+        modaldata={modal}
         isVisible={showModal}
-        courseId={getid}
         onclose={() => {
           setshowModal(false);
         }}
@@ -154,11 +155,13 @@ const [pageNumber, setPageNumber] = useState();
               return (
                 <Item
                   key={index}
+                  id={item.courseId}
                   im={item.tumbImageAddress}
                   title={item.title}
                   modares={item.teacherName}
                   price={item.cost}
                   courseid={item.courseId}
+                  modal={setmodal}
                   showmodal={() => {
                     setshowModal(true);
                   }}
