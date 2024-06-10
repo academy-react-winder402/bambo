@@ -39,11 +39,11 @@ const Router = createBrowserRouter([
   { path: "/forgotpassone/newpass/:configValue?", element: <ForgotPassPageThree /> },
   { path: '*', element: <Notfound /> },
   { path: '/PanelDashbord', element: <PanelDashbord/>,children: [
-    { path: '/dashbord', element: <Dashbored /> },
-    { path: '/editprofile', element: <EditProfile /> },
-    { path: '/mycourse', element: <MyCourse /> },
-    { path: '/pannelcourse', element: <PannelCourse/> },
-  ] },
+    { path: '/PanelDashbord/dashbord', element: <Dashbored /> },
+    { path: '/PanelDashbord/editprofile/:id', element: <EditProfile /> },
+    { path: '/PanelDashbord/mycourse', element: <MyCourse /> },
+    { path: '/PanelDashbord/pannelcourse', element: <PannelCourse/> },
+  ]},
   
 
 ])

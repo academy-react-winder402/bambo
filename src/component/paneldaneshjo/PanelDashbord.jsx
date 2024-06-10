@@ -31,23 +31,23 @@ const PanelDashbordc =()=>{
   "><HeaderDashbord/></div>
 <div className={pagedashbord === 0 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%] md:w-[90%] md:h-[80%] md:bg-[#ffff] md:m-auto md:mt-[3%] sm:w-[90%] sm:h-[80%] sm:bg-[#ffff] sm:m-auto sm:mt-[3%] xs:w-[90%]  xs:bg-[#ffff] xs:m-auto xs:mt-[3%]" : "hidden"} >
   
-<NavLink to='/dashbord'></NavLink>
+<NavLink to='/PanelDashbord/dashbord'></NavLink>
 
 </div>
 
 <div className={pagedashbord === 1 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%] md:w-[90%] md:h-[80%] md:bg-[#ffff] md:m-auto md:mt-[3%] sm:w-[90%] sm:h-[80%] sm:bg-[#ffff] sm:m-auto sm:mt-[3%] xs:w-[90%]  xs:bg-[#ffff] xs:m-auto xs:mt-[3%]" : "hidden"} >
   
-  <EditProfile /> 
+<NavLink to='/PanelDashbord/editprofile'></NavLink>
 
 </div>
 <div className={pagedashbord === 2 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%] md:w-[90%] md:h-[80%] md:bg-[#ffff] md:m-auto md:mt-[3%] sm:w-[90%] sm:h-[80%] sm:bg-[#ffff] sm:m-auto sm:mt-[3%] xs:w-[90%]  xs:bg-[#ffff] xs:m-auto xs:mt-[3%]" : "hidden"} >
   
-  <MyCourse /> 
+<NavLink to='/PanelDashbord/mycourse'></NavLink>
 
 </div>
 <div className={pagedashbord === 3 ? "lg:w-[90%] lg:h-[80%] lg:bg-[#ffff] lg:m-auto lg:mt-[3%] md:w-[90%] md:h-[80%] md:bg-[#ffff] md:m-auto md:mt-[3%] sm:w-[90%] sm:h-[80%] sm:bg-[#ffff] sm:m-auto sm:mt-[3%] xs:w-[90%]  xs:bg-[#ffff] xs:m-auto xs:mt-[3%]" : "hidden"} >
   
-  <PannelCourse /> 
+<NavLink to='/PanelDashbord/pannelcourse'></NavLink>
 
 </div>
 

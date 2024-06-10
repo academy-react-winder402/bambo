@@ -7,8 +7,8 @@ import { AddImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
 
 const EditProfile = () => {
   const [profile, setProfile] = useState([]);
-  // const [user, setUser] = useState();
-  // const id = useParams().id;
+  const [user, setUser] = useState();
+  const id = useParams().id;
   const onSubmit = async (values) => {
     const formdata = new FormData();
     formdata.append("LName", values.LName);
@@ -18,6 +18,7 @@ const EditProfile = () => {
     formdata.append("Gender", values.Gender);
     formdata.append("HomeAdderess", values.HomeAdderess);
     formdata.append("Email", values.Email);
+    formdata.append("id", values.id);
     console.log(formdata);
     const editapi = await getname(formdata);
 
