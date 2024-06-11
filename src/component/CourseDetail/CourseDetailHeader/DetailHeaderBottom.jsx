@@ -7,7 +7,7 @@ import danesh from "../../../assets/img/coursedetail/danesh.png";
 
 
 
-const DetailHeaderBottom = ({teachername,likecount,dislikecount}) => {
+const DetailHeaderBottom = ({teachername,likecount,dislikecount,startTime,endTime}) => {
 
 
 
@@ -43,8 +43,8 @@ md:w-[20px] md:h-[20px] md:m-auto
 xs:w-[15px] xs:h-[15px] xs:m-auto 
 " ><img src={danesh}></img></div>
 
-                <div className=" mt-[3rem]"> تاریخ شروع : </div>
-                <div className=" mt-[1rem]"> تاریخ پایان : </div>
+                <div className=" mt-[3rem]"> تاریخ شروع : {startTime}</div>
+                <div className=" mt-[1rem]"> تاریخ پایان : {endTime}</div>
 
             </div>
 

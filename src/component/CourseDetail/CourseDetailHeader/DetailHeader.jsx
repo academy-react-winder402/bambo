@@ -4,7 +4,7 @@ import { DetailHeaderContant } from "./DetailHeaderContent";
 import { DetailHeaderBottom} from "./DetailHeaderBottom"
 
 
-const DetailHeader = ({title,teachername,likecount,dislikecount}) => {
+const DetailHeader = ({title,teachername,likecount,dislikecount,capacity,currentRegistrants,endTime,startTime}) => {
 
 
     return(
@@ -24,8 +24,8 @@ const DetailHeader = ({title,teachername,likecount,dislikecount}) => {
    ">
 
     <DetailHeaderTop />
-   <DetailHeaderContant title={title}/>
-   <DetailHeaderBottom teachername={teachername} likecount={likecount} dislikecount={dislikecount}/>
+   <DetailHeaderContant title={title} capacity={capacity} currentRegistrants={currentRegistrants}/>
+   <DetailHeaderBottom teachername={teachername} likecount={likecount} dislikecount={dislikecount} endTime={endTime} startTime={startTime}/>
 
 
 

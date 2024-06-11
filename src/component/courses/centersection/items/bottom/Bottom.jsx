@@ -5,16 +5,18 @@ import { getcourseDetail } from "../../../../../core/services/api/landing/Detail
 const Bottom = ({ title, modares,price, showmodal,courseid,modal,id}) => {
 
 const [getid, setgetid] =useState();
-const [datamodal, setdatamodal] = useState([]);
+
+
 
 const getmodalcourse = async () => {
     const courses = await getcourseDetail(getid);
-    setdatamodal(courses);
+    modal(courses);
   };
 
   useEffect(() => {
     getmodalcourse();
   }, [getid]);
+
 
     return (
 
@@ -30,7 +32,6 @@ const getmodalcourse = async () => {
                  top-[5.8rem] left-[1rem]" onClick={() => { 
                     showmodal();
                     setgetid(id);
-                    modal(datamodal);
                   }}> جزئیات </button>
 
             <div className="border border-solid border-[#004458]  ml-[0.5rem] mr-[0.5rem]"> </div>
