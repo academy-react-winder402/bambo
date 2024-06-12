@@ -3,15 +3,16 @@ import logo from '../../assets/img/landing/logo.png';
 import { NavLink } from "react-router-dom";
 import shopp from '../../assets/img/landing/shopp.png';
 import { DarkModeSwitch } from "./darkmod/Darkmode";
-import { getItem } from "../../core/services/api/storage/Storage.Services";
+// import { getItem } from "../../core/services/api/storage/Storage.Services";
 const Header = () => {
 
     const [islogin,setIslogin] =useState(null);
-    const Loged = getItem("token");
+    // const Loged = getItem("token");
+    // setIslogin(Loged);
     return (
         <div className="border-b border-solid border-[#D1D1D1]  w-11/12 h-14 m-auto flex justify-between relative font-sans dark:bg-[#4040406c] ">
             <div className=" w-36 flex justify-between ">
-                {islogin?(<>  </>):(
+                {islogin?(<> <div>name</div> </>):(
                     <>
                     <NavLink to='/register' className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white "> ثبت نام </NavLink>
                     <NavLink to="/login" className=" w-6/12 text-center leading-[3.2rem] hover:bg-[#004458] cursor-pointer text-white "> ورود </NavLink>
