@@ -25,6 +25,7 @@ const EditProfile = () => {
     const imgdata = new FormData();
     imgdata.append("formFile", values.formFile);
     const editimg = await AddImg(imgdata ? imgdata : null);
+    console.log(editimg);
   };
   const selectimg = async () => {
     const formdata = new FormData();
