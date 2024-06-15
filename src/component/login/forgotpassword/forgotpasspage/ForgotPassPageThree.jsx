@@ -11,14 +11,16 @@ const ForgotPassPageThree = ({setEmail,email}) => {
   const getsteptwo = async() => {
     const getapi = await getforgottwo(ConfigValue);
     setReset(getapi);
+    console.log(getapi);
   };
  
   const navigate =useNavigate();
   const onSubmit = async(values) => {
     const obj = {
+      userId: reset?.id,
       newPassword: values?.password,
       resetValue: reset?.resetpass,
-      userId: reset?.id,
+     
     };
    
     const newpassapi = await Postnewpass(obj);

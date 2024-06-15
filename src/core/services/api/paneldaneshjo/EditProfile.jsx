@@ -4,7 +4,19 @@ export const getname = async(formdata) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.put('/SharePanel/UpdateProfileInfo'+id ,formdata);
+        const result = await instance.put("/SharePanel/UpdateProfileInfo",formdata);
+
+        return result;
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};
+export const UserInfo = async() => {
+    try{
+        console.log("fetching started ...");
+
+        const result = await instance.put("/SharePanel/GetProfileInfo");
 
         return result;
     }catch(error){
@@ -13,12 +25,11 @@ export const getname = async(formdata) => {
     }
 };
 
-
-export const SelectImg = async() => {
+export const SelectImg = async(formdata) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.put("/SharePanel/SelectProfileImage");
+        const result = await instance.post("/SharePanel/SelectProfileImage",formdata);
 
         return result;
     }catch(error){
@@ -30,7 +41,7 @@ export const DeleteImg = async() => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.put("/SharePanel/DeleteProfileImage");
+        const result = await instance.delete("/SharePanel/DeleteProfileImage");
 
         return result;
     }catch(error){

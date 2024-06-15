@@ -4,36 +4,55 @@ import { Fragment } from "react";
 import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
 import { useParams } from "react-router-dom";
 import { AddImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
-
+import { SelectImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
+import { UserInfo } from "../../../core/services/api/paneldaneshjo/EditProfile";
 const EditProfile = () => {
   const [profile, setProfile] = useState([]);
-  // const [user, setUser] = useState();
-  // const id = useParams().id;
+  const getApi = async () => {
+    const info = await UserInfo();
+    setProfile(info);
+  };
+
+  useEffect(() => {
+    getApi();
+  }, [])
   const onSubmit = async (values) => {
     const formdata = new FormData();
     formdata.append("LName", values.LName);
     formdata.append("FName", values.FName);
     formdata.append("BirthDay", values.BirthDay);
-    formdata.append("phoneNumber", values.phoneNumber);
+    formdata.append("NationalCode", values.NationalCode);
     formdata.append("Gender", values.Gender);
     formdata.append("HomeAdderess", values.HomeAdderess);
-    formdata.append("Email", values.Email);
+    formdata.append("LinkdinProfile", values.LinkdinProfile);
+    formdata.append("ReceiveMessageEvent", true);
+    formdata.append("TelegramLink", "@leila73ka");
+    formdata.append("Latitude", "25");
+    formdata.append("Longitude", "35");
     console.log(formdata);
     const editapi = await getname(formdata);
-
     console.log(editapi);
+    const imgdata = new FormData();
+    imgdata.append("formFile", values.formFile);
+    const editimg = await AddImg(imgdata ? imgdata : null);
+    console.log(editimg);
   };
-//   const [pic,setPic] = useState([]);
-// const getimg =async()=>{
-//   const imgdata = new FormData();
-//   imgdata.append('formFile', values.formFile);
-//   const editimg = await AddImg(imgdata);
-//   const imageObjectURL = URL.createObjectURL(editimg);
-//   setPic(imageObjectURL);
-// }
-// useEffect(() => {
-//   getimg();
-// }, []);
+  const selectimg = async () => {
+    const formdata = new FormData();
+    formdata.append("ImageId", id);
+    const selectapi = await SelectImg(formdata);
+  };
+
+  // const getimg =async()=>{
+  //   const imgdata = new FormData();
+  //   imgdata.append('formFile', values.formFile);
+  //   const editimg = await AddImg(imgdata);
+  //   const imageObjectURL = URL.createObjectURL(editimg);
+  //   setPic(imageObjectURL);
+  // }
+  // useEffect(() => {
+  //   getimg();
+  // }, []);
   return (
     <Fragment>
       <div
@@ -50,27 +69,39 @@ xs:py-[10px]
         ویرایش پروفایل
       </div>
 
-      <div
-        className="lg:w-[90%] lg:m-auto lg:h-[85%]  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto " >
-        <div className="flex flex-row-reverse lg:w-[100%] mt-[20px] h-[100%] ">
-        <Formik 
-        // initialValues={{formFile:pic.formFile}}
-        >
-         <div className="lg:w-[30%] flex flex-col gap-[10px] items-center ">
+      <div className="lg:w-[90%] lg:m-auto  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto ">
+        <Formik
+          initialValues={{
+            formFile: null,
+            LName: profile.LName,
+            FName: profile.FName,
+            BirthDay: profile.BirthDay,   
+            NationalCode: profile.NationalCode,
+            Gender: profile.Gender,
+            HomeAdderess: profile.HomeAdderess,
+            LinkdinProfile: profile.LinkdinProfile,
+            HomeAdderess: profile.HomeAdderess,
+            Email: profile.Email,
+           phoneNumber: profile.phoneNumber,
            
-              <Form>
-              <div className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]">
-              {/* <img src={pic}></img> */}
-                            {/* <Field type="file" name="formFile"/> */}
-                           
-                        </div>
+          }}
+          onSubmit={(values) => onSubmit(values)}
+        >
+         {({setFieldValue}) =>{return(<Form><div className="lg:flex lg:flex-row-reverse gap-[130px] lg:w-[100%] mt-[20px]">
+              <div className="lg:w-[300px]  flex flex-col gap-[10px] items-center border-[1px] border-solid border-black ">
+                {/* <img src={pic}></img> */}
+                <input
+                type="file"
+                  className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]"
+                  onchange={(e) => setFieldValue("formFile", e.target.file[0])}
+                />
 
-                <div className="flex flex-col gap-[20px]">
+                {/* <div className="flex flex-col gap-[20px]">
                   <button
-                    type="button"
+                    type="file"
                     className="py-3.5 px-7 text-base font-medium text-[#fff] focus:outline-none bg-[#09B28B]  rounded-xl "
-                //  onClick={getimg} 
-                 >
+                    onClick={selectimg}
+                  >
                     Change picture
                   </button>
                   <button
@@ -79,26 +110,11 @@ xs:py-[10px]
                   >
                     Delete picture
                   </button>
-                </div>
-              </Form>
-           
-          </div>
-          </Formik>
-          <div className="lg:w-[70%] flex flex-col gap-[30px] items-start text-[#202142] h-[100%] ">
-            <Formik
-              initialValues={{
-                LName: profile.LName,
-                FName: profile.FName,
-                Email: profile.Email,
-                BirthDay: profile.BirthDay,
-                phoneNumber: profile.phoneNumber,
-                Gender: profile.Gender,
-                HomeAdderess: profile.HomeAdderess,
-              }}
-              onSubmit={(values) => onSubmit(values)}
-            >
-              <Form>
-                <div className="lg:flex lg:gap-[20px] items-center w-[100%] space-x-0 space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0 ">
+                </div> */}
+              </div>
+
+              <div className="lg:w-[500px] flex flex-col gap-[5px] items-start text-[#202142] ">
+                <div className="lg:flex lg:gap-[20px] items-center w-[100%]  sm:flex-row  ">
                   <div className="w-[50%]">
                     <label
                       for="LName"
@@ -109,7 +125,8 @@ xs:py-[10px]
                     <Field
                       type="text"
                       name="LName"
-                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "  />
+                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
+                    />
                   </div>
 
                   <div className="w-[50%]">
@@ -122,7 +139,8 @@ xs:py-[10px]
                     <Field
                       type="text"
                       name="FName"
-                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 " />
+                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
+                    />
                   </div>
                 </div>
 
@@ -132,12 +150,12 @@ xs:py-[10px]
                       for="Email"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
-                      جیمیل
+                      Linkdin 
                     </label>
                     <Field
-                      type="Email"
+                      
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
-                      name="Email"
+                      name="LinkdinProfile"
                     />
                   </div>
 
@@ -155,21 +173,22 @@ xs:py-[10px]
                     />
                   </div>
                 </div>
-                <div className="w-[100%] flex gap-[20px] items-center  mt-[30px] ">
-                  <div className="w-[33%]">
+                <div className="w-[100%] flex gap-[20px] items-center  mt-[10px] ">
+                  <div className="w-[50%]">
                     <label
-                      for="phoneNumber"
+                      for="NationalCode"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
-                      شماره موبایل
+                      کدملی
                     </label>
                     <Field
-                      type="phoneNumber"
-                      name="PhoneNumber"
-                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 " />
+                     
+                      name="NationalCode"
+                      className="w-[100%] bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2.5 "
+                    />
                   </div>
 
-                  <div className="w-[33%]">
+                  <div className="w-[50%]">
                     <label
                       for="Gender"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
@@ -179,7 +198,8 @@ xs:py-[10px]
                     <Field
                       name="Gender"
                       type="text"
-                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 " />
+                      className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
+                    />
                   </div>
                 </div>
                 <div className="w-[100%]  mt-[30px]  ">
@@ -197,35 +217,35 @@ xs:py-[10px]
                 </div>
                 <div
                   className="lg:w-[100%]  lg:flex lg:justify-end lg:gap-[30px] lg:text-center lg:text-[17px] lg:mt-[30px] lg:text-[#fff]
-    md:w-[100%]  md:flex md:justify-end md:gap-[30px] md:text-center md:text-[17px] md:mt-[30px] md:text-[#fff]
-    sm:w-[100%] sm:flex sm:justify-end sm:gap-[30px] sm:text-center sm:text-[17px] sm:mt-[30px] sm:text-[#fff]
-    xs:w-[100%]  xs:flex xs:justify-end xs:gap-[30px] xs:text-center xs:text-[17px] xs:mt-[30px] xs:text-[#fff]
-    "
+                  md:w-[100%]  md:flex md:justify-end md:gap-[30px] md:text-center md:text-[17px] md:mt-[30px] md:text-[#fff]
+                  sm:w-[100%] sm:flex sm:justify-end sm:gap-[30px] sm:text-center sm:text-[17px] sm:mt-[30px] sm:text-[#fff]
+                  xs:w-[100%]  xs:flex xs:justify-end xs:gap-[30px] xs:text-center xs:text-[17px] xs:mt-[30px] xs:text-[#fff]
+                  "
                 >
                   <button
                     className="lg:bg-[#F83333] lg:w-[50%] lg:h-[50px] rounded-[0.5em]
-md:bg-[#F83333] md:w-[50%] md:h-[50px]
-sm:bg-[#F83333] sm:w-[50%] sm:h-[50px]
-xs:bg-[#F83333] xs:w-[30%] xs:h-[50px]
+                  md:bg-[#F83333] md:w-[50%] md:h-[50px]
+                  sm:bg-[#F83333] sm:w-[50%] sm:h-[50px]
+                  xs:bg-[#F83333] xs:w-[30%] xs:h-[50px]
 "
                   >
                     لغوتغییرات
                   </button>
                   <button
                     className="lg:bg-[#09B28B] lg:w-[50%] lg:h-[50px]  rounded-[0.5em]
-md:bg-[#09B28B] md:w-[50%] md:h-[50px]
-sm:bg-[#09B28B] sm:w-[50%] sm:h-[50px]
-xs:bg-[#09B28B] xs:w-[30%] xs:h-[50px]
+                  md:bg-[#09B28B] md:w-[50%] md:h-[50px]
+                  sm:bg-[#09B28B] sm:w-[50%] sm:h-[50px]
+                  xs:bg-[#09B28B] xs:w-[30%] xs:h-[50px]
 "
                     type="onsubmit"
                   >
                     ثبت تغییرات
                   </button>
                 </div>
-              </Form>
-            </Formik>
-          </div>
-        </div>
+              </div>
+              </div>
+              </Form>)}} 
+        </Formik>
       </div>
     </Fragment>
   );
