@@ -5,10 +5,17 @@ import { getname } from "../../../core/services/api/paneldaneshjo/EditProfile";
 import { useParams } from "react-router-dom";
 import { AddImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
 import { SelectImg } from "../../../core/services/api/paneldaneshjo/EditProfile";
+import { UserInfo } from "../../../core/services/api/paneldaneshjo/EditProfile";
 const EditProfile = () => {
   const [profile, setProfile] = useState([]);
-  const [user, setUser] = useState();
+  const getApi = async () => {
+    const info = await UserInfo();
+    setProfile(info);
+  };
 
+  useEffect(() => {
+    getApi();
+  }, [])
   const onSubmit = async (values) => {
     const formdata = new FormData();
     formdata.append("LName", values.LName);
@@ -18,7 +25,10 @@ const EditProfile = () => {
     formdata.append("Gender", values.Gender);
     formdata.append("HomeAdderess", values.HomeAdderess);
     formdata.append("LinkdinProfile", values.LinkdinProfile);
-
+    formdata.append("ReceiveMessageEvent", true);
+    formdata.append("TelegramLink", "@leila73ka");
+    formdata.append("Latitude", "25");
+    formdata.append("Longitude", "35");
     console.log(formdata);
     const editapi = await getname(formdata);
     console.log(editapi);
@@ -62,29 +72,33 @@ xs:py-[10px]
       <div className="lg:w-[90%] lg:m-auto  md:w-[90%]  md:m-auto sm:w-[90%] sm:m-auto xs:w-[90%]  xs:m-auto ">
         <Formik
           initialValues={{
+            formFile: null,
             LName: profile.LName,
             FName: profile.FName,
-            LinkdinProfile: profile.LinkdinProfile,
-            BirthDay: profile.BirthDay,
+            BirthDay: profile.BirthDay,   
             NationalCode: profile.NationalCode,
             Gender: profile.Gender,
             HomeAdderess: profile.HomeAdderess,
-            formFile: null,
+            LinkdinProfile: profile.LinkdinProfile,
+            HomeAdderess: profile.HomeAdderess,
+            Email: profile.Email,
+           phoneNumber: profile.phoneNumber,
+           
           }}
           onSubmit={(values) => onSubmit(values)}
         >
-          <Form>
-            <div className="lg:flex lg:flex-row-reverse gap-[130px] lg:w-[100%] mt-[20px]">
+         {({setFieldValue}) =>{return(<Form><div className="lg:flex lg:flex-row-reverse gap-[130px] lg:w-[100%] mt-[20px]">
               <div className="lg:w-[300px]  flex flex-col gap-[10px] items-center border-[1px] border-solid border-black ">
                 {/* <img src={pic}></img> */}
-                <Field
+                <input
+                type="file"
                   className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]"
-                  onchange={(e) => setfieldvalue("formFile", e.target.file[0])}
+                  onchange={(e) => setFieldValue("formFile", e.target.file[0])}
                 />
 
-                <div className="flex flex-col gap-[20px]">
+                {/* <div className="flex flex-col gap-[20px]">
                   <button
-                    type="button"
+                    type="file"
                     className="py-3.5 px-7 text-base font-medium text-[#fff] focus:outline-none bg-[#09B28B]  rounded-xl "
                     onClick={selectimg}
                   >
@@ -96,7 +110,7 @@ xs:py-[10px]
                   >
                     Delete picture
                   </button>
-                </div>
+                </div> */}
               </div>
 
               <div className="lg:w-[500px] flex flex-col gap-[5px] items-start text-[#202142] ">
@@ -136,10 +150,10 @@ xs:py-[10px]
                       for="Email"
                       className=" mb-2 text-sm font-medium text-indigo-900 dark:text-white"
                     >
-                      جیمیل
+                      Linkdin 
                     </label>
                     <Field
-                      type="Email"
+                      
                       className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                       name="LinkdinProfile"
                     />
@@ -229,8 +243,8 @@ xs:py-[10px]
                   </button>
                 </div>
               </div>
-            </div>
-          </Form>
+              </div>
+              </Form>)}} 
         </Formik>
       </div>
     </Fragment>

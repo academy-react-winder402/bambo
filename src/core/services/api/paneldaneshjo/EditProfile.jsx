@@ -12,7 +12,18 @@ export const getname = async(formdata) => {
         return[];
     }
 };
+export const UserInfo = async() => {
+    try{
+        console.log("fetching started ...");
 
+        const result = await instance.put("/SharePanel/GetProfileInfo");
+
+        return result;
+    }catch(error){
+        console.log(error);
+        return[];
+    }
+};
 
 export const SelectImg = async(formdata) => {
     try{
