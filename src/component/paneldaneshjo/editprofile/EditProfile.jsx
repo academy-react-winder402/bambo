@@ -42,7 +42,7 @@ const EditProfile = () => {
     formdata.append("ImageId", id);
     const selectapi = await SelectImg(formdata);
   };
-
+const [select,setSelect]=useState(0);
   // const getimg =async()=>{
   //   const imgdata = new FormData();
   //   imgdata.append('formFile', values.formFile);
@@ -91,11 +91,15 @@ xs:py-[10px]
               <div className="lg:w-[300px]  flex flex-col gap-[10px] items-center border-[1px] border-solid border-black ">
                 {/* <img src={pic}></img> */}
                 <input
-                type="file"
+                // type="file"
                   className="w-[300px] h-[300px] border-[1px] border-black border-solid rounded-[100%]"
                   onchange={(e) => setFieldValue("formFile", e.target.file[0])}
+                  onClick={setSelect}
                 />
-
+<div className={select === 0 ? "hidden" : "w-[800px] h-[400px] bg-[#ccc] absolute top-[200px] left-[500px]"}>
+  <div>close</div>
+  {selectimg}
+</div>
                 {/* <div className="flex flex-col gap-[20px]">
                   <button
                     type="file"
