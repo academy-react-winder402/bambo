@@ -38,7 +38,7 @@ const Coursesc = () => {
   }, [RowsOfPage, pageNumber]);
 
 
-
+console.log(data);
 
   const getfiltersearchlist = async () => {
     const courses = await getfiltersearch(Query,RowsOfPage);
@@ -88,13 +88,13 @@ const Coursesc = () => {
 
 
   const getfilterpriceupList = async () => {
-    const courses = await getfilterpriceup(CostUp,CostDown);
+    const courses = await getfilterpriceup(RowsOfPage,pageNumber,CostDown,CostUp);
     setData(courses);
   };
 
   useEffect(() => {
     getfilterpriceupList();
-  }, [CostUp,CostDown]);
+  }, [RowsOfPage,pageNumber,CostDown,CostUp]);
 
 
   const [page, setpage] = useState(1);

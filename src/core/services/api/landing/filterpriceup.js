@@ -1,13 +1,14 @@
 import { instance } from "../../interseptor";
 
 const getfilterpriceup = async(
-    CostUp=undefined,  
+    RowsOfPage=4,
+    pageNumber=1,
     CostDown=undefined,
-    
+    CostUp=undefined,
 ) => {
     try{
         
-        const result = await instance.get(`/Home/GetCoursesWithPagination?${CostUp ? `CostUp=${CostUp} ` : ""}&${CostDown ? `CostDown=${CostDown} ` : ""}`);
+        const result = await instance.get(`/Home/GetCoursesWithPagination?RowsOfPage=${RowsOfPage}&pageNumber=${pageNumber}&${CostDown ? `CostDown=${CostDown} ` : ""}&${CostUp ? `CostUp=${CostUp} ` : ""}`);
         return result;
         
     }catch(error){
