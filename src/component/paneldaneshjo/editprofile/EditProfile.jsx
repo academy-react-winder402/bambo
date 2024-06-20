@@ -37,6 +37,7 @@ const EditProfile = () => {
     const editimg = await AddImg(imgdata ? imgdata : null);
     console.log(editimg);
   };
+  
   const selectimg = async () => {
     const formdata = new FormData();
     formdata.append("ImageId", id);
@@ -98,7 +99,8 @@ xs:py-[10px]
                 />
 <div className={select === 0 ? "hidden" : "w-[800px] h-[400px] bg-[#ccc] absolute top-[200px] left-[500px]"}>
   <div>close</div>
-  {selectimg}
+  <button onClick={selectimg} className="border-[red] w-[100px] h-[50px] border-[1px] border-solid">select</button>
+  
 </div>
                 {/* <div className="flex flex-col gap-[20px]">
                   <button
