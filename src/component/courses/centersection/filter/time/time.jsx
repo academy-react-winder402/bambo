@@ -34,7 +34,7 @@ const Time = () => {
           className="font-bold tracking-[1px] w-[7rem] mx-[210px] h-[50px] flex items-center"
         >
           
-          مدت زمان
+          تکنولوژی
         </label>
         <label
           for="inputtime"

@@ -1,17 +1,17 @@
 import React from "react";
 
 
-const ContantTopLeft = ({coursedetail}) => {
-    const {title,cost} = coursedetail;
+const ContantTopLeft = () => {
+    
     return(
 <div className="h-[450px] w-[400px] mt-[100px] bg-[#F9F9F9] font-sans">
  <div className="h-[60px] w-[400px] border-b-solid border-b-black border-b-[1px] m-auto text-[26px] text-right text-[#004458] leading-[50px]" >
-    {title}
+    
     <img ></img>
     </div>   
     <div className="h-[40px] text-[20px] text-[#004458] flex flex-row-reverse gap-[100px] mt-[15px]">
         <div className="mr-[30px]"> :قیمت دوره</div>
-        <div >{cost}</div>
+        <div ></div>
     </div>
 
     <div className="h-[40px] text-[20px] text-[#004458] flex flex-row-reverse gap-[220px] mt-[15px]">

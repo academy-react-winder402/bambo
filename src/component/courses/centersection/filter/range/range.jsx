@@ -12,17 +12,19 @@ const Range = () => {
 
 const dispatch = useDispatch();
 
-const filterprice = () => {
+const filterpriceup = (e) => {
     dispatch(
-        setpricedown({mindata}),
-        setpriceup({maxdata}),
-        
+        setpriceup(e),
     )
+    setmaxdata(e);
 };
 
-useEffect(() => {
-    filterprice();
-  }, []);
+const filterpricedown = (e) => {
+    dispatch(
+        setpricedown(e),  
+    )
+    setmindata(e);
+};
 
 
 
@@ -43,7 +45,7 @@ useEffect(() => {
                         <h1 className="text-center "> {maxdata}</h1>
                         <div className="flex ml-[2rem]">
                             <span className="inline-block ml-[0.3rem] mt-[0.3rem]"> 0 </span>
-                            <input type="range" min="0" max="10000000" step="10" value={maxdata} onChange={e => setmaxdata(e.target.value)}
+                            <input type="range" min="0" max="10000000" step="10" value={maxdata} onChange={e => filterpriceup(e.target.value)}
                                 className="w-[10rem] ml-[0.5rem] mr-[0.5rem] block appearance-none h-[0.2rem] rounded-md mt-[1rem] bg-[#004458]" />
                             <span className="mt-[0.1rem]"> 10000000 </span>
                         </div>
@@ -53,7 +55,7 @@ useEffect(() => {
                         <h1 className="text-center "> {mindata}</h1>
                         <div className="flex ml-[2rem]">
                             <span className="inline-block ml-[0.3rem] mt-[0.3rem]"> 0 </span>
-                            <input type="range" min="0" max="10000000" step="10" value={mindata} onChange={e => setmindata(e.target.value)}
+                            <input type="range" min="0" max="10000000" step="10" value={mindata} onChange={e => filterpricedown(e.target.value)}
                                 className="w-[10rem] ml-[0.5rem] mr-[0.5rem] block appearance-none h-[0.2rem] rounded-md mt-[1rem] bg-[#004458]" />
                             <span className="mt-[0.1rem]"> 10000000 </span>
                         </div>

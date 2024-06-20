@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { getcourseDetail } from "../../../../../core/services/api/landing/Detail";
 
-const Bottom = ({ title, modares,price, showmodal,courseid}) => {
+const Bottom = ({ title, modares,price, showmodal,courseid,modal,id}) => {
+
+const [getid, setgetid] =useState();
+
+
+
+const getmodalcourse = async () => {
+    const courses = await getcourseDetail(getid);
+    modal(courses);
+  };
+
+  useEffect(() => {
+    getmodalcourse();
+  }, [getid]);
+
+
     return (
 
         <div className=" pb-[1rem] bg-[#fff]  relative">
@@ -15,7 +31,7 @@ const Bottom = ({ title, modares,price, showmodal,courseid}) => {
             <button className=" h-[2rem] w-[4rem] bg-[#004458] text-white text-center rounded-md hover:cursor-pointer absolute
                  top-[5.8rem] left-[1rem]" onClick={() => { 
                     showmodal();
-                    
+                    setgetid(id);
                   }}> جزئیات </button>
 
             <div className="border border-solid border-[#004458]  ml-[0.5rem] mr-[0.5rem]"> </div>
