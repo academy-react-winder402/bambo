@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import filterCourse from "./course";
 
-const store = configureStore({
+import filterCourse from "../course";
+
+ const Store = configureStore({
     reducer:{
         filterCourse:filterCourse,
     },
 });
-export {store};
+
+
 

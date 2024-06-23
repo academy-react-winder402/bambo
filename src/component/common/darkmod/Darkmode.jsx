@@ -2,6 +2,7 @@ import {motion} from 'framer-motion'
 import React, {useState} from 'react'
 import {RiMoonClearFill, RiSunFill} from 'react-icons/ri'
 
+
 const DarkModeSwitch = () =>{
 
     const [isOn, setIsOn] = useState(() => {

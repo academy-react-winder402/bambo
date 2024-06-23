@@ -36,14 +36,14 @@ const RegisterLeftThird = ({ setPassword, setGmail, phoneNumber }) => {
   const gotohome = () => {
     return navigator("/");
   };
-  const [passwordShown, setPasswordShown] = useState(false);
-  const [passShown, setPassShown] = useState(false);
-  const togglePasswordVisiblity = () => {
-    setPasswordShown(passwordShown ? false : true);
-  };
-  const togglePassVisiblity = () => {
-    setPassShown(passShown ? false : true);
-  };
+  // const [passwordShown, setPasswordShown] = useState(false);
+  // const [passShown, setPassShown] = useState(false);
+  // const togglePasswordVisiblity = () => {
+  //   setPasswordShown(passwordShown ? false : true);
+  // };
+  // const togglePassVisiblity = () => {
+  //   setPassShown(passShown ? false : true);
+  // };
   return (
     <div>
       <Formik
@@ -90,7 +90,6 @@ const RegisterLeftThird = ({ setPassword, setGmail, phoneNumber }) => {
           >
             <label className="   lg:text-[17px]">رمز عبور</label>
             <Field
-              type={passwordShown ? "text" : "password"}
               name="password"
               className=" lg:w-[90%]  lg:h-[50px]  lg:rounded-[10px] lg:pr-[1rem] 
                          md:w-[90%]  md:h-[50px]  md:rounded-[10px]
@@ -102,12 +101,12 @@ const RegisterLeftThird = ({ setPassword, setGmail, phoneNumber }) => {
                          xs:border-solid xs:border-[1px] xs:border-[black]
                         "
             />
-            <i
+            {/* <i
               className="lg:absolute top-[335px] left-[240px]"
               onClick={togglePasswordVisiblity}
             >
               {eye}
-            </i>
+            </i> */}
             <ErrorMessage
               name="password"
               component={"p"}
