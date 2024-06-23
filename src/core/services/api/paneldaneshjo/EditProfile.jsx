@@ -1,10 +1,10 @@
-import { instance } from "../../interseptor/index.js";
+import {instance} from "../../interseptor/index.js";
 
-export const getname = async(formdata) => {
+export const getname = async(obj) => {
     try{
         console.log("fetching started ...");
 
-        const result = await instance.put("/SharePanel/UpdateProfileInfo",formdata);
+        const result = await instance.put("/SharePanel/UpdateProfileInfo",obj);
 
         return result;
     }catch(error){
@@ -12,18 +12,29 @@ export const getname = async(formdata) => {
         return[];
     }
 };
-export const UserInfo = async() => {
-    try{
-        console.log("fetching started ...");
+// export const UserInfo = async() => {
+//     try{
+//         console.log("fetching started ...");
 
-        const result = await instance.put("/SharePanel/GetProfileInfo");
+//         const result = await instance.get("/SharePanel/GetProfileInfo");
 
-        return result;
-    }catch(error){
+//         return result;
+//     }catch(error){
+//         console.log(error);
+//         return[];
+//     }
+// };
+
+export const UserInfo = async () => {
+    try {
+      const result = await instance.get(`/SharePanel/GetProfileInfo`);
+  
+      return result;
+    } catch (error) {
         console.log(error);
         return[];
     }
-};
+  };
 
 export const SelectImg = async(formdata) => {
     try{
